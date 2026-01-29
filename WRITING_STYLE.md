@@ -7,17 +7,17 @@ This guide provides prescriptive instructions for creating missions across all A
 Every mission must follow this structure in order:
 
 1. YAML frontmatter with prev/next navigation
-2. Mission title (H1)
-3. Codename (H2 with OPERATION NAME in backticks)
-4. Time estimate (blockquote with approximate minutes)
-5. Video Walkthrough (optional)
-6. Mission Brief section explaining context and what will be accomplished
-7. Objectives section listing 3-5 learning outcomes
-8. Theory sections explaining concepts (2-5 sections)
-9. Lab sections providing hands-on practice (1-3 labs)
-10. Mission Complete section summarizing achievements and linking to next mission
-11. Tactical Resources section with Microsoft Learn documentation links
-12. Analytics tracking image
+1. Mission title (H1)
+1. Codename (H2 with OPERATION NAME in backticks)
+1. Time estimate (blockquote with approximate minutes)
+1. Video Walkthrough (optional)
+1. Mission Brief section explaining context and what will be accomplished
+1. Objectives section listing 3-5 learning outcomes
+1. Theory sections explaining concepts (2-5 sections)
+1. Lab sections providing hands-on practice (1-3 labs)
+1. Mission Complete section summarizing achievements and linking to next mission
+1. Tactical Resources section with Microsoft Learn documentation links
+1. Analytics tracking image
 
 ## YAML Frontmatter
 
@@ -49,7 +49,18 @@ Start with "In this mission, you'll learn:" followed by numbered list. Use paral
 
 ## Theory Before Practice
 
-Always explain concepts in theory sections before applying them in labs. Theory sections use H2 headings. Break complex topics into sub-sections using H3 headings. Include callouts for key points: TIP for best practices, INFO for important concepts, NOTE for additional context, WARNING for cautions, IMPORTANT for critical information. Use tables to compare options or patterns. Keep theory sections 200-500 words each.
+Always explain concepts in theory sections before applying them in labs.
+
+- Theory sections use H2 headings
+- Break complex topics into sub-sections using H3 headings
+- Include callouts for key points:
+  - **TIP** for best practices
+  - **INFO** for important concepts
+  - **NOTE** for additional context
+  - **WARNING** for cautions
+  - **IMPORTANT** for critical information
+- Use tables to compare options or patterns
+- Keep theory sections 200-500 words each
 
 **Callout Examples:**
 
@@ -71,6 +82,7 @@ Always explain concepts in theory sections before applying them in labs. Theory 
 ```
 
 **Theory Section Example:**
+
 > ## What are connected agents?
 >
 > In Copilot Studio, you're not limited to building single, monolithic agents. You can create **multi-agent systems** - networks of specialized agents that work together to handle complex workflows.
@@ -86,9 +98,13 @@ Always explain concepts in theory sections before applying them in labs. Theory 
 
 ## Lab Structure
 
-Labs use H2 headings with "Lab" prefix and sequential numbering. Begin each lab with 1-2 sentences explaining what will be accomplished. Use sub-labs (H3) with decimal numbering for logical groupings within a lab.
+Labs use H2 headings with "Lab" prefix and sequential numbering. Begin each lab with 1-2 sentences explaining what will be accomplished. Use sub-labs (H3) with decimal numbering for logical groupings within a lab. 
+
+The H2 headings with "Lab" prefix and sequential numbering will also be used in the video chapter markers.
+Example: [https://www.youtube.com/watch?v=BVNUmLXFCq8](https://www.youtube.com/watch?v=BVNUmLXFCq8)
 
 **Example:**
+
 > ## Lab 1: Setup the Hiring Agent
 >
 > In this hands-on lab, you'll establish the foundation for your hiring automation system. You'll begin by importing a pre-configured solution that contains all the necessary Dataverse tables and data structure for managing candidates, job positions, and hiring workflows.
@@ -106,7 +122,7 @@ Number all steps starting with `1.` - markdown auto-numbers. Start every step wi
 
 ## Screenshots
 
-Include a screenshot after every significant UI interaction. Place images after the step they illustrate, indented with 4 spaces. Use descriptive alt text (5-10 words). Save as PNG or SVG (preferred) in `./assets/` folder. Name files: `[mission-number]-[description].png` in lowercase with hyphens.
+Include a screenshot after every significant UI interaction. Place images after the step they illustrate, indented with 4 spaces. Use descriptive alt text (5-10 words). Save as PNG in `./assets/` folder. Name files: `[mission-number]-[description].png` in lowercase with hyphens.
 
 **Screenshot requirements:**
 
@@ -119,12 +135,10 @@ Include a screenshot after every significant UI interaction. Place images after 
 
 ## Mission Complete
 
-Summarize 3-5 key skills learned with checkmarks. Include link to next mission using relative path. Follow with Tactical Resources section linking to official Microsoft Learn documentation. Include Azure DevOps tracking codes in Microsoft Learn URLs. End file with analytics tracking pixel.
+Summarize 3-5 key skills learned with check-marks. Include link to next mission using relative path. Follow with Tactical Resources section linking to official Microsoft Learn documentation. Include Azure DevOps tracking codes in Microsoft Learn URLs. End file with analytics tracking pixel.
 
 **Example:**
 
-> ## Mission Complete
->
 > Mission 01 is completed! You now have mastered the following skills:
 >
 > ✅ **Scenario Understanding**: Comprehensive knowledge of hiring automation challenges and the solution you will be building
@@ -135,8 +149,8 @@ Summarize 3-5 key skills learned with checkmarks. Include link to next mission u
 >
 > ## Tactical Resources
 >
-> 📖 [Microsoft Copilot Studio - Create an agent](https://learn.microsoft.com/microsoft-copilot-studio/authoring-first-bot?WT.mc_id=power-172621-ebenitez)
-> 📖 [Microsoft Dataverse Documentation](https://learn.microsoft.com/power-apps/maker/data-platform)
+> - 📖 [Microsoft Copilot Studio - Create an agent](https://learn.microsoft.com/microsoft-copilot-studio/authoring-first-bot?WT.mc_id=power-172621-ebenitez)
+> - 📖 [Microsoft Dataverse Documentation](https://learn.microsoft.com/power-apps/maker/data-platform)
 
 ## Writing Style
 
@@ -153,5 +167,4 @@ Each mission in numbered folder: `01-[mission-name]/` with `index.md` and `asset
 ## Additional Resources
 
 - [Contributing Guide](./CONTRIBUTING.md) - Markdown linting, spell checking, and general contribution standards
-- [Recruit missions](./docs/recruit/) - Examples of introductory missions with theory-focused content
-- [Operative missions](./docs/operative/) - Examples of advanced missions with complex labs and multi-step workflows
+- [Microsoft Writing Style Guide](https://learn.microsoft.com/style-guide/welcome/) - Official Microsoft style and terminology guide
