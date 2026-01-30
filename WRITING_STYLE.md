@@ -98,7 +98,7 @@ Always explain concepts in theory sections before applying them in labs.
 
 ## Lab Structure
 
-Labs use H2 headings with "Lab" prefix and sequential numbering. Begin each lab with 1-2 sentences explaining what will be accomplished. Use sub-labs (H3) with decimal numbering for logical groupings within a lab. 
+Labs use H2 headings with "Lab" prefix and sequential numbering. Begin each lab with 1-2 sentences explaining what will be accomplished. Use sub-labs (H3) with decimal numbering for logical groupings within a lab.
 
 The H2 headings with "Lab" prefix and sequential numbering will also be used in the video chapter markers.
 Example: [https://www.youtube.com/watch?v=BVNUmLXFCq8](https://www.youtube.com/watch?v=BVNUmLXFCq8)
