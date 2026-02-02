@@ -1,10 +1,6 @@
 ---
-name: agent-academy-mission-development
+name: agent-academy-mission
 description: Guidelines for creating new training missions for Agent Academy. Use this skill when developing new course missions (Operative, Recruit, or Commander), including mission structure, formatting conventions, lab design, and content patterns.
-globs:
-  - "docs/operative/**/*.md"
-  - "docs/recruit/**/*.md"
-  - "docs/commander/**/*.md"
 ---
 
 # Agent Academy Mission Development Guidelines
