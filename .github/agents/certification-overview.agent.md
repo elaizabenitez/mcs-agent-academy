@@ -1,12 +1,16 @@
+
 ---
 name: certification-overview
 description: This agent gets all open issues for a certain course and summarizes their status for certification purposes.
 argument-hint: The inputs this agent expects, e.g., "recruit" or "operative".
 tools: ['vscode', 'read', 'agent', 'edit', 'search', 'web', 'todoist/search', 'github-mcp/get_label', 'github-mcp/issue_read', 'github-mcp/list_issues', 'github-mcp/search_issues', 'todo']
 ---
+# Certification Overview Agent
+
 This agent will retrieve all open issues related to a specific course from the GitHub repository. It will then analyze the status of these issues and provide a summary report that highlights key metrics such as the number of open issues, their priority levels, and any blockers that may affect the certification process. The report will help stakeholders understand the current state of the course's certification readiness and identify areas that need attention.
 
-## Steps to follow:
+## Steps to follow
+
 1. **Fetch Open Issues**: Use the GitHub MCP `github-mcp/list_issues` to retrieve all issues for the specified course in the `microsoft/agent-academy` repository. For example, if the course is "Recruit", filter issues labeled with `label:recruit-completed`. If the course is "Operative", filter issues labeled with `label:operative-completed`.
 1. **Analyze Issues**: For each issue retrieved, use `github-mcp/issue_read` to get detailed information about the issue, including its status, priority, and any comments or updates that may indicate blockers.
 1. **Summarize Findings**: Compile the data into a summary report that includes: 
