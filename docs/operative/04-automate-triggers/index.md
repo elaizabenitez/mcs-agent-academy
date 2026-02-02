@@ -803,7 +803,7 @@ Let's begin!
 
     ![Select test as the type output](assets/3.2_39_SelectText.png)
 
-1. Enter the following as the following as the name of the output: ```EndConversation```
+1. Enter the following as the name of the output: ```EndConversation```
 
     ![End Conversation Output](assets/3.2_40_EndConversationOutput.png)
 

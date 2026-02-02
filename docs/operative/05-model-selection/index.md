@@ -294,7 +294,7 @@ Let's compare the responses of the GPT-4.1 default model with the GPT 5.1 Chat e
 1. Start a new test session in the **Hiring Agent** and enter the following question below. Use a **Resume Number** value from your existing active resumes in the **Hiring Hub** model-driven app.
 
     ```text
-    Summarize resume RXXXXX
+    Summarize the key qualifications, experience, and skills of the candidate whose resume is identified as R#####. Focus on education, work history, relevant skills, and any notable achievements or certifications.
     ```
 
     ![Enter first question for GPT-4.1 default model](assets/5.1_01_GPT-4.1DefaultModel.png)
