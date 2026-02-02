@@ -1,4 +1,3 @@
-
 ---
 name: certification-overview
 description: This agent gets all open issues for a certain course and summarizes their status for certification purposes.
