@@ -395,7 +395,6 @@ Let's compare the responses of the GPT-4.1 default model with the GPT-5 Auto pre
 
        ![Question 3 response for GPT-5 Auto preview model](assets/5.2_08_GPT5_01_Question3Response.png)
 
-
 1. The model also provides a suggestion of how it can tailor questions to a resume or application, and also includes the reference format based on the agent's instructions we set up in [Mission 03](../03-multi-agent/index.md): Building multi-agent systems.
 
        ![Question 3 response for for GPT-5 Auto preview model](assets/5.2_08_GPT5_02_Question3Response.png)
