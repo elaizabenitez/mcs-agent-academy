@@ -543,6 +543,9 @@ To complete this lab you will need to:
 
 1. Select **Edit** in the **Details** section and update the **Plan** to the **Copilot Studio** option.
 
+    > [!NOTE]
+    > Converting the plan to Copilot Studio allows you to manage the event trigger flow in Copilot Studio and consume Copilot Studio capacity instead of Power Automate billing.
+
     Select **Save**.
 
     ![Change Copilot Studio plan](assets/3.1_46_ChangePlanDetails.png)
@@ -803,7 +806,7 @@ Let's begin!
 
     ![Select test as the type output](assets/3.2_39_SelectText.png)
 
-1. Enter the following as the following as the name of the output: ```EndConversation```
+1. Enter the following as the name of the output: ```EndConversation```
 
     ![End Conversation Output](assets/3.2_40_EndConversationOutput.png)
 
@@ -996,7 +999,7 @@ This enables the **Hiring Agent** to work autonomously whenever resumes are rece
 
 This is the end of **Lab 04 - Automating candidate application emails**, select the link below to move to the next mission.
 
-⏭️ Move to mission [**Understanding Agent Models**](../05-model-selection/index.md)
+⏭️ Move to mission [**Understanding Agent Models and Response Formatting**](../05-model-selection/index.md)
 
 ## 📚 Tactical Resources
 
