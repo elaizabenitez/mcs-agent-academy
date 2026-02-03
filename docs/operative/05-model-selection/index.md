@@ -384,7 +384,7 @@ Let's compare the responses of the GPT-4.1 default model with the GPT-5 Chat pre
 
     ![Question 3 response for GPT-4.1 default model](assets/5.2_05_GPT4.1_02_Question3Response.png)
 
-1. Let's now change the agent's model. In the **Overview** tab select the **chevron** icon and from the list of **OpenAI** models, select **GPT-5 Auto**.
+1. Let's now change the agent's model. In the **Overview** tab select the **chevron** icon and from the list of **OpenAI** models, select **GPT-5 Chat**.
 
     A confirmation message will appear shortly to inform you that the agent model has been updated. Let's now test the responses of this model by starting a new test session.
 
@@ -463,6 +463,10 @@ Let's compare the responses of the GPT-4.1 default model with the GPT-5 Chat pre
     ![Question 1 response for Claude Sonnet 4.5 experimental model](assets/5.2_12_Question1Response.png)
 
 1. We'll still ask the same second question to verify that the date format is being correctly followed since we tested this with the two previous models.
+
+    ```text
+    When was the upload date?
+    ```
 
     ![Question 2 response for Claude Sonnet 4.5 experimental model](assets/5.2_13_Question2Response.png)
 
