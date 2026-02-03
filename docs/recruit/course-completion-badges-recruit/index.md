@@ -15,63 +15,145 @@ next:
 
 ## 🎯 Mission Brief
 
-Welcome, Recruit. You've completed your training—now it's time to claim your badge and mark your achievement! Congratulations!  
+Welcome, Recruit. You’ve completed your training. Now it’s time to **make it official**.
 
-Let’s make your accomplishment official and get your Recruit badge.
+This final mission verifies that:
 
-## 🔎 Objectives
+- You completed the hands-on work
+- Your solution runs in a real environment
+- Your badge is issued accurately and fairly
 
-📖 This mission covers:
-
-1. The exact steps to claim your badge
-1. What to expect after you submit your badge request
-1. Where to connect with Power Platform Advocates
+Badges aren’t auto-issued. They’re validated by humans.  
+That’s why **every step below matters**.
 
 ## 🏅 Secure Your Recruit Badge
 
-Every Agent Academy path—Recruit, Operative, Commander, and beyond—includes a badge to recognize your accomplishment. To ensure your badge is issued correctly, follow the submission protocol below.
+Every Agent Academy path, from **Recruit → Operative → Commander**, includes an official digital badge issued through the [Global AI Community](https://globalai.community/).
 
-### Submission Protocol
+These badges are:
 
-To initiate badge deployment, complete the following steps:
+- Verifiable
+- Shareable (LinkedIn, resumes, portfolios)
+- Tied to real technical work, not just attendance
 
-1. ⭐ **Star the Agent Academy GitHub Repo**  
-   [Agent Academy GitHub Repo](https://github.com/microsoft/agent-academy)
+![Recruit Badge](./assets/recruitbadge.png)
+To ensure badges remain meaningful, we follow a **strict validation protocol**.
 
-1. 📤 **Submit the Recruit Completion Form**  
-   [Recruit Completion Form](https://aka.ms/agent-academy-recruit/badge)  
-   **Include:**
-      * 📸 Screenshot of your solution file in your environment (with environment name + file owner name visible)
-      * 📸 Screenshot of the Agent Test screen (with environment name visible)
-      * 📝 All required fields completed
+> [!IMPORTANT]
+> **Only the IT Help Desk Agent built in the Recruit path is eligible for this badge.**
+>
+> Submissions using screenshots from **any other agent** (personal projects, demos, experiments, or agents built outside the Recruit labs) **will be rejected**, even if the agent works correctly.
+>
+> Your screenshots must clearly show the **IT Help Desk Agent** created by following the Recruit path instructions.
 
-1. 🧾 **Complete the Badge Validation Form**  
-   [Badge Validation Form](https://aka.ms/agent-academy-recruit/form)
+### 🧭 Submission Protocol
 
-1. 🔐 **Create and Log In to Your Global AI Community Account**  
-   [Global AI Community Account Log In](https://globalai.community/auth/login)
+Please follow **each step exactly and in order**.  
+Missing or incomplete submissions are the #1 cause of badge delays.
+
+### 1. ⭐ Star the Agent Academy GitHub Repo
+
+👉 **[Agent Academy GitHub Repo](https://github.com/microsoft/agent-academy)**
+
+**Why this matters:**
+
+- It helps others discover the Academy
+- It signals active community engagement
+- It directly supports continued investment in the project
+
+Starring the repo is quick, free, and required for badge eligibility.
+
+### 2. 📤 Submit the Recruit Completion Form
+
+👉 **[Recruit Completion Form](https://aka.ms/agent-academy-recruit/badge)**
+
+This is the **primary validation step**. Submissions without clear evidence cannot be approved.
+
+#### Required Evidence (All Mandatory)
+
+Include **two screenshots**, clearly visible and unedited:
+
+- 📸 **A screenshot of your solution file**
+  - Environment name visible
+  - The **All** section expanded
+  - Confirms *you* built it and *where* it lives
+
+    ![Solution](./assets/solution.png)
+
+- 📸 **Agent Overview Screen**
+  - Environment name visible  
+  - Confirms the agent runs and responds
+
+    ![Agent](./assets/agent.png)
+
+- 📝 **All form fields completed**
+  - Incomplete forms are automatically flagged
+
+> [!TIP]
+> ⚠️ Blurry screenshots, cropped environment names, or missing info will result in a validation comment and delay.
+>
+> Click the **Paste, drop or add files here** button in the Final Solutions Screenshots field to add your images. Do not link to a document (we won't have access)
+
+   ![Upload Image](./assets/uploadimage.png)
+
+### 3. 🧾 Complete the Badge Validation Form
+
+👉 **[Badge Validation Form](https://aka.ms/agent-academy-recruit/form)**
+
+This form:
+
+- Links your submission to badge issuance
+- Ensures correct email to send the badge to
+- Allows you to agree to receiving a badge through the Global AI Community
+
+Yes, it’s separate. Yes, it’s required.  
+This keeps the system scalable as participation grows.
+
+### 4. 🔐 Create & Log In to Your Global AI Community Account
+
+👉 **[Global AI Community Account Log In](https://globalai.community/auth/login)**
+
+Badges are issued **through this platform**.
+
+If you don’t have an account:
+
+- Create one using the **same email** you used in your forms
+- Otherwise, your badge can’t be delivered
+
+No account = no badge issuance (even with a valid submission).
 
 ## ⏳ Badge Deployment Timeline
 
-Badges are typically issued **within 7–10 business days** of submitting your completion form.
+Once all steps are completed correctly:
 
-| Status           | Action                                      |
-|------------------|---------------------------------------------|
-| ✅ Valid Entry   | Issue closed + email confirmation           |
-| ⚠️ Invalid Entry | Comment with resolution steps               |
-| ⏳ Processing    | Please be patient — high volume in progress |
+**⏱️ Typical issuance:** **~14 business days**
+
+We review submissions manually to ensure fairness and quality.
+
+If any information is missing (screenshots, no badge form submission, etc), we will reply to your issue and inform you of what's missing. You'll have two weeks to respond with the required info. If that isn't provided we will close your issue and you'll have to go through the process again.
 
 > [!NOTE]
-> Direct messages or individual badge timing requests cannot be accommodated.
+> Please don’t DM advocates or submit duplicate requests.  
+> Duplicate entries slow everyone down.
 
 ## 🧠 Mission Intel
 
-Your feedback helps us improve the Academy experience—every submission is reviewed personally 💖  
-Future paths (Commander, and side-quests) will also include badge rewards.
+Every submission is reviewed by a real human who wants you to succeed 💖  
+
+Your participation:
+
+- Improves future Academy paths
+- Shapes upcoming Commander-level content
+- Helps justify continued expansion (labs, badges, side-quests)
+
+More missions are coming.
 
 ## 📡 Stay Mission-Ready
 
-🎖 Thank you for completing your mission—and for helping Agent Academy grow stronger every day! 💥
+🎖 Congratulations, Recruit.  
+You didn’t just watch content—you *built something*.
+
+Next up: **[Operative training](/docs/operative/index.md)**.
 
 ## 📚 Tactical Resources
 
