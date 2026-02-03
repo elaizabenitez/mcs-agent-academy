@@ -254,7 +254,7 @@ We're now going to review the feedback submitted in the **Analytics** page of th
 
 1. Navigate to the **Analytics** tab of the agent and scroll down to the **Satisfaction** section. In the **Reactions** section, select **See details**. This will load the **Reactions** pane where you can view all the thumbs up and thumbs down for the period and the written feedback.
 
-       ![Submitted reactions and written feedback](assets/11.2_01_Reactions.png)
+    ![Submitted reactions and written feedback](assets/11.2_01_Reactions.png)
 
 ### 11.3 Build adaptive card to collect custom feedback
 

@@ -7,7 +7,7 @@ next:
   link: '/operative/06-ai-safety'
 ---
 
-# Understanding Agent Models
+# Understanding Agent Models and Response Formatting
 
 ## 🕵️‍♂️ CODENAME: `OPERATION ARCHETYPE`
 
@@ -19,7 +19,7 @@ Welcome back, Agent. In [Mission 02](../02-agent-instructions/index.md),you lear
 
 Now it’s time to choose the brain.
 
-In **Operation Archetype**, you’ll learn how to select the right AI model for your agent and how to test model changes to see the impact on response quality, structure, and depth. Different models can respond faster or slower, be more concise or more detailed, and handle complex reasoning differently.
+In **Operation Archetype**, you’ll learn how to select the right AI model for your agent and how to test model changes to see the impact on response quality, structure, and depth. Different models can respond faster or slower, be more concise or more detailed, and handle complex reasoning differently. You'll also learn about crafting response formats that resonate with users on a human level.
 
 By the end of this mission, you’ll be able to confidently choose a model based on your scenario and validate that choice by comparing results.
 
@@ -30,6 +30,7 @@ In this mission, you'll learn:
 1. How to understand and select the optimal AI model for your agent's use case
 1. How to compare different model capabilities and performance characteristics
 1. How to switch your agent’s model
+1. How to configure response formatting to enhance readability and user experience
 1. How to test and evaluate differences in output when you change models
 
 ## 🤔 What is the Agent Model?
@@ -70,23 +71,24 @@ The table below explains the availability tags - [source](https://learn.microsof
 | **Default** | The default model for all agents, and usually the best performing generally available model. The default model is periodically upgraded as new, more capable models become generally available. Agents also use the default model as a fallback if a selected model is turned off or unavailable. |
 | **Retired** | When a new model becomes the default model, the old default model is retired. You can still use the retired model for up to one month after retirement. For more information, see [Continue using a retired AI model](https://learn.microsoft.com/microsoft-copilot-studio/authoring-retired-model). |
 
+It's always a good idea to review the [list of public availability of models](https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-select-agent-model#public-availability) supported by Copilot Studio.
+
 #### OpenAI models
 
-AI capabilities evolve rapidly, and Copilot Studio keeps up by offering a range of Azure OpenAI models. As of 2025, the primary models to choose from include OpenAI's GPT-4.1, and the latest GPT-5 previews. The following table summarizes the main choices and what each is best suited for:
+AI capabilities evolve rapidly, and Copilot Studio keeps up by offering a range of Azure OpenAI models. As of 2025, the primary models to choose from include OpenAI's GPT-4.1, and the latest GPT-5 models. The following table summarizes the main choices and what each is best suited for:
 
-| Model Version | Category | Availability | Key Strengths | Ideal Use Cases |
+| Model Version | Category | Availability (United States) | Key Strengths | Ideal Use Cases |
 | ------- | ---------- | ---------- | ------------- | ----------- |
-| **GPT‑4o** | General | Retired | Fast, versatile responses; supports text and image input; cost-effective balance of speed and accuracy. | Routine Q&A; summarizing support chats or calls; quick content drafts; tasks combining text with visuals. |
 | **GPT-4.1** | General | Default | Higher accuracy and reasoning than GPT-4o; excellent at complex text analysis (text-only model). | Analyzing detailed documents (policies, reports); complex knowledge-base Q&A; scenarios where precision is critical. |
-| **GPT‑5 Chat** | General | Preview | Advanced conversational abilities with strong context retention; produces human-like dialogue. | Employee self-service chatbots; IT/HR helpdesk assistants; interactive agents requiring natural, human-like responses. |
-| **GPT‑5 Auto** | Auto | General | Optimized for orchestrating multi-step workflows; can automate actions across systems (not just chit-chat). | End-to-end process automation (e.g. ticket creation to resolution); multi-step task sequences across apps; "digital project manager" scenarios. |
+| **GPT‑5 Chat** | General | GA | Advanced conversational abilities with strong context retention; produces human-like dialogue. | Employee self-service chatbots; IT/HR helpdesk assistants; interactive agents requiring natural, human-like responses. |
+| **GPT‑5 Auto** | Auto | Preview | Optimized for orchestrating multi-step workflows; can automate actions across systems (not just chit-chat). | End-to-end process automation (e.g. ticket creation to resolution); multi-step task sequences across apps; "digital project manager" scenarios. |
 | **GPT‑5 Reasoning** | Deep | Preview | - Latest model optimized for complex reasoning (trained up to Oct 2024) - High scores in document understanding and response accuracy | Advanced reasoning tasks where top-tier analytical capability is required (such as extensive planning, interpreting complex data). Again, use cautiously in testing since it’s a preview model. |
-| **GPT‑5.1 Chat** | General | Experimental | Latest experimental conversational model with broad task proficiency; improves on context awareness and responsiveness. | General-purpose Q&A and dialogue tasks leveraging the newest model’s capabilities; versatile chatbot scenarios where enhanced performance is beneficial. |
-| **GPT‑5.1 Reasoning** | Deep | Experimental | Experimental top-tier reasoning model offering maximum depth and accuracy for complex tasks. | Ultra-complex analytical queries or decision support requiring the highest precision (e.g. intricate strategic planning, high-stakes data analysis). |
+| **GPT‑5.2 Chat** | General | Experimental | Latest experimental conversational model with further improved context awareness; broad task proficiency. | General-purpose Q&A and dialogue tasks leveraging the newest model's capabilities; complex chatbot interactions where enhanced performance is beneficial. |
+| **GPT‑5.2 Reasoning** | Deep | Experimental | Experimental top-tier reasoning model offering maximum depth and accuracy for complex tasks. | Ultra-complex analytical queries or decision support requiring the highest precision (e.g. intricate strategic planning, high-stakes data analysis). |
 
 > [!WARNING]
 >
-> - Experimental/preview models (like GPT-5 Chat) are accessible for testing new capabilities before they’re production-ready. They may have limited testing and higher variability in performance.
+> - Experimental/preview models (like GPT-5 Auto) are accessible for testing new capabilities before they’re production-ready. They may have limited testing and higher variability in performance.
 > - They are not recommended for production use because of possible instability (variable quality, latency, or even time-outs). Always review any _Preview_ model’s limitations and consider using them only in non-critical environments. Use them in _Sandbox_ or _Developer_ environments. If you do publish an agent with an experimental model, usage will still be billed at that model’s established rate.
 
 #### Anthropic models (external)
@@ -100,10 +102,10 @@ OpenAI remains as the default model for new agents in Copilot Studio and you hav
 
 Both are available in Microsoft Copilot Studio as opt-in preview (Frontier Program) models rather than General Availability (GA), meaning they’re for early experimental use only. The table below compares their status, strengths, and ideal use cases in the Copilot Studio context:
 
-| Model Version | Status | Key Strengths | Ideal Use Cases |
-| ------- | ---------- | ------------- | ----------- |
-| **Claude Sonnet 4.5** | Experimental | Excels at code-related tasks and complex “agent” workflows; strong at tool use and step-by-step reasoning. | Advanced software development assistance (code generation & debugging); building multi-step autonomous agents; tasks requiring integration with external tools or systems. |
-| **Claude Opus 4.1** | Experimental | Specialized for intensive analysis and structured problem-solving. | In-depth data analysis and research projects; complex reasoning scenarios (e.g. compliance auditing, elaborate planning) where thoroughness is paramount. |
+| Model Version | Category | Availability (United States) | Key Strengths | Ideal Use Cases |
+| ------- | ---------- | ---------- | ------------- | ----------- |
+| **Claude Sonnet 4.5** | General | Preview | Excels at code-related tasks and complex “agent” workflows; strong at tool use and step-by-step reasoning. | Advanced software development assistance (code generation & debugging); building multi-step autonomous agents; tasks requiring integration with external tools or systems. |
+| **Claude Opus 4.1** | Deep | Experimental | Specialized for intensive analysis and structured problem-solving. | In-depth data analysis and research projects; complex reasoning scenarios (e.g. compliance auditing, elaborate planning) where thoroughness is paramount. |
 
 > [!WARNING]
 >
@@ -116,9 +118,9 @@ All the above models are capable with large context windows. For instance, GPT-4
 
 ### 🔧 Changing and updating the model of your agent
 
-By default, a new Copilot agent starts on the GPT-4o model, which is optimized as a balanced choice for most scenarios.
+By default, a new Copilot agent starts on the GPT-4.1 model, which is optimized as a balanced choice for most scenarios.
 
-You can switch the agent’s primary model anytime via the agent’s **Settings** page ➡️ **Model** section in the **Generative AI** tab, using a simple dropdown to pick from available models.
+You can switch the agent’s primary model anytime via the agent’s **Overview** tab, using a simple dropdown to pick from available models in the **Select your agent's model** section.
 
 ![Agent models available](./assets/5.0_01_AgentModels.png)
 
@@ -126,10 +128,12 @@ This flexibility allows you to experiment with different models even after your 
 
 ## 📶 Model updates and retired models
 
-Microsoft periodically upgrades the available models to newer versions. Notably, in November 2025, several models were made available:
+Microsoft periodically upgrades the available models to newer versions. Notably, in December 2025, several models were made available in early release cycle environments:
 
-- GPT-5.1 Chat
-- GPT-5.1 Reasoning
+- GPT-5.2 Chat
+- GPT-5.2 Reasoning
+
+Agents that were running on GPT-5.1 were automatically moved to GPT-5.2. For more details, refer to the [announcement blog post](https://www.microsoft.com/en-us/microsoft-365/blog/2025/12/11/available-today-gpt-5-2-in-microsoft-365-copilot/).
 
 > [!NOTE]
 >
@@ -159,9 +163,9 @@ If you switch this on, your agent will remain on the previous model version for 
 
 #### Example
 
-Suppose your agent was using GPT-4o and it got upgraded to GPT-4.1. If you notice the AI’s tone changed or it uses slightly different phrasing that doesn’t align with your established conversational style, you could toggle on “use retired model” to temporarily revert to GPT-4o.
+Suppose your agent was using GPT-4o and it got upgraded to GPT-4.1. If you notice the AI's tone changed or it uses slightly different phrasing that doesn’t align with your established conversational style, you could toggle on “use retired model” to temporarily revert to GPT-4o.
 
-You then have a few weeks to update your prompts/instructions to suit GPT-4.1’s style (maybe adding an instruction like “keep responses brief”) and test thoroughly. Test your agent on GPT-4.1 in a safe environment, and then disable the retired model toggle once confident. This way, your end users have a consistent experience during the transition.
+You then have a few weeks to update your prompts/instructions to suit GPT-4.1's style (maybe adding an instruction like “keep responses brief”) and test thoroughly. Test your agent on GPT-4.1 in a safe environment, and then disable the retired model toggle once confident. This way, your end users have a consistent experience during the transition.
 
 ## 🔐 Admin controls for AI model selection
 
@@ -173,11 +177,15 @@ Here are the key admin controls affecting which models a maker/developer can sel
 
 ![Allow Anthropic provider setting in Microsoft 365 admin center](./assets/5.0_05_AllowAnthropicProvider.png)
 
-- **Allow Preview (Experimental) models to be used in Copilot Studio environments**: An admin can toggle whether preview and experimental AI models are available in a given environment. If this is turned **off**, makers/developers will only see generally-available models (like GPT-4o) in the dropdown.
+   An admin can also toggle whether external models are available in a given environment in the Power Platform admin center.
+
+![Enable external model setting](./assets/5.0_03_EnableExternalModelsSetting.png)
+
+- **Allow Preview (Experimental) models to be used in Copilot Studio environments**: An admin can toggle whether preview and experimental AI models are available in a given environment. If this is turned **off**, makers/developers will only see generally-available models (like GPT-4.1) in the dropdown.
 
     To use GPT-5 or any future preview, the admin must turn this setting **on** for that specific environment.
 
-![Enable external model setting](./assets/5.0_03_EnableExternalModelsSetting.png)
+![Enable external model setting](./assets/5.0_06_EnablePreviewAndExperimentalAIModelsSetting.png)
 
 - **Move data across regions**: Because experimental models may not run in the same regional data centers as standard models, enabling them often requires allowing cross-region data movement. In the Power Platform admin center (environment settings), there is a setting called **Move data across regions**. This must be turned on by the admin if you want to permit experimental model usage. It acknowledges that data processed by these models may leave your organization's geographic boundaries.
 
@@ -270,8 +278,6 @@ Now that we know what we _can_ do, let’s talk about what we _should_ do to mak
 
     Similarly, if generative AI provides a date in an undesirable format, a Power Fx expression could re-format it. Essentially, you can post-process the AI’s text to enforce any strict patterns.
 
-- **Validate and extract text using regex**: TBC
-
 - **Aim for readability**: After applying all the above, always put yourself in the user’s perspective and read the output. Is it easy to find the main point? Is the response unnecessarily long? Often, less is more. If the AI tends to be very verbose, consider instructing it to be concise or limiting the scope of answers.
 
     On the other hand, if the answer is too short or lacks detail, you might want to add instructions asking for more explanation or examples.
@@ -282,28 +288,91 @@ In summary, use formatting to enhance clarity, not distract. The user should be 
 
 ## 🧪 Lab 05 - Model selection for the Interview Agent
 
-In this lab, you’ll compare responses from two different models by asking the same questions and observing differences in:
+In this lab, you’ll compare responses, including the formatting, from three different models by asking the same questions and observing differences in:
 
      - Depth
      - Structure
      - Tone
      - Specificity
 
-Let's compare the responses of the GPT-4.1 default model with the GPT 5.1 Chat experimental model.
+### Lab 5.1 - Response formatting of the Interview Agent
 
-1. Start a new test session in the **Hiring Agent** and enter the following question below. Use a **Resume Number** value from your existing active resumes in the **Hiring Hub** model-driven app.
+1. In the **Interview Agent's Settings**, scroll down to the **Response formatting** section to update the instructions. Use the following as the formatting instructions.
+
+    ```text
+    For all agent responses to questions, follow these rules exactly:
+
+    # Dates
+
+    - All dates MUST always be formatted as 'MMM dd, yyyy'. Example:  
+
+    # Resume information
+
+    - For resume information, start with the Resume Number as the header in bold, followed by bullet points.
+    - Example:
+    ```
+
+    ![Response formatting instructions of agent](assets/5.1_01_SettingsResponses.png)
+
+1. For the two date format examples in the instructions, we're going to add a Power Fx formula. Click after the first `Example:` and select the **Power Fx** icon. Copy and paste the following formula, then select **Insert**.
+
+    ```text
+    Text(DateTimeValue("2026-01-06T13:45:54Z"), "MMM dd, yyyy")
+    ```
+
+    ![Inserting a Power Fx formula](assets/5.1_02_PowerFxFormula.png)
+
+1. You'll see the formula added in the instructions for the first example. Repeat the same steps for the second `Example:` by copying and pasting the Power Fx formula, select **Insert** and select **Save** to save the response formatting settings.
+
+    ![Power Fx formula added to response formatting instructions](assets/5.1_03_PowerFxFormulasAdded.png)
+
+1. Exit from **Settings**.
+
+### Lab 5.2 - Compare model responses and formatting
+
+Let's compare the responses of the GPT-4.1 default model with the GPT-5 Chat preview model and the Claude Sonnet 4.5 experimental model.
+
+> [!WARNING] Responses may differ across test sessions
+>
+> Each conversation in a test session can produce slightly different responses, since the selected generative AI model creates answers dynamically rather than returning fixed replies.
+
+1. Start a new test session in the **Interview Agent** and enter the following question below. Use a **Resume Number** value from your existing active resumes in the **Hiring Hub** model-driven app.
 
     ```text
     Summarize the key qualifications, experience, and skills of the candidate whose resume is identified as R#####. Focus on education, work history, relevant skills, and any notable achievements or certifications.
     ```
 
-    ![Enter first question for GPT-4.1 default model](assets/5.1_01_GPT-4.1DefaultModel.png)
+    ![Enter first question for GPT-4.1 model](assets/5.2_01_GPT4.1Model.png)
 
-1. A summary of the resume will next be displayed and we can see it's in the output of bullet points by headings. There's also a reference to the Dataverse row for the **Active Resumes** system view.
+1. A summary of the resume will next be displayed. How did it align with our response formatting? We can see the output starts with the Resume Number in bold, followed by bullet points.
 
-    ![Question 1 response](assets/5.1_02_01_Question1Response.png)
+    ![Question 1 response for GPT-4.1  model](assets/5.2_02_GPT4.1_FormatCheck.png)
 
-    ![Question 1 response](assets/5.1_02_02_Question1Response.png)
+    It's also good to check the agent's response matches what's in the Dataverse resume row and the PDF file.
+
+    ![Certifications returned by the model](assets/5.2_02_GPT4.1_Question1Response.png)
+
+    We can see that the certifications are correct when reviewing the associated Resume file.
+
+    ![Verify certifications in Resume file](assets/5.2_02_GPT4.1_Question1ResponseCheck.png)
+
+    Let's do one more check by reviewing the skills listed.
+
+    ![Skills returned by the model](assets/5.2_03_GPT4.1_Question1Response.png)
+
+    The skills returned by the model are correct when reviewing the associated Resume file. Great!
+
+    ![Verify skills in Resume file](assets/5.2_03_GPT4.1_Question1ResponseCheck.png)
+
+1. Next, we'll verify the date formatting is followed by the agent. Enter the question below.
+
+    ```text
+    When was the upload date?
+    ```
+
+    ![Question 2 response for GPT-4.1 model](assets/5.2_04_GPT4.1_Question2Response.png)
+
+    You can see that the model did not correctly follow the date format.
 
 1. We'll ask another question for suggestions of interview questions to ask based on the evaluation criteria of a job role, and provide what the potential answers are. Enter the question below.
 
@@ -311,60 +380,130 @@ Let's compare the responses of the GPT-4.1 default model with the GPT 5.1 Chat e
     Can you provide suggestions of questions to ask in an interview for the Power Platform developer role (Job role number J1004) based on its associated evaluation criteria? Can you also please provide what the answers may be for each question?
     ```
 
-    ![Question 2](assets/5.1_03_Question2.png)
+    The returned response lists interview questions by evaluation criteria. Each question is followed by a `Model Answer`. Notice how the answer is in _first person_, where it's outlining the expected answers from the candidate to the question asked.
 
-1. The returned response lists interview questions in numbered format. Each question is followed by a `Model Answer`. Notice how the answer is in the point of view of the candidate, the model refers to the answers in first-person writing.
+    ![Question 3 response for GPT-4.1 model](assets/5.2_05_GPT4.1_01_Question3Response.png)
 
-    ![Question 2 response](assets/5.1_04_01_Question2Response.png)
+    ![Question 3 response for GPT-4.1 model](assets/5.2_05_GPT4.1_02_Question3Response.png)
 
-    ![Question 2 response](assets/5.1_04_02_Question2Response.png)
+1. Let's now change the agent's model. In the **Overview** tab select the **chevron** icon and from the list of **OpenAI** models, select **GPT-5 Chat**.
 
-1. Let's now change the agent's model. In the **Overview** tab select the **chevron** icon and from the list of **OpenAI** models, select **GPT-5.1 Chat**.
+    A confirmation message will appear shortly to inform you that the agent model has been updated. Let's now test the responses of this model by starting a new test session.
 
-    ![Select GPT-5.1 Chat](assets/5.1_05_SelectGPT-5.1Chat.png)
-
-1. A confirmation message will appear shortly to inform you that the agent model has been updated. Let's now test the responses of this model by starting a new test session.
-
-    ![New test session](assets/5.1_06_NewTestSession.png)
-
-1. Enter the following question below. Use a **Resume Number** value from your existing active resumes in the **Hiring Hub** model-driven app.
+    Enter the following question below. Use a **Resume Number** value from your existing active resumes in the **Hiring Hub** model-driven app.
 
     ```text
-    Summarize resume RXXXXX
+    Summarize the key qualifications, experience, and skills of the candidate whose resume is identified as R#####. Focus on education, work history, relevant skills, and any notable achievements or certifications.
     ```
 
-    ![Question 1](assets/5.1_07_Question1.png)
+    ![Question 1 for GPT-5 Chat model](assets/5.2_06_GPT5Model.png)
 
-1. A response with the summarized resume is returned. Notice how it is shorter and more concise compared to the previous model's response.
+1. A response with the summarized resume is returned. Notice how the information returned is slightly different to the previous model's response and also provides a suggestion of how it can next be helpful.
 
-    ![Question 1 response](assets/5.1_08_Question1Response.png)
+    ![Question 1 response for GPT-5 Chat model](assets/5.2_07_GPT5_01_Question1Response.png)
 
-1. We'll ask the same second question for a list of interview questions based on the evaluation criteria of a job role, and provide what the potential answers are. Enter the question below.
+    ![Question 1 response for GPT-5 Chat model](assets/5.2_07_GPT5_02_Question1Response.png)  
+
+1. We'll now check if this model follows the date format instructions better than the previous model. Enter the question below.
+
+    ```text
+    When was the upload date?
+    ```
+
+    ![Question 2 response for GPT-5 Chat model](assets/5.2_08_GPT5_Question2Response.png)
+
+    You can see that the model did not correctly follow the date format.
+
+1. We'll ask the same third question for a list of interview questions based on the evaluation criteria of a job role, and provide what the potential answers are. Enter the question below.
 
     ```text
     Can you provide suggestions of questions to ask in an interview for the Power Platform developer role (Job role number J1004) based on its associated evaluation criteria? Can you also please provide what the answers may be for each question?
     ```
 
-    ![Question 2](assets/5.1_09_Question2.png)
+    A response with the suggested list of interview questions is returned by the criteria outlined in the Job Role Dataverse row, and the potential answers a candidate can provide during the interview. Notice how this time,
 
-1. A response with the suggested list of interview questions is returned with the potential answers a candidate can provide during the interview. Notice how this time,
+    - The response is organized under **criteria**, **question** and **answer**
+        - **Criteria**:
+            - This indicates the criteria evaluated
+        - **Question**:
+            - The interview question being evaluated
+        - **Answer**:
+            - This subsection lists points that the agent considers acceptable strong answers in a candidate's response.
 
-    - The response is organized under a **main header** and **subsections**
-        - **Question Header**: 15. Environment Strategy
-            - This indicates the interview question being evaluated
-                - How do you structure environments for enterprise deployments?
-        - **Strong Answer Indicators**:
-            - This subsection lists key points that the agent considers strong or desirable in a candidate's response.
+    ![Question 3 response for GPT-5 Chat model](assets/5.2_09_GPT5_01_Question3Response.png)
 
-       ![Question 2 response](assets/5.1_10_01_Question2Response.png)
+1. The model also provides a suggestion of how it can tailor questions to a resume, and also includes a reference to the resume.
 
-       ![Question 2 response](assets/5.1_10_02_Question2Response.png)
+    ![Suggestions on how the model can next be helpful](assets/5.2_09_GPT5_02_Question3Response.png)
+
+1. Let's now change the agent's model to one of the external models.
+
+    > [!IMPORTANT]
+    >
+    > You need to make sure you have the settings enabled for `Allow Preview & Experimental Models` and `Allow External Models` as [outlined earlier](index.md/#%F0%9F%94%90-admin-controls-for-ai-model-selection) in this mission.
+    >
+    > If you don't have admin rights and cannot enable the settings, you can skip the hands-on steps for the remainder of this exercise.
+
+    In the **Overview** tab select the **chevron** icon and from the list of **Anthropic** models, select **Claude Sonnet 4.5 (Experimental)**.
+
+    A confirmation message will appear shortly to inform you that the agent model has been updated. Let's now test the responses of this model by starting a new test session.
+
+1. Enter the following question below. Use a **Resume Number** value from your existing active resumes in the **Hiring Hub** model-driven app.
+
+    ```text
+    Summarize the key qualifications, experience, and skills of the candidate whose resume is identified as R#####. Focus on education, work history, relevant skills, and any notable achievements or certifications.
+    ```
+
+    ![Question 1 for Claude Sonnet 4.5 model](assets/5.2_10_ClaudeSonnet4.5Model.png)
+
+    We can also see the thought process of the model as it's generating its response.
+
+    ![Thought process of the model](assets/5.2_11_ThoughtProcess.png)
+
+1. The response this time is more concise and we can see that the date format was also correctly followed.
+
+    ![Question 1 response for Claude Sonnet 4.5 model](assets/5.2_12_Question1Response.png)
+
+1. We'll still ask the same second question to verify that the date format is being correctly followed since we tested this with the two previous models.
+
+    ```text
+    When was the upload date?
+    ```
+
+    ![Question 2 response for Claude Sonnet 4.5 model](assets/5.2_13_Question2Response.png)
+
+    You can see that the date format was correctly followed.
+
+1. We'll ask the same third question for a list of interview questions based on the evaluation criteria of a job role, and provide what the potential answers are. Enter the question below.
+
+    ```text
+    Can you provide suggestions of questions to ask in an interview for the Power Platform developer role (Job role number J1004) based on its associated evaluation criteria? Can you also please provide what the answers may be for each question?
+    ```
+
+    A response with the suggested list of interview questions is returned by the criteria outlined in the Job Role Dataverse row, and the potential answers a candidate can provide during the interview. Notice how this time,
+
+    - The response is organized under **criteria**, **question** and **answer**
+        - **Criteria**:
+            - This indicates the criteria evaluated
+        - **Question**:
+            - The interview question being evaluated
+        - **Answer**:
+            - This provides a suggested sample answer and notice how the answer is in _first person_, where it's outlining the expected answer from the candidate to the question asked.
+
+    ![Question 3 response for Claude Sonnet 4.5 model](assets/5.2_14_01_Question3Response.png)
+
+    ![Question 3 response for Claude Sonnet 4.5 model](assets/5.2_14_02_Question3Response.png)
+
+    And that's the end of this lab!
+
+    > [!NOTE] EXPLORE MODELS
+    > Try experimenting with different models. Some perform better at reasoning, others at creativity, and models like Anthropic excel at following detailed response instructions. That’s why it's worth testing multiple models to find the best fit for your specific scenario.
 
 ## ✅ Mission Complete
 
 Congratulations! 👏🏻 Excellent work, Operative.
 
-You learned about the differences in the available models and how it affects your agent output. This enables the **Interview Agent** to be equipped in answering questions and inquiries using the power of the selected model.
+You learned about response formatting, the strengths of different available models, and how those choices impact your agent's output. This enables the **Interview Agent** to be equipped in answering questions and inquiries using the power of the selected model.
 
 This is the end of **Lab 05 - Understanding Agent Models**, select the link below to move to the next mission.
 
