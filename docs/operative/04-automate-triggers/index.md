@@ -999,7 +999,7 @@ This enables the **Hiring Agent** to work autonomously whenever resumes are rece
 
 This is the end of **Lab 04 - Automating candidate application emails**, select the link below to move to the next mission.
 
-⏭️ Move to mission [**Understanding Agent Models**](../05-model-selection/index.md)
+⏭️ Move to mission [**Understanding Agent Models and Response Formatting**](../05-model-selection/index.md)
 
 ## 📚 Tactical Resources
 

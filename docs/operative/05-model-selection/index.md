@@ -7,7 +7,7 @@ next:
   link: '/operative/06-ai-safety'
 ---
 
-# Understanding Agent Models
+# Understanding Agent Models and Response Formatting
 
 ## 🕵️‍♂️ CODENAME: `OPERATION ARCHETYPE`
 
@@ -19,7 +19,7 @@ Welcome back, Agent. In [Mission 02](../02-agent-instructions/index.md),you lear
 
 Now it’s time to choose the brain.
 
-In **Operation Archetype**, you’ll learn how to select the right AI model for your agent and how to test model changes to see the impact on response quality, structure, and depth. Different models can respond faster or slower, be more concise or more detailed, and handle complex reasoning differently.
+In **Operation Archetype**, you’ll learn how to select the right AI model for your agent and how to test model changes to see the impact on response quality, structure, and depth. Different models can respond faster or slower, be more concise or more detailed, and handle complex reasoning differently. You'll also learn about crafting response formats that resonate with users on a human level.
 
 By the end of this mission, you’ll be able to confidently choose a model based on your scenario and validate that choice by comparing results.
 
@@ -30,6 +30,7 @@ In this mission, you'll learn:
 1. How to understand and select the optimal AI model for your agent's use case
 1. How to compare different model capabilities and performance characteristics
 1. How to switch your agent’s model
+1. How to configure response formatting to enhance readability and user experience
 1. How to test and evaluate differences in output when you change models
 
 ## 🤔 What is the Agent Model?
