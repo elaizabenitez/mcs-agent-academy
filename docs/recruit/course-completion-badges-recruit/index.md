@@ -153,7 +153,7 @@ More missions are coming.
 🎖 Congratulations, Recruit.  
 You didn’t just watch content—you *built something*.
 
-Next up: **[Operative training](/docs/operative/index.md)**.
+Next up: **Operative training**.
 
 ## 📚 Tactical Resources
 
