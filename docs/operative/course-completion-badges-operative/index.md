@@ -97,12 +97,14 @@ Include **three screenshots**, clearly visible and unedited:
 > ⚠️ Blurry screenshots, cropped environment names, or missing info will result in a validation comment and delay.
 >
 > Click the **Paste, drop or add files here** button in the Final Solutions Screenshots field to add your images. Do not link to a document (we won't have access)
+>
+> If you can't fit all the details on one screenshot (instructions, knowledge, tools, agents, etc), you can upload multiple screenshots.
 
    ![Upload Image](./assets/uploadimage.png)
 
 ### 3. 🧾 Complete the Badge Validation Form
 
-👉 **[Badge Validation Form](https://aka.ms/agent-academy-operatitve/form)**
+👉 **[Badge Validation Form](https://aka.ms/agent-academy-operative/form)**
 
 This form:
 
@@ -161,7 +163,7 @@ You didn’t just watch content—you *built something*.
 
 Learn more about Power Platform Advocacy:
 
-* ⚡ [Power Platform Advocacy Hub](https://aka.ms/power-advocates)
+⚡ [Power Platform Advocacy Hub](https://aka.ms/power-advocates)
 
 <!-- markdownlint-disable-next-line MD033 -->
 <img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/operative/final-mission" alt="Analytics" />
