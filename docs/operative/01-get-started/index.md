@@ -207,11 +207,20 @@ Now you are done with the setup of the prerequisites, it's time for the actual w
 
     ![Agent Tab](./assets/01-agenttab.png)
 
-1. Select **New Agent**
+1. Select the chevron down icon (arrow down) next to *Create blank agent* and select **Advanced create**
 
     ![New Agent](./assets/01-newagent.png)
 
-1. Select **Configure**
+1. For *solution*, select **Operative** (this is the solution you just imported)
+1. For *schema name*, enter **hiringagent** behind the *ppa_* prefix
+
+    ![Agent settings](./assets/01-agentsettings.png)
+
+1. Select **Confirm and create**
+
+    This should create your agent in the *Operative* solution. It will create an agent named *Agent 1*. This is not a very useful name, so let's change that!
+
+1. In the *Details* card at the top, select **Edit**
 1. For **Name**, enter:
 
     ```text
@@ -224,21 +233,11 @@ Now you are done with the setup of the prerequisites, it's time for the actual w
     Central orchestrator for all hiring activities
     ```
 
-    ![Configuration](./assets/01-configname.png)
+    ![Configuration](./assets/01-editdetails.png)
 
-1. Select the **...** next to the *Create* button on the top right corner
-1. Select **Update advanced settings**
+1. Select **Save** to save the agent (it might take a while before the changes are visible)
 
-    ![Settings](./assets/01-advancedsettings.png)
-
-1. As **Solution**, select `Operative`
-1. Select **Update**
-
-    ![Update Solution Settings](./assets/01-solutionsettings.png)
-
-1. Select **Create** in the top right corner
-
-This will create the Hiring Agent for you, which you will use throughout this Operative course.
+This agent you will use in other missions in the Operative course!
 
 ## 🎉 Mission Complete
 
