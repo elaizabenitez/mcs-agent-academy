@@ -316,7 +316,7 @@ Let's compare the responses of the GPT-4.1 default model with the GPT-5 Auto pre
 1. Start a new test session in the **Interview Agent** and enter the following question below. Use a **Resume Number** value from your existing active resumes in the **Hiring Hub** model-driven app.
 
     ```text
-    Please tell me about RXXXXX
+    Summarize resume RXXXXX
     ```
 
     ![Enter first question for GPT-4.1 default model](assets/5.2_01_GPT4.1Model.png)

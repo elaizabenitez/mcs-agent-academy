@@ -36,6 +36,7 @@ bld/
 [Oo]ut/
 [Ll]og/
 [Ll]ogs/
+reports/
 
 # Build results on 'Bin' directories
 **/[Bb]in/*
