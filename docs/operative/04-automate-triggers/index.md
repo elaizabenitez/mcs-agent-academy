@@ -543,6 +543,9 @@ To complete this lab you will need to:
 
 1. Select **Edit** in the **Details** section and update the **Plan** to the **Copilot Studio** option.
 
+    > [!NOTE]
+    > Converting the plan to Copilot Studio allows you to manage the event trigger flow in Copilot Studio and consume Copilot Studio capacity instead of Power Automate billing.
+
     Select **Save**.
 
     ![Change Copilot Studio plan](assets/3.1_46_ChangePlanDetails.png)

@@ -80,8 +80,8 @@ AI capabilities evolve rapidly, and Copilot Studio keeps up by offering a range 
 | **GPT‑5 Chat** | General | Preview | Advanced conversational abilities with strong context retention; produces human-like dialogue. | Employee self-service chatbots; IT/HR helpdesk assistants; interactive agents requiring natural, human-like responses. |
 | **GPT‑5 Auto** | Auto | General | Optimized for orchestrating multi-step workflows; can automate actions across systems (not just chit-chat). | End-to-end process automation (e.g. ticket creation to resolution); multi-step task sequences across apps; "digital project manager" scenarios. |
 | **GPT‑5 Reasoning** | Deep | Preview | - Latest model optimized for complex reasoning (trained up to Oct 2024) - High scores in document understanding and response accuracy | Advanced reasoning tasks where top-tier analytical capability is required (such as extensive planning, interpreting complex data). Again, use cautiously in testing since it’s a preview model. |
-| **GPT‑5.1 Chat** | General | Experimental | Latest experimental conversational model with broad task proficiency; improves on context awareness and responsiveness. | General-purpose Q&A and dialogue tasks leveraging the newest model’s capabilities; versatile chatbot scenarios where enhanced performance is beneficial. |
-| **GPT‑5.1 Reasoning** | Deep | Experimental | Experimental top-tier reasoning model offering maximum depth and accuracy for complex tasks. | Ultra-complex analytical queries or decision support requiring the highest precision (e.g. intricate strategic planning, high-stakes data analysis). |
+| **GPT‑5.2 Chat** | General | Experimental | Latest experimental conversational model with with further improved context awareness; broad task proficiency. | General-purpose Q&A and dialogue tasks leveraging the newest model's capabilities; complex chatbot interactions where enhanced performance is beneficial. |
+| **GPT‑5.2 Reasoning** | Deep | Experimental | Experimental top-tier reasoning model offering maximum depth and accuracy for complex tasks. | Ultra-complex analytical queries or decision support requiring the highest precision (e.g. intricate strategic planning, high-stakes data analysis). |
 
 > [!WARNING]
 >
@@ -174,7 +174,7 @@ Here are the key admin controls affecting which models a maker/developer can sel
 
 ![Allow Anthropic provider setting in Microsoft 365 admin center](./assets/5.0_05_AllowAnthropicProvider.png)
 
-    An admin can also toggle whether external models are available in a given environment in the Power Platform admin center.
+   An admin can also toggle whether external models are available in a given environment in the Power Platform admin center.
 
 ![Enable external model setting](./assets/5.0_03_EnableExternalModelsSetting.png)
 
@@ -299,43 +299,77 @@ In this lab, you’ll compare responses, including the formatting, from three di
     ```text
     For all agent responses to questions, follow these rules exactly:
 
-    ## Dates
-    - All dates MUST always be formatted as 'MMM dd, yyyy'. Example: Jan 10, 2026
+    # Dates
 
-    ## Resume information
+    - All dates MUST always be formatted as 'MMM dd, yyyy'. Example:  
+
+    # Resume information
+
     - For resume information, start with the Resume Number as the header in bold, followed by bullet points.
-    - All references to dates must be formatted as 'MMM dd, yyyy'. Example: 'January 7, 2026' becomes 'Jan 07, 2026'
+    - Example:
     ```
 
-1. **Save** and exit from **Settings**.
+    ![Response formatting instructions of agent](assets/5.1_01_SettingsResponses.png)
+
+1. For the two date format examples in the instructions, we're going to add a Power Fx formula. Click after the first `Example:` and select the **Power Fx** icon. Copy and paste the following formula, then select **Insert**.
+
+    ```text
+    Text(DateTimeValue("2026-01-06T13:45:54Z"), "MMM dd, yyyy")
+    ```
+
+    ![Inserting a Power Fx formula](assets/5.1_02_PowerFxFormula.png)
+
+1. You'll see the formula added in the instructions for the first example. Repeat the same steps for the second `Example:` and select **Save** to save the response formatting settings.
+
+    ![Power Fx formula added to response formatting instructions](assets/5.1_03_PowerFxFormulasAdded.png)
+
+1. Exit from **Settings**.
 
 ### Lab 5.2 - Compare model responses and formatting
 
-Let's compare the responses of the GPT-4.1 default model with the GPT-5 Auto preview model.
+Let's compare the responses of the GPT-4.1 default model with the GPT-5 Chat preview model and the Claude Sonnet 4.5 experimental model.
+
+> [!WARNING] Responses may differ across test sessions
+>
+> Each conversation in a test session can produce slightly different responses, since the selected generative AI model creates answers dynamically rather than returning fixed replies.
 
 1. Start a new test session in the **Interview Agent** and enter the following question below. Use a **Resume Number** value from your existing active resumes in the **Hiring Hub** model-driven app.
 
     ```text
-    Summarize resume RXXXXX
+    Summarize the key qualifications, experience, and skills of the candidate whose resume is identified as R#####. Focus on education, work history, relevant skills, and any notable achievements or certifications.
     ```
 
     ![Enter first question for GPT-4.1 default model](assets/5.2_01_GPT4.1Model.png)
 
-1. A summary of the resume will next be displayed. How did it align with our response formatting? We can see the output starts with the Resume Number in bold, followed by bullet points. There's also a reference to the Dataverse row for the **Active Resumes** system view.
+1. A summary of the resume will next be displayed. How did it align with our response formatting? We can see the output starts with the Resume Number in bold, followed by bullet points.
 
-    ![Question 1 response for GPT-4.1 default model](assets/5.2_02_GPT4.1_Question1Response.png)
+    ![Question 1 response for GPT-4.1 default model](assets/5.2_02_GPT4.1_FormatCheck.png)
 
-    Except the date format wasn't followed by the model in the summary, highlighted in yellow in the screenshot. Let's try another date related question to see if the model's answer follows the response format we instructed for dates (`MMM dd, yyyy`).
+    It's also good to check the agent's response matches whats in the Dataverse resume row and the PDF file.
 
-1. Enter the question below.
+    ![Certifications returned by the model](assets/5.2_02_GPT4.1_Question1Response.png)
+
+    We can see that the certifications are correct when reviewing the associated Resume file.
+
+    ![Verify certifications in Resume file](assets/5.2_02_GPT4.1_Question1ResponseCheck.png)
+
+    Let's do one more check by reviewing the skills listed.
+
+    ![Skills returned by the model](assets/5.2_03_GPT4.1_Question1Response.png)
+
+    The skills returned by the model are correct when reviewing the associated Resume file. Great!
+
+    ![Verify skills in Resume file](assets/5.2_03_GPT4.1_Question1ResponseCheck.png)
+
+1. Next, we'll verify the date formatting is followed by the agent. Enter the question below.
 
     ```text
     When was the upload date?
     ```
 
-    ![Question 2 response for GPT-4.1 default model](assets/5.2_03_GPT4.1_Question2Response.png)
+    ![Question 2 response for GPT-4.1 default model](assets/5.2_04_GPT4.1_Question2Response.png)
 
-    You can see that the model still didn't respond using the date format.
+    You can see that the model did not correctly follow the date format.
 
 1. We'll ask another question for suggestions of interview questions to ask based on the evaluation criteria of a job role, and provide what the potential answers are. Enter the question below.
 
@@ -343,39 +377,39 @@ Let's compare the responses of the GPT-4.1 default model with the GPT-5 Auto pre
     Can you provide suggestions of questions to ask in an interview for the Power Platform developer role (Job role number J1004) based on its associated evaluation criteria? Can you also please provide what the answers may be for each question?
     ```
 
-    The returned response lists interview questions in numbered format. Each question is followed by a `Model Answer`. Notice how the answer is in third person, where it's outlining the expected answers from the candidate to the question asked.
+    The returned response lists interview questions by evaluation criteria. Each question is followed by a `Model Answer`. Notice how the answer is in _first person_, where it's outlining the expected answers from the candidate to the question asked.
 
-    ![Question 3 response for GPT-4.1 default model](assets/5.2_04_GPT4.1_01_Question3Response.png)
+    ![Question 3 response for GPT-4.1 default model](assets/5.2_05_GPT4.1_01_Question3Response.png)
 
-    ![Question 3 response for GPT-4.1 default model](assets/5.2_04_GPT4.1_02_Question3Response.png)
+    ![Question 3 response for GPT-4.1 default model](assets/5.2_05_GPT4.1_02_Question3Response.png)
 
 1. Let's now change the agent's model. In the **Overview** tab select the **chevron** icon and from the list of **OpenAI** models, select **GPT-5 Auto**.
 
     A confirmation message will appear shortly to inform you that the agent model has been updated. Let's now test the responses of this model by starting a new test session.
 
-1. Enter the following question below. Use a **Resume Number** value from your existing active resumes in the **Hiring Hub** model-driven app.
+    Enter the following question below. Use a **Resume Number** value from your existing active resumes in the **Hiring Hub** model-driven app.
 
     ```text
-    Summarize resume RXXXXX
+    Summarize the key qualifications, experience, and skills of the candidate whose resume is identified as R#####. Focus on education, work history, relevant skills, and any notable achievements or certifications.
     ```
 
-    ![Question 1 for GPT-5 Auto preview model](assets/5.2_05_GPT5Model.png)
+    ![Question 1 for GPT-5 Auto preview model](assets/5.2_06_GPT5Model.png)
 
-1. A response with the summarized resume is returned. Notice how it is shorter and more concise compared to the previous model's response.
+1. A response with the summarized resume is returned. Notice how the information returned is slightly different to the previous model's response and also provides a suggestion of how it can next be helpful.
 
-    ![Question 1 response for GPT-5 Auto preview model](assets/5.2_06_GPT5_Question1Response.png)
+    ![Question 1 response for GPT-5 Auto preview model](assets/5.2_07_GPT5_01_Question1Response.png)
 
-    Except the date format wasn't followed by the model in the summary, highlighted in yellow in the screenshot. Let's try another date related question to see if the model's answer follows the response format we instructed for dates (`MMM dd, yyyy`).
+    ![Question 1 response for GPT-5 Auto preview model](assets/5.2_07_GPT5_02_Question1Response.png)  
 
-1. Enter the question below.
+1. We'll now check if this model follows the date format instructions better than the previous model. Enter the question below.
 
     ```text
     When was the upload date?
     ```
 
-    ![Question 2 response for GPT-5 Auto preview model](assets/5.2_07_GPT5_Question1Response.png)
+    ![Question 2 response for GPT-5 Auto preview model](assets/5.2_08_GPT5_Question2Response.png)
 
-    You can see that the model correctly responded using the date format.
+    You can see that the model did not correctly follow the date format.
 
 1. We'll ask the same third question for a list of interview questions based on the evaluation criteria of a job role, and provide what the potential answers are. Enter the question below.
 
@@ -385,35 +419,84 @@ Let's compare the responses of the GPT-4.1 default model with the GPT-5 Auto pre
 
     A response with the suggested list of interview questions is returned with by the criteria outlined in the Job Role Dataverse row, and the potential answers a candidate can provide during the interview. Notice how this time,
 
-    - The response is organized under **criteria**, **question** and **subsections**
-        - **Criteria**: Certifications (10%)
+    - The response is organized under **criteria**, **question** and **answer**
+        - **Criteria**:
             - This indicates the criteria evaluated
-        - **Question**: What from PL-400/PL-600 changed your day-to-day practice?
-            - This indicates the interview question being evaluated
-        - **Strong Answer Indicators, Acceptable and Red Flags**:
-            - This subsection lists points that the agent considers strong, acceptable or not acceptable in a candidate's response.
+        - **Question**:
+            - The interview question being evaluated
+        - **Answer**:
+            - This subsection lists points that the agent considers acceptable strong answers in a candidate's response.
 
-       ![Question 3 response for GPT-5 Auto preview model](assets/5.2_08_GPT5_01_Question3Response.png)
+    ![Question 3 response for GPT-5 Auto preview model](assets/5.2_09_GPT5_01_Question3Response.png)
 
-1. The model also provides a suggestion of how it can tailor questions to a resume or application, and also includes the reference format based on the agent's instructions we set up in [Mission 03](../03-multi-agent/index.md): Building multi-agent systems.
+1. The model also provides a suggestion of how it can tailor questions to a resume, and also includes a reference to the resume.
 
-       ![Question 3 response for for GPT-5 Auto preview model](assets/5.2_08_GPT5_02_Question3Response.png)
+    ![Suggestions on how the model can next be helpful](assets/5.2_09_GPT5_02_Question3Response.png)
 
-1. Let's now change the agent's model to one of the external models. In the **Overview** tab select the **chevron** icon and from the list of **Anthropic** models, select **Claude Sonnet 4.5 (Experimental)**.
+1. Let's now change the agent's model to one of the external models.
+
+    > [!IMPORTANT]
+    >
+    > You need to make sure you have the settings enabled for `Allow Preview & Experimental Models` and `Allow Preview & Experimental Models` as [outlined earlier](index.md/#%F0%9F%94%90-admin-controls-for-ai-model-selection) in this mission.
+    >
+    > If you don't have admin rights and cannot enable the settings, you can skip the hands-on steps for the remainder of this exercise.
+
+    In the **Overview** tab select the **chevron** icon and from the list of **Anthropic** models, select **Claude Sonnet 4.5 (Experimental)**.
 
     A confirmation message will appear shortly to inform you that the agent model has been updated. Let's now test the responses of this model by starting a new test session.
 
 1. Enter the following question below. Use a **Resume Number** value from your existing active resumes in the **Hiring Hub** model-driven app.
 
     ```text
-    Summarize resume RXXXXX
+    Summarize the key qualifications, experience, and skills of the candidate whose resume is identified as R#####. Focus on education, work history, relevant skills, and any notable achievements or certifications.
     ```
+
+    ![Question 1 for Claude Sonnet 4.5 experimental model](assets/5.2_10_ClaudeSonnet4.5Model.png)
+
+    We can also see the thought process of the model as it's generating its response.
+
+    ![Thought process of the model](assets/5.2_11_ThoughtProcess.png)
+
+1. The response this time is more concise and we can see that the date format was also correctly followed.
+
+    ![Question 1 response for Claude Sonnet 4.5 experimental model](assets/5.2_12_Question1Response.png)
+
+1. We'll still ask the same second question to verify that the date format is being correctly followed since we tested this with the two previous models.
+
+    ![Question 2 response for Claude Sonnet 4.5 experimental model](assets/5.2_13_Question2Response.png)
+
+    You can see that the date format was correctly followed.
+
+1. We'll ask the same third question for a list of interview questions based on the evaluation criteria of a job role, and provide what the potential answers are. Enter the question below.
+
+    ```text
+    Can you provide suggestions of questions to ask in an interview for the Power Platform developer role (Job role number J1004) based on its associated evaluation criteria? Can you also please provide what the answers may be for each question?
+    ```
+
+    A response with the suggested list of interview questions is returned with by the criteria outlined in the Job Role Dataverse row, and the potential answers a candidate can provide during the interview. Notice how this time,
+
+    - The response is organized under **criteria**, **question** and **answer**
+        - **Criteria**:
+            - This indicates the criteria evaluated
+        - **Question**:
+            - The interview question being evaluated
+        - **Answer**:
+            - This provides a suggested sample answer and notice how the answer is in _first person_, where it's outlining the expected answer from the candidate to the question asked.
+
+    ![Question 3 response for GPT-5 Auto preview model](assets/5.2_14_01_Question3Response.png)
+
+    ![Question 3 response for GPT-5 Auto preview model](assets/5.2_14_02_Question3Response.png)
+
+    And that's the end of this lab!
+
+    > [!NOTE] EXPLORE MODELS
+    > Try experimenting with different models. Some perform better at reasoning, others at creativity, and models like Anthropic excel at following detailed response instructions. That’s why it's worth testing multiple models to find the best fit for your specific scenario.
 
 ## ✅ Mission Complete
 
 Congratulations! 👏🏻 Excellent work, Operative.
 
-You learned about the differences in the available models and how it affects your agent output. This enables the **Interview Agent** to be equipped in answering questions and inquiries using the power of the selected model.
+You learned about response formatting, the strengths of different available models, and how those choices impact your agent's output. This enables the **Interview Agent** to be equipped in answering questions and inquiries using the power of the selected model.
 
 This is the end of **Lab 05 - Understanding Agent Models**, select the link below to move to the next mission.
 
