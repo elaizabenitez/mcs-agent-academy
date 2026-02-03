@@ -71,22 +71,24 @@ The table below explains the availability tags - [source](https://learn.microsof
 | **Default** | The default model for all agents, and usually the best performing generally available model. The default model is periodically upgraded as new, more capable models become generally available. Agents also use the default model as a fallback if a selected model is turned off or unavailable. |
 | **Retired** | When a new model becomes the default model, the old default model is retired. You can still use the retired model for up to one month after retirement. For more information, see [Continue using a retired AI model](https://learn.microsoft.com/microsoft-copilot-studio/authoring-retired-model). |
 
+It's always a good idea to review the [list of public availability of models](https://learn.microsoft.com/en-us/microsoft-copilot-studio/authoring-select-agent-model#public-availability) supported by Copilot Studio.
+
 #### OpenAI models
 
-AI capabilities evolve rapidly, and Copilot Studio keeps up by offering a range of Azure OpenAI models. As of 2025, the primary models to choose from include OpenAI's GPT-4.1, and the latest GPT-5 previews. The following table summarizes the main choices and what each is best suited for:
+AI capabilities evolve rapidly, and Copilot Studio keeps up by offering a range of Azure OpenAI models. As of 2025, the primary models to choose from include OpenAI's GPT-4.1, and the latest GPT-5 models. The following table summarizes the main choices and what each is best suited for:
 
-| Model Version | Category | Availability | Key Strengths | Ideal Use Cases |
+| Model Version | Category | Availability (United States) | Key Strengths | Ideal Use Cases |
 | ------- | ---------- | ---------- | ------------- | ----------- |
 | **GPT-4.1** | General | Default | Higher accuracy and reasoning than GPT-4o; excellent at complex text analysis (text-only model). | Analyzing detailed documents (policies, reports); complex knowledge-base Q&A; scenarios where precision is critical. |
-| **GPT‑5 Chat** | General | Preview | Advanced conversational abilities with strong context retention; produces human-like dialogue. | Employee self-service chatbots; IT/HR helpdesk assistants; interactive agents requiring natural, human-like responses. |
-| **GPT‑5 Auto** | Auto | General | Optimized for orchestrating multi-step workflows; can automate actions across systems (not just chit-chat). | End-to-end process automation (e.g. ticket creation to resolution); multi-step task sequences across apps; "digital project manager" scenarios. |
+| **GPT‑5 Chat** | General | GA | Advanced conversational abilities with strong context retention; produces human-like dialogue. | Employee self-service chatbots; IT/HR helpdesk assistants; interactive agents requiring natural, human-like responses. |
+| **GPT‑5 Auto** | Auto | Preview | Optimized for orchestrating multi-step workflows; can automate actions across systems (not just chit-chat). | End-to-end process automation (e.g. ticket creation to resolution); multi-step task sequences across apps; "digital project manager" scenarios. |
 | **GPT‑5 Reasoning** | Deep | Preview | - Latest model optimized for complex reasoning (trained up to Oct 2024) - High scores in document understanding and response accuracy | Advanced reasoning tasks where top-tier analytical capability is required (such as extensive planning, interpreting complex data). Again, use cautiously in testing since it’s a preview model. |
-| **GPT‑5.2 Chat** | General | Experimental | Latest experimental conversational model with with further improved context awareness; broad task proficiency. | General-purpose Q&A and dialogue tasks leveraging the newest model's capabilities; complex chatbot interactions where enhanced performance is beneficial. |
+| **GPT‑5.2 Chat** | General | Experimental | Latest experimental conversational model with further improved context awareness; broad task proficiency. | General-purpose Q&A and dialogue tasks leveraging the newest model's capabilities; complex chatbot interactions where enhanced performance is beneficial. |
 | **GPT‑5.2 Reasoning** | Deep | Experimental | Experimental top-tier reasoning model offering maximum depth and accuracy for complex tasks. | Ultra-complex analytical queries or decision support requiring the highest precision (e.g. intricate strategic planning, high-stakes data analysis). |
 
 > [!WARNING]
 >
-> - Experimental/preview models (like GPT-5 Chat) are accessible for testing new capabilities before they’re production-ready. They may have limited testing and higher variability in performance.
+> - Experimental/preview models (like GPT-5 Auto) are accessible for testing new capabilities before they’re production-ready. They may have limited testing and higher variability in performance.
 > - They are not recommended for production use because of possible instability (variable quality, latency, or even time-outs). Always review any _Preview_ model’s limitations and consider using them only in non-critical environments. Use them in _Sandbox_ or _Developer_ environments. If you do publish an agent with an experimental model, usage will still be billed at that model’s established rate.
 
 #### Anthropic models (external)
@@ -100,10 +102,10 @@ OpenAI remains as the default model for new agents in Copilot Studio and you hav
 
 Both are available in Microsoft Copilot Studio as opt-in preview (Frontier Program) models rather than General Availability (GA), meaning they’re for early experimental use only. The table below compares their status, strengths, and ideal use cases in the Copilot Studio context:
 
-| Model Version | Status | Key Strengths | Ideal Use Cases |
-| ------- | ---------- | ------------- | ----------- |
-| **Claude Sonnet 4.5** | Experimental | Excels at code-related tasks and complex “agent” workflows; strong at tool use and step-by-step reasoning. | Advanced software development assistance (code generation & debugging); building multi-step autonomous agents; tasks requiring integration with external tools or systems. |
-| **Claude Opus 4.1** | Experimental | Specialized for intensive analysis and structured problem-solving. | In-depth data analysis and research projects; complex reasoning scenarios (e.g. compliance auditing, elaborate planning) where thoroughness is paramount. |
+| Model Version | Category | Availability (United States) | Key Strengths | Ideal Use Cases |
+| ------- | ---------- | ---------- | ------------- | ----------- |
+| **Claude Sonnet 4.5** | General | Preview | Excels at code-related tasks and complex “agent” workflows; strong at tool use and step-by-step reasoning. | Advanced software development assistance (code generation & debugging); building multi-step autonomous agents; tasks requiring integration with external tools or systems. |
+| **Claude Opus 4.1** | Deep | Experimental | Specialized for intensive analysis and structured problem-solving. | In-depth data analysis and research projects; complex reasoning scenarios (e.g. compliance auditing, elaborate planning) where thoroughness is paramount. |
 
 > [!WARNING]
 >
@@ -320,7 +322,7 @@ In this lab, you’ll compare responses, including the formatting, from three di
 
     ![Inserting a Power Fx formula](assets/5.1_02_PowerFxFormula.png)
 
-1. You'll see the formula added in the instructions for the first example. Repeat the same steps for the second `Example:` and select **Save** to save the response formatting settings.
+1. You'll see the formula added in the instructions for the first example. Repeat the same steps for the second `Example:` by copying and pasting the Power Fx formula, select **Insert** and select **Save** to save the response formatting settings.
 
     ![Power Fx formula added to response formatting instructions](assets/5.1_03_PowerFxFormulasAdded.png)
 
@@ -340,13 +342,13 @@ Let's compare the responses of the GPT-4.1 default model with the GPT-5 Chat pre
     Summarize the key qualifications, experience, and skills of the candidate whose resume is identified as R#####. Focus on education, work history, relevant skills, and any notable achievements or certifications.
     ```
 
-    ![Enter first question for GPT-4.1 default model](assets/5.2_01_GPT4.1Model.png)
+    ![Enter first question for GPT-4.1 model](assets/5.2_01_GPT4.1Model.png)
 
 1. A summary of the resume will next be displayed. How did it align with our response formatting? We can see the output starts with the Resume Number in bold, followed by bullet points.
 
-    ![Question 1 response for GPT-4.1 default model](assets/5.2_02_GPT4.1_FormatCheck.png)
+    ![Question 1 response for GPT-4.1  model](assets/5.2_02_GPT4.1_FormatCheck.png)
 
-    It's also good to check the agent's response matches whats in the Dataverse resume row and the PDF file.
+    It's also good to check the agent's response matches what's in the Dataverse resume row and the PDF file.
 
     ![Certifications returned by the model](assets/5.2_02_GPT4.1_Question1Response.png)
 
@@ -368,7 +370,7 @@ Let's compare the responses of the GPT-4.1 default model with the GPT-5 Chat pre
     When was the upload date?
     ```
 
-    ![Question 2 response for GPT-4.1 default model](assets/5.2_04_GPT4.1_Question2Response.png)
+    ![Question 2 response for GPT-4.1 model](assets/5.2_04_GPT4.1_Question2Response.png)
 
     You can see that the model did not correctly follow the date format.
 
@@ -380,9 +382,9 @@ Let's compare the responses of the GPT-4.1 default model with the GPT-5 Chat pre
 
     The returned response lists interview questions by evaluation criteria. Each question is followed by a `Model Answer`. Notice how the answer is in _first person_, where it's outlining the expected answers from the candidate to the question asked.
 
-    ![Question 3 response for GPT-4.1 default model](assets/5.2_05_GPT4.1_01_Question3Response.png)
+    ![Question 3 response for GPT-4.1 model](assets/5.2_05_GPT4.1_01_Question3Response.png)
 
-    ![Question 3 response for GPT-4.1 default model](assets/5.2_05_GPT4.1_02_Question3Response.png)
+    ![Question 3 response for GPT-4.1 model](assets/5.2_05_GPT4.1_02_Question3Response.png)
 
 1. Let's now change the agent's model. In the **Overview** tab select the **chevron** icon and from the list of **OpenAI** models, select **GPT-5 Chat**.
 
@@ -394,13 +396,13 @@ Let's compare the responses of the GPT-4.1 default model with the GPT-5 Chat pre
     Summarize the key qualifications, experience, and skills of the candidate whose resume is identified as R#####. Focus on education, work history, relevant skills, and any notable achievements or certifications.
     ```
 
-    ![Question 1 for GPT-5 Auto preview model](assets/5.2_06_GPT5Model.png)
+    ![Question 1 for GPT-5 Chat model](assets/5.2_06_GPT5Model.png)
 
 1. A response with the summarized resume is returned. Notice how the information returned is slightly different to the previous model's response and also provides a suggestion of how it can next be helpful.
 
-    ![Question 1 response for GPT-5 Auto preview model](assets/5.2_07_GPT5_01_Question1Response.png)
+    ![Question 1 response for GPT-5 Chat model](assets/5.2_07_GPT5_01_Question1Response.png)
 
-    ![Question 1 response for GPT-5 Auto preview model](assets/5.2_07_GPT5_02_Question1Response.png)  
+    ![Question 1 response for GPT-5 Chat model](assets/5.2_07_GPT5_02_Question1Response.png)  
 
 1. We'll now check if this model follows the date format instructions better than the previous model. Enter the question below.
 
@@ -408,7 +410,7 @@ Let's compare the responses of the GPT-4.1 default model with the GPT-5 Chat pre
     When was the upload date?
     ```
 
-    ![Question 2 response for GPT-5 Auto preview model](assets/5.2_08_GPT5_Question2Response.png)
+    ![Question 2 response for GPT-5 Chat model](assets/5.2_08_GPT5_Question2Response.png)
 
     You can see that the model did not correctly follow the date format.
 
@@ -418,7 +420,7 @@ Let's compare the responses of the GPT-4.1 default model with the GPT-5 Chat pre
     Can you provide suggestions of questions to ask in an interview for the Power Platform developer role (Job role number J1004) based on its associated evaluation criteria? Can you also please provide what the answers may be for each question?
     ```
 
-    A response with the suggested list of interview questions is returned with by the criteria outlined in the Job Role Dataverse row, and the potential answers a candidate can provide during the interview. Notice how this time,
+    A response with the suggested list of interview questions is returned by the criteria outlined in the Job Role Dataverse row, and the potential answers a candidate can provide during the interview. Notice how this time,
 
     - The response is organized under **criteria**, **question** and **answer**
         - **Criteria**:
@@ -428,7 +430,7 @@ Let's compare the responses of the GPT-4.1 default model with the GPT-5 Chat pre
         - **Answer**:
             - This subsection lists points that the agent considers acceptable strong answers in a candidate's response.
 
-    ![Question 3 response for GPT-5 Auto preview model](assets/5.2_09_GPT5_01_Question3Response.png)
+    ![Question 3 response for GPT-5 Chat model](assets/5.2_09_GPT5_01_Question3Response.png)
 
 1. The model also provides a suggestion of how it can tailor questions to a resume, and also includes a reference to the resume.
 
@@ -438,7 +440,7 @@ Let's compare the responses of the GPT-4.1 default model with the GPT-5 Chat pre
 
     > [!IMPORTANT]
     >
-    > You need to make sure you have the settings enabled for `Allow Preview & Experimental Models` and `Allow Preview & Experimental Models` as [outlined earlier](index.md/#%F0%9F%94%90-admin-controls-for-ai-model-selection) in this mission.
+    > You need to make sure you have the settings enabled for `Allow Preview & Experimental Models` and `Allow External Models` as [outlined earlier](index.md/#%F0%9F%94%90-admin-controls-for-ai-model-selection) in this mission.
     >
     > If you don't have admin rights and cannot enable the settings, you can skip the hands-on steps for the remainder of this exercise.
 
@@ -452,7 +454,7 @@ Let's compare the responses of the GPT-4.1 default model with the GPT-5 Chat pre
     Summarize the key qualifications, experience, and skills of the candidate whose resume is identified as R#####. Focus on education, work history, relevant skills, and any notable achievements or certifications.
     ```
 
-    ![Question 1 for Claude Sonnet 4.5 experimental model](assets/5.2_10_ClaudeSonnet4.5Model.png)
+    ![Question 1 for Claude Sonnet 4.5 model](assets/5.2_10_ClaudeSonnet4.5Model.png)
 
     We can also see the thought process of the model as it's generating its response.
 
@@ -460,7 +462,7 @@ Let's compare the responses of the GPT-4.1 default model with the GPT-5 Chat pre
 
 1. The response this time is more concise and we can see that the date format was also correctly followed.
 
-    ![Question 1 response for Claude Sonnet 4.5 experimental model](assets/5.2_12_Question1Response.png)
+    ![Question 1 response for Claude Sonnet 4.5 model](assets/5.2_12_Question1Response.png)
 
 1. We'll still ask the same second question to verify that the date format is being correctly followed since we tested this with the two previous models.
 
@@ -468,7 +470,7 @@ Let's compare the responses of the GPT-4.1 default model with the GPT-5 Chat pre
     When was the upload date?
     ```
 
-    ![Question 2 response for Claude Sonnet 4.5 experimental model](assets/5.2_13_Question2Response.png)
+    ![Question 2 response for Claude Sonnet 4.5 model](assets/5.2_13_Question2Response.png)
 
     You can see that the date format was correctly followed.
 
@@ -478,7 +480,7 @@ Let's compare the responses of the GPT-4.1 default model with the GPT-5 Chat pre
     Can you provide suggestions of questions to ask in an interview for the Power Platform developer role (Job role number J1004) based on its associated evaluation criteria? Can you also please provide what the answers may be for each question?
     ```
 
-    A response with the suggested list of interview questions is returned with by the criteria outlined in the Job Role Dataverse row, and the potential answers a candidate can provide during the interview. Notice how this time,
+    A response with the suggested list of interview questions is returned by the criteria outlined in the Job Role Dataverse row, and the potential answers a candidate can provide during the interview. Notice how this time,
 
     - The response is organized under **criteria**, **question** and **answer**
         - **Criteria**:
@@ -488,9 +490,9 @@ Let's compare the responses of the GPT-4.1 default model with the GPT-5 Chat pre
         - **Answer**:
             - This provides a suggested sample answer and notice how the answer is in _first person_, where it's outlining the expected answer from the candidate to the question asked.
 
-    ![Question 3 response for GPT-5 Auto preview model](assets/5.2_14_01_Question3Response.png)
+    ![Question 3 response for Claude Sonnet 4.5 model](assets/5.2_14_01_Question3Response.png)
 
-    ![Question 3 response for GPT-5 Auto preview model](assets/5.2_14_02_Question3Response.png)
+    ![Question 3 response for Claude Sonnet 4.5 model](assets/5.2_14_02_Question3Response.png)
 
     And that's the end of this lab!
 
