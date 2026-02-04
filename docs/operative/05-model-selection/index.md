@@ -15,7 +15,7 @@ next:
 
 ## 🎯 Mission Brief
 
-Welcome back, Agent. In [Mission 02](../02-agent-instructions/index.md),you learned how strong instructions shape agent behavior.
+Welcome back, Agent. In [Mission 02](../02-agent-instructions/index.md), you learned how strong instructions shape agent behavior.
 
 Now it’s time to choose the brain.
 
@@ -93,7 +93,7 @@ AI capabilities evolve rapidly, and Copilot Studio keeps up by offering a range 
 
 #### Anthropic models (external)
 
-Currently there are two Anthropic models which are currently under Preview, they are accessible in early release environments.
+There are two Anthropic models available.
 
 - **Claude Sonnet 4.5** is Anthropic's newest, coding and agent-focused model.
 - **Claude Opus 4.1** is a reasoning-focused model.
@@ -237,7 +237,7 @@ Copilot Studio generative answers support a subset of Markdown for rich text. He
 | **Bold** | Makes important words or phrases stand out. Use bold to highlight key information or critical values. | **"Your account balance is $1,250."** - The amount is bold so it's immediately noticeable. |
 | _Italics_ | Adds subtle emphasis or denotes special terms. Commonly used for document titles, or to highlight a _phrase_ in a softer way than bold. | _"Please provide additional details for verification."_ - The words “additional details” are italicized to indicate a prompt or placeholder. |
 | Hyperlinks | Inserts clickable links in the response text. Useful for directing users to external articles, internal knowledge base, or any detailed reference. | "Refer to our [Microsoft Surface Warranty and Protection Plans](https://www.microsoft.com/surface/business/warranty-protection-plans-and-support) for more details." - The text "Microsoft Surface Warranty and Protection Plans" is a hyperlink to the web page. |
-| Power Fx expressions | Embeds dynamic content or logic-driven text in the response. Power Fx can pull in variables, do calculations, or enforce formatting (even with regex for validation). This allows parts of the answer to be determined by real-time data or conditions. | "Today is `${Text(Now(), "dddd, mmmm d, yyyy")}`." - This uses a Power Fx formula to insert the current date in a long format, `Friday, October 3, 2025`. You could also use expressions to format numbers, or ensure an output meets a pattern (using regex). |
+| Power Fx expressions | Embeds dynamic content or logic-driven text in the response. Power Fx can pull in variables, do calculations, or enforce formatting (even with regex for validation). This allows parts of the answer to be determined by real-time data or conditions. | "Today is `Text(Now(), "dddd, mmmm d, yyyy")`." - This uses a Power Fx formula to insert the current date in a long format, `Friday, October 3, 2025`. You could also use expressions to format numbers, or ensure an output meets a pattern (using regex). |
 
 > [!TIP]
 > Always test your response formatting using the testing pane in Copilot Studio. Try out sample user questions. See if the agent's answer is coming through with the formatting you expect. If something is not right, such as the response shows markdown syntax in text instead of formatting it, you may need to adjust the instructions. Sometimes the model might not be sure it's allowed to use formatting and will "play safe" by showing the markdown syntax such as raw asterisks. Clarify in the formatting instructions and repeat testing till you're satisfied.
