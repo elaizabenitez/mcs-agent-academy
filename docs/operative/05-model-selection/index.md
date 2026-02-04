@@ -424,7 +424,7 @@ Let's compare the responses of the GPT-4.1 default model with the GPT-5 Chat pre
 
     Similar to the previous model, the returned response firsts lists the evaluation criteria for the Power Platform Developer role including the percentage weight but this time provides some type of explanation for the criterion. Again, questions are listed for each criterion followed by a `Model Answer`. Notice how the answer is in _first person_, where it's outlining the expected answers from the candidate to the question asked.
 
-    The model similarly suggests interview questions is by each criterion, and the potential answers a candidate can provide during the interview.
+    The model similarly suggests interview questions by each criterion, and the potential answers a candidate can provide during the interview.
 
     ![Question 3 response for GPT-5 Chat model](assets/5.2_09_GPT5_01_Question3Response.png)
 
