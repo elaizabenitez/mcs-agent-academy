@@ -10,10 +10,18 @@ This skill generates a comprehensive HTML analytics dashboard for Agent Academy,
 ## Report Overview
 
 The report includes:
-- **Agent Academy (Overall)**: Total sessions, weekly trends, daily trends with projections
+- **Agent Academy (Overall)**: Total sessions, weekly trends, interactive weekly graph with week selector, daily trends with projections
 - **Performance by Course**: Bar chart comparing all courses (Recruit, Operative, Commander)
-- **Recruit Section**: Sessions, users, weekly/daily charts, badge statistics
-- **Operative Section**: Sessions, users, weekly/daily charts, badge statistics
+- **Recruit Section**: Sessions, users, interactive weekly graph with week selector, daily charts, badge statistics
+- **Operative Section**: Sessions, users, interactive weekly graph with week selector, daily charts, badge statistics
+
+### Interactive Weekly Graph
+
+All sections (Agent Academy Overall, Recruit, and Operative) include an **interactive weekly graph** with:
+- **Week selector dropdown**: Allows switching between the current week and previous weeks (up to 4-5 weeks back)
+- **Daily breakdown**: Shows sessions and users for each day of the selected week (Monday-Sunday)
+- **Current week projections**: If the current week is incomplete, project the remaining days using patterns from previous weeks (same day of week averages)
+- **Visual distinction**: Projected days shown with dotted lines and reduced opacity fill
 
 ## Data Sources
 
@@ -40,12 +48,16 @@ For each section (overall, recruit, operative):
 Query: Sessions and unique users per week for pages containing "/[section]/" for the last 4 complete weeks
 ```
 
-### 3. Query Daily Data (Last 2 Weeks)
+### 3. Query Daily Data (Last 4-5 Weeks)
 
-For each section:
+For each section, query daily data to support the interactive weekly graph:
 ```
-Query: Daily sessions and unique users for pages containing "/[section]/" for the last 2 complete weeks plus current partial week
+Query: Daily sessions and unique users for pages containing "/[section]/" for the last 4 complete weeks plus current partial week
 ```
+
+This data is used to:
+- Populate the interactive weekly graph for each selectable week
+- Calculate projections for the current incomplete week (averaging same day-of-week from historical data)
 
 ### 4. Query Badge Statistics from GitHub
 
@@ -74,18 +86,62 @@ reports/YYYYMMDD-analytics-overview.html
 1. **Header**: Title and generation date
 2. **Agent Academy Section**:
    - Stats cards (Total Sessions, Last 4 Weeks Sessions, Last 4 Weeks Users)
-   - Weekly Trend line chart
-   - Last 2 Weeks daily chart with projections
+   - Weekly Trend line chart (overview of all weeks)
+   - **Interactive Weekly Graph** with week selector dropdown (see below)
    - Performance by Course bar chart
    - Weekly data table
 3. **Tabbed Courses Section**:
    - Tab buttons for each course
    - Each course panel includes:
      - Stats cards (Sessions, Users, Share of Total)
-     - Weekly Trend line chart
-     - Daily chart with projections
+     - Weekly Trend line chart (overview of all weeks)
+     - **Interactive Weekly Graph** with week selector dropdown (see below)
      - Weekly data table
      - Badge stats (Total Requests, Awarded, Pending)
+
+### Interactive Weekly Graph Component
+
+Each section (Agent Academy, Recruit, Operative) must include an interactive weekly graph with:
+
+**UI Elements:**
+- Week selector dropdown showing: "Week X (Current)", "Week X-1", "Week X-2", etc.
+- Previous/Next navigation buttons for quick week switching
+- Display of selected week's date range (e.g., "Jan 27 - Feb 2, 2026")
+
+**Chart Display:**
+- X-axis: Days of the week (Mon, Tue, Wed, Thu, Fri, Sat, Sun)
+- Y-axis: Sessions and Users (dual axis or stacked)
+- Solid lines for actual data
+- Dotted lines for projected data (current week only)
+
+**Projection Logic:**
+- Only applies when viewing the current (incomplete) week
+- Calculate projections for remaining days using:
+  - Average of same day-of-week from previous 2-4 weeks
+  - Apply trend adjustment if there's consistent growth/decline
+- Show projection confidence by reducing opacity
+
+**JavaScript Implementation:**
+```javascript
+// Week selector change handler
+function updateWeeklyChart(section, weekOffset) {
+    const weekData = getWeekData(section, weekOffset);
+    const isCurrentWeek = (weekOffset === 0);
+    
+    if (isCurrentWeek && weekData.incomplete) {
+        // Add projections for remaining days
+        weekData.projected = calculateProjections(section, weekData);
+    }
+    
+    renderChart(section, weekData);
+}
+
+// Projection calculation
+function calculateProjections(section, currentWeekData) {
+    const historicalData = getHistoricalDayAverages(section);
+    return remainingDays.map(day => historicalData[day]);
+}
+```
 
 ### Theme: GitHub Dark Dimmed
 
@@ -117,10 +173,16 @@ Chart options:
 
 ### Projection Calculation
 
-Daily projections should:
-- Start from the last complete day (not partial current day)
-- Use patterns from previous weeks (same day of week)
-- Show as dotted lines with reduced opacity fill
+**For Interactive Weekly Graphs:**
+- Only show projections when viewing the current (incomplete) week
+- Start projections from the first incomplete day (today if partial, or next day)
+- Calculate projected values using average of same day-of-week from previous 2-4 weeks
+- Show as dotted lines with reduced opacity fill (`borderDash: [5, 5]`, `backgroundColor` with alpha 0.1)
+- Update projections dynamically when user switches weeks (projections only appear for current week)
+
+**For Weekly Trend Charts:**
+- If current week is incomplete, show projected week total as dotted segment
+- Calculate weekly projection by summing: actual days + projected remaining days
 
 ## Sample Clarity Queries
 
@@ -134,10 +196,14 @@ Total sessions for agent-academy.github.io for the last 4 complete weeks
 Sessions and unique users per week for pages containing "/recruit/" for the last 4 complete weeks
 ```
 
-### Daily by Section
+### Daily by Section (for Interactive Weekly Graph)
 ```
-Daily sessions and unique users for pages containing "/operative/" for the last 2 complete weeks plus current partial week
+Daily sessions and unique users for pages containing "/operative/" for the last 4 complete weeks plus current partial week
 ```
+
+**Note**: Query 4+ weeks of daily data to support:
+1. Interactive week selector (switch between weeks)
+2. Accurate projections for current week (need historical same-day averages)
 
 ## Badge Stats Display
 
@@ -170,7 +236,7 @@ Please create an HTML report at `reports/YYYYMMDD-analytics-overview.html` with:
 1. **Microsoft Clarity data** for Agent Academy:
    - Overall sessions and users (all time and last 4 complete weeks)
    - Weekly breakdown for overall, `/recruit/`, and `/operative/` paths (last 4 complete weeks)
-   - Daily breakdown for last 2 complete weeks plus current partial week, with projections
+   - Daily breakdown for last 4 complete weeks plus current partial week (to support interactive weekly graph and projections)
 
 2. **GitHub badge statistics** from microsoft/agent-academy:
    - Recruit: count issues with `recruit-completed` label (open = pending, closed with `recruit-badge-issued` or `recruit-badge-issued-gaic` = awarded)
@@ -179,9 +245,11 @@ Please create an HTML report at `reports/YYYYMMDD-analytics-overview.html` with:
 3. **Report features**:
    - GitHub Dark Dimmed theme
    - Line charts with area fill for trends
+   - **Interactive weekly graphs** with week selector dropdown in all sections (Agent Academy, Recruit, Operative)
+   - Previous/Next week navigation buttons
+   - Projections for incomplete current week (dotted lines)
    - Bar chart comparing course performance
    - Tabbed interface for Recruit/Operative sections
-   - Dotted projection lines for current week predictions
    - Badge statistics with Total/Awarded/Pending breakdown
 
 ---
