@@ -422,7 +422,7 @@ Let's compare the responses of the GPT-4.1 default model with the GPT-5 Chat pre
     Can you provide suggestions of questions to ask in an interview for the Power Platform developer role (Job role number J1004) based on its associated evaluation criteria? Can you also please provide what the answers may be for each question?
     ```
 
-    Similar to the previous model, the returned response firsts lists the evaluation criteria for the Power Platform Developer role including the percentage weight but this time provides some type of explanation for the criterion. Again, questions are listed for each criterion followed by a `Model Answer`. Notice how the answer is in _first person_, where it's outlining the expected answers from the candidate to the question asked.
+    Similar to the previous model, the returned response first lists the evaluation criteria for the Power Platform Developer role including the percentage weight but this time provides some type of explanation for the criterion. Again, questions are listed for each criterion followed by a `Model Answer`. Notice how the answer is in _first person_, where it's outlining the expected answers from the candidate to the question asked.
 
     The model similarly suggests interview questions is by each criterion, and the potential answers a candidate can provide during the interview.
 
