@@ -15,7 +15,7 @@ next:
 
 ## 🎯 Mission Brief
 
-Welcome back, Agent. In [Mission 02](../02-agent-instructions/index.md),you learned how strong instructions shape agent behavior.
+Welcome back, Agent. In [Mission 02](../02-agent-instructions/index.md), you learned how strong instructions shape agent behavior.
 
 Now it’s time to choose the brain.
 
@@ -93,7 +93,7 @@ AI capabilities evolve rapidly, and Copilot Studio keeps up by offering a range 
 
 #### Anthropic models (external)
 
-Currently there are two Anthropic models which are currently under Preview, they are accessible in early release environments.
+There are two Anthropic models available.
 
 - **Claude Sonnet 4.5** is Anthropic's newest, coding and agent-focused model.
 - **Claude Opus 4.1** is a reasoning-focused model.
@@ -237,7 +237,7 @@ Copilot Studio generative answers support a subset of Markdown for rich text. He
 | **Bold** | Makes important words or phrases stand out. Use bold to highlight key information or critical values. | **"Your account balance is $1,250."** - The amount is bold so it's immediately noticeable. |
 | _Italics_ | Adds subtle emphasis or denotes special terms. Commonly used for document titles, or to highlight a _phrase_ in a softer way than bold. | _"Please provide additional details for verification."_ - The words “additional details” are italicized to indicate a prompt or placeholder. |
 | Hyperlinks | Inserts clickable links in the response text. Useful for directing users to external articles, internal knowledge base, or any detailed reference. | "Refer to our [Microsoft Surface Warranty and Protection Plans](https://www.microsoft.com/surface/business/warranty-protection-plans-and-support) for more details." - The text "Microsoft Surface Warranty and Protection Plans" is a hyperlink to the web page. |
-| Power Fx expressions | Embeds dynamic content or logic-driven text in the response. Power Fx can pull in variables, do calculations, or enforce formatting (even with regex for validation). This allows parts of the answer to be determined by real-time data or conditions. | "Today is `${Text(Now(), "dddd, mmmm d, yyyy")}`." - This uses a Power Fx formula to insert the current date in a long format, `Friday, October 3, 2025`. You could also use expressions to format numbers, or ensure an output meets a pattern (using regex). |
+| Power Fx expressions | Embeds dynamic content or logic-driven text in the response. Power Fx can pull in variables, do calculations, or enforce formatting (even with regex for validation). This allows parts of the answer to be determined by real-time data or conditions. | "Today is `Text(Now(), "dddd, mmmm d, yyyy")`." - This uses a Power Fx formula to insert the current date in a long format, `Friday, October 3, 2025`. You could also use expressions to format numbers, or ensure an output meets a pattern (using regex). |
 
 > [!TIP]
 > Always test your response formatting using the testing pane in Copilot Studio. Try out sample user questions. See if the agent's answer is coming through with the formatting you expect. If something is not right, such as the response shows markdown syntax in text instead of formatting it, you may need to adjust the instructions. Sometimes the model might not be sure it's allowed to use formatting and will "play safe" by showing the markdown syntax such as raw asterisks. Clarify in the formatting instructions and repeat testing till you're satisfied.
@@ -309,7 +309,7 @@ In this lab, you’ll compare responses, including the formatting, from three di
     # Resume information
 
     - For resume information, start with the Resume Number as the header in bold, followed by bullet points.
-    - Example:
+    - All dates MUST always be formatted as 'MMM dd, yyyy'. Example:
     ```
 
     ![Response formatting instructions of agent](assets/5.1_01_SettingsResponses.png)
@@ -344,6 +344,8 @@ Let's compare the responses of the GPT-4.1 default model with the GPT-5 Chat pre
 
     ![Enter first question for GPT-4.1 model](assets/5.2_01_GPT4.1Model.png)
 
+    You can see the model is searching through the configured Dataverse knowledge sources that we set up in [Mission 03: Multi-Agent Systems](../03-multi-agent/index.md/#_3-2-1-create-the-connected-interview-agent)
+
 1. A summary of the resume will next be displayed. How did it align with our response formatting? We can see the output starts with the Resume Number in bold, followed by bullet points.
 
     ![Question 1 response for GPT-4.1  model](assets/5.2_02_GPT4.1_FormatCheck.png)
@@ -352,17 +354,9 @@ Let's compare the responses of the GPT-4.1 default model with the GPT-5 Chat pre
 
     ![Certifications returned by the model](assets/5.2_02_GPT4.1_Question1Response.png)
 
-    We can see that the certifications are correct when reviewing the associated Resume file.
+    The skills returned by the model are correct when reviewing the associated Resume file. We can also see that the certifications are correct when reviewing the associated Resume file. Great!
 
     ![Verify certifications in Resume file](assets/5.2_02_GPT4.1_Question1ResponseCheck.png)
-
-    Let's do one more check by reviewing the skills listed.
-
-    ![Skills returned by the model](assets/5.2_03_GPT4.1_Question1Response.png)
-
-    The skills returned by the model are correct when reviewing the associated Resume file. Great!
-
-    ![Verify skills in Resume file](assets/5.2_03_GPT4.1_Question1ResponseCheck.png)
 
 1. Next, we'll verify the date formatting is followed by the agent. Enter the question below.
 
@@ -380,7 +374,15 @@ Let's compare the responses of the GPT-4.1 default model with the GPT-5 Chat pre
     Can you provide suggestions of questions to ask in an interview for the Power Platform developer role (Job role number J1004) based on its associated evaluation criteria? Can you also please provide what the answers may be for each question?
     ```
 
-    The returned response lists interview questions by evaluation criteria. Each question is followed by a `Model Answer`. Notice how the answer is in _first person_, where it's outlining the expected answers from the candidate to the question asked.
+    The returned response first lists the evaluation criteria for the Power Platform Developer role (defined by the Dataverse Job Role row). Each criterion includes a percentage weight. After the evaluation criteria, questions are listed for each criterion followed by a `Model Answer`. Notice how the answer is in _first person_, where it's outlining the expected answers from the candidate to the question asked.
+
+    - The response is organized under **criteria**, **question** and **answer**
+        - **Criteria**:
+            - This indicates the criteria evaluated
+        - **Question**:
+            - The interview question being evaluated
+        - **Model Answer**:
+            - This subsection lists points that the agent considers acceptable strong answers in a candidate's response.
 
     ![Question 3 response for GPT-4.1 model](assets/5.2_05_GPT4.1_01_Question3Response.png)
 
@@ -412,7 +414,7 @@ Let's compare the responses of the GPT-4.1 default model with the GPT-5 Chat pre
 
     ![Question 2 response for GPT-5 Chat model](assets/5.2_08_GPT5_Question2Response.png)
 
-    You can see that the model did not correctly follow the date format.
+    You can see that the model correctly followed the date format this time.
 
 1. We'll ask the same third question for a list of interview questions based on the evaluation criteria of a job role, and provide what the potential answers are. Enter the question below.
 
@@ -420,15 +422,9 @@ Let's compare the responses of the GPT-4.1 default model with the GPT-5 Chat pre
     Can you provide suggestions of questions to ask in an interview for the Power Platform developer role (Job role number J1004) based on its associated evaluation criteria? Can you also please provide what the answers may be for each question?
     ```
 
-    A response with the suggested list of interview questions is returned by the criteria outlined in the Job Role Dataverse row, and the potential answers a candidate can provide during the interview. Notice how this time,
+    Similar to the previous model, the returned response first lists the evaluation criteria for the Power Platform Developer role including the percentage weight but this time provides some type of explanation for the criterion. Again, questions are listed for each criterion followed by a `Model Answer`. Notice how the answer is in _first person_, where it's outlining the expected answers from the candidate to the question asked.
 
-    - The response is organized under **criteria**, **question** and **answer**
-        - **Criteria**:
-            - This indicates the criteria evaluated
-        - **Question**:
-            - The interview question being evaluated
-        - **Answer**:
-            - This subsection lists points that the agent considers acceptable strong answers in a candidate's response.
+    The model similarly suggests interview questions by each criterion, and the potential answers a candidate can provide during the interview.
 
     ![Question 3 response for GPT-5 Chat model](assets/5.2_09_GPT5_01_Question3Response.png)
 
@@ -460,7 +456,7 @@ Let's compare the responses of the GPT-4.1 default model with the GPT-5 Chat pre
 
     ![Thought process of the model](assets/5.2_11_ThoughtProcess.png)
 
-1. The response this time is more concise and we can see that the date format was also correctly followed.
+1. The response this time is more concise and we can see that a date was included in the summary, notice how the date format was correctly followed.
 
     ![Question 1 response for Claude Sonnet 4.5 model](assets/5.2_12_Question1Response.png)
 
@@ -474,21 +470,13 @@ Let's compare the responses of the GPT-4.1 default model with the GPT-5 Chat pre
 
     You can see that the date format was correctly followed.
 
-1. We'll ask the same third question for a list of interview questions based on the evaluation criteria of a job role, and provide what the potential answers are. Enter the question below.
+1. Finally, we'll ask the same third question for a list of interview questions based on the evaluation criteria of a job role, and provide what the potential answers are. Enter the question below.
 
     ```text
     Can you provide suggestions of questions to ask in an interview for the Power Platform developer role (Job role number J1004) based on its associated evaluation criteria? Can you also please provide what the answers may be for each question?
     ```
 
-    A response with the suggested list of interview questions is returned by the criteria outlined in the Job Role Dataverse row, and the potential answers a candidate can provide during the interview. Notice how this time,
-
-    - The response is organized under **criteria**, **question** and **answer**
-        - **Criteria**:
-            - This indicates the criteria evaluated
-        - **Question**:
-            - The interview question being evaluated
-        - **Answer**:
-            - This provides a suggested sample answer and notice how the answer is in _first person_, where it's outlining the expected answer from the candidate to the question asked.
+    A response with the suggested list of interview questions is returned and grouped by the criteria outlined in the Job Role Dataverse row, and the potential answers a candidate can provide during the interview.
 
     ![Question 3 response for Claude Sonnet 4.5 model](assets/5.2_14_01_Question3Response.png)
 
