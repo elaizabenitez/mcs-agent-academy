@@ -173,9 +173,9 @@ It’s worth noting that not every copilot environment allows all model choices 
 
 Here are the key admin controls affecting which models a maker/developer can select for an agent:
 
-- **Enable Anthropic models to be used within your organization**: An admin with the **Global administrator** role needs to enable (allow) anthropic models in the Microsoft 365 Admin Center. If this setting is disabled, only OpenAI models will be available to select.
+- **Enable Anthropic as a Microsoft subprocessor subject to the above terms**: An admin with the **Global administrator** role needs to enable the [Enable Anthropic as a Microsoft subprocessor subject to the above terms](https://learn.microsoft.com/en-us/copilot/microsoft-365/connect-to-ai-subprocessor) setting in the Microsoft 365 Admin Center. If this setting is disabled, only OpenAI models will be available to select.
 
-![Allow Anthropic provider setting in Microsoft 365 admin center](./assets/5.0_05_AllowAnthropicProvider.png)
+![AI providers operating as Microsoft subprocessors](./assets/5.0_05_AIProvidersOperatingAsMicrosoftSubProcessors.png)
 
    An admin can also toggle whether external models are available in a given environment in the Power Platform admin center.
 
