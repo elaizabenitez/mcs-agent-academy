@@ -268,7 +268,7 @@ To complete this lab you will need to:
     **Trigger conditions extend the trigger itself with the ability to selectively fire**
     💡 As a performant alternative to doing the branching logic inside the flow, triggers in Power Automate can also contain trigger conditions themselves.
     Trigger conditions can access the triggers payload. In our case the attachments are in an array inside the trigger body called ```` attachments```
-    The following expression will check if the attachments array is not empty **AND** if the first item`s content type is ```application/pdf```.
+    The following expression will check if the attachments array is not empty **AND** if the first item's content type is ```application/pdf```.
     
     ```text
         @and(not(empty(triggerOutputs()?['body/attachments'])),equals(toLower(first(triggerOutputs()?['body/attachments'])?['contentType']),'application/pdf'))
