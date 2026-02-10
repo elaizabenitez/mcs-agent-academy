@@ -277,7 +277,7 @@ To complete this lab you will need to:
     This condition can be specified in the *Settings* tab when selecting the trigger
     ![Trigger Conditions](assets/3.1.11.1_triggercondition.png)
 
-    :::   
+    :::
 
 1. Next, in the other **Choose a value** field to the right in the **Condition** block, type the following,
 
