@@ -432,7 +432,7 @@ We'll next update our instructions to invoke the prompt and test our declarative
 1. We can now update our instructions to invoke our prompt by referencing the name of the prompt. Clear the instructions, then copy and paste the following.
 
     ```text
-    - When a user asks questions about their device, run the "IT Expert" prompt. Use their question as the problem input of the "IT Expert" prompt.
+    When a user asks IT related questions such as questions on their device, run the "IT Expert- prompt". Use their question as the problem input of the "IT Expert- prompt".
     ```
 
     Notice how the final sentence is instructing the agent to use the question asked by the user as the value for the problem input parameter. The agent will use the question as the problem input for the prompt. Next, select **Save**.
@@ -498,9 +498,8 @@ Let's now publish our declarative agent 😃
 
 1. Let's take a look at sharing the agent. Select **Show to my teammates and shared users**. A pane will appear where you can search for users you want to to share the agent with either by entering their name, an email or a security group. You can review this list anytime to edit who has access to the agent.
 
-    There's also two checkboxes:
-    - _Send an email invitation to new users_ - new users will receive an email invitation.
-    - _Visible Built with Power Platform_ - agent becomes available in the Built with Power Platform section of the Teams app store.
+    There's also a checkbox:
+    - _Show in Built By Your Colleagues_ - agent becomes available in the Built with Power Platform section of the Teams app store.
 
     For more details, refer to [Connect and configure an agent for Teams and Microsoft 365](https://learn.microsoft.com/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams/?WT.mc_id=power-172614-ebenitez).
 
@@ -519,11 +518,11 @@ Let's now publish our declarative agent 😃
 
     ![Availability options](assets/3.4_07_AgentAppDetails.png)
 
-1. Our declarative agent will load next. We can see the starter prompts to select from which quickly enables users to seek immediate help.
+1. Our declarative agent will load next. We can see the suggested prompts to select from which quickly enables users to seek immediate help.
 
-    Select one of the starter prompt. In my starter prompts, I'll select the **Software Installation Help** prompt which will automatically prepopulate the message Copilot field. Submit the question to Copilot.
+    Select one of the suggested prompts which will automatically prepopulate the message Copilot field. Submit the question to Copilot.
 
-    ![Select starter prompt](assets/3.4_08_SelectStarterPrompt.png)
+    ![Select one of suggested prompts](assets/3.4_08_SelectStarterPrompt.png)
 
 1. Select **Always allow** to give your declarative agent permission to invoke the IT Expert prompt.
 
@@ -555,7 +554,7 @@ Let's now publish our declarative agent 😃
 1. Submit the following question to invoke the prompt.
 
     ```text
-    Can you help me, my laptop is encountering a blue screen
+    My laptop restarted unexpectedly. Any advice?
     ```
 
     ![Enter question](assets/3.4_12_EnterQuestion.png)
@@ -568,16 +567,18 @@ Let's now publish our declarative agent 😃
 
 1. Here you'll find information on the agent metadata that occurred at runtime.
 
-    ![Agent debug info expanded](assets/3.4_14_01_ReviewAgentDebugInfo.png)
-
-    In our use case, we'll be focusing on the _Actions_ section
+    In our use case, we'll be focusing on the _Actions_ section:
 
     - **Matched actions** highlight the current status of functions found during the app's search.
     - **Selected actions** highlight the current status of functions chosen to run based on the app's decision-making process.
 
-    ![Agent debug info expanded](assets/3.4_14_02_ReviewAgentDebugInfo.png)
+    So here we can see the agent orchestrator chose to invoke the IT Expert prompt as per the instructions of our declarative agent.
 
-    So here we can see the agent orchestrator chose to invoke the IT Expert prompt as per the instructions of our declarative agent. This is further outlined in the _Executed Actions_ section which also tells us that it successfully invoked the prompt.
+    ![Agent debug info expanded](assets/3.4_14_01_ReviewAgentDebugInfo.png)
+
+    This is further outlined in the _Executed Actions_ section which also tells us that it successfully invoked the prompt and used our question as the value for our `problem input` parameter.
+
+    ![Agent debug info expanded](assets/3.4_14_02_ReviewAgentDebugInfo.png)
 
     ![Review agent debug info](assets/3.4_14_03_ReviewAgentDebugInfo.png)
 
@@ -637,11 +638,11 @@ Until next time, stay sharp. The future of enterprise work runs through agents�
 
 ## 📚 Tactical Resources
 
-🔗 [Build declarative agent in Microsoft Copilot Studio for Microsoft 365 Copilot](https://learn.microsoft.com/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext/?WT.mc_id=power-172614-ebenitez)
+📖 [Build declarative agent in Microsoft Copilot Studio for Microsoft 365 Copilot](https://learn.microsoft.com/microsoft-copilot-studio/microsoft-copilot-extend-copilot-extensions?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext/?WT.mc_id=power-172614-ebenitez)
 
-🔗 [Add prompts](https://learn.microsoft.com/ai-builder/create-a-custom-prompt?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext/?WT.mc_id=power-172614-ebenitez)
+📖 [Add prompts](https://learn.microsoft.com/ai-builder/create-a-custom-prompt?context=%2Fmicrosoft-365-copilot%2Fextensibility%2Fcontext/?WT.mc_id=power-172614-ebenitez)
 
-🔗 [Share agents with other users](https://learn.microsoft.com/microsoft-copilot-studio/admin-share-bots/?WT.mc_id=power-172614-ebenitez)
+📖[Share agents with other users](https://learn.microsoft.com/microsoft-copilot-studio/admin-share-bots/?WT.mc_id=power-172614-ebenitez)
 
 📺 [Build prompts for your agent](https://aka.ms/ai-in-action/copilot-studio/ep3)
 
