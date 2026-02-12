@@ -285,21 +285,19 @@ Next we'll learn how to add a tool to our agent, we'll create a prompt.
 
     ![Add tool](assets/3.2_01_AddTool.png)
 
-1. The Tools modal will appear and a list of Power Platform connectors is displayed. To add a Prompt, select **+ New tool**.
+1. The Tools modal will appear and you can either create a new tool or select from the list of tools available. By default, a list of Power Platform connectors is displayed. Since we are going to add a Prompt, select **Prompt** under **Create new**.
 
-    ![New tool](assets/3.2_02_NewTool.png)
+    ![Select prompt](assets/3.2_0_SelectPrompt.png)
 
-1. A list of other tools is displayed - Prompt, Custom connector, REST API and Model Context Protocol. If your organization meets the [requirements for Computer Use](https://learn.microsoft.com/microsoft-copilot-studio/computer-use?tabs=new#requirements/?WT.mc_id=power-172614-ebenitez), this will also appear in the list. Select **Prompt**.
+1. The Prompt modal appears, this is where we can define our prompt for our agent.
 
-    ![Select prompt](assets/3.2_03_SelectPrompt.png)
+    Enter a name for the prompt. Let's name our prompt `IT Expert`.
 
-1. Enter a name for the prompt. Let's name our prompt `IT Expert`.
+    ![Enter name](assets/3.2_03_NamePrompt.png)
 
-    ![Enter name](assets/3.2_04_NamePrompt.png)
+1. Select the **chevron icon** next to the **Model** to see the different [chat models](https://learn.microsoft.com/en-us/microsoft-copilot-studio/prompt-model-settings) you can choose from. The default model select is **Basic GPT-4.1 mini**. You'll see a list of OpenAI models and [Anthropic models](https://learn.microsoft.com/en-us/copilot/microsoft-365/connect-to-ai-subprocessor) that you can select from. You also have the option to bring-your-own-model using Microsoft Foundry Models. We'll stick with the selected default model.
 
-1. Select the **chevron icon** next to the **Model** to see the different chat models you can choose from. By default, the **Basic GPT-4.1 mini** model is selected and you also have the option to bring-your-own-model using Microsoft Foundry Models. We'll stick with the selected default model.
-
-    ![Change model](assets/3.2_05_ChangeModel.png)
+    ![Change model](assets/3.2_04_ChangeModel.png)
 
 1. Next, we'll provide our prompt with instructions. There's 3 methods that you can choose from
 
@@ -313,15 +311,15 @@ Next we'll learn how to add a tool to our agent, we'll create a prompt.
     I need an IT expert that can help answer questions related to networking, computer systems, user devices and anything else IT related
     ```
 
-    ![Get started with Copilot](assets/3.2_06_UseCopilot_EnterPrompt.png)
+    ![Get started with Copilot](assets/3.2_05_UseCopilot_EnterPrompt.png)
 
 1. Copilot will then begin to generate a prompt for us.
 
-    ![Copilot drafts prompts](assets/3.2_07_CopilotDraftingPrompt.png)
+    ![Copilot drafts prompts](assets/3.2_06_CopilotDraftingPrompt.png)
 
 1. The Copilot generated draft instructions will then appear.
 
-    ![Copilot generated draft instructions](assets/3.2_08_CopilotGeneratedInstructions.png)
+    ![Copilot generated draft instructions](assets/3.2_07_CopilotGeneratedInstructions.png)
 
 1. Scroll down to the bottom of the instructions and you'll see the user input parameter already defined by Copilot. You then have the option to
     - Keep the draft instructions generated.
@@ -330,26 +328,26 @@ Next we'll learn how to add a tool to our agent, we'll create a prompt.
 
     Clear the draft instructions by selecting the **trash bin** icon and we'll next try the prompt library.
 
-    ![Prompt instructions](assets/3.2_09_Options.png)
+    ![Copilot generated prompt instructions and options available](assets/3.2_07_CopilotGeneratedInstructions.png)
 
 1. Select the **prompt template** link.
 
-    ![Select prompt template](assets/3.2_10_SelectPromptLibrary.png)
+    ![Select prompt template](assets/3.2_08_SelectPromptTemplate.png)
 
 1. You'll see a list of prompt templates to choose from. These are from the [Power Platform Prompt library](https://aka.ms/power-prompts).
 
-    ![Prompt library](assets/3.2_11_PromptLibrary.png)
+    ![Prompt library](assets/3.2_09_PromptLibrary.png)
 
 1. Search for the `IT expert` prompt and select it.
 
-    ![Select IT expert prompt](assets/3.2_12_ITExpertPrompt.png)
+    ![Select IT expert prompt](assets/3.2_10_SelectITExpertPrompt.png)
 
 1. The prompt will then be added as the instructions with the input parameter as defined by the prompt template. Similar to the approach we took when providing instructions for our agent during the conversational creation experience with Copilot, this prompt template outlines
     - a task,
     - what type of inquiries it can handle,
     - and the format of its response and the goal of the prompt.
 
-    ![Prompt instructions](assets/3.2_13_ITExpertPromptInstructions.png)
+    ![Prompt instructions](assets/3.2_11_ITExpertPromptInstructions.png)
 
 1. Clear the instructions and we'll next try manually entering the instructions. We'll use the [IT Expert prompt](https://adoption.microsoft.com/sample-solution-gallery/sample/pnp-powerplatform-prompts-it-expert/) from the [Power Platform Prompt library](https://aka.ms/power-prompts). Copy and paste the prompt.
 
@@ -357,11 +355,11 @@ Next we'll learn how to add a tool to our agent, we'll create a prompt.
     I want you to act as an IT Expert. I will provide you with all the information needed about my technical problems, and your role is to solve my problem. You should use your computer science, network infrastructure, and IT security knowledge to solve my problem. Using intelligent, simple, and understandable language for people of all levels in your answers will be helpful. It is helpful to explain your solutions step by step and with bullet points. Try to avoid too many technical details, but use them when necessary. I want you to reply with the solution, not write any explanations. My problem is [Problem]
     ```
 
-    ![Prompt instructions](assets/3.2_14_PromptInstructions.png)
+    ![Prompt instructions](assets/3.2_12_PromptInstructions.png)
 
 1. Next, we can define the user input parameters of our prompt. These can be text and images, and sample data to test with. There's also the capability to ground the prompt with knowledge from Dataverse tables. For this exercise, we only have one user input to define which is the problem input. This is currently a placeholder in our prompt as `[Problem]`. We'll now configure this input either by entering the `/` character or selecting **+Add content** and then select **Text**.
 
-    ![Text input](assets/3.2_15_AddContent.png)
+    ![Text input](assets/3.2_13_AddContent.png)
 
 1. We can now enter a name for our input parameter and sample data.
 
@@ -374,50 +372,54 @@ Next we'll learn how to add a tool to our agent, we'll create a prompt.
     Enter the following as the sample data
 
     ```text
-    My laptop gets an error with a blue screen
+    My laptop restarted unexpectedly. Any advice?
     ```
 
     Then select **Close**.
 
-    ![Configure problem input](assets/3.2_16_NameSampleData.png)
+    ![Configure problem input](assets/3.2_14_NameSampleData.png)
 
 1. The problem input parameter will now be added to the instructions with the configured sample data. We can now test our prompt!
 
-    ![Problem input added](assets/3.2_17_InputAdded.png)
+    Select **Test** to the test the prompt.
 
-1. Select **Test** to the test the prompt.
+    ![Test prompt instructions](assets/3.2_15_TestPrompt.png)
 
-    ![Test instructions](assets/3.2_18_SelectTest.png)
+1. The model will be in-progress of generating a response.
+
+    ![Model in-progress of generating its response](assets/3.2_16_ModelResponse.png)
 
 1. The response will then display. Notice how the response provides headings with bullet points as per the instructions. Scroll down and review the remainder of the model response.
 
-    ![Model response](assets/3.2_19_ModelResponse.png)
+    ![Model response](assets/3.2_17_ModelResponse.png)
 
 1. Before we save our prompt, let's learn about the settings that can be configured for this prompt. Select the **ellipsis (...) icon**.
 
-    ![Prompt settings](assets/3.2_20_PromptSettings.png)
+    ![Prompt settings](assets/3.2_18_PromptSettings.png)
 
 1. Here we'll see three settings that can be configured.
 
     - **Temperature**: Lower temperatures lead to predictable results, while higher temperatures allow more diverse or creative responses.
     - **Record retrieval**: Specify the number of records retrieved for your knowledge sources.
     - **Include links in the response**: When selected, the response includes link citations for the retrieved records.
+    - **Enable code interpreter**: When this option is turned on, the code interpreter feature becomes active, allowing the agent to generate and run code.
+    - **Content moderation level**: Lower content‑moderation levels allow more answers but increase the risk of harmful content. Higher moderation levels apply stricter filtering, reducing harmful content but also producing fewer answers.
 
     Select the **X** icon to exit from Settings.
 
-    ![Configure settings](assets/3.2_21_ConfigureSettings.png)
+    ![Configure settings](assets/3.2_19_ConfigurePromptSettings.png)
 
 1. Select **Save** to save the prompt.
 
-    ![Save prompt](assets/3.2_22_SavePrompt.png)
+    ![Save prompt](assets/3.2_20_SavePrompt.png)
 
-1. Next, select **Add to agent** to add the prompt to our declarative agent.
+1. Next, select **Add and configure** to add the prompt to our declarative agent.
 
-    ![Prompt instructions](assets/3.2_23_AddToAgent.png)
+    ![Select add and configure](assets/3.2_21_AddAndConfigure.png)
 
 1. The prompt will now appear under Tools 🙌🏻
 
-    ![Prompt added](assets/3.2_24_PromptAdded.png)
+    ![Prompt added](assets/3.2_22_PromptAddedAsTool.png)
 
 We'll next update our instructions to invoke the prompt and test our declarative agent.
 
@@ -444,14 +446,20 @@ We'll next update our instructions to invoke the prompt and test our declarative
 1. Next, enter the following prompt below and submit.
 
     ```text
-    Can you help me, my laptop is encountering a blue screen
+    My laptop restarted unexpectedly. Any advice?
     ```
 
     ![Perform test](assets/3.3_04_PerformTest.png)
 
 1. The agent invokes the prompt and responds.
 
-    ![Prompt instructions](assets/3.3_05_ModelResponse.png)
+    ![Model response](assets/3.3_05_ModelResponse.png)
+
+    ![Model response](assets/3.3_06_ModelResponse.png)
+
+> [!NOTE] Model responses may differ across sessions
+>
+> AI-generated responses are non‑deterministic, so the same prompt may produce slightly different results each time.
 
 Let's now publish our declarative agent 😃
 
