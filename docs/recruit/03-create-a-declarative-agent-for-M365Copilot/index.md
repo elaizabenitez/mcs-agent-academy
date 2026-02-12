@@ -287,7 +287,7 @@ Next we'll learn how to add a tool to our agent, we'll create a prompt.
 
 1. The Tools modal will appear and you can either create a new tool or select from the list of tools available. By default, a list of Power Platform connectors is displayed. Since we are going to add a Prompt, select **Prompt** under **Create new**.
 
-    ![Select prompt](assets/3.2_0_SelectPrompt.png)
+    ![Select prompt](assets/3.2_02_SelectPrompt.png)
 
 1. The Prompt modal appears, this is where we can define our prompt for our agent.
 
