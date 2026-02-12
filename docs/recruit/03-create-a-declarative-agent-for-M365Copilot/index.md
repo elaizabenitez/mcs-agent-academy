@@ -397,7 +397,7 @@ Next we'll learn how to add a tool to our agent, we'll create a prompt.
 
     ![Prompt settings](assets/3.2_18_PromptSettings.png)
 
-1. Here we'll see three settings that can be configured.
+1. Here we'll see several settings that can be configured.
 
     - **Temperature**: Lower temperatures lead to predictable results, while higher temperatures allow more diverse or creative responses.
     - **Record retrieval**: Specify the number of records retrieved for your knowledge sources.
