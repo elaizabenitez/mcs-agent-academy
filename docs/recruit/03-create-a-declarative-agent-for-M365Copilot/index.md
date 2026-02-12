@@ -263,7 +263,6 @@ Let's begin!
 
     ![Create agent](assets/3.1_09_CreateDeclarativeAgent.png)
 
-
 1. Once the agent has been provisioned, you'll see the details of the agent including the name, description, instructions and suggested prompts we defined during the agent creation experience. The starter prompts will also be displayed in the test pane on the right hand side. Users can select these starter prompts to begin interacting with the agent.
 
     Scroll down and you'll also see the capabilities of adding knowledge, enabling web search (via Bing), the suggested prompts and the publish details of the declarative agent for Microsoft 365 Copilot.
