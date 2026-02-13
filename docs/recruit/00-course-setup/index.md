@@ -110,7 +110,7 @@ The Copilot Studio trial recently changed and it does not allow publishing of ag
 
 First, you need a security group to hold everyone you want to be able to publish. This is what you'll associate with the Copilot Studio Authors role.
 
-1. Navigate to [admin.cloud.microsoft](admin.cloud.microsoft)
+1. Navigate to [admin.cloud.microsoft](https://admin.cloud.microsoft)
 1. Expand the **Teams & groups** tab and select **Active teams & groups**
 
     ![Teams and groups](images/admin-teams-groups.png)
