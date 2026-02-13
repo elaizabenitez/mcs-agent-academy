@@ -117,6 +117,8 @@ You'll learn how to connect your agent to ready-made tooling servers (like Outlo
 
 > [!IMPORTANT]
 > For this lab, you need to make sure that you are part of the [Frontier preview program](https://adoption.microsoft.com/copilot/frontier-program/) to get early access to Microsoft Agent 365. Frontier connects you directly with Microsoft’s latest AI innovations. Frontier previews are subject to the existing preview terms of your customer agreements. As these features are still in development, their availability and capabilities may change over time.
+>
+> If you’re unable to gain access to the Frontier program, please feel free to skip this lab - you’ll still be able to earn the Operative badge.
 
 ### Add MCP servers to the Interview Agent
 
