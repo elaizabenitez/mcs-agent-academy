@@ -25,12 +25,18 @@ By completing the Agent Academy Operative program, you'll be able to:
 
 ## 🧪 Prerequisites
 
-Before starting this mission, you'll need to:
+Before starting this mission, you'll need:
 
 - Have completed the **[Agent Academy Recruit](https://microsoft.github.io/agent-academy/recruit/)** training
 - A Microsoft Power Platform environment with **Copilot Studio** license or trial
 - Access to **Microsoft Dataverse**
 - Administrative permissions to create solutions and agents
+- Access to the [Frontier Program](https://adoption.microsoft.com/files/copilot/Frontier_Getting-started-guide.pdf)
+
+> [!NOTE]
+> **Need to set up an environment?** The Operative course does **not** include its own environment setup — if you need to create a trial Microsoft 365 tenant, get a Copilot Studio trial, or configure a Power Apps developer environment, follow **Steps 1–4** in the [Recruit Course Setup](https://microsoft.github.io/agent-academy/recruit/00-course-setup/). You do **not** need to complete Step 5 (SharePoint site creation) for the Operative course.
+>
+> If you already have a Microsoft 365 business tenant with Power Platform and Copilot Studio access, you're good to go.
 
 ## 🧬 Who This Is For
 
