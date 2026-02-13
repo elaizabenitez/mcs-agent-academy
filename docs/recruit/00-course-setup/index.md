@@ -30,6 +30,10 @@ Your mission includes:
 1. Creating a developer environment as your Copilot Studio environment to build in  
 1. Creating a SharePoint site to serve as your data source in later missions
 
+> [!IMPORTANT]
+> **Already have access to Microsoft 365, Power Platform, and Copilot Studio?**
+> Steps 1–4 below walk you through creating a **new trial environment from scratch**. If you already have a Microsoft 365 business tenant with access to Power Platform and Copilot Studio, you can **skip directly to [Step 5: Create new SharePoint site](#step-5-create-new-sharepoint-site)**. Steps 1–4 are only needed if you want to set up a dedicated trial environment to test these capabilities.
+
 ## 🔍 Prerequisites
 
 Before you begin, ensure you have:
@@ -38,6 +42,10 @@ Before you begin, ensure you have:
 1. Access to the internet and a modern browser (Edge, Chrome, or Firefox recommended).  
 1. Basic familiarity with Microsoft 365 (for example, signing into Office apps or Teams).  
 1. (Optional) A credit card or billing method if you plan to purchase paid licenses.
+
+---
+
+## 🧪 Trial Environment Setup (Steps 1–4)
 
 ## Step 1: Get a Microsoft 365 Account
 
@@ -96,7 +104,77 @@ Using the same Microsoft 365 tenant in Step 1, sign up for a Power Apps Develope
 > [!NOTE]
 > If you are using an existing Microsoft 365 account and did not create one in Step 1, for example - using your own account in your work organization, your IT administrator (or the equivalent) team who manages your tenant/environments might have turned off the sign up process. In this case, please contact your administrator, or create a test tenant as per Step 1.
 
-## Step 4: Create new SharePoint site
+## Step 4: Enable Ability to Publish with the Copilot Studio Trial
+
+The Copilot Studio trial recently changed and it does not allow publishing of agents by default. To enable publishing, you have to add yourself to the Copilot Studio Authors role in the Power Platform Admin Center.
+
+First, you need a security group to hold everyone you want to be able to publish. This is what you'll associate with the Copilot Studio Authors role.
+
+1. Navigate to [admin.cloud.microsoft](admin.cloud.microsoft)
+1. Expand the **Teams & groups** tab and select **Active teams & groups**
+
+    ![Teams and groups](images/admin-teams-groups.png)
+
+1. Select the **Security groups** tab and select **Add a security group**
+
+    ![Security Group](images/admin-securitygroup-tab.png)
+
+1. Give the security group a name like **AgentCreators** and select the **Next** button.
+
+    ![Security Group Name](images/admin-securitygroup-name.png)
+
+1. Verify the name and select **Create group**
+
+    ![Create group](images/admin-creategroup.png)
+
+1. Select your newly created security group from the list
+
+    ![Select group](images/admin-selectgroup.png)
+
+1. Select the **members** tab and select **view all and manage members**
+
+    ![Add members](images/admin-viewmembers.png)
+
+1. Select **add members**
+
+    ![Add members](images/admin-addmember.png)
+
+1. Select your name from the list and click **Add** then **Add** again
+
+    ![Select yourself](images/admin-selectname.png)
+
+1. Navigate to **admin.powerplatform.com**
+1. Select the **manage** tab
+
+    ![Manage](images/pp-admin-managetab.png)
+
+1. Select the **tenant settings** tab
+
+    ![Tenant Settings](images/pp-admin-tenantsettings.png)
+
+1. Select the ***copilot studio authors** option
+
+    ![Authors](images/pp-authors.png)
+
+1. Select the **pencil icon**
+
+    ![Pencil](images/pp-pencil.png)
+
+1. Select your security group from the list and click **Done**
+
+    ![Select Security Group](images/pp-securitygroup.png)
+
+1. Verify your security group is there and click **Save**
+
+    ![Save](images/pp-save.png)
+
+---
+
+## 🔧 Required Setup (Everyone)
+
+The following steps are required regardless of whether you're using a trial or an existing environment.
+
+## Step 5: Create new SharePoint site
 
 A new SharePoint site needs to be created  which will be used in [Lesson 06](../06-create-agent-from-conversation/index.md#62-add-an-internal-knowledge-source-using-a-sharepoint-site).
 
