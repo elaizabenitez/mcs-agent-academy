@@ -268,7 +268,7 @@ Let's begin!
 
 1. **Contoso Helpdesk Copilot**
 
-    We're going to use the same agent created previously in [Lesson 06 - Create a custom agent using natural language with Copilot and grounding it with your data](../06-create-agent-from-conversation/index.md).
+    We're going to use the same agent created previously in [Lesson 06 - Create a custom agent using natural language with AI and grounding it with your data](../06-create-agent-from-conversation/index.md).
 
 ### 8.1 Create a new topic with an adaptive card for user to submit their request
 

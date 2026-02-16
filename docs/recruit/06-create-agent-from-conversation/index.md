@@ -254,7 +254,7 @@ We'll be using the **Contoso Helpdesk Agent** solution from [Lesson 04 - Creatin
 
 If you have not set up the **Contoso Agent** solution, please head back to [Lesson 04 - Creating a Solution for your agent](../04-creating-a-solution/index.md#41-create-a-solution-publisher).
 
-### 6.1 Use natural language to create an agent with Copilot
+### 6.1 Use natural language to create an agent with AI
 
 > [!WARNING] AI generated instructions may differ across sessions
 >
@@ -283,8 +283,8 @@ If you have not set up the **Contoso Agent** solution, please head back to [Less
 
     - **Role and goal:** IT Help Desk assistant
     - **Primary knowledge sources** including a hierarchy for the website knowledge sources
-    - **Response style:** police, concise, helpful
-    - **Trouble shooting flow:** Question > quick fixes > steps > branches > escalation
+    - **Response style:** polite, concise, helpful
+    - **Troubleshooting flow:** Question > quick fixes > steps > branches > escalation
     - **Escalation artifact:** ticket summary
     - **Device support (basic)**
     - **Security boundaries**: no passwords, no bypassing security
@@ -352,7 +352,7 @@ If you have not set up the **Contoso Agent** solution, please head back to [Less
 
     ![Add second website URL](./assets/6.1_12_AddAdditionalWebsite.png)
 
-1. The two website URLs have now been added as knowledge sources for our agent. Select **X Dismiss** to remove the second suggestion.
+1. The two website URLs have now been added as knowledge sources for our agent. Select **X Dismiss** to remove the second suggestion by AI.
 
     ![Select Dismiss](./assets/6.1_13_SelectDismiss.png)
 
@@ -426,7 +426,7 @@ Let's now test our agent!
 
 ### 6.4 Test agent
 
-We'll test our three knowledge sources by asking questions to our Contoso Helpdesk Agent.
+We'll test our four knowledge sources by asking questions to our Contoso Helpdesk Agent.
 
 1. Select the **new test session** icon in the test pane.
 
@@ -458,7 +458,7 @@ We'll test our three knowledge sources by asking questions to our Contoso Helpde
 
     ![Test SharePoint and document knowledge sources](./assets/6.4_04_EnterQuestion2Question3.png)
 
-1. Once again you'll see the agent reviewing the all four knowledge sources to generate a response to the questions our single message. The agent responds to both questions in a single message, and separately references the SharePoint page and document of where it generated its response from.
+1. Once again you'll see the agent reviewing all four knowledge sources to generate a response to the two questions submitted in a single message. The agent responds to both questions in a single message, and provides separate references of where it generated its response from.
 
     In the knowledge modal in the activity map, you'll see the SharePoint site referenced for the Question 1 in regard to accessing the Contoso VPN. You have full visibility of what knowledge sources were used to answer both questions in the activity modal.
 
