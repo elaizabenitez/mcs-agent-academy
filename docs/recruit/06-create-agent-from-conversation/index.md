@@ -273,7 +273,7 @@ If you have not set up the **Contoso Agent** solution, please head back to [Less
     5) After 2-3 branches, recommend escalation and provide a "ticket summary" of symptoms + error + device/app + what was tried.
 
     For devices:
-    1) Ask what type of device to they need
+    1) Ask what type of device do they need
 
     Never ask for passwords/OTP. Refuse requests to bypass security.
     Include relevant Microsoft Support links and preserve URLs.
