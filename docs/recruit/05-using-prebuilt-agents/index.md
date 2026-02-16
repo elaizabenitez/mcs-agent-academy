@@ -3,7 +3,7 @@ prev:
   text: 'Creating a Solution for Your Agent'
   link: '/recruit/04-creating-a-solution'
 next:
-  text: 'Create a custom agent using natural language with Copilot'
+  text: 'Create a custom agent using natural language with AI'
   link: '/recruit/06-create-agent-from-conversation'
 ---
 
