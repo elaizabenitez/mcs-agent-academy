@@ -7,7 +7,7 @@ next:
   link: '/recruit/07-add-new-topic-with-trigger'
 ---
 
-# 🚨 Mission 06: Create a custom agent using natural language with Copilot and grounding it with your data
+# 🚨 Mission 06: Create a custom agent using natural language with AI and grounding it with your data
 
 ## 🕵️‍♂️ CODENAME: `OPERATION AGENT FORGE`
 
@@ -32,7 +32,7 @@ Let’s build your agent from the ground up.
 In this mission, you’ll learn:
 
 1. Understanding what custom agents are and how they differ from pre-built templates
-1. Creating agents using natural language prompts and conversational design with Copilot
+1. Creating agents using natural language prompts with AI
 1. Grounding agents with enterprise knowledge sources including SharePoint, documents, and websites
 1. Learning about generative orchestration and how agents dynamically search and respond using multiple data sources
 1. Building and testing a fully functional IT helpdesk agent that can answer questions from your own data
@@ -75,15 +75,15 @@ Now, instead of navigating to the SharePoint list and creating a new item, emplo
 
 ## 🗣️ Use natural language to create agents
 
-Previously you learnt how to quickly build agents in Copilot Studio using prebuilt agent templates in [Lesson 05 - Get started quickly with pre-built agents](../05-using-prebuilt-agents/index.md). In this lesson, we'll dive into the conversational creation experience with Copilot. Copilot Studio makes it easy to build agents by chatting with Copilot, just like having a conversation.
+Previously you learnt how to quickly build agents in Copilot Studio using prebuilt agent templates in [Lesson 05 - Get started quickly with pre-built agents](../05-using-prebuilt-agents/index.md). In this lesson, we'll dive into the conversational authoring experience with AI. In Copilot Studio, you don’t need to write code to create an agent. Copilot Studio makes it easy to build agents by starting with a description in your own words (natural language).
 
-In Copilot Studio, you don’t need to write code to create an agent. Instead, you describe what you want your agent to do in plain language, and Copilot helps you build it step by step through a chat-like experience.
+When you start by describing your agent in natural language, the AI automatically generates the agent’s name, description, and instructions. It also proposes triggers, channels, knowledge sources, and tools. You can accept or ignore these suggestions, but they only last for the current session and won’t be saved.
 
 ## 🌱 But I'm new to "describing what I want" - what do I do?
 
 Describing in natural language to create a custom agent might be a new concept for you. Whenever you use Copilot across Microsoft products and services, you are using natural language in the form of a _prompt_.
 
-A prompt is the message or instruction you give to an AI agent to tell it what you want it to do. Think of it as giving directions to an assistant. The clearer your instructions are, the easier it is for your assistant to understand and act on them.
+A prompt is the message or instruction you give to an AI agent to tell it what you want it to do. Think of it as giving directions to an assistant. The clearer your instructions are, the easier it is for AI to understand and act on them.
 
 ### 🪄 Why Prompts matter
 
@@ -103,7 +103,7 @@ A prompt is the message or instruction you give to an AI agent to tell it what y
 >
 > The prompt could be,
 >
-> `I want to build an agent that helps users submit a vacation request. When a user says they want to request time off, the agent should ask for their name, the start date of their vacation, the end date of their vacation, and their manager’s name. Once the user provides this information, the agent should save it to a SharePoint list called ‘Vacation Requests’ and post a notification in a dedicated Microsoft Teams channel.`
+> `I want to build an agent that helps users submit a vacation request. When a user says they want to request time off, the agent should ask for their name, the start date of their vacation, the end date of their vacation, and their manager’s name. Once the user provides this information, the agent should save it to a SharePoint list called 'Vacation Requests' and post a notification in a dedicated Microsoft Teams channel.`
 >
 > Why this prompt works:
 >
@@ -159,7 +159,7 @@ When a user asks a question, the agent:
     - **Why it's useful:** Enables your agent to answer questions based on internal guides, manuals or policies.
 
 1. **SharePoint**
-    - **What it does:** Connects to SharePoint folders or files using Microsoft Graph Search.
+    - **What it does:** Connects to SharePoint folders or files powered by [Work IQ](https://www.microsoft.com/en-us/microsoft-365/blog/2025/11/18/microsoft-ignite-2025-copilot-and-agents-built-to-power-the-frontier-firm/#microsoft-365-copilot-with-work-iq-ai-built-for-work).
     - **Why it's useful:** Ideal for accessing team documents, HR policies, or project files stored in SharePoint.
 
 1. **Dataverse**
@@ -182,7 +182,7 @@ Some sources such as SharePoint and Dataverse require user authentication. This 
 
 ## Improving your agent's responses in Copilot Studio
 
-After your agent is provisioned from the conversational creation experience, you'll want to test your agent against the instructions Copilot generated from your prompt. Improving your agent’s responses in Copilot Studio is all about making sure it understands your goals clearly and has the right information to work with.
+After your agent is provisioned from the conversational authoring experience, you'll want to test your agent against the instructions AI generated from your prompt. Improving your agent’s responses in Copilot Studio is all about making sure it understands your goals clearly and has the right information to work with.
 
 1. **Refine the agent instructions** - this is where you tell your agent how it should behave. Use clear, specific language.
 
@@ -254,195 +254,171 @@ We'll be using the **Contoso Helpdesk Agent** solution from [Lesson 04 - Creatin
 
 If you have not set up the **Contoso Agent** solution, please head back to [Lesson 04 - Creating a Solution for your agent](../04-creating-a-solution/index.md#41-create-a-solution-publisher).
 
-### 6.1 Use natural language to create an agent with Copilot
+### 6.1 Use natural language to create an agent with AI
 
-> [!WARNING] Copilot questions may differ across sessions
+> [!WARNING] AI generated instructions may differ across sessions
 >
-> The Copilot conversational creation experience can vary each time where the provided questions for guidance may be slightly different than previously.
+> When you start by describing your agent in natural language, the AI generated name, description, instructions can vary in each session. This also applies to the proposed triggers, channels, knowledge sources and tools.
 
-1. Navigate to the Home page of Copilot Studio and in the field, enter the following prompt which describes the IT help desk agent. The prompt includes the goal of the agent, the context, the expected tasks and format of the agent's response.
+1. Navigate to the Home page of Copilot Studio and in the field, enter the following prompt which describes the IT help desk agent.
 
     ```text
-    You are an IT help desk agent. Your goal is to assist users with their IT issues. You can access information from our company's knowledge base at https://support.microsoft.com/en-us. Your responses should be polite and helpful. If a user reports a slow computer, ask about the age of the device, current software versions, and if they've recently installed any new programs. If a user is experiencing trouble logging into their email, guide them through password reset procedures. You should be concise and informative, using step-by-step instructions with bullet points when appropriate.
+    You are an IT Help Desk assistant that helps employees resolve common IT issues and find available devices. Be polite, concise, and helpful. Use Microsoft Support as the primary source: https://support.microsoft.com (and Microsoft Learn troubleshooting if needed: https://learn.microsoft.com/en-us/troubleshoot/). Do not invent steps - if you can't verify official guidance, say so and offer safe diagnostics + escalation.
+
+    For troubleshooting:
+    1) Ask ONE focused question if details are missing (goal, symptom/error, app/device).
+    2) Try quick fixes first (restart, connectivity, sign-in, service status).
+    3) Provide numbered step-by-step instructions (short, actionable).
+    4) If not resolved, offer 1-2 alternative branches.
+    5) After 2-3 branches, recommend escalation and provide a "ticket summary" of symptoms + error + device/app + what was tried.
+
+    For devices:
+    1) Ask what type of device do they need
+
+    Never ask for passwords/OTP. Refuse requests to bypass security.
+    Include relevant Microsoft Support links and preserve URLs.
     ```
+
+    The prompt covers:
+
+    - **Role and goal:** IT Help Desk assistant
+    - **Primary knowledge sources** including a hierarchy for the website knowledge sources
+    - **Response style:** polite, concise, helpful
+    - **Troubleshooting flow:** Question > quick fixes > steps > branches > escalation
+    - **Escalation artifact:** ticket summary
+    - **Device support (basic)**
+    - **Security boundaries**: no passwords, no bypassing security
+    - **Link handling:** preserve URLs, cite Microsoft Support
 
     ![Enter prompt](./assets/6.1_01_Prompt.png)
 
-1. The conversational creation experience with Copilot will next load. You'll see Copilot is in progress of responding to you.
+1. We'll double check the solution that our agent will be created in, is the solution we created and selected as the preferred solution in [Lesson 04 - Create a new solution](../04-creating-a-solution/index.md#42-create-a-new-solution).
 
-    ![Copilot conversational creation experience](./assets/6.1_02_ConversationalCreationExperienceLoads.png)
+    Select the **wheel cog** icon and the **Agent Settings** modal will appear and we can see our solution created from earlier is selected by default. This is due to selecting our solution as the preferred solution in [Lesson 04 - Create a new solution](../04-creating-a-solution/index.md#42-create-a-new-solution).
 
-1. Copilot confirms the agent has been set up with the instructions provided, and is asking for confirmation on the name of the agent. We'll ask Copilot to name our agent as,
+    ![View of Agent Settings](./assets/6.1_02_AgentSettings.png)
+
+1. Select **Cancel.** Submit the prompt description and Copilot Studio will begin provisioning our agent.
+
+1. Once the agent has been provisioned, you'll see a confirmation appear. Notice how AI automatically generated the name, description and instructions for your agent. The orchestration mode is enabled by default (found in **Settings**) and the default model is used for the response model of the agent.
+
+    > [!WARNING] Reminder: AI generated instructions may differ across sessions
+    >
+    > When you start by describing your agent in natural language, the AI generated name, description, instructions can vary in each session. This also applies to the proposed triggers, channels, knowledge sources and tools.
+
+    ![Setting up agent](./assets/6.1_03_AgentProvisioned.png)
+
+1. Scroll down to review the AI suggestions for knowledge sources, tools and triggers.
+
+    ![Knowledge sources and tools sections with suggestions from AI](./assets/6.1_04_KnowledgeAndTools.png)
+
+1. Scroll down some more to review the Connected Agents, Topics and Suggested Prompts sections.
+
+    ![Connected Agents, Topics and Suggested Prompts sections](./assets/6.1_05_ConnectedAgentsTopicsSuggestedPrompts.png)
+
+1. We'll next double check our agent has correctly been created in the `Contoso Helpdesk Agent` solution. Select **Settings** on the upper right.
+
+    ![Select Settings](./assets/6.1_06_AgentSettings.png)
+
+1. We can see under **Advanced** that the agent has been created in the `Contoso Helpdesk Agent` solution. Nice! Exit from settings.
+
+    ![Solution created in Contoso Helpdesk Agent solution](./assets/6.1_07_AdvancedSettings.png)
+
+1. Now let's update the name of our agent. Select **Edit** in the **Details** section.
+
+    ![Select Edit in Details section](./assets/6.1_08_EditDetails.png)
+
+1. Enter the following as the name of the agent and **Save** the updated details.
 
     ```text
     Contoso Helpdesk Agent
     ```
 
-    ![Rename the agent](./assets/6.1_03_AgentName.png)
+    ![Update agent name](./assets/6.1_09_AgentName.png)
 
-1. Copilot performs the request and we'll see that the name of the agent has been updated in the agent pane. Copilot next asks us to refine the instructions. It's asking how we should respond to particular issues and we'll request that it acknowledges the issue, provide examples of topics to answer, and format the response as bullet points.
+1. We'll now add the suggested knowledge sources. In the **Knowledge** section, select **+ Add** for the website URL of `https://support.microsoft.com`
 
-    Copy and paste the following, and submit the request to Copilot.
+    ![Select add for the suggested website URL](./assets/6.1_10_AddSuggestedWebsite.png)
 
-    ```text
-    Prioritize urgent requests. Examples of IT issues or scenarios to help with: device problems, network connectivity, log in issues. When troubleshooting, first acknowledge their issue and respond with empathy, then provide step by step guidance using bullet points and ask if they require further assistance.
-    ```
+1. The **Add public websites** modal appears with the website URL. Select **Add**.
 
-    ![Refine agent instructions](./assets/6.1_04_RefineInstructions.png)
+    ![Select add](./assets/6.1_11_AddWebsite.png)
 
-1. The instructions of the agent will be updated after Copilot has received the request. Notice how on the right hand side pane, that starter prompts have now appeared. These were formed based on our instructions.
-
-    Next, Copilot is asking for public websites to ground the agent's knowledge.
-
-    Copy and paste the following, and submit the request to Copilot.
+1. Add another website using the below URL and select **Add to agent**.
 
     ```text
-    https://support.microsoft.com
+    https://learn.microsoft.com/troubleshoot/
     ```
 
-    ![Add publicly accessible website](./assets/6.1_05_KnowledgeSource.png)
+    ![Add second website URL](./assets/6.1_12_AddAdditionalWebsite.png)
 
-1. The public website will be added as a knowledge source. Copilot is asking if additional knowledge sources are to be added. We don't need to add additional public websites.
+1. The two website URLs have now been added as knowledge sources for our agent. Select **X Dismiss** to remove the second suggestion by AI.
 
-    Copy and paste the following, and submit the request to Copilot.
+    ![Select Dismiss](./assets/6.1_13_SelectDismiss.png)
 
-    ```text
-    Proceed with setup
-    ```
+1. By default the **Web Search** setting is enabled. Select the **toggle** to disable the **Web Search** feature as we only want the agent to use the knowledge sources we define.
 
-    ![Proceed with setup](./assets/6.1_06_ProceedWithSetup.png)
+    ![Disable Web Search](./assets/6.1_14_DisableWebSearch.png)
 
-1. Copilot confirms the setup of our Contoso Helpdesk Agent is complete but we'll add one more modification, we're going to request that our agent does not answer HR related questions. This lets our agent know that it should not answer HR related questions asked by users.
+1. Let's now test our newly created agent. In the **Testing** pane on the right hand side, select the **new test session** icon.
 
-    Copy and paste the following, and submit the request to Copilot.
+    ![Select start new test session in testing pane](./assets/6.1_15_StartNewTestSession.png)
 
-    ```text
-    Do not provide assistance to questions related to HR, examples are: What is my vacation leave balance? How many sick days do I have? What's the URL to our payroll portal? 
-    ```
-
-    ![Do not answer HR related questions](./assets/6.1_07_DoNotTalkAbout.png)
-
-1. The instructions will be updated to not provide assistance with questions related to HR. We don't need to make further updates, our agent is ready to be created.
-
-    ![Agent instructions updated](./assets/6.1_08_AgentInstructionsUpdated.png)
-
-1. Before we create our agent, let's do a couple of things.
-
-    First, select the **Configure** tab to view the agent details defined from our conversation with Copilot. This is where you'll see the Name, Description, Instructions, Knowledge and Suggested/Starter prompts.
-
-    ![View agent details](./assets/6.1_09_ViewAgentDetails.png)
-
-1. Secondly, let's test our agent. Copy and paste the following, and submit the question to our agent.
+1. Enter the following question in the **Testing** pane.
 
     ```text
     How can I check the warranty status of my Surface?
     ```
 
-    ![Test agent](./assets/6.1_10_TestAgent.png)
+    ![Test newly created agent](./assets/6.1_16_EnterQuestion.png)
 
-1. The response to the question will then display where the answers are in the format of a step-by-step guide using bullet points. Great, our agent works! 🙌🏻
+1. The Activity map will then load which shows us in real-time what path the agent is processing. In this scenario, our agent has understood the question and searches the knowledge sources using the two website URLs.
 
-    ![Agent Response](./assets/6.1_11_AgentResponse.png)
+    Our agent responds with answers that are outlined as numbered step-by-step instructions, as defined in the instructions. The response has references to the [https://support.microsoft.com](https://support.microsoft.com) website that the agent formed its response from. This enables users to verify the source of the answer.
 
-1. Lastly, we'll double check the solution that our agent will be created in, is the solution we created and selected as the preferred solution in [Lesson 04 - Create a new solution](../04-creating-a-solution/index.md#42-create-a-new-solution).
+    ![References in response](./assets/6.1_17_References.png)
 
-    Select the **ellipsis icon (...)** and select **Update Advanced Settings**.
-
-    ![Update Advanced Settings](./assets/6.1_12_UpdateAdvancedSettings.png)
-
-1. The **Advanced Settings** modal will appear and we can see our solution created from earlier is selected by default. This is due to selecting our solution as the preferred solution in [Lesson 04 - Create a new solution](../04-creating-a-solution/index.md#42-create-a-new-solution).
-
-    Select **Cancel.**
-
-    ![View of Advanced Settings](./assets/6.1_13_AdvancedSettings.png)
-
-1. Let's now create our custom agent! Select **Create**.
-
-    ![Select Create](./assets/6.1_14_CreateAgent.png)
-
-1. Copilot Studio will begin provisioning our agent.
-
-    ![Setting up agent](./assets/6.1_15_SettingUpAgent.png)
-
-1. Once our agent has been provisioned, we can see the details of the agent reflect what we requested during our Copilot conversational creation experience. Scroll down to review the agent where you'll see the name, description, instructions, the knowledge sources and the suggested prompts. The orchestration mode is enabled by default and the default model is used for the response model of the agent.
-
-    ![Agent created](./assets/6.1_16_AgentCreated.png)
-
-    ![Knowledge sources](./assets/6.1_17_KnowledgeSources.png)
-
-    ![Suggested prompts](./assets/6.1_18_SuggestedPrompts.png)
-
-1. Let's now test our newly created agent. In the **Test** pane on the right hand side, select the **Activity Map** icon.
-
-    ![Select Activity Map](./assets/6.1_19_ActivityMap.png)
-
-1. Enter the following question in the **Test** pane.
-
-    ```text
-    How do I find my Windows 11 product key?
-    ```
-
-    ![Test newly created agent](./assets/6.1_20_TestAgent.png)
-
-1. The Activity map will then load which shows us in real-time what path the agent is processing. In this scenario, our agent has understood the question and searches the knowledge sources. Currently we have one source which is the public website we added earlier using Copilot, which is what the agent is reviewing.
-
-    ![Reviewing knowledge sources](./assets/6.1_21_ReviewingSources.png)
-
-1. Our agent then responds with answers that are outlined as bullet points, as defined in the instructions. The response has references to the web pages that the agent formed its response from. This enables users to verify the source of the answer.
-
-    ![References in response](./assets/6.1_22_Response.png)
-
-1. You can also review the response and its sources by scrolling down the **Knowledge modal** in the Activity map.
-
-    ![Referenced sources](./assets/6.1_23_ReferencedSources.png)
-
-Congratulations! You've built your first custom agent with Copilot in Copilot Studio 🙌🏻
+Congratulations! You've built your first custom agent by starting with a description in Copilot Studio 🙌🏻
 
 ### 6.2 Add an internal knowledge source using a SharePoint site
 
-Previously with Copilot, we added a public website as an external knowledge source for our agent during the conversational creation experience. We're now going to add an internal knowledge source using a SharePoint site. This will be the SharePoint site you created during [Lesson 00 - Course Setup](../00-course-setup/index.md#step-4-create-new-sharepoint-site).
+Previously, we added a public website as an external knowledge source for our agent during the conversational creation experience. We're now going to add an internal knowledge source using a SharePoint site. This will be the SharePoint site you created during [Lesson 00 - Course Setup](../00-course-setup/index.md#step-4-create-new-sharepoint-site).
 
-1. Select **+ Add knowledge**.
+1. In the **Knowledge** section, select **+ Add knowledge** and select **SharePoint**.
 
-    ![Select Add knowledge](./assets/6.2_01_AddKnowledge.png)
-
-1. Select **SharePoint**.
-
-    ![Select SharePoint](./assets/6.2_02_SelectSharePoint.png)
+    ![Select SharePoint](./assets/6.2_01_SelectSharePoint.png)
 
 1. Paste in the **address of the SharePoint site** created in [Lesson 00 - Course Setup](../00-course-setup/index.md#step-4-create-new-sharepoint-site) in the SharePoint URL field and select **Add**.
 
-    ![Enter SharePoint site URL](./assets/6.2_03_AddSharePointURL.png)
+    Update the **name** of the SharePoint site to `Contoso IT` and select **Add to agent**.
 
-1. Update the **name** of the SharePoint site to `Contoso IT` and select **Add**.
-
-    ![Update SharePoint site name](./assets/6.2_04_UpdateNameAddToAgent.png)
+    ![Update SharePoint site name and select Add to agent](./assets/6.2_02_AddSharePointSite.png)
 
 1. The SharePoint site has now been added as a knowledge source with a status of _Ready_. The Status column will show whether the knowledge source has been loaded/connected to successfully, or if there is an issue.
 
-    ![SharePoint site status](./assets/6.2_05_SharePointStatus.png)
+    ![SharePoint site status](./assets/6.2_03_SharePointSiteAdded.png)
 
 ### 6.3 Add an internal knowledge source by uploading a document
 
 We'll now add another internal knowledge source by uploading a document directly to our agent.
 
-1. Select **Add knowledge**.
+1. In the **Knowledge** section, select **+ Add knowledge** and select **Upload file** or **select to browse**.
 
-    ![Select Add knowledge](./assets/6.3_01_AddKnowledge.png)
-
-1. Select **Upload file** or **Select to browse**.
-
-    ![Select upload files](./assets/6.3_02_UploadFile.png)
+    ![Select upload files](./assets/6.3_01_SelectUploadFile.png)
 
 1. Download this [sample file](https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/recruit/06-create-agent-from-conversation/assets/Contoso_Guest_WiFi_Connection_Guide.docx) and select it in your File Explorer. Select **Open**.
 
-    ![Select document](./assets/6.3_03_SelectFile.png)
+    ![Select document](./assets/6.3_02_SelectWordFile.png)
 
 1. The file has been selected for upload. Select **Add to agent** next.
 
-    ![Select Add to Agent](./assets/6.3_04_AddToAgent.png)
+    ![Select Add to Agent](./assets/6.3_03_SelectAddToAgent.png)
 
-1. The document will be in the process of being added to the agent. Wait until the upload has completed, do not close the browser window. The status of the document will initially show as _In progress_, wait until the status has been updated to **Ready** before testing your agent.
+1. The document will be in the process of being added to the agent. Wait until the upload has completed, do not close the browser window.
+
+    ![Document added](./assets/6.3_04_FileAdded.png)
+
+1. The status of the document will initially show as _In progress_, wait until the status has been updated to **Ready** before testing your agent.
 
     ![File status](./assets/6.3_05_FileStatus.png)
 
@@ -450,49 +426,53 @@ Let's now test our agent!
 
 ### 6.4 Test agent
 
-We'll test our three knowledge sources by asking questions to our Contoso Helpdesk Agent.
+We'll test our four knowledge sources by asking questions to our Contoso Helpdesk Agent.
 
-1. Select the **refresh** icon in the test pane, followed by selecting the **activity map** icon.
+1. Select the **new test session** icon in the test pane.
 
-      ![Refresh icon](./assets/6.4_01_RefreshAndActivityMap.png)
-
-1. Enter the following question to test our public website (external) knowledge source.
+    Enter the following question to test our public website (external) knowledge source.
 
       ```text
       How can I find the serial number on my Surface device?
       ```
 
-      ![Enter prompt to test website knowledge source](./assets/6.4_02_TestQuestion1.png)
+      ![Select start a new test session icon](./assets/6.4_01_EnterQuestion1.png)
 
 1. You'll next see the agent reviewing the knowledge sources and providing a response using the website knowledge source.
 
-      ![Web page referenced in response](./assets/6.4_03_ReviewingSources.png)
+    A response will be returned and notice how there are references to the web page it formed its answer from.
 
-1. A response will be returned an notice how there are references to the web page it formed its answer from. If you scroll down the knowledge modal in the activity map, you'll see the other knowledge sources the agent searched, which is the SharePoint site and the uploaded file.
+    ![Question 1 response](./assets/6.4_02_Question1Response.png)
 
-    However these were not used as in the **Referenced sources** section, the website knowledge source was only referenced. The answer was grounded using the website knowledge source. If you select the references, you'll be directed to the web page.
+1. If you scroll down the knowledge modal in the activity map, you'll see the other knowledge sources the agent searched, which is the other website URL, SharePoint site and the uploaded file.
 
-    ![Knowledge sources referenced and searched](./assets/6.4_04_ReferencedSources.png)
+    However these were not used as in the **Referenced sources** section, the first website knowledge source was only referenced. The answer was grounded using the first website knowledge source. If you select the references, you'll be directed to the web page.
+
+    ![Knowledge sources referenced and searched](./assets/6.4_03_OtherSourcesSearchedOver.png)
 
 1. Let's now test both our SharePoint site knowledge source and document knowledge source in a single message. Enter the following question.
 
     ```text
-    How can I access our company Contoso VPN? How do guests connect to the Contoso Guest wifi?
+    How can I access our company's Contoso VPN from my device? How do guests connect to the Contoso Guest wifi?
     ```
 
-    ![Test SharePoint and document knowledge sources](./assets/6.4_05_TestQuestion2.png)
+    ![Test SharePoint and document knowledge sources](./assets/6.4_04_EnterQuestion2Question3.png)
 
-1. Once again you'll see the agent reviewing the three knowledge sources to generate a response to the questions our single message. The agent responds to both questions in a single message, and separately references the SharePoint page and document of where it generated its response from.
+1. Once again you'll see the agent reviewing all four knowledge sources to generate a response to the two questions submitted in a single message. The agent responds to both questions in a single message, and provides separate references of where it generated its response from.
 
-    In the knowledge modal in the activity map, you'll see the SharePoint site and document used as the reference sources. You have full visibility of what knowledge sources were used to answer both questions.
+    In the knowledge modal in the activity map, you'll see the SharePoint site referenced for the Question 1 in regard to accessing the Contoso VPN. You have full visibility of what knowledge sources were used to answer both questions in the activity modal.
 
-    ![Knowledge sources referenced](./assets/6.4_06_ReferencedSources.png)
+    ![Knowledge sources referenced for Question 1 and Question 2](./assets/6.4_05_Question2Response.png)
 
-1. It's always good to verify the generated response is correct. Select the SharePoint site reference and the FAQs SharePoint page will load where you can scroll down to review the VPN instructions.
+1. Scroll down to the response for Question 2 in regard to the Contoso Guest wifi. Again, we'll see a response that's grounded using the uploaded file that contains the details.
 
-    ![Review SharePoint page](./assets/6.4_07_VerifySharePoint.png)
+    ![Question 3 response](./assets/6.4_06_Question3Response.png)
 
-1. Next, select the document reference and a modal will appear with the text from the document that reflects the answer.
+1. In the activity modal, notice how the second website URL was also referred to but not used as one of the referenced sources.
+
+    ![Activity modal of other sources searched over](./assets/6.4_07_OtherSourcesSearchedOver.png)
+
+1. It's always good to verify the generated response is correct. Select the document reference and a modal will appear with the text from the document that reflects the answer.
 
     ![Review document](./assets/6.4_08_VerifyDocument.png)
 
@@ -500,9 +480,9 @@ The agent can answer multiple questions in a single message, and search the know
 
 ## ✅ Mission Complete
 
-Congratulations! 👏🏻 You've learnt how to use natural language to create your own custom agent that can chat over your data from three different knowledge sources 🙌🏻
+Congratulations! 👏🏻 You've learnt how to create your own custom agent by starting with a description. Your custom agent can chat over your data from four different knowledge sources 🙌🏻
 
-This is the end of **Lab 06 - Create an agent with Copilot**, select the link below to move to the next lesson. Your custom agent created in this lab will be used in the next lesson's lab.
+This is the end of **Lab 06 - Create an agent with AI**, select the link below to move to the next lesson. Your custom agent created in this lab will be used in the next lesson's lab.
 
 ⏭️ [Move to **Add a new Topic with trigger** lesson](../07-add-new-topic-with-trigger/index.md)
 

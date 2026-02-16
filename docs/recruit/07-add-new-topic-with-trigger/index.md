@@ -1,6 +1,6 @@
 ---
 prev:
-  text: 'Create a custom agent using natural language with Copilot'
+  text: 'Create a custom agent using natural language with AI'
   link: '/recruit/06-create-agent-from-conversation'
 next:
   text: 'Enhance user interactions in Topics with Adaptive Cards'
@@ -464,7 +464,7 @@ Let's begin!
 
 1. **Contoso Helpdesk Agent**
 
-    We're going to use the same agent created previously in [Lesson 06 - Create a custom agent using natural language with Copilot and grounding it with your data](../06-create-agent-from-conversation/index.md).
+    We're going to use the same agent created previously in [Lesson 06 - Create a custom agent using natural language with AI and grounding it with your data](../06-create-agent-from-conversation/index.md).
 
 ### 7.1 Add a new topic from blank
 

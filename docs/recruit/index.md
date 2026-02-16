@@ -52,7 +52,7 @@ This academy is broken into progressive lessons—each one designed as a field m
 | `03` | 👩‍💻 [Create a Declarative Agent](./03-create-a-declarative-agent-for-M365Copilot/index.md) | Add your own agent to the Microsoft 365 Copilot, grounded in a prompt |
 | `04` | 🧩 [Creating a Solution](./04-creating-a-solution/index.md) | Package your agent into a reusable solution for environment management |
 | `05` | 🚀 [Get Started with Pre-Built Agents](./05-using-prebuilt-agents/index.md) | Use and customize a template agent to accelerate setup |
-| `06` | ✍️ [Build a Custom Agent](./06-create-agent-from-conversation/index.md) | Create a new Copilot grounded in knowledge sources |
+| `06` | ✍️ [Build a Custom Agent](./06-create-agent-from-conversation/index.md) | Create a new agent grounded in knowledge sources |
 | `07` | 🧠 [Add a Topic with Triggers](./07-add-new-topic-with-trigger/index.md) | Use Topics to define custom question/answer paths |
 | `08` | 🪪 [Enhance with Adaptive Cards](./08-add-adaptive-card/index.md) | Build an Adaptive Card using Power Fx and SharePoint |
 | `09` | 🔁 [Automate with Agent Flows](./09-add-an-agent-flow/index.md) | Use Adaptive Card input to trigger back-end flows |
