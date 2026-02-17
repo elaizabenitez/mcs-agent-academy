@@ -282,7 +282,7 @@ This allows you to build custom conversation flows from scratch, and you can add
 - You can customize logic using variables, Power Fx, and conditions.
 - It’s perfect for building tailored experiences for specific business needs.
 
-### 2. Create with Copilot
+### 2. Add from description with Copilot
 
 This allows you to describe what you want using natural language, and Copilot will build the conversation for you. Same applies when editing your topic, use natural language and Copilot will review and modify the topic for you.
 
@@ -484,15 +484,13 @@ Let's begin!
     Available devices
     ```
 
-    ![Name the topic](assets/7.1_03_TopicName.png)
-
-1. Enter a trigger description that outlines what the topic does. Copy and paste the following.
+    Enter a trigger description that outlines what the topic does. Copy and paste the following.
 
     ```text
     This topic helps users find devices that are available from our SharePoint Devices list. User can ask to see available devices and it will return a list of devices that are available which can include laptops, smartphones, accessories and more.
     ```
 
-    ![Enter a name and description for trigger](assets/7.1_04_TriggerDescription.png)
+    ![Enter a name and description for trigger](assets/7.1_03_TopicNameAndDescription.png)
 
 ### 7.2 Define the trigger inputs and outputs
 
