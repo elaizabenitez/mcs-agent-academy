@@ -687,7 +687,7 @@ Let's begin!
 
     ![Add instructions](assets/7.3_23_ClearInstructions.png)
 
-1. Add the a new line in the instructions, copy and paste the following.
+1. Add a new line in the instructions, copy and paste the following.
 
     ```text
     1. Help find available devices and give full details using [Available devices]. Always extract the VarDeviceType from the inputs. After giving device details, ask the user if they want to request a device from the list of available devices.
