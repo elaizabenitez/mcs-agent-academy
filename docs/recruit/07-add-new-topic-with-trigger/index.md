@@ -247,7 +247,7 @@ This node lets your agent send non-message actions to external systems or channe
 
 In Copilot Studio, Power Fx is a low-code programming language used to add logic and dynamic behavior to your agent. It's the same language used in Microsoft Power Apps, and it's designed to be simple and Excel-like, making it easy for developers and non-developers.
 
-![Power Fx expression](assets/7.3_13_EnterFormula.png)
+![Power Fx expression](assets/7.3_09_EnterFormula.png)
 
 ### What Power Fx can do in topics
 
