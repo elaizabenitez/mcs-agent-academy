@@ -545,7 +545,7 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
     Link to item in SharePoint
     Additional comments from:
 
-    This is an automated email from Contoso Helpdesk Copilot
+    This is an automated email from Contoso Helpdesk Agent
     ```
 
     ![Rename action and configure inputs](./assets/9.1_24_RenameAndConfigureParameters.png)
@@ -588,11 +588,21 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 
     ![Add Model input as dynamic content](./assets/9.1_29_ModelAdded.png)
 
-1. For the `Link to item in SharePoint` text, we'll update this to be a hyperlink in the email message body. Click at the beginning of the line and select the **lightning bolt icon** or **fx icon** to the right.
+1. For the `Link to item in SharePoint` text, we'll update this to be a hyperlink in the email message body.
 
-    ![Add dynamic content](./assets/9.1_33_AddDynamicContent.png)
+1. We need to switch to the HTML editor by selecting the **&lt;/&gt;** icon.
 
-1. Click after the HTML anchor tag and select the **lightning bolt icon** or **fx icon** to the right.
+    ![Add User input](./assets/9.1_30_ToggleCodeView.png)
+
+1. The HTML editor is now enabled. Click before the `Link to item in SharePoint` text, add an HTML anchor tag to create a hyperlink. Copy and paste the following.
+
+    ```text
+    <a href="
+    ```
+
+    ![HTML tag](./assets/9.1_31_AddHTMLTag.png)
+
+1. Click after the HTML anchor tag (`<a href="`) and select the **lightning bolt icon** or **fx icon** to the right.
 
     In the **Dynamic content** tab of the flyout pane, enter the following in the search field,
 
@@ -602,56 +612,39 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 
     Select the **Link to item** input from the **Get item** action and select **Add**.
 
-    ![Add Link to item as dynamic content](./assets/9.1_34_AddLinkToItem.png)
+    ![Add Link to item as dynamic content](./assets/9.1_32_AddLinkToItem.png)
 
-1. We need to switch to the HTML editor by selecting the **&lt;/&gt;**
- icon.
+1. The dynamic content input of **Link to item** is now referenced in the **Body** parameter.
 
-    ![Add User input](./assets/9.1_35_ToggleCodeView.png)
+    ![Link to item parameter added](./assets/9.1_33_LinkToItemAdded.png)
 
-1. The HTML editor is now enabled. Click before the `Link to item in SharePoint` text, add an HTML anchor tag to create a hyperlink. Copy and paste the following.
-
-    ```text
-    <a href="
-    ```
-
-    ![HTML tag](./assets/9.1_36_AddHTMLTag.png)
-
-1. The dynamic content input of **Link to item** is now referenced in the **Body** parameter. Click after the **Link to item** input, copy and paste the following.
+1. Click after the **Link to item** input, copy and paste the following.
 
     ```text
     ">
     ```
 
-    ![HTML tag](./assets/9.1_37_AddHTMLTag.png)
+    ![HTML tag](./assets/9.1_34_AddHTMLTag.png)
 
-1. Click after the `Link to item in SharePoint` text, close the html anchor tag. Copy and paste the following.
+1. Click after the `Link to item in SharePoint` text.
+
+    ![HTML tag](./assets/9.1_35_ClickAfterText.png)
+
+1. To finish the hyperlink, you need to close the HTML anchor tag. Copy and paste the following.
 
     ```text
     </a>
     ```
 
-    ![HTML tag](./assets/9.1_38_AddHTMLTag.png)
-
-1. Select the **&lt;/&gt;** icon to toggle the code view.
-
-    ![Disable code view](./assets/9.1_39_ToggleCodeView.png)
-
-1. Then reselect the **&lt;/&gt;** icon to toggle the code view again.
-
-    ![Switch back to code view](./assets/9.1_40_ToggleCodeViewAgain.png)
-
-1. Notice how there are several extra characters `&lt;br&gt;`. Delete these characters
-
-    ![Delete characters](./assets/9.1_41_DeleteCharacters.png)
+    ![Closing anchor tag](./assets/9.1_36_ClosingAnchorTag.png)
 
 1. We're now done adding a hyperlink to our email message body 😎 Select the **&lt;/&gt;** icon to toggle the code view.
 
-    ![HTML Tag Tidied Up](./assets/9.1_42_HTMLTagTidiedUp.png)
+    ![Toggle the code view](./assets/9.1_37_ToggleCodeView.png)
 
 1. Click after the `Additional comments from` text before the colon character and select the **lightning bolt icon** or **fx icon** to the right.
 
-    ![Add User parameter](./assets/9.1_43_AddUserInput.png)
+    ![Add User parameter](./assets/9.1_38_AddUserInput.png)
 
 1. In the **Dynamic content** tab of the flyout pane, enter the following in the search field,
 
@@ -661,13 +654,13 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 
     Select the **User** parameter from the trigger and select **Add**.
 
-    ![Add User parameter as dynamic content](./assets/9.1_44_AddUserDynamicContent.png)
+    ![Add User parameter as dynamic content](./assets/9.1_39_AddUserDynamicContent.png)
 
 1. We're now going to insert an expression that will display the value of Additional Comments if provided by the user in the **Ask an adaptive card** node, otherwise display "None" if the user does not provide any comments.
 
     Click after the colon and select the **lightning bolt icon** or **fx icon** to the right.
 
-    ![Add expression](./assets/9.1_45_AddExpression.png)
+    ![Add expression](./assets/9.1_40_AddExpression.png)
 
 1. In the **Function** tab of the flyout pane and in the expression field above, enter the following,
 
@@ -679,7 +672,7 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 
     The next function used is `empty` which checks whether a value exists or not in a string parameter. The string parameter to be referenced is the `AdditionalComments` input parameter value from the trigger.
 
-    ![If empty](./assets/9.1_46_IfEmptyFunctions.png)
+    ![If empty](./assets/9.1_41_IfEmptyFunctions.png)
 
 1. Next, click **inside of the brackets** after the `empty` function. We're going to insert the `AdditionalComments` input parameter from the trigger.
 
@@ -691,7 +684,7 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 
     Scroll down the pane and select **AdditionalComments** input from the trigger. The parameter will now be added as a string parameter in the expression.
 
-    ![Add AdditionalComments as dynamic content](./assets/9.1_47_AdditionalCommentsDynamicContent.png)
+    ![Add AdditionalComments as dynamic content](./assets/9.1_42_AdditionalCommentsDynamicContent.png)
 
 1. Next we'll define the **_true_** logic, where if the `AdditionalComments` string parameter is empty, then we want to display a string (text) of `None`.
 
@@ -701,7 +694,7 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
     , 'None',
     ```
 
-    ![True logic](./assets/9.1_48_None.png)
+    ![True logic](./assets/9.1_43_None.png)
 
 1. Finally we'll define the **_false_** logic, where if the `AdditionalComments` string parameter is not empty, then we want to display the value of the **AdditionalComments** input parameter from our trigger.
 
@@ -718,11 +711,11 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 
     Now add it our **Body** parameter by selecting **Add**.
 
-    ![False logic](./assets/9.1_49_AdditionalCommentsDynamicContent.png)
+    ![False logic](./assets/9.1_44_AdditionalCommentsDynamicContent.png)
 
 1. Excellent, our expression is complete! The expression has now been added to the **Body** parameter. Lastly, format the last line in Italics.
 
-    ![Italics](./assets/9.1_50_Italics.png)
+    ![Italics](./assets/9.1_45_Italics.png)
 
 1. We're now going to update the **Respond to the agent** action to send the value of the **Model value** parameter from the **Get item** action back to the agent.
 
@@ -730,7 +723,7 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 
     Select the **Respond to the agent** action and select the **Text** output as the type.
 
-    ![Select Text output](./assets/9.1_51_RespondToTheAgentAction.png)
+    ![Select Text output](./assets/9.1_46_RespondToTheAgentAction.png)
 
 1. Enter the following as the name of the output.
 
@@ -738,13 +731,11 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
     ModelValue
     ```
 
-    ![ModelValue output](./assets/9.1_52_ModelValueInput.png)
+    ![ModelValue output](./assets/9.1_47_ModelValueInput.png)
 
 1. Select the value field and select the **lightning bolt icon** or **fx icon** to the right.
 
-    ![Insert expression](./assets/9.1_53_InsertDynamicContent.png)
-
-1. In the **Dynamic content** tab of the flyout pane, enter the following in the search field,
+    In the **Dynamic content** tab of the flyout pane, enter the following in the search field,
 
     ```text
     model
@@ -752,17 +743,17 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 
     Select the **Model** parameter from the **Get item** action and select **Add**.
 
-    ![Add Model parameter as dynamic content](./assets/9.1_54_ModelParameter.png)
+    ![Add Model parameter as dynamic content](./assets/9.1_48_InsertModelDynamicContent.png)
 
 1. The **Model** parameter is now the value of the text output. Select **Save draft** to save our agent flow.
 
     We've now completed our agent flow 👏🏻
 
-    ![Select save draft](./assets/9.1_55_SaveDraftAgentFlow.png)
+    ![Select save draft](./assets/9.1_49_SaveDraftAgentFlow.png)
 
 1. Let's make one more update to our agent flow before publishing. Select the **Overview** tab and select **Edit**.
 
-    ![Select Edit](./assets/9.1_56_EditAgentFlowDetails.png)
+    ![Select Edit](./assets/9.1_50_EditAgentFlowDetails.png)
 
 1. For the **Flow name**, copy and paste the following.
 
@@ -770,19 +761,23 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
     Send device request email
     ```
 
-    For the **Description**, select the **refresh icon** to use AI to automatically generate a description for you based on the trigger and actions in the agent flow.
+    For the **Description**, copy and paste the following.
+
+    ```text
+    This flow starts when an agent manually triggers it and provides device and user details. It retrieves device information from a SharePoint list using the provided device ID. After successfully getting the device details, it sends an email to a manager with the request information, and sends a value back to the agent.
+    ```
 
     Select **Save** to save the updated name and description of the agent flow.
 
-    ![Rename, add description, and save details](./assets/9.1_57_RenameAndDescription.png)
+    ![Rename, add description, and save details](./assets/9.1_51_RenameAndDescription.png)
 
 1. Select the **Designer** tab and select **Publish** to publish the agent flow so that it can be added as a node in the **Request device** topic.
 
-    ![Publish](./assets/9.1_58_Publish.png)
+    ![Publish](./assets/9.1_52_Publish.png)
 
 1. A confirmation message will appear shortly to confirm the agent flow is published.
 
-    ![Confirmation message](./assets/9.1_59_Confirmation.png)
+    ![Confirmation message](./assets/9.1_53_Confirmation.png)
 
 ### 9.2 Add agent flow to topic
 
