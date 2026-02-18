@@ -385,11 +385,11 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 
 1. Next, we're going to add several inputs for the agent flow.
 
-    - `DeviceSharePointId` - this will store the value, ID, of the SharePoint item. This ID value is an output from the Ask with adaptive card node where the user selected the device.
+    - `DeviceSharePointId` - this will store the value, ID, of the SharePoint item. This ID value is an output from the **Ask with adaptive card** node where the user selected the device.
 
     - `User` - this will be the name of the user which will be from a system variable of the agent.
 
-    - `AdditionalComments` - this will be the the comment entered by the user, which is an output from the Ask with adaptive card node.
+    - `AdditionalComments` - this will be the the comment entered by the user, which is an output from the **Ask with adaptive card** node.
 
     We'll first add the `DeviceSharePointId` as an input for our trigger. Select **+ Add an input**.
 
@@ -480,7 +480,7 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 1. In the **Dynamic content** tab of the flyout pane, enter the following,
 
     ```text
-    sharepoint
+    id
     ```
 
     The search results will show input parameters that match the value searched. Select the **DeviceSharePointId** parameter from the trigger.
@@ -515,19 +515,9 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 
     ![Send an email action](./assets/9.1_23_SendAnEmail.png)
 
-1. We next need to create a connection for the connector action. Select **Sign in**.
+1. Create a connection for the connector action if you don't have one by selecting **Sign in** and use your signed in user account.
 
-    ![Create connection](./assets/9.1_24_CreateConnection.png)
-
-1. Select your signed in user account.
-
-    ![Select user account](./assets/9.1_25_SelectUserAccount.png)
-
-1. Select **Allow access**. A connection has now been created.
-
-    ![Select allow access](./assets/9.1_26_AllowAccess.png)
-
-1. Rename the action to the following,
+    Rename the action to the following,
 
     ```text
     Send an email to manager
@@ -558,23 +548,21 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
     This is an automated email from Contoso Helpdesk Copilot
     ```
 
-    ![Rename action and configure inputs](./assets/9.1_27_RenameAndConfigureParameters.png)
+    ![Rename action and configure inputs](./assets/9.1_24_RenameAndConfigureParameters.png)
 
 1. Next, we're going to update the **Body** input parameter with references to dynamic content input from the **trigger** or **Get item** action. Enter a space after the second line as we'll insert the name of the user from the trigger input, **User**.
 
     Select the **lightning bolt icon** or **fx icon** to the right.
 
-    ![Add User input as dynamic content](./assets/9.1_28_AddUserInput.png)
+    ![Add User input as dynamic content](./assets/9.1_25_AddUserInput.png)
 
-1. In the **Dynamic content** tab of the flyout pane, select the **User** input from the trigger.
+1. In the **Dynamic content** tab of the flyout pane, select the **User** input from the trigger. Select **Add** to add the dynamic content **User** input into the **Body** parameter of the action.
 
-    Select **Add** to add the dynamic content **User** input into the **Body** parameter of the action.
-
-    ![Select User input](./assets/9.1_29_SelectUserInput.png)
+    ![Select User input](./assets/9.1_26_SelectUserInput.png)
 
 1. The dynamic content input from the trigger is now referenced in the **Body** parameter of the action. We'll repeat the same for the remaining lines in the email message body.
 
-    ![User input added](./assets/9.1_30_UserInputAdded.png)
+    ![User input added](./assets/9.1_27_UserInputAdded.png)
 
 1. Click into the space beside `Manufacturer:`. Select the **lightning bolt icon** or **fx icon** to the right.
 
@@ -586,7 +574,7 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 
     Select the **Manufacturer value** input from the trigger and select **Add**.
 
-    ![Add Manufacturer value input as dynamic content](./assets/9.1_31_ManufacturerValueAdded.png)
+    ![Add Manufacturer value input as dynamic content](./assets/9.1_28_ManufacturerValueAdded.png)
 
 1. Click into the space beside `Model:`. Select the **lightning bolt icon** or **fx icon** to the right.
 
@@ -598,7 +586,7 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 
     Select the **Model** input from the **Get item** action and select **Add**.
 
-    ![Add Model input as dynamic content](./assets/9.1_32_ModelAdded.png)
+    ![Add Model input as dynamic content](./assets/9.1_29_ModelAdded.png)
 
 1. For the `Link to item in SharePoint` text, we'll update this to be a hyperlink in the email message body. Click at the beginning of the line and select the **lightning bolt icon** or **fx icon** to the right.
 
