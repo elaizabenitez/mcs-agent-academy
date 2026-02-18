@@ -407,7 +407,7 @@ Now that we created the new topic that handles the device requests, we need to u
 
     ![Redirect to Goodbye topic](assets/8.2_04_ReferenceGoodbyeTopic.png)
 
-1. Let's now test our the redirection from the _Available devices_ topic to the _Request devices_ topic. Select the **Test** to load the testing pane select **Refresh**.
+1. Let's now test our the redirection from the _Available devices_ topic to the _Request devices_ topic. Select the **Test** to load the testing pane and select **Refresh**.
 
     Then select the **Activity map** icon in the test pane, followed by enabling **Track between topics**. This will allow us to see the _Available devices_ topic has redirected to the _Request devices_ topic.
 
