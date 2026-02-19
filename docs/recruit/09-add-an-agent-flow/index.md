@@ -154,7 +154,7 @@ This saves time, reduces mistakes and makes the whole process much smoother.
     - The agent can plan and adjust steps based on changing information.
 
 1. **Integration actions**
-    - Connect your flow to other tools like Outlook, Microsoft Teams, ServiceNow, SharePoint and other applications and services, through from +1400 built-in connectors or from your own custom connector.
+    - Connect your flow to other tools like Outlook, Microsoft Teams, ServiceNow, SharePoint and other applications and services, through +1400 built-in connectors or from your own custom connector.
     - This helps your agent work with the apps your team already uses.
 
 1. **Human in the loop**
@@ -439,7 +439,7 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 
     ![Add action](./assets/9.1_11_AddAction.png)
 
-1. The **Actions pane** will appear where you can view actions from 1400+ built-in connectors to Microsoft and third-party services. In the **search field** enter the following,
+1. The **Actions pane** will appear where you can view actions from 1400+ built-in connectors to Microsoft and third-party services. In the **search field**, enter the following.
 
     ```text
     Get item
@@ -477,7 +477,7 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 
     ![Dynamic content picker](./assets/9.1_17_InsertExpressionIcon.png)
 
-1. In the **Dynamic content** tab of the flyout pane, enter the following,
+1. In the **Dynamic content** tab of the flyout pane, enter the following.
 
     ```text
     id
@@ -505,7 +505,7 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 
     ![Add new action](./assets/9.1_22_AddAnAction.png)
 
-1. In the search field enter the following,
+1. In the **search field**, enter the following.
 
     ```text
     send an email
@@ -566,7 +566,7 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 
 1. Click into the space beside `Manufacturer:`. Select the **lightning bolt icon** or **fx icon** to the right.
 
-    In the **Dynamic content** tab of the flyout pane, enter the following in the search field,
+    In the **Dynamic content** tab of the flyout pane, enter the following in the search field.
 
     ```text
     manufacturer
@@ -578,7 +578,7 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 
 1. Click into the space beside `Model:`. Select the **lightning bolt icon** or **fx icon** to the right.
 
-    In the **Dynamic content** tab of the flyout pane, enter the following in the search field,
+    In the **Dynamic content** tab of the flyout pane, enter the following in the search field.
 
     ```text
     model
@@ -604,7 +604,7 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 
 1. Click after the HTML anchor tag (`<a href="`) and select the **lightning bolt icon** or **fx icon** to the right.
 
-    In the **Dynamic content** tab of the flyout pane, enter the following in the search field,
+    In the **Dynamic content** tab of the flyout pane, enter the following in the search field.
 
     ```text
     link to item
@@ -646,7 +646,7 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 
     ![Add User parameter](./assets/9.1_38_AddUserInput.png)
 
-1. In the **Dynamic content** tab of the flyout pane, enter the following in the search field,
+1. In the **Dynamic content** tab of the flyout pane, enter the following in the search field.
 
     ```text
     user
@@ -662,7 +662,7 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 
     ![Add expression](./assets/9.1_40_AddExpression.png)
 
-1. In the **Function** tab of the flyout pane and in the expression field above, enter the following,
+1. In the **Function** tab of the flyout pane and in the expression field above, enter the following.
 
     ```text
     if(empty())
@@ -676,7 +676,7 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 
 1. Next, click **inside of the brackets** after the `empty` function. We're going to insert the `AdditionalComments` input parameter from the trigger.
 
-    Select the **Dynamic content** tab. Enter the following in the search field,
+    Select the **Dynamic content** tab. Enter the following in the search field.
 
     ```text
     Additional
@@ -701,7 +701,7 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
     > [!NOTE]
     > A reminder this value will be from the Additional Comments field of the adaptive card in the **Ask with adaptive card** node in the **Request device** topic.
 
-    After the comma after our **_true_** logic, select the **Dynamic content** tab. Enter the following in the search field,
+    After the comma after our **_true_** logic, select the **Dynamic content** tab. Enter the following in the search field.
 
     ```text
     Additional
@@ -735,7 +735,7 @@ In this exercise, we'll create an agent flow that retrieves the SharePoint item 
 
 1. Select the value field and select the **lightning bolt icon** or **fx icon** to the right.
 
-    In the **Dynamic content** tab of the flyout pane, enter the following in the search field,
+    In the **Dynamic content** tab of the flyout pane, enter the following in the search field.
 
     ```text
     model
@@ -791,13 +791,13 @@ Let's now add the agent flow to the **Request device** topic.
 
     ![Select Topics tab](./assets/9.2_02_SelectTopics.png)
 
-1. Select the **Request device** topic.
+1. Next, select the **Request device** topic.
 
     ![Select Request device topic](./assets/9.2_03_SelectRequestDevice.png)
 
 1. Scroll down to the **Ask with adaptive card** node and add a new node.
 
-    Select **Add a tool** and in the **Basic tools** tab of the fly out pane, select the **Send device request email** agent flow we recently created and published.
+    Select **Add a tool** and in the **Basic tools** tab of the fly out pane, select the **Send device request email** agent flow we recently created and published. Notice how the description we entered earlier for the agent flow is also visible (highlighted in yellow).
 
     ![Select agent flow](./assets/9.2_04_SelectAgentFlow.png)
 
@@ -813,7 +813,7 @@ Let's now add the agent flow to the **Request device** topic.
 
 1. Next, select the **ellipsis (...) icon** for the **User** input.
 
-    ![Select Variable](./assets/9.2_07_SelectVariable.png)
+    ![Select variable](./assets/9.2_07_SelectVariable.png)
 
 1. Select the **System** tab in the flyout variable pane and select **User.DisplayName**. This variable stores the display name of the internal user interacting with the agent.
 
@@ -862,13 +862,15 @@ Let's now add the agent flow to the **Request device** topic.
 1. Next we'll define the logic
 
     - when **_true_** - if the `Topic.commentsId` string parameter is empty, then we want to insert no value.
-    - when **_false_** - if the `Topic.commentsId` string parameter is not empty, then insert the value of commentsId variable.
+    - when **_false_** - if the `Topic.commentsId` string parameter is not empty, then insert the value of `commentsId` variable.
 
     After the bracket that encloses the string parameter, enter the following,
 
     ```text
     "", Topic.commentsId)
     ```
+
+    ![Power Fx expression](./assets/9.2_14_PowerFxExpression.png)
 
     The Power Fx expression should be the following,
 
@@ -878,7 +880,9 @@ Let's now add the agent flow to the **Request device** topic.
 
     Great work, our expression is complete! 🙌🏻 Now select **Insert** to set the input parameter of the agent flow to the Power Fx expression.
 
-    ![Power Fx expression](./assets/9.2_14_PowerFxExpression.png)
+1. We'll now see the Power Fx expression in the **AdditionalComments** input.
+
+    ![Power Fx expression in AdditionalComments input](./assets/9.2_15_PowerFxExpressionForAdditionalCommentsInput.png)
 
 1. **Save** the topic.
 
@@ -902,7 +906,7 @@ Let's begin!
     Thanks
     ```
 
-    Then select the **Insert variable** as we'll reference the user's name.
+    Then select the **Insert variable** icon as we'll reference the user's name.
 
     ![Insert variable](./assets/9.3_02_InsertVariable.png)
 
@@ -910,15 +914,17 @@ Let's begin!
 
     ![Select system variable](./assets/9.3_03_SelectSystemVariable.png)
 
-1. Enter the following below in the message field,
+1. After the system variable is added, enter the following below in the message field,
 
     ```text
     . Your selected device,
     ```
 
-    Then select **Insert variable** and this time in the **Custom** tab, select the **ModelValue** variable.
+    Then select **Insert variable** and this time in the **Custom** tab, search for `Model` in the search field. Select the **ModelValue** variable.
 
-    Then enter the following below to complete the message.
+    ![Select system variable](./assets/9.3_04_SelectCustomVariable.png)
+
+1. Then enter the following below to complete the message.
 
     ```text
     , has been submitted and will be reviewed by your manager.
@@ -926,15 +932,15 @@ Let's begin!
 
     The message should look like the following.
 
-    ![Send message](./assets/9.3_04_SendAMessage.png)
+    ![Send message](./assets/9.3_05_SendAMessage.png)
 
 1. Lastly, select the **plus + icon** below the **Send a message** node and select **Topic management**, followed by **Go to another topic** and select **End of Conversation**.
 
-    ![Topic management](./assets/9.3_05_EndOfConversation.png)
+    ![Topic management](./assets/9.3_06_EndOfConversation.png)
 
 1. **Save** the topic.
 
-    ![Save](./assets/9.3_06_SaveTopic.png)
+    ![Save](./assets/9.3_07_SaveTopic.png)
 
 ### 9.4 Test agent using several scenarios
 
@@ -942,89 +948,93 @@ Great work!!! 😁 We can now test our agent.
 
 #### 9.4.1 Request a device and enter a comment in adaptive card
 
-1. **Refresh** the test pane, select the **activity map** icon and enter the following as a message to the agent.
+1. Start a **new test session** in the test pane, select the **ellipsis (. . .)** icon and select **Track between topics**. This will allow you to see in real-time when the topic redirects to another topic.
+
+    ![Enable track between topics](./assets/9.4_01_EnableTrackBetweenTopics.png)
+
+1. Now we'll test our first use case, where the user selects a device and enters an additional comment. Enter the following as a message to the agent.
 
     ```text
     I need a laptop
     ```
 
-    ![Test agent](./assets/9.4_01_TestAgent_RequestDevice_Yes.png)
+    ![Test first use case](./assets/9.4_02_TestAgent_RequestDevice_Yes.png)
 
 1. The agent triggers the **Available devices** and responds with the list of available devices. We'll enter the following as the answer to the question of whether we'd like to request a device.
 
     ```text
-    Yes
+    yes please
     ```
 
-    ![Yes](./assets/9.4_02_RequestDevice_Yes.png)
+    ![Yes](./assets/9.4_03_RequestDevice_Yes.png)
 
 1. Notice how the agent invoked the **Request device** as per the agent instructions and that the adaptive card is now being displayed in the agent message.
 
-    Select the **Surface Laptop 15** device and add the following as a comment.
+    Select the **Surface Laptop 13** device and add the following as a comment.
 
     ```text
     I need 16GB of RAM please
     ```
 
-    ![Select device and enter comment](./assets/9.4_03_SelectDeviceAndEnterComment.png)
+    ![Select device and enter comment](./assets/9.4_04_SelectDeviceAndEnterComment.png)
 
 1. Scroll down until you see the **Submit Request** button and select it to submit the adaptive card to the agent.
 
-    ![Submit request](./assets/9.4_04_SubmitRequest.png)
+    ![Submit request](./assets/9.4_05_SubmitRequest.png)
 
 1. Select **Allow** for the agent to use your credentials for the connection authentication of the two connector actions.
 
-    ![Allow](./assets/9.4_05_SelectAllow.png)
+    ![Allow](./assets/9.4_06_SelectAllow.png)
 
-1. The agent will then display the confirmation message which includes the model selected, followed by redirecting to the **End of Conversation** topic. Cool!
+1. The agent will then display the confirmation message which includes the user's display name, the selected model, followed by redirecting to the **End of Conversation** topic. Cool!
 
-    ![Request submitted](./assets/9.4_06_RequestSubmitted.png)
+    ![Request submitted](./assets/9.4_07_RequestSubmitted.png)
 
 1. Select **Yes** to verify the rest of the **End of Conversation** topic.
 
-    ![Select Yes](./assets/9.4_07_RedirectNode.png)
+    ![Select Yes](./assets/9.4_08_RedirectNode.png)
 
 1. Next, rate the experience by selecting any of the stars in the rating scale card.
 
     The agent will then proceed to the final **Question** node in the **End of Conversation** topic. Select **No**.
 
-    ![End of conversation topic](./assets/9.4_08_EndOfConversation.png)
-
-1. The topic will then complete as a final message will be displayed in the test pane.
-
     ![End of conversation topic](./assets/9.4_09_EndOfConversation.png)
+
+1. The topic will then complete as a final message from the **End of Conversation** topic will be displayed in the test pane.
+
+    ![End of conversation topic](./assets/9.4_10_EndOfConversation.png)
 
 1. Check your Inbox of your email account to review the email sent to the manager by the agent flow. You can see the details of the device selected, and the note entered in the adaptive card.
 
-    ![Email received](./assets/9.4_10_ReviewEmailMessageWithComment.png)
+    ![Email received](./assets/9.4_11_ReviewEmailMessageWithComment.png)
 
 1. Click the hyperlink and the browser should load the SharePoint item of the device. Super!
 
-    ![Click hyperlink in email](./assets/9.4_11_SelectLinkInEmail.png)
+    ![Click hyperlink in email](./assets/9.4_12_SelectLinkInEmail.png)
 
 #### 9.4.2 Request a device and do not enter a comment in adaptive card
 
-Let's now test the scenario when a comment is not entered.
+Let's now test the second scenario when a comment is not entered.
 
 1. Repeat the same steps of
 
     - **Refresh** the test pane and select the **activity map** icon
     - Enter the message, `I need a laptop`
-    - Respond with `Yes` to the question of requesting a device
+    - Respond with `yes please` to the question of requesting a device
 
-    ![Request device](./assets/9.4_12_RequestDevice_Yes.png)
+    ![Request device](./assets/9.4_13_RequestDevice_Yes.png)
 
-1. This time select **Surface Laptop 13** as the device and do not enter a comment.
+1. This time select **Surface Laptop 15** as the device and do not enter a comment.
 
-    ![Select device](./assets/9.4_13_SelectDevice.png)
+    ![Select device](./assets/9.4_14_SelectDevice.png)
 
 1. **Submit** the request by selecting the **Submit Request** button.
 
-    ![Submit Request](./assets/9.4_14_SubmitRequest.png)
+    ![Submit Request](./assets/9.4_15_SubmitRequest.png)
 
 1. This time the email received in your Inbox will display **None** as the comment.
 
-    ![Email received](./assets/9.4_15_ReviewEmailMessage.png)
+    ![Email received](./assets/9.4_16_ReviewEmailMessage.png)
 
 #### 9.4.3 Do not request for a device
 
@@ -1036,11 +1046,11 @@ Let's test the final scenario which is to not request a device, and the **Goodby
     - Enter the message, `I need a laptop`
     - This time respond with `No` to the question of requesting a device
 
-    ![Test agent](./assets/9.4_16_TestAgent_RequestDevice_No.png)
+    ![Test agent](./assets/9.4_17_TestAgent_RequestDevice_No.png)
 
 1. The agent invoked the **Goodbye** topic and the question as defined in the topic is asked.
 
-    ![Goodbye topic invoked](./assets/9.4_17_Goodbye.png)
+    ![Goodbye topic invoked](./assets/9.4_18_Goodbye.png)
 
 ## ✅ Mission Complete
 
