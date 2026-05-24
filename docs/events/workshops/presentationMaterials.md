@@ -1,0 +1,23 @@
+---
+title: Speaker Presentation Decks
+---
+
+## Speaker Presentation Decks
+
+Ready-to-deliver PowerPoint decks for facilitating Agent Academy workshops. Each deck is designed to be used as-is, just download, open, and present.
+
+::: info These decks are for facilitators
+These are structured to support live workshop delivery alongside the hands-on labs. Participants work through the curriculum on screen while you present. If you haven't already, read the [Facilitator Guide](./facilitatorGuide) before your first delivery.
+:::
+
+## Available decks
+
+| Track | Description | Download |
+|-------|-------------|----------|
+| 🟢 **Recruit** | Covers agent fundamentals through publishing — designed for half-day and full-day formats | [⬇️ Download Recruit Workshop Deck](https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/events/workshops/assets/Recruit-Workshop.pptx) |
+| 🔵 **Operative** | Advanced agent patterns including multi-agent, MCP, and ALM — for audiences who've completed Recruit | [⬇️ Download Operative Workshop Deck](https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/events/workshops/assets/Operative-Workshop.pptx) |
+
+::: tip Using the decks
+These decks are designed to be presented alongside the hands-on lab content at [aka.ms/agent-academy](https://aka.ms/agent-academy). Participants follow the lab steps on their own machines while you walk through the slides. No customization needed — the timing guidance in the [Facilitator Guide](./facilitatorGuide) tells you when to present vs. when to let participants work.
+:::
+
