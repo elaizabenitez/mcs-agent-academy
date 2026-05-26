@@ -15,11 +15,11 @@ TBC
 
 In this mission, you'll learn:
 
-1. How to create Docusign Web Forms, Document Templates and a Maestro workflow
+1. How to create Docusign Web Forms, Document Templates and a workflow using Workflow Builder
 1. How to add the Docusign MCP server as a tool to your agent
 1. How to add the Outlook MCP server as a tool to your agent
-1. How to invoke the Maestro workflow from the agent
-1. How to provide inputs in natural language for the Maestro workflow
+1. How to invoke the workflow from the agent
+1. How to provide inputs in natural language for the workflow
 
 ## ❓ What is Docusign?
 
@@ -33,7 +33,7 @@ TBC
 
 For this Special Ops mission, we're going to:
 
-- 1.0 Create templates and a Maestro workflow in docusign
+- 1.0 Create templates and a workflow in Docusign
 - 2.0 Build an agent and add the Docusign MCP server as a tool in Copilot Studio
 - 3.0 Add the Outlook MCP server as a tool in Copilot Studio
 - 4.0 Test end-to-end
@@ -57,7 +57,7 @@ To complete this Special Ops mission, you'll need the following outlined in this
 - Copilot Studio license
 - Access to a Microsoft Power Platform environment
 - Administrative permissions to create solutions and agents
-- A SharePoint site where you have permissions to create a new folder in the Documents library - this will be used in a Maestro workflow step
+- A SharePoint site where you have permissions to create a new folder in the Documents library - this will be used in a workflow step
 
 > [!TIP] Prerequisites help:
 > If you need help getting a Copilot Studio license, please reference the [Recruit Course Setup lab](./../../recruit/00-course-setup/index.md) which walks you through setting up a Power Platform environment with a Copilot Studio trial.
@@ -248,7 +248,7 @@ You'll need two different email addresses to complete this lab:
 
     ![Select Activate](assets/1.1_23_Activate.png)
 
-1. A confirmation modal will appear with an **Access setting** field. We'll leave this as **Public** as the web form we'll be used in a step in the Maestro workflow we'll create in a later lab exercise. Select **Activate**.
+1. A confirmation modal will appear with an **Access setting** field. We'll leave this as **Public** as the web form we'll be used in a step in the workflow we'll create in a later lab exercise. Select **Activate**.
 
     ![Select Activate](assets/1.1_24_Activate.png)
 
@@ -269,7 +269,7 @@ In this lab exercise, we'll create two Document Templates
 1. An employment agreement - [download the sample employment agreement](assets/Sample%20Employment%20Agreement.docx)
 1. An employee offer letter - [download the sample offer letter](assets/Sample%20Offer%20Letter.docx)
 
-These document templates will be used in the next lab exercise when we create a Maestro workflow.
+These document templates will be used in the next lab exercise when we create a workflow in Workflow Builder.
 
 Let's begin!!! ⤵️
 
@@ -385,11 +385,11 @@ Let's begin!!! ⤵️
 
 1. Repeat the same steps to add the remaining custom fields, using them in place of the Sender role placeholders.
 
-    | Placeholder              | Field name             | Field description                      | Required field | API reference name         |
-    |--------------------------|------------------------|----------------------------------------|----------------|----------------------------|
-    | **{EmployeePosition}**   | `Employee Position`    | `Position the employee is fulfilling`  | Yes            | Text                       |
-    | **{EmployeeStartDate}**  | `Employee Start Date`  | `The start date of the employee`       | Yes            | Text                       |
-    | **{SalaryAmount}**       | `Salary`               | `The salary of the employee`           | Yes            | Text                       |
+    | Placeholder              | Field name             | Field description                      | Required field | Field Type         |
+    |--------------------------|------------------------|----------------------------------------|----------------|--------------------|
+    | **{EmployeePosition}**   | `Employee Position`    | `Position the employee is fulfilling`  | Yes            | Text               |
+    | **{EmployeeStartDate}**  | `Employee Start Date`  | `The start date of the employee`       | Yes            | Date               |
+    | **{SalaryAmount}**       | `Salary`               | `The salary of the employee`           | Yes            | Text               |
 
     ![Create remaining custom fields](assets/1.2_14_CreateRemainingCustomFields.png)
 
@@ -471,11 +471,11 @@ Let's begin!!! ⤵️
 
 1. Repeat the same steps for the remainder of the placeholders for the **Sender** role by selecting existing fields on the left hand side menu or creating new fields.
 
-    | Placeholder                   | Field name                   | Create New Field | Field description                          | Required field | API reference name |
+    | Placeholder                   | Field name                   | Create New Field | Field description                          | Required field | Field Type |
     |-------------------------------|------------------------------|------------------|--------------------------------------------|----------------|--------------------|
     | **{EmployeeAddressLine1}**    | `Employee Address Line 1`    | Yes              | `Apt or House No. and street name`         | Yes            | Text               |
     | **{EmployeeAddressLine2}**    | `Employee Address Line 2`    | Yes              | `Suburb`                                   | Yes            | Text               |
-    | **{EmployeeAddressCity}**     | `Employee Address City`      |                  | `City`                                     | Yes            | Text               |
+    | **{EmployeeAddressCity}**     | `Employee Address City`      | Yes              | `City`                                     | Yes            | Text               |
     | **{Employee AddressPostCode}**| `Employee Address Post Code` | Yes              | `Post code`                                | Yes            | Text               |
     | **{EmployeePosition}**        | `Employee Position`          | No               |                                            |                |                    |
     | **{EmployeeStartDate}**       | `Employee Start Date`        | No               |                                            |                |                    |
@@ -517,7 +517,75 @@ Let's begin!!! ⤵️
 
     ![Sample Offer Letter document published](assets/1.2_32_Published.png)
 
-🏃🏻‍♀️‍➡️ Right, let's move on to creating the Docusign Maestro workflow!
+🏃🏻‍♀️‍➡️ Right, let's move on to creating the workflow in Workflow Builder!
+
+### 1.3 Create Docusign Maestro workflow
+
+For our HR scenario, we need to process the following:
+
+- Send the employment agreement and offer letter
+- Get the candidate to sign it
+- Then get the manager to sign
+- Save the final document to SharePoint
+
+All of this can be handled automatically by a Docusign workflow created in Workflow Builder instead of doing it manually. Let's begin building 🏗️
+
+1. Navigate to **Agreements** and select **Workflows**. Then select **Create Workflow**.
+
+Note: The label on the menu has since changed from _Maestro Workflows_ to **Workflows**.
+
+    ![Select Workflows](assets/1.3_01_CreateWorkflow.png)
+
+1. Select **+Blank Workflow**
+
+    ![Select Blank Workflow](assets/1.3_02_BlankWorkflow.png)
+
+1. The Workflow Builder designer will now load. Select the ellipsis (...) icon and select **Rename** to name our workflow.
+
+    ![Select Create Workflow](assets/1.3_03_RenameWorkflow.png)
+
+1. Enter the following as the name of the workflow and select **Save**.
+
+    ```text
+    Send employment agreement and offer letter workflow
+    ```
+
+    ![Save workflow name](assets/1.3_04_SaveWorkflowName.png)
+
+1. Select **Add workflow start**. This step in the workflow determines how the workflow will be initiated.
+
+    ![Select Add workflow start](assets/1.3_05_AddWorkflowStart.png)
+
+1. There are several methods to choose one and the one to select is **From an API Call** to enable the agent built in Microsoft Copilot Studio to invoke the workflow through the Docusign MCP server.
+
+   Select **Apply**.
+
+    ![Workflow start method](assets/1.3_06_WorkflowStartMethod.png)
+
+1. Select **Next**.
+
+    ![Select Next](assets/1.3_07_NextConfigurationStep.png)
+
+1. We're now going to add variables which will act as input parameters for the workflow. We'll be sending data from the agent built in Microsoft Copilot Studio to the workflow. This data will be consumed by other steps in the workflow.
+
+   Select **Text**.
+
+    ![Select Text](assets/1.3_08_NewTextVariable.png)
+
+1. Repeat the same steps to create the remaining variables listed in the table below.
+
+    | Variable type | Value                       |
+    |:--------------|:----------------------------|
+    | Email         | `Employee Email`            |
+    | Text          | `Employee Position`         |
+    | Date          | `Effective Date`            |
+    | Text          | `Salary`                    |
+    | Text          | `Hiring Manager Full Name`  |
+    | Email         | `Hiring Manager Email`      |
+    | Date          | `Due Signed Date`           |
+    | Start Date    | `Start Date`                |
+
+1. 
 
 > [!NOTE]
 > 🚧 This mission is under construction. Check back soon for the full walkthrough.
