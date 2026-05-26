@@ -585,7 +585,59 @@ Note: The label on the menu has since changed from _Maestro Workflows_ to **Work
     | Date          | `Due Signed Date`           |
     | Start Date    | `Start Date`                |
 
-1. 
+    ![Workflow Start variables](assets/1.3_09_WorkflowStartVariables.png)
+
+1. Now that the variables have been configured, we can proceed to the next configuration step. Select **Next**.
+
+    ![Select Next](assets/1.3_10_SelectNext.png)
+
+1. In this step you define how the API call will be initiated or triggered with two options. Select the second option, **Automated process** since the agent built in Microsoft Copilot Studio will be invoking the workflow through the Docusign MCP server.
+
+   Select **Apply**. That's it - we've now completed configuring the workflow start step, so let's continue with the remainder of the workflow steps.
+
+    ![Select Automated process](assets/1.3_11_SelectAutomatedProcess.png)
+
+1. Select **Add a step** in the workflow designer.
+
+    ![Select Add a step](assets/1.3_12_AddWorkflowStep.png)
+
+1. Select **Set Up Invite** which enables participants to be added to the workflow steps.
+
+    ![Select Set Up Invite](assets/1.3_13_SetUpInvite.png)
+
+1. Select **Configure**.
+
+    ![Select Configure](assets/1.3_14_SelectConfigure.png)
+
+1. Select **Add Participant** as we'll create participants for the Employee and Hiring Manager.
+
+    ![Select Add Participant](assets/1.3_15_SelectAddParticipant.png)
+
+1. Enter `Employee` as the value in the **Employee role** field and select **Add**.
+
+    ![Employee participant](assets/1.3_16_EmployeeParticipant.png)
+
+1. You'll next see two fields appear, **Employee name** and **Employee email** which need to be mapped to either a workflow variable from the start step, or a different step. Since we added variables in the workflow start step, this is what we'll map the participant fields to.
+
+    ![Select variables to map to](assets/1.3_17_SelectVariables.png)
+
+1. Select the dropdown (chevron) icon for the **Employee name** field. In the list of **Variables from Workflow Start** select **Employee Full Name** variable.
+
+    ![Select dropdown icon in the employee name field](assets/1.3_18_EmployeeFullNameVariable.png)
+
+1. For the **Employee email** field, select the  **Employee Email** variable.
+
+    ![Select employee email](assets/1.3_19_EmployeeEmailVariable.png)
+
+1. Select **Apply**.
+
+   You've now completed configuring the **Set Up Invite** step.
+
+    ![Select Apply](assets/1.3_20_Apply.png)
+
+1. Next, select **Add a step**.
+
+    ![Select Add a step](assets/1.3_21_AddStep.png)
 
 > [!NOTE]
 > 🚧 This mission is under construction. Check back soon for the full walkthrough.
