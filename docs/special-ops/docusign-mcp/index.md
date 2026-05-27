@@ -388,7 +388,7 @@ Let's begin!!! ⤵️
     | Placeholder              | Field name             | Field description                      | Required field | Field Type         |
     |--------------------------|------------------------|----------------------------------------|----------------|--------------------|
     | **{EmployeePosition}**   | `Employee Position`    | `Position the employee is fulfilling`  | Yes            | Text               |
-    | **{EmployeeStartDate}**  | `Employee Start Date`  | `The start date of the employee`       | Yes            | Date               |
+    | **{EmployeeStartDate}**  | `Start Date`  | `The start date of the employee`       | Yes            | Date               |
     | **{SalaryAmount}**       | `Salary`               | `The salary of the employee`           | Yes            | Text               |
 
     ![Create remaining custom fields](assets/1.2_14_CreateRemainingCustomFields.png)
@@ -478,7 +478,7 @@ Let's begin!!! ⤵️
     | **{EmployeeAddressCity}**     | `Employee Address City`      | Yes              | `City`                                     | Yes            | Text               |
     | **{Employee AddressPostCode}**| `Employee Address Post Code` | Yes              | `Post code`                                | Yes            | Text               |
     | **{EmployeePosition}**        | `Employee Position`          | No               |                                            |                |                    |
-    | **{EmployeeStartDate}**       | `Employee Start Date`        | No               |                                            |                |                    |
+    | **{EmployeeStartDate}**       | `Start Date`        | No               |                                            |                |                    |
     | **{DueDate}**                 | `Signed Due Date`            | Yes              | `Due date of signed agreement by employee` | Yes            | Date               |
 
 1. Next, we'll add the fields for the **Hiring Manager** and **Employee** roles using the same steps as last time.
@@ -638,6 +638,137 @@ Note: The label on the menu has since changed from _Maestro Workflows_ to **Work
 1. Next, select **Add a step**.
 
     ![Select Add a step](assets/1.3_21_AddStep.png)
+
+1. Select **Collet Data with Web Forms** as the next step.
+
+    ![Select Collect Data with Web Forms](assets/1.3_22_SelectCollectDataWithWebForms.png)
+
+1. Select **Configure** to configure the Web Form step.
+
+    ![Select Configure](assets/1.3_23_SelectConfigure.png)
+
+1. You'll now need to select the web form created earlier. Select the **Request for contact information** web form.
+
+    ![Select Request for contact information web form](assets/1.3_24_ChooseForm.png)
+
+1. Select **Next** to configure the participant of the Web Form.
+
+    ![Select Next](assets/1.3_25_NextConfigurationStep.png)
+
+1. Select **Employee** in the Participant dropdown field.
+
+    ![Select Employee](assets/1.3_26_SelectEmployeeParticipant.png)
+
+1. Select **Continue to map data fields**.
+
+    ![Select Continue to map data fields](assets/1.3_27_ContinueToMapDataFields.png)
+
+1. For the **Full Name** field, select the **Employee Full Name** variable from the workflow start list.
+
+    ![Select Employee Full Name variable](assets/1.3_28_EmployeeFullNameVariable.png)
+
+1. Great! We're now done configuring the Web Form step. Select **Apply** to add the next step in the workflow.
+
+    ![Select Apply](assets/1.3_29_Apply.png)
+
+1. Select **Add a step**.
+
+    ![Select Add a step](assets/1.3_30_AddAStep.png)
+
+1. Scroll down to the **Documents** list and elect **Prepare a Document Template** step.
+
+    ![Select Prepare a Document Template step](assets/1.3_31_SelectPrepareDocumentTemplate.png)
+
+1. Select **Configure** to configure the Document Template step.
+
+    ![Select Configure](assets/1.3_32_SelectConfigure.png)
+
+1. You'll now need to select the document template created earlier. Select the **Sample Employment Agreement** document template.
+
+    ![Select Sample Employment Agreement document template](assets/1.3_33_SelectSampleEmploymentAgreement.png)
+
+1. Select **Next** to proceed with the rest of the configuration.
+
+    ![Select Next](assets/1.3_34_SelectNext.png)
+
+1. In this configuration step, you have the option to generate the document automatically without a review. For the purpose of this lab, we'll leave it as **Yes** to showcase how the turnaround time of sending an employment agreement with the employee's information can be reduced. In the real-world, the document template would have been approved internally including its input values that are to be mapped to the workflow start variables.
+
+   Select **Next**.
+
+    ![Select Next](assets/1.3_35_SelectNext.png)
+
+1. Now in this configuration step, we're defining how the values in the employment agreement are to be mapped to generate the document. Let's start with the Effective Date field. In the **Variables from Workflow Start** list, select **Effective Date**.
+
+    ![Select Effective Date variable](assets/1.3_36_SelectEffectiveDate.png)
+
+1. Repeat the same steps for the remainder of the employment agreement fields using the values in the table below as guidance. Make sure the Employee Full Name field is mapped to the **Full Name** field under the **Collect Data with Web Forms** list.
+
+   Select **Next** to configure the naming of the file.
+
+    | Agreement Field    | Workflow Component           | Component Field      |
+    |:-------------------|:-----------------------------|:---------------------|
+    | Effective Date     | Variables from Workflow Start| Effective Date       |
+    | Employee Full Name | Collect Data with Web Forms  | Full Name            |
+    | Employee Position  | Variables from Workflow Start| Employee Position    |
+    | Start Date         | Variables from Workflow Start| Start Date  |
+    | Salary             | Variables from Workflow Start| Salary               |
+
+    ![Agreement Fields configured](assets/1.3_31_SelectPrepareDocumentTemplate.png)
+
+1. In this step we can configure the naming convention of the generated file. We'll keep it simple by referencing the employee's full name, the effective date and append the text value of `EmploymentAgreement`.
+
+   Select the option **Use variables to customize a title** to reference values from our workflow steps. Select **Full Name** from the **Web Form** list.
+
+    ![Select Full Name from the Web Form list](assets/1.3_38_TitleBuilder.png)
+
+1. Select the **+** icon to select the **Effective Date** from the **Collect Data with Web Forms** list.
+
+    ![Select Effective Date from the Collect with Web Forms list](assets/1.3_39_SelectEffectiveDate.png)
+
+1. Next enter `_` in-between the two variables and at the end, enter the text value of `_EmploymentAgreement`.
+
+   Update the file format to **.pdf** in and select **Next**.
+
+    ![Title Builder Field configured](assets/1.3_40_TitleBuilderFieldConfigured.png)
+
+1. Great! You've completed configured the step so let's continue with the next step. Select **Apply**.
+
+    ![Select Apply](assets/1.3_41_SelectApply.png)
+
+1. Select **Add a step**.
+
+    ![Select add a step](assets/1.3_42_AddAStep.png)
+
+1. You'll repeat the same steps to add the second Document Template created earlier, Sample Offer Letter, to the workflow. Select **Prepare Document Template**.
+
+    ![Select Prepare a Document Template step](assets/1.3_43_SelectPrepareDocumentTemplate.png)
+
+1. Select the **Sample Offer Letter** document template and configure the agreement fields mapping to the relevant workflow components using the below table as guidance.
+
+   Make sure you select the relevant workflow component fields to map to, such as **Employee Full Name** from the **Collect Data with Web Forms** list.
+
+    | Agreement Field            | Workflow Component            | Component Field   |
+    |:---------------------------|:------------------------------|:------------------|
+    | Employee Full Name         | Collect Data with Web Forms   | Full Name         |
+    | Employee Address Line 1    | Collect Data with Web Forms   | Address Line 1    |
+    | Employee Address Line 2    | Collect Data with Web Forms   | Address Line 2    |
+    | Employee Address City      | Collect Data with Web Forms   | City              |
+    | Employee Address Post Code | Collect Data with Web Forms   | Post Code         |
+    | Employee Position          | Variables from Workflow Start | Employee Position |
+    | Start Date                 | Variables from Workflow Start | Start Date        |
+    | Signed Due Date            | Variables from Workflow Start | Due Signed Date   |
+
+    ![Configured agreement fields](assets/1.3_31_SelectPrepareDocumentTemplate.png)
+
+1. For the naming convention of the generated file, we'll apply the same references of the employee's full name from **Collect Data with Web Forms**, the effective date from **Variables from Workflow Start** and append the text value of `_OfferLetter`.
+
+   Update the file format to **.pdf**, select **Next** and select **Apply**.
+
+    ![Configure the document file name](assets/1.3_45_NameDocumentConfigurationStep.png)
+
+1. We'll add another step to send the documents for signature by selecting **Add a step**.
+
+    ![Select Add a step](assets/1.3_36_SelectEffectiveDate.png)
 
 > [!NOTE]
 > 🚧 This mission is under construction. Check back soon for the full walkthrough.
