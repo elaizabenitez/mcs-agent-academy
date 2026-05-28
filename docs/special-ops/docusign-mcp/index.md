@@ -770,5 +770,255 @@ Note: The label on the menu has since changed from _Maestro Workflows_ to **Work
 
     ![Select Add a step](assets/1.3_36_SelectEffectiveDate.png)
 
+1. Select **Send Documents for Signature**.
+
+    ![Select Send Documents for Signature](assets/1.3_47_SendDocumentsForSignature.png)
+
+1. Select **Configure**.
+
+    ![Select Configure](assets/1.3_48_SelectConfigure.png)
+
+1. In this step, select the previous **Generate Document** steps so the generated documents are added to an envelope and sent to participants for signature.
+
+   For the primary document, select the **Document** variable under **Generate Document - Employment Agreement**.
+
+    ![Select Generate Document - Employment Agreement variable](assets/1.3_49_SelectGenerateDocumentEmploymentAgreement.png)
+
+1. Next, we'll add the document variable for the Offer Letter as the secondary document for the envelope. Select **Add Document**.
+
+    ![Select Add Document](assets/1.3_50_SelectAddDocument.png)
+
+1. Select the **Document** variable under **Generate Document - Offer Letter**.
+
+    ![Select Generate Document - Offer Letter variable](assets/1.3_51_SelectGenerateDocumentOfferLetter.png)
+
+1. Select **Next** to continue with the configuration of the workflow step.
+
+    ![Select Next](assets/1.3_52_SelectNext.png)
+
+1. For sending of the envelope, leave the setting as **Automatically** as the envelope with the attached documents are to be automatically sent. By default, the sender will be your Docusign developer user. Select **Next**.
+
+    ![Select Next](assets/1.3_53_SendEnvelopeAutomatically.png)
+
+1. Next you'll configure the recipients of the document agreements. These will be the Employee and Hiring Manager roles you defined earlier when the document templates were created. You'll map them to the Employee participant you set up earlier in the **Set Up Invite** step, and we'll also add a new participant for the Hiring Manager.
+
+   Enable the **Set a signing order** setting to configure the Employee to receive the envelope first, followed by the Hiring Manager when the Employee completes signing the document agreements.
+
+    ![Enable the setting of Set a signing order](assets/1.3_54_SetASigningOrder.png)
+
+1. Update the integer value to `2` for the **Hiring Manager**.
+
+    ![Set Hiring Manager as 2](assets/1.3_55_SetHiringManagerAs2.png)
+
+1. Update the integer value to `1` for the **Employee**.
+
+    ![Set Employee as 1](assets/1.3_56_SetEmployeeAs1.png)
+
+1. For the Employee recipient, select the **Employee** variable in the dropdown field.
+
+    ![Select Employee](assets/1.3_57_SelectEmployee.png)
+
+1. Since we already mapped the participant fields in the **Set Up Invite** step, there's no need to configure mapping. Leave these as-is.
+
+    ![Mapped Participant Fields for Employee](assets/1.3_58_MappedParticipantFields.png)
+
+1. Next we'll add a new participant to the workflow for the Hiring Manager. Select **Add Participant**.
+
+    ![Select Add Participant](assets/1.3_59_AddParticipant.png)
+
+1. Enter `Hiring Manager` and select **Add**.
+
+    ![Enter Hiring Manager and select Add](assets/1.3_60_HiringManager.png)
+
+1. For the **Hiring Manager Name** participant field, map it to **Hiring Manager Full Name** under **Variables from Workflow Start**.
+
+    ![Map Hiring Manager Name](assets/1.3_61_MapHiringManagerName.png)
+
+1. For the **Hiring Manager Email** participant field, map it to **Hiring Manager Email** under **Variables from Workflow Start**.
+
+   Select **Next** to continue with the configuration of the workflow step.
+
+    ![Map Hiring Manager Email](assets/1.3_62_MapHiringManagerEmail.png)
+
+1. In the final step is to select the signing session. **Use a direct signing session** is the default which we'll use.
+
+   Select **Next**.
+
+    ![Use a direct signing session](assets/1.3_63_UseADirectSigningSession.png)
+
+1. Select **Apply** to completing configuring the workflow step.
+
+    ![Select Apply](assets/1.3_64_SelectApply.png)
+
+1. Select **Add a step**, we'll next add a Confirmation Screen for the Employee participant which will be displayed to them when they complete signing the document agreements.
+
+    ![Select Add a step](assets/1.3_65_AddAStep.png)
+
+1. Select **Show a Confirmation Screen**.
+
+    ![Select Show a Confirmation Screen](assets/1.3_66_SelectShowAConfirmationScreen.png)
+
+1. Select **Configure** to configure the step.
+
+    ![Select Configure](assets/1.3_67_SelectConfigure.png)
+
+1. Select **Employee** as the participant for the confirmation screen.
+
+    ![Select Employee](assets/1.3_68_SelectEmployee.png)
+
+1. Next, you have the option to configure the fields for message type, message title and message body. By default, there will be values already selected and entered. You can stick with the default values for the purpose of this lab. Select **Apply**.
+
+    ![Select Apply](assets/1.3_69_SelectApply.png)
+
+1. OK home stretch, the final step in the workflow is to upload the signed document agreements into SharePoint for visibility of the agreements. To do this, you'll need to set up a connection to your SharePoint site and authorize the connection. Select **App Center** on the upper right of the designer.
+
+    ![Select App Center](assets/1.3_70_SelectAppCenter.png)
+
+1. A list of support services will appear. Scroll down and select **SharePoint**.
+
+    ![Select SharePoint](assets/1.3_71_SelectSharePoint.png)
+
+1. Select **Install App**.
+
+    ![Select Install App](assets/1.3_72_SelectInstallApp.png)
+
+1. Next, select **Install and Authorize**.
+
+    ![Select Install and Authorize](assets/1.3_73_SelectInstallAndAuthorize.png)
+
+1. Select **Connect Account**.
+
+    ![Select Connect Account](assets/1.3_74_ConnectAccount.png)
+
+1. You'll see a couple of options on how to connect a SharePoint account - either as a private connection for individual use or a shared connection for team access, before proceeding to the next step. Since you created your own Docusign developer account, stick with **Private** for the purpose of this lab.
+
+   Select **Next**.
+
+    ![Select Private](assets/1.3_75_SelectPrivateAndNext.png)
+
+1. Enter a name for your SharePoint account such as `YourName_SharePoint_Docusign` or your Copilot Studio environment name.
+
+   Select **Log In** on the bottom right.
+
+    ![Enter name for SharePoint account](assets/1.3_76_NameTheSharePointConnection.png)
+
+1. Enter your credentials for your SharePoint site when prompted to sign in, and tick the checkbox to allow permissions. Then select **Accept**.
+
+    ![Allow consent](assets/1.3_77_Consent.png)
+
+1. You'll now see confirmation you've been logged into your SharePoint account. Select **X** icon to exit from the App Center and you should be back in the workflow designer. Otherwise navigate to **Agreements**, select **Workflows**, and open the workflow to edit it.
+
+    ![Select the x icon to exit from the App Center](assets/1.3_78_SelectUseThisApp.png)
+
+1. Select **Add a step** as we'll add the SharePoint step as the final step for the workflow.
+
+    ![Select Add a step](assets/1.3_79_SelectAddAStep.png)
+
+1. Select the **Apps** tab and select **Store files in SharePoint**.
+
+    ![Select Store files in SharePoint](assets/1.3_80_SelectStoreFilesInSharePoint.png)
+
+1. Select **Configure** to configure the step.
+
+    ![Select Configure](assets/1.3_81_SelectConfigure.png)
+
+1. Select the **Combined Envelope File** variable in the dropdown field. This represents the signed document agreements from the **Send Documents for Signature** step.
+
+    ![Select Combined Envelope File](assets/1.3_82_SelectCombinedEnvelopFile.png)
+
+1. Next, select the **Connection** created earlier for your SharePoint site. This connection will be used in this step.
+
+    ![Select connection](assets/1.3_83_SelectConnection.png)
+
+1. Next select your SharePoint site from the **Select site** dropdown. If you have more than one site, it will be listed so select the one that you want to upload the signed document agreements to.
+
+    ![Select SharePoint Site](assets/1.3_84_SelectHRTeam.png)
+
+1. For the drive, select **Document**.
+
+    ![Select Documents](assets/1.3_85_SelectDocuments.png)
+
+1. For the folder, select the folder of your choice in your SharePoint site. For example in the screenshot, there's an existing folder - _Signed employees_ under _Documents_ in the _HR Team_ site.
+
+    ![Select folder](assets/1.3_86_SelectSignedEmployees.png)
+
+1. Select **Next**.
+
+    ![Select Next](assets/1.3_87_SelectNext.png)
+
+1. In the final configuration step, you'll need to define the naming convention of the uploaded file. This can be achieved using variables from the workflow steps. We'll keep it simple by referencing the Envelope ID and the Employee Full name. Enter `env` and select **Envelope ID**.
+
+    ![Select Envelope ID Variable](assets/1.3_88_SelectEnvelopeIDVariable.png)
+
+1. Next, we'll add an underscore character. Select **Add Text**.
+
+    ![Select Add Text](assets/1.3_89_SelectText.png)
+
+1. Enter `_` and select **Add**.
+
+    ![Add underscore character](assets/1.3_90_AddUnderscoreCharacter.png)
+
+1. Select **Add Variable** and enter `full name`. Select the **Full Name** variable under **Collect data with web forms**.
+
+    ![Select Full Name variable](assets/1.3_91_SelectFullName.png)
+
+1. You've completed naming the file 👏🏻 Select **Apply**.
+
+    ![Select Apply](assets/1.3_92_SelectApply.png)
+
+1. Now it's time to publish the workflow. Select **Save Draft** on the upper right of the designer.
+
+    ![Select Save Draft](assets/1.3_93_SelectSaveDraft.png)
+
+1. You'll see confirmation that the workflow has been saved. Select **Review & Publish**.
+
+    ![Select Review and Publish](assets/1.3_64_SelectApply.png)
+
+1. There will be confirmation on whether you workflow has errors. Select **Next**.
+
+    ![Select Next](assets/1.3_95_SelectNext.png)
+
+1. Next, we'll name the workflow instance which will be the name given to a workflow run. We'll use the name builder to select variables as part of the naming convention. Select the **+** icon to insert a variable.
+
+    ![Select plus icon to insert a variable](assets/1.3_96_InsertVariable.png)
+
+1. Select the **Instance ID** variable.
+
+    ![Select Instance ID variable](assets/1.3_97_SelectInstanceIDVariable.png)
+
+1. Select the **+** icon again to insert another variable. Select the **Start Date and Time** variable.
+
+    ![Select Start Date and Time variable](assets/1.3_98_SelectStartDateAndTimeVariable.png)
+
+1. In-between the variables, enter the underscore character, `_` to complete the naming convention.
+
+   Select **Done**.
+
+    ![Enter underscore character](assets/1.3_99_InsertUnderscoreCharacter.png)
+
+1. Select **Publish**.
+
+    ![Select Publish](assets/1.3_100_SelectPublish.png)
+
+1. Next, you'll authorize the sender of the workflow which will be yourself. Select **Authorize My Account**.
+
+    ![Select Authorize My Account](assets/1.3_101_SelectAuthorizeMyAccount.png)
+
+1. You'll be prompted to allow access for Workflow Builder (previously known as Docusign Maestro) to use your account. Select **Allow Access**.
+
+    ![Select Allow Access](assets/1.3_102_SelectAllowAccess.png)
+
+1. Select **Publish**.
+
+    ![Select Publish](assets/1.3_103_SelectPublish.png)
+
+1. You'll see confirmation that the workflow has published successfully. Select **Go to Workflows**.
+
+    ![Select Go to Workflows](assets/1.3_104_SelectGoToWorkflow.png)
+
+1. The workflow will now show a status of **Published**.
+
+    ![Workflow published](assets/1.3_105_WorkflowPublished.png)
+
 > [!NOTE]
 > 🚧 This mission is under construction. Check back soon for the full walkthrough.
