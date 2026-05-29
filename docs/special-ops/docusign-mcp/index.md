@@ -1020,5 +1020,56 @@ Note: The label on the menu has since changed from _Maestro Workflows_ to **Work
 
     ![Workflow published](assets/1.3_105_WorkflowPublished.png)
 
+## 1.4 Test the workflow
+
+Before we move onto building the agent in Microsoft Copilot Studio, it's best practice to run the workflow to test it. You can manually run the workflow by starting a new instance.
+
+1. Open the workflow and on the upper right, select **Start Instance**.
+
+    ![Select Start Instance](assets/1.4_01_StartInstance.png)
+
+1. A new modal will appear where you'll be required to provide the variables for the workflow start step. Fill in the fields with some sample data.
+
+    ::: info Reminder on email address values
+    Use two different email addresses that you have access to for the employee and hiring manager
+
+    ![Enter the values for Workflow Start Variables](assets/1.4_02_EnterValuesForWorkflowStartVariables.png)
+
+1. After you've entered the values for the variables, select **Start**.
+
+    ![Enter the values for Workflow Start Variables](assets/1.4_03_EnterValuesForWorkflowStartVariables.png)
+
+1. A confirmation will appear that the workflow instance has started.
+
+    ![Confirmation of workflow instance](assets/1.4_04_ConfirmationOfInstance.png)
+
+1. For the email address you entered for the employee participant, navigate to the email Inbox and open the Docusign email - it should have the subject of `***Test Email*** Review and complete workflow`. Select **Review**.
+
+    ![Select Review](assets/1.4_05_SelectReview.png)
+
+1. The first page of the Web Form will load, select **Start**.
+
+    ![Select Start](assets/1.4_06_SelectStart.png)
+
+1. You'll now see the **Your Name** page of the Web Form. Enter the first name and last name of the employee you provided earlier when entering sample data for the variables in the workflow start step.
+
+    ![Provide name information](assets/1.4_07_ProvideNameInformation.png)
+
+1. Enter sample address information in the **Address** page of the Web Form.
+
+    ![Provide address information](assets/1.4_08_ProvideAddressInformation.png)
+
+1. The final step of the Web Form is to review the information entered. Select **Next**.
+
+    ![Select Next](assets/1.4_09_SelectNextToCompleteWebForm.png)
+
+1. Once the Web Form has been submitted, the next steps in the workflow will execute which is generating the Employment Agreement and Offer Letter using the data from the Web Form for the document templates, and then requesting the Employee participant to sign. As the Employee participant you'll immediately be directed to signing the document.
+
+   In a matter of minutes, the Employee participant goes from providing data in the Web Form, to signing the document which reduces the turnaround time for HR teams.
+
+   **Tick the terms and conditions checkbox** and select **Continue**.
+
+    ![Agree and continue](assets/1.4_10_AgreeAndContinue.png)
+
 > [!NOTE]
 > 🚧 This mission is under construction. Check back soon for the full walkthrough.
