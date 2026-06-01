@@ -1043,7 +1043,7 @@ Before we move onto building the agent in Microsoft Copilot Studio, it's best pr
 
     ![Confirmation of workflow instance](assets/1.4_04_ConfirmationOfInstance.png)
 
-1. For the email address you entered for the employee participant, navigate to the email Inbox and open the Docusign email - it should have the subject of `***Test Email*** Review and complete workflow`. Select **Review**.
+1. For the email address you entered for the Employee participant, navigate to the email Inbox and open the Docusign email - it should have the subject of `***Test Email*** Review and complete workflow`. Select **Review**.
 
     ![Select Review](assets/1.4_05_SelectReview.png)
 
@@ -1070,6 +1070,63 @@ Before we move onto building the agent in Microsoft Copilot Studio, it's best pr
    **Tick the terms and conditions checkbox** and select **Continue**.
 
     ![Agree and continue](assets/1.4_10_AgreeAndContinue.png)
+
+1. You'll now see the Employment Agreement. Notice how the text in blue displays the values entered from the variables in the Workflow Start step and from the Web Form you completed as the Employee (participant). Review the remainder of the Employment Agreement and then sign the agreement. Select **Start**.
+
+    ![Select Start](assets/1.4_11_ReviewDocumentAgreements.png)
+
+1. Select the **Sign** icon to sign the Employment Agreement.
+
+    ![Select Sign icon](assets/1.4_12_SignEmploymentAgreement.png)
+
+1. Next a modal will appear where you can confirm your signature details and select the style. The options are to use the default style, draw your signature or upload your signature. Continue with the default style and select **Adopt and Sign**.
+
+    ![Select Adopt and Sign](assets/1.4_13_AdoptAndSign.png)
+
+1. Review the Offer Letter next, notice how the address information is now displayed - this is the information you entered in the Address page of the Web Form as the the Employee participant. Select the **Sign** tab icon which will direct you to the **Sign** icon in the Offer Letter.
+
+   Select the **Sign** icon.
+
+    ![Select Sign icon](assets/1.4_14_SignOfferLetter.png)
+
+1. Select **Adopt and Sign** for the Offer Letter and then select **Finish**.
+
+    ![Select Finish](assets/1.4_15_SelectFinish.png)
+
+1. You'll next see the Confirmation Screen which is the step configured earlier.
+
+    ![Confirmation screen displayed](assets/1.4_05_SelectReview.png)
+
+1. Next, for the email address you entered for the Hiring Manager participant, navigate to the email Inbox and open the Docusign email - it should have the subject of `Complete this envelope with Docusign`. Select **Review Documents**.
+
+1. Sign the Employment Agreement and Offer Letter, then select **Finish**.
+
+    ![Select Finish](assets/1.4_18_SelectFinish.png)
+
+1. If you're using the same email address of you Docusign Developer user account, you may see the following modal appear. Select **No Thanks**.
+
+    ![Select No Thanks](assets/1.4_19_OptionToLogIntoDocusign.png)
+
+1. You'll see confirmation that the documents have been successfully signed.
+
+    ![Confirmation of documents being successfully signed](assets/1.4_20_Configrmation.png)
+
+1. For you Docusign Developer user account, if you navigate to the Inbox of the associated email address, you'll see an email with the signed document agreements.
+
+    ![Received signed document agreements](assets/1.4_21_DocusignDeveloperUserAccount.png)
+
+1. The final step in the workflow was uploading the signed document agreements to SharePoint. Navigate to your SharePoint location of the folder and you'll see the .PDF file of the signed document agreements listed.
+
+    ![Signed document agreements uploaded into SharePoint](assets/1.4_22_SignedDocumentAgreementsUploadedToSharePoint.png)
+
+1. Open the .PDF file to see the document. You've now completed testing your workflow end-to-end manually! 🎉 Let's now build the agent in Microsoft Copilot Studio.
+
+    ![View signed document agreements](assets/1.4_23_ViewSignedDocumentAgreements.png)
+
+## 1.5 Build a custom agent in Microsoft Copilot Studio, connect to Docusign MCP, and trigger the workflow
+
+
+
 
 > [!NOTE]
 > 🚧 This mission is under construction. Check back soon for the full walkthrough.
