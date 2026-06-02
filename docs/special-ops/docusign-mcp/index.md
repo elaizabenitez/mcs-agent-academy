@@ -1111,7 +1111,7 @@ Before we move onto building the agent in Microsoft Copilot Studio, it's best pr
 
     ![Confirmation of documents being successfully signed](assets/1.4_20_Configrmation.png)
 
-1. For you Docusign Developer user account, if you navigate to the Inbox of the associated email address, you'll see an email with the signed document agreements.
+1. For your Docusign Developer user account, if you navigate to the Inbox of the associated email address, you'll see an email with the signed document agreements.
 
     ![Received signed document agreements](assets/1.4_21_DocusignDeveloperUserAccount.png)
 
@@ -1125,8 +1125,156 @@ Before we move onto building the agent in Microsoft Copilot Studio, it's best pr
 
 ## 1.5 Build a custom agent in Microsoft Copilot Studio, connect to Docusign MCP, and trigger the workflow
 
+1. Navigate to [https://copilotstudio.microsoft.com](https://copilotstudio.microsoft.com)
 
+1. Sign in with your Microsoft 365 work or school account
 
+> [!WARNING]
+> You must be in a tenant where Copilot Studio is enabled.
+> Make sure you switch to your dedicated developer environment.
+
+1. Select **+ Create blank agent** and enter a name for your agent.
+
+   For example,
+
+   ```text
+   Docusign MCP Demo
+   ```
+
+    It's also best practice to use a solution, select an existing solution for your agent. Refer to our [Recruit mission](../../recruit/04-creating-a-solution/index.md) to learn how to create a solution.
+
+    Select **Create**.
+
+    ![Create blank agent](assets/1.5_01_CreateBlankAgent.png)
+
+1. Edit the description for the agent. Copy and paste the following, then select **Save**.
+
+   ```text
+   This agent automates the HR recruitment process when hiring an employee by triggering Docusign Workflow Builder workflows. It sends Employment Agreements and Offer Letters to candidates for signature, and then routes the documents to the hiring manager for final signing.
+   ```
+
+    ![Edit agent description](assets/1.5_02_UpdateAgentDescription.png)
+
+1. You'll next add instructions to the agent so that it has clear guidelines of how it should invoke the Workflow Builder workflow using the Docusign MCP Demo tool.
+
+   Copy and paste the following, then select **Save**.
+
+   ```text
+   #Docusign Workflow Builder workflows
+   - Get Docusign workflow requirements for 'Send Employment agreement and offer letter' workflow, collect the mandatory inputs from the user and only then trigger the workflow to send the documents to the candidate. Respond to the user to let them know if the workflow is triggered successfully.
+   - For the startDate input in Docusign workflows, use today's date. Do not prompt or ask the user for the startDate
+   ```
+
+    ![Edit agent instructions](assets/1.5_03_AddAgentInstructions.png)
+
+1. Next step is to add the Docusign MCP Demo server as a tool for our agent. Scroll down to the **Tools** section and select **+Add tool**.
+
+   Enter `docusign` in the search field and select the **Model Context Protocol** filter.
+
+    ![Search for Docusign MCP Demo tool](assets/1.5_04_SearchForDocusignMCP.png)
+
+1. You may see multiple Docusign MCP servers listed. Select the **Docusign MCP Demo** tool.
+
+    ![Select Docusign MCP Demo](assets/1.5_05_SelectDocusignMCPDemo.png)
+
+1. Next you'll need to add a new connection for your Docusign developer user account. Select the **chevron** icon and select **Create new connection**.
+
+    ![Select create new connection](assets/1.5_06_CreateNewConnection.png)
+
+1. Select **Create** to enter your Docusign developer user account credentials.
+
+    ![Select Create](assets/1.5_07_SelectCreate.png)
+
+1. Enter your username and password for your Docusign developer user account.
+
+    ![Enter credentials](assets/1.5_08_EnterCredentials.png)
+
+1. Next you'll need to verify your identity. Enter the SMS code you would've received and select **Verify**.
+
+    ![Verify identity](assets/1.5_09_VerifyYourIdentity.png)
+
+1. Select **Allow Access**. The connection will now be created, hooray! Let's now test the agent.
+
+    ![Select Allow Access](assets/1.5_10_AllowAccess.png)
+
+1. Start a new test session by selecting the **+** icon and enter the below text.
+
+   ```text
+   Send an employment agreement and offer letter to [employee name], [email address]
+   ```
+
+   - Replace the `[employee name]` with a name.
+   - Replace the `[email address]` placeholder using an email address for the employee (use the same one for the Employee participant when you manually tested the workflow earlier in Docusign).
+
+    ![Test agent](assets/1.5_12_TestAgent.png)
+
+1. In the test pane, the agent prompts you to select **Open connect manager** to verify your credentials.
+
+   Select **Open connect manager**.
+
+    ![Select Open connection manager](assets/1.5_13_OpenConnectionManager.png)
+
+1. Select **Connect** to authorize the agent to use the tool.
+
+    ![Select Connect](assets/1.5_14_SelectConnect.png)
+
+1. Next, it will load the connection using the credentials you entered earlier for your Docusign developer user account.
+
+   Select **Submit**.
+
+    ![Select Submit](assets/1.5_15_SelectSubmit.png)
+
+1. Back in the test pane, select **Retry**.
+
+    ![Select Retry](assets/1.5_16_SelectRetry.png)
+
+1. Your agent will now interact with the Docusign MCP Demo tool based on the instructions entered earlier, where it will retrieve the Docusign workflow requirements for `Send Employment agreement and offer letter` workflow.
+
+   First, the orchestrator will fetch details about your Docusign developer user account, then retrieve the list of workflows to identify the `Send Employment agreement and offer letter` workflow, and then retrieve the workflow requirements which are the variables you configured for the **Start** step of the workflow.
+
+   Then you'll be prompted to enter the missing variable values needed since you only provided the employee name and the email address.
+
+    ![Enter missing workflow start variables](assets/1.5_17_WorkflowTriggerRequirements.png)
+
+1. Enter the below text.
+
+   ```text
+   employee position is [position], effective date and start date is [MMMM d], salary is [salary dollar amount], based in [city], reporting to [manager full name] [manager email address], and due signed date is [MMMM d]
+   ```
+
+   - Replace the `[position]` placeholder with job position such as `Power Platform Engineer`.
+   - Replace the `[MMMM d]` placeholder with the full month name and day such as `August 25`. `d` means no leading zero (August 5).
+   - Replace the `[salary dollar amount]` with a dollar amount value.
+   - Replace the `[city]` placeholder with a city of where the employee will be working in.
+   - Replace the `[manager full name]` with a name of the manager.
+   - Replace the `[manager email address]` placeholder using an email address for the manager (use the same one for the Hiring Manager participant when you manually tested the workflow earlier in Docusign).
+
+1. The orchestrator will trigger the workflow as all the variables for the workflow start step have bene provided. You'll see confirmation that the workflow was successfully triggered.
+
+    ![Workflow invoked](assets/1.5_18_WorkflowInvoked.png)
+
+   You'll also see the Instance ID reference of the workflow.
+
+    ![Workflow details](assets/1.5_17_WorkflowTriggerRequirements.png)
+
+1. Follow the same steps of completing the workflow.
+
+   - First navigate to the email Inbox of the email address you entered for the Employee participant and open the Docusign email. It should have the subject of `***Test Email*** Review and complete workflow`. Select **Review** to complete the web form followed by signing the agreements.
+
+        ![Run through workflow process](assets/1.5_20_RunThroughWorkflowProcess.png)
+
+   - Navigate to the email Inbox of the email address you entered for the Hiring Manager participant and open the Docusign email to sign the agreements.
+   - Lastly the final signed agreements should be uploaded to SharePoint.
+
+        ![Document uploaded to SharePoint](assets/1.5_21_DocumentUploadedToSharePoint.png)
+
+**Congrats!!!** 🥳 You've now learnt how to invoke your workflow created in Workflow Builder from your agent through the **Docusign MCP Demo** tool.
+
+If you want to continue to the bonus exercise of this lab, feel free to do so.
+
+## 1.6 BONUS - Add Work IQ Calendar tool (Frontier program) for multi-MCP capabilities
+
+If your tenant and user has been enabled to use Frontier features, try the following exercise for your agent to combine the power of a first-party Microsoft MCP server (Work IQ Calendar) with a third-party service MCP server (Docusign MCP Demo).
 
 > [!NOTE]
 > 🚧 This mission is under construction. Check back soon for the full walkthrough.
