@@ -1197,7 +1197,7 @@ Before we move onto building the agent in Microsoft Copilot Studio, it's best pr
 
     ![Select Allow Access](assets/1.5_10_AllowAccess.png)
 
-1. Start a new test session by selecting the **+** icon and enter the below text.
+1. Start a new test session by selecting the **+** icon in the test pane and enter the below text.
 
    ```text
    Send an employment agreement and offer letter to [employee name], [email address]
@@ -1275,6 +1275,89 @@ If you want to continue to the bonus exercise of this lab, feel free to do so.
 ## 1.6 BONUS - Add Work IQ Calendar tool (Frontier program) for multi-MCP capabilities
 
 If your tenant and user has been enabled to use Frontier features, try the following exercise for your agent to combine the power of a first-party Microsoft MCP server (Work IQ Calendar) with a third-party service MCP server (Docusign MCP Demo).
+
+The agent will be updated to automatically create an Outlook meeting in your calendar to dedicate time in reviewing the HR pre-onboarding checklist. To achieve this, we'll use the Work IQ Calendar (Preview) tool.
+
+    ::: info IT Admin Guide to enabling Frontier
+    Refer to the [IT Admin Guide](https://www.microsoft.com/microsoft-365-copilot/frontier-it-admins) which outlines the requirements and details of enabling Frontier in your tenant.
+
+1. Update the agent instructions to include details in creating an Outlook meeting in your calendar after the Workflow Builder workflow has successfully triggered. You can provide instructions such as creating the meeting invite 2 working days before the effective date, or specify the time zone to use. Below is an example.
+
+   ```text
+   - After sending the response to confirm the workflow was triggered successfully, automatically create a 1-hour Outlook meeting in the user's calendar without asking for any additional input. Schedule the meeting exactly 2 workdays before the agreement's Effective Date, ensuring it does not fall on a Saturday or Sunday, and use the user's work hours. Hardcode the time zone to (UTC+12:00) Auckland, Wellington so that no time zone selection is required. Set the subject to: Review pre-onboarding checklist for [Employee Fullname] where [Employee Fullname] comes from the Docusign Workflow Builder workflow.
+   - Finally, send a response to the user confirming that the meeting has been created.
+   ```
+
+   The orchestrator will insert the variable value of the Employee Fullname placeholders in square brackets.
+
+   Make sure select **Save** after updating the agent instructions.
+
+    ![Update agent instructions](assets/1.6_01_UpdateAgentInstructions.png)
+
+1. Next scroll down to **Tools** and **+Add tool**.
+
+    ![Select Add tool](assets/1.6_02_SelectAddTool.png)
+
+1. Select the **Model Context Protocol** filter.
+
+    ![Select Model Context Protocol](assets/1.6_03_SelectModelContextProtocol.png)
+
+1. In the search field, enter `work iq`. Select the **Work IQ Calendar (Preview)** tool.
+
+    ![Select Work IQ Calendar (Preview tool)](assets/1.6_04_SelectWorkIQCalendar.png)
+
+1. You'll next need to create a connection for the tool using your signed in user account for your developer environment. Select the **chevron icon** and select **Create new connection**.
+
+    ![Select Create new connection](assets/1.6_02_SelectAddTool.png)
+
+1. Select your signed in user account.
+
+    ![Select user account](assets/1.6_06_UserAccountCredentials.png)
+
+1. Now that the connection has been created, select **Add**.
+
+    ![Select Add](assets/1.6_07_SelectAdd.png)
+
+1. The tool has now been added so you can now test your updated agent. Start a new test session by selecting the **+** icon in the test pane and enter the below text.
+
+   ```text
+   Send an employment agreement and offer letter to [employee name], [email address]
+   ```
+
+   - Replace the `[employee name]` with a name.
+   - Replace the `[email address]` placeholder using an email address for the employee (use the same one for the Employee participant when you manually tested the workflow earlier in Docusign).
+
+    ![Test agent](assets/1.6_08_TestAgent.png)
+
+1. The agent will respond with a consent card. Select **Allow** to consent with the MCP server using your data.
+
+    ![Select Allow](assets/1.6_09_SelectAllow.png)
+
+1. Next, the orchestrator will invoke the Docusign MCP Demo tool to retrieve the workflow and the workflow trigger requirements. Repeat the same step in the previous exercise by entering the below text, replacing the placeholders and submitting the information to the agent.
+
+   Use a date value for the effective date and start date that falls on a Monday or Tuesday to confirm the instructions of creating it _2 working days_ before the date is adhered to.
+
+   ```text
+   employee position is [position], effective date and start date is [MMMM d], salary is [salary dollar amount], based in [city], reporting to [manager full name] [manager email address], and due signed date is [MMMM d]
+   ```
+
+    ![Workflow trigger requirements](assets/1.6_10_WorfklowTriggerRequirements.png)
+
+1. The workflow will successfully be triggered.
+
+    ![Workflow successfully triggered](assets/1.6_11_WorkflowSuccesfullyTriggered.png)
+
+1. The agent will also confirm that the Outlook Meeting has been created successfully 🙌🏻
+
+    ![Outlook meeting created](assets/1.6_12_OutlookMeetingCreated.png)
+
+1. Navigate to your Outlook calendar and find the meeting invite. In the screenshot below the meeting has been created for the Friday, 2 working days before the Tuesday effective date.
+
+    ![View Outlook meeting in calendar](assets/1.6_13_OutlookCalendarEvent.png)
+
+1. After you completed the workflow process, once again the signed document will be uploaded to SharePoint.
+
+    ![Signed document uploaded to SharePoint](assets/1.6_14_DocumentUploadedInSharePoint.png)
 
 > [!NOTE]
 > 🚧 This mission is under construction. Check back soon for the full walkthrough.
