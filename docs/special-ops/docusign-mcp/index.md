@@ -23,11 +23,97 @@ In this mission, you'll learn:
 
 ## ❓ What is Docusign?
 
-TBC
+[Docusign](https://www.docusign.com) is best known as an electronic signature platform that allows people and organizations to securely send, sign, approve, and manage documents digitally instead of relying on paper-based processes. Today, Docusign has evolved into a broader [Intelligent Agreement Management (IAM) platform](https://www.docusign.com/intelligent-agreement-management) that helps businesses create, sign, automate, track, and manage agreements from start to finish.
 
-### Why should I use it?
+At its core, Docusign helps organizations manage the full lifecycle of agreements - from creating contracts and collecting signatures, through to storing, tracking, and analyzing agreement data. The platform integrates with commonly used business tools such as Microsoft, Salesforce, and other enterprise systems.
 
-TBC
+### Why Docusign is essential for organizations
+
+For organizations, agreements are everywhere:
+
+- Employee contracts
+- Sales proposals
+- NDAs
+- Procurement approvals
+- Customer onboarding forms
+- Vendor agreements
+
+Managing these manually can be slow, repetitive, and error-prone and this is where Docusign shines by streamlining these processes digitally.
+
+#### Faster business processes
+Instead of waiting days for signatures or approvals, documents can be reviewed and signed from anywhere on almost any device. This helps businesses move faster and reduce delays.
+
+#### Reduced manual work
+Docusign removes much of the printing, scanning, emailing, and data entry involved in traditional paperwork processes.
+
+#### Better visibility and tracking
+Teams can see where agreements are in the process, who still needs to sign, and where bottlenecks exist.
+
+#### Improved security and compliance
+Docusign provides secure digital signing and audit trails, helping organizations manage sensitive agreements more safely.
+
+#### Works with existing business tools
+Docusign integrates with platforms many organizations already use, including Microsoft applications, CRM systems, and productivity tools
+
+## 🏗️ What is Docusign Workflow Builder?
+You'll be building a workflow with Docusign Workflow Builder in this mission so let's learn more about it. Docusign Workflow Builder is a workflow automation platform that helps organizations automate agreement processes from beginning to end.
+
+Rather than manually sending documents, collecting information, chasing approvals, and tracking progress, Workflow Builder connects everything into a structured digital workflow.
+
+Docusign describes Workflow Builder as a way to automate, customize, and connect agreement workflows across the business.
+
+### What Workflow Builder can do
+Workflow Builder allows organizations to automate processes such as:
+
+- Employee onboarding
+- Customer onboarding
+- Procurement approvals
+- Vendor agreements
+- NDAs
+- Compliance and identity checks
+
+### Key Workflow Builder capabilities
+
+#### Identity Verification
+Identity Verification helps organizations confirm a signer’s identity before agreements are completed. This adds an extra layer of security and is especially important for sensitive or regulated processes.
+
+#### Web Forms
+Web Forms allow organizations to collect structured information through browser-based forms before generating agreements. Data entered into the form can automatically populate documents.
+
+#### eSignature
+Docusign eSignature enables legally recognized electronic signing directly within workflows, reducing delays and removing paper-based processes.
+
+#### App Center
+The App Center connects Workflow Builder with third-party applications and services so organizations can integrate agreement workflows into existing business systems.
+
+#### Workflow Templates
+Workflow Templates provide pre-built workflows for common business scenarios, helping teams quickly deploy standardized agreement processes without starting from scratch.
+
+#### Agreement Desk
+Agreement Desk helps centralize and coordinate agreement preparation, review, and collaboration activities across teams involved in the process. The sources reference workflow coordination and agreement process visibility as part of the broader Workflow Builder platform.
+
+#### Document Generation
+Document Generation helps automatically create agreements and documents using collected business data and reusable templates, reducing repetitive manual document creation.
+
+### Why Workflow Builder adds value
+
+#### Faster processes
+Automated workflows reduce delays caused by back-and-forth emails and manual handoffs.
+
+#### Better consistency
+Templates and standardized workflows ensure every agreement follows the same approved process.
+
+#### Less manual work
+Teams spend less time creating documents, chasing approvals, and entering data.
+
+#### Improved visibility
+Organizations can track workflow progress and agreement status more easily.
+
+#### Scalability
+As businesses grow, Workflow Builder helps manage larger volumes of agreements without increasing administrative overhead.
+
+#### No-code accessibility
+Business users can build workflows without needing developers or complex custom software.
 
 ## 🧪 Docusign MCP lab
 
@@ -55,7 +141,7 @@ To complete this Special Ops mission, you'll need the following outlined in this
 #### Microsoft
 
 - Copilot Studio license
-- Access to a Microsoft Power Platform environment
+- Access to a Copilot Studio developer environment
 - Administrative permissions to create solutions and agents
 - A SharePoint site where you have permissions to create a new folder in the Documents library - this will be used in a workflow step
 
@@ -1358,6 +1444,12 @@ The agent will be updated to automatically create an Outlook meeting in your cal
 1. After you completed the workflow process, once again the signed document will be uploaded to SharePoint.
 
     ![Signed document uploaded to SharePoint](assets/1.6_14_DocumentUploadedInSharePoint.png)
+
+## ✅ Mission Accomplished {#mission-accomplished}
+
+TBC
+
+## 📚 Tactical Resources {#tactical-resources}
 
 > [!NOTE]
 > 🚧 This mission is under construction. Check back soon for the full walkthrough.
