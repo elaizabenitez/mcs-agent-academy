@@ -115,6 +115,41 @@ As businesses grow, Workflow Builder helps manage larger volumes of agreements w
 #### No-code accessibility
 Business users can build workflows without needing developers or complex custom software.
 
+## 🛡️ Certified MCP spotlight: Docusign MCP Demo
+
+Before we jump into the lab, here's the key intel: the Docusign MCP Demo server is supported in Copilot Studio and is published as a certified MCP integration in Microsoft's connector ecosystem.
+
+Why this matters for your mission:
+
+- **Enterprise trust signal**: Certified MCP servers go through Microsoft validation and review stages before broad availability.
+- **Security and compliance alignment**: Certification includes checks for packaging quality, behavior validation, and security/compliance readiness.
+- **Responsible AI expectations**: Certification review includes safety evaluation, but safe usage in your tenant still depends on good implementation choices.
+
+In practical terms, this means you're not wiring up an unknown endpoint. You're integrating a reviewed MCP server that can expose Docusign capabilities to your agent through natural language.
+
+### 🔐 Security and governance guidance for this mission
+
+Treat this as secure-by-design, not secure-by-default:
+
+- Use the correct account and connector pairing (Demo with Demo, Production with Production).
+- Use OAuth and least-privileged accounts whenever possible.
+- Protect secrets and tokens used during connection setup.
+- Keep a human in the loop for high-impact actions.
+- Validate prompts and outputs before scaling to production scenarios.
+
+### ⚠️ Demo environment notes
+
+The Docusign MCP Demo connector is intended for sandbox testing. It is separate from the production connector, and workflows are not automatically migrated between Demo and Production environments.
+
+For this Special Ops lab, that's exactly what we want: a safe proving ground to test prompt-driven agreement workflows before any production rollout.
+
+### 📚 Learn more
+
+- [Microsoft MCP server certification](https://learn.microsoft.com/en-us/microsoft-copilot-studio/mcp-certification)
+- [Docusign MCP Demo connector (Microsoft Learn)](https://learn.microsoft.com/en-us/connectors/docusignmcpdemo/)
+- [Connect a Docusign account to Copilot Studio](https://support.docusign.com/s/document-item?language=en_US&elqTrackId=92dab223e52c434bb4d719365ec42701&elqTrack=true&bundleId=ug3906200f-95c6-4a6b-90b1-f928c85961c6&topicId=tsk6894353c-47ad-4dc9-8867-8a26ea379a65.html&_LANG=enus)
+- [Docusign MCP Overview](https://support.docusign.com/s/document-item?language=en_US&bundleId=ug3906200f-95c6-4a6b-90b1-f928c85961c6&topicId=con1438e5dd-ae84-435f-8b2e-028117782a6d.html&_LANG=enus)
+
 ## 🧪 Docusign MCP lab
 
 For this Special Ops mission, we're going to:
