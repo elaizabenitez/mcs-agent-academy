@@ -87,7 +87,7 @@ Docusign provides secure digital signing and audit trails, helping organizations
 Docusign integrates with platforms many organizations already use, including Microsoft applications, CRM systems, and productivity tools
 
 ## 🏗️ What is Docusign Workflow Builder? {#what-is-docusign-workflow-builder}
-You'll be building a workflow with Docusign Workflow Builder in this mission so let's learn more about it. Docusign Workflow Builder is a workflow automation platform that helps organizations automate agreement processes from beginning to end.
+In this mission, you'll build a workflow with Docusign Workflow Builder. Docusign Workflow Builder is a workflow automation platform that helps organizations automate agreement processes from beginning to end.
 
 Rather than manually sending documents, collecting information, chasing approvals, and tracking progress, Workflow Builder connects everything into a structured digital workflow.
 
@@ -198,11 +198,11 @@ For this Special Ops mission, we're going to:
 
 ### ✅ Prerequisites {#docusign-mcp-lab-prerequisites}
 
-To complete this Special Ops mission, you'll need the following outlined in this section.
+To complete this Special Ops mission, you'll need the following prerequisites.
 
 #### Docusign
 
-- Sign up for a free **Docusign developer account** if you already don't have one
+- Sign up for a free **Docusign developer account** if you don't already have one
   - Browse to [https://developers.docusign.com](https://developers.docusign.com) and on the upper right select **Create Account**.
 
     ![Select Create Account](assets/0.0_01_CreateDeveloperAccount.png)
@@ -224,20 +224,64 @@ You'll need two different email addresses to complete this lab:
 - Email address to use as the employee
 - Email address to use as the hiring manager
 
-### 📝 1.1 Create a Docusign Web Form {#lab-1-1-create-a-docusign-web-form}
+## 🧪 1.1 Create a Docusign Web Form {#lab-1-1-create-a-docusign-web-form}
 
 > [!WARNING] IMPORTANT
 > You need a Docusign developer account to complete these Docusign lab exercises. Follow the steps outlined in the above **Prerequisites** section.
+
+Docusign Web Forms allow organizations to collect information through secure, browser-based forms that can automatically feed data into agreements and workflows. They help reduce manual data entry, improve accuracy, and streamline processes such as onboarding, registrations, approvals, and contract generation.
+
+To learn more about Docusign **Web Forms**, expand the following additional learning block.
+
+::: details Web Forms: Collecting Data Before Agreements
+🤔 **What is Web Forms?**
+
+One of the most powerful features within Workflow Builder is Web Forms.
+
+Web Forms allow organizations to collect structured information from users through browser-based forms before generating or sending agreements.
+
+Examples include:
+
+- Customer application forms
+- Employee onboarding questionnaires
+- Vendor registration forms
+- Service request forms
+- Intake forms for legal or HR teams
+
+Instead of manually entering information into contracts, users enter their own details directly into the form.
+
+The collected data can then:
+
+- Automatically populate agreements
+- Trigger workflows
+- Feed information into business systems
+- Launch signing processes
+
+🌱 Web Forms support:
+
+- Text fields
+- Dropdowns
+- Checkboxes
+- Conditional logic
+- Required inputs
+- Template field mapping
+
+💡 **This significantly reduces**
+
+- Manual data entry
+- Copy/paste mistakes
+- Delays caused by incomplete forms
+:::
 
 1. From the Home page of Docusign developers portal, select **Templates**.
 
     ![Select Templates](assets/1.1_01_Templates.png)
 
-1. On the left hand side navigation pane, select **Start**. Select **Web Forms** followed by **Create Web Form**.
+1. On the left-hand side navigation pane, select **Start**. Select **Web Forms** followed by **Create Web Form**.
 
     ![Select Create Web Forms](assets/1.1_02_CreateWebForm.png)
 
-1. We'll now be asked how we want to create our Web Form. Select **Start From Scratch**.
+1. You'll be asked how you want to create your Web Form. Select **Start From Scratch**.
 
     ![Select Start from Scratch](assets/1.1_03_StartFromScratch.png)
 
@@ -291,7 +335,7 @@ You'll need two different email addresses to complete this lab:
 
     ![Update Your Name page details](assets/1.1_06_YourNamePage.png)
 
-1. We're now going to add fields to this page. Select the **plus icon** below the page title section in the middle of the designer.
+1. Now add fields to this page. Select the **plus icon** below the page title section in the middle of the designer.
 
     ![Select plus icon to add a field](assets/1.1_07_AddField.png)
 
@@ -299,7 +343,7 @@ You'll need two different email addresses to complete this lab:
 
     ![Select Text Field](assets/1.1_08_SelectTextField.png)
 
-1. You'll now see different attributes of the field. The following are the attributes of the field to update,
+1. You'll now see the field attributes. Update the following attributes:
 
     | Field name    | Field description | Required field | API reference name    |
     |---------------|-------------------|----------------|-----------------------|
@@ -309,15 +353,15 @@ You'll need two different email addresses to complete this lab:
 
     ![Update field attributes](assets/1.1_10_FirstNameField.png)
 
-1. We'll repeat the same steps to add the remaining **Text Fields**. Select the **plus icon** and add new **Text Fields** using the following attributes for each one,
+1. Repeat these steps to add the remaining **Text Fields**. Select the **plus icon** and add new **Text Fields** using the following attributes:
 
     | Field name    | Field description  | Required field | API reference name   |
     |---------------|--------------------|----------------|----------------------|
     | `Middle Name` | `Your middle name` | No             | `TextBox_MiddleName` |
     | `Surname`     | `Your surname`     | Yes            | `TextBox_Surname`    |
-    | `Full Name`   | `Your fullname`    | Yes            | `TextBox_FullName`   |
+    | `Full Name`   | `Your full name`   | Yes            | `TextBox_FullName`   |
 
-    After the **Text Fields** have been added, select the **plus icon** on the left hand side pane and select **New Blank Page**.
+    After the **Text Fields** have been added, select the **plus icon** on the left-hand side pane and select **New Blank Page**.
 
     ![Add New Blank Page](assets/1.1_12_AddNewBlankPage.png)
 
@@ -341,17 +385,22 @@ You'll need two different email addresses to complete this lab:
     Step_CandidateAddress
     ```
 
-    We'll repeat the same steps to add the remaining **Text Fields**. Select the **plus icon** and add new **Text Fields** using the following attributes for each one,
+    Repeat these steps to add the remaining **Text Fields**. Select the **plus icon** and add new **Text Fields** using the following attributes:
+
+    ::: info Generic address format
+    The table below shows a generic address format. You can adjust it, but keep track of any field changes because you'll need them in the Workflow Builder lab exercise. To avoid issues in later steps, use the following address format.
+    :::
 
     | Field name    | Field description  | Required field | API reference name   |
     |---------------|--------------------|----------------|----------------------|
-    | `Middle Name` | `Your middle name` | No             | `TextBox_MiddleName` |
-    | `Surname`     | `Your surname`     | Yes            | `TextBox_Surname`    |
-    | `Full Name`   | `Your fullname`    | Yes            | `TextBox_FullName`   |
+    | `Address Line 1` | `Street Address` | No             | `TextBox_AddressLine1` |
+    | `Address Line 2`     | `Suburb/District`     | Yes            | `TextBox_AddressLine2`    |
+    | `City`   | `City`    | Yes            | `TextBox_City`   |
+    | `Post Code`   | `Post Code`    | Yes            | `PostCode`   |
 
     ![Update Address page details](assets/1.1_13_AddressPage.png)
 
-1. After the **Text Fields** have been added, select the **Thank you page** on the left hand side pane.
+1. After the **Text Fields** have been added, select the **Thank you page** on the left-hand side pane.
 
     ![Select Thank you page](assets/1.1_14_FieldsAddedToAddressPage.png)
 
@@ -371,7 +420,7 @@ You'll need two different email addresses to complete this lab:
 
     ![Update Thank you page details](assets/1.1_15_ThankYouPageDetails.png)
 
-1. Great, you've now finished configuring the Web Form. Let's take a look at what the Web Form will look like for the end user, select **Preview**.
+1. You've finished configuring the Web Form. To see the end-user view, select **Preview**.
 
     ![Select **Preview** to see the Web Form in preview mode](assets/1.1_16_PreviewWebForm.png)
 
@@ -403,7 +452,7 @@ You'll need two different email addresses to complete this lab:
 
     ![Select Activate](assets/1.1_23_Activate.png)
 
-1. A confirmation modal will appear with an **Access setting** field. We'll leave this as **Public** as the web form we'll be used in a step in the workflow we'll create in a later lab exercise. Select **Activate**.
+1. A confirmation modal will appear with an **Access setting** field. We'll leave this as **Public** since the web form will be used in a step in the workflow we'll create in a later lab exercise. Select **Activate**.
 
     ![Select Activate](assets/1.1_24_Activate.png)
 
@@ -411,13 +460,47 @@ You'll need two different email addresses to complete this lab:
 
     ![Select Go to Web Forms](assets/1.1_25_GoToWebForms.png)
 
-1. The Web Form will appear with a status of **Active**. Hooray, you've built a web form! 👏🏻
+1. The Web Form will appear with a status of **Active**. You've successfully built a web form 👏🏻
 
     ![Web Form showing as Active](assets/1.1_26_ActiveWebForm.png)
 
-### 📄 1.2 Create Document Templates {#lab-1-2-create-document-templates}
+## 🧪 1.2 Create Document Templates {#lab-1-2-create-document-templates}
 
 A Document Template is a reusable setup for sending agreements that lets you pre‑define documents, recipient roles, routing order, and messages, so you can quickly create and send consistent envelopes without starting from scratch each time.
+
+To learn more about Docusign **Document Templates**, expand the following additional learning block.
+
+::: details Using Document Templates
+📄Workflow Builder works closely with reusable document templates.
+
+Templates allow organizations to standardize frequently used agreements such as:
+
+- NDAs
+- Employment contracts
+- Procurement forms
+- Customer agreements
+- Approval documents
+
+📦 Templates can contain:
+
+- Pre-configured documents
+- Signer roles
+- Signature fields
+- Approval flows
+- Workflow logic
+
+This means teams no longer need to recreate documents every time.
+
+For example:
+
+- A customer fills out a Web Form
+- Their information automatically populates a contract template
+- Workflow Builder routes the agreement for approval
+- The document is sent for eSignature
+- Signed copies are stored automatically
+
+💡 All of this can happen with minimal manual intervention.
+:::
 
 In this lab exercise, we'll create two Document Templates
 
@@ -426,9 +509,9 @@ In this lab exercise, we'll create two Document Templates
 
 These document templates will be used in the next lab exercise when we create a workflow in Workflow Builder.
 
-Let's begin!!! ⤵️
+Let's begin. ⤵️
 
-1. Navigate to **Templates** and select **Document Templates** in the left hand side menu pane. Select **Create**.
+1. Navigate to **Templates** and select **Document Templates** in the left-hand side menu pane. Select **Create**.
 
     ![Create new Document Template](assets/1.2_01_SelectDocumentTemplates.png)
 
@@ -444,7 +527,7 @@ Let's begin!!! ⤵️
 
     ![Select Offer Letter as the agreement type value](assets/1.2_04_AgreementType.png)
 
-1. Next we'll define the roles for the document template. On the **Fields** left hand side pane, select the **chevron icon** by **Sender 1** and select **Edit recipients**.
+1. Next we'll define the roles for the document template. On the **Fields** left-hand side pane, select the **chevron icon** by **Sender 1** and select **Edit recipients**.
 
     ::: info What is a "Role" in a template? :thinking:
     A role is a placeholder in a template that represents an individual who will act on the document, such as signing or approving. Roles define _who_ is involved and _what action_ they take, while allowing the actual recipient to be assigned when the template is used.
@@ -474,7 +557,7 @@ Let's begin!!! ⤵️
 
     ![Edit and Add Recipients](assets/1.2_06_EditAndAddRecipients.png)
 
-1. Next, we'll replace placeholders in the document with fields. We'll start by switching to the **Sender** role.
+1. Next, replace placeholders in the document with fields. Start by switching to the **Sender** role.
 
     ::: info What is a "Field" in a template? :thinking:
     A field is an interactive element added to a document that captures or displays information for a recipient. Fields are placed on documents so recipients can take action, such as signing or entering data when the envelope is sent.
@@ -498,7 +581,7 @@ Let's begin!!! ⤵️
 
 1. Each of the sample documents have blue colored text to easily identify the placeholders of where we'll be adding fields to the template. This is for the purpose of learning and completing the lab exercise so keep in mind you would not have colored text in _Production-used_ templates.
 
-    Highlight the first placeholder `{EffectiveDate}` and select the standard field, **Effective Date**, on the left hand side menu.
+    Highlight the first placeholder `{EffectiveDate}` and select the standard field, **Effective Date**, on the left-hand side menu.
 
     ![Effective Date field](assets/1.2_08_EffectiveDate.png)
 
@@ -506,7 +589,7 @@ Let's begin!!! ⤵️
 
     ![Effective Date added](assets/1.2_09_EffectiveDateAdded.png)
 
-1. The next field we'll add is a custom field. Highlight the `{EmployeeFullName}`placeholder and select the **+ icon** in the **Fields** pane. Select **Field**.
+1. The next field we'll add is a custom field. Highlight the `{EmployeeFullName}` placeholder and select the **+ icon** in the **Fields** pane. Select **Field**.
 
     ![Add custom field for Effective Full Name](assets/1.2_10_AddedEmployeeFullNameCustomField.png)
 
@@ -522,7 +605,7 @@ Let's begin!!! ⤵️
 
     ![Create new custom field for Employee Full Name](assets/1.2_11_CreateEmployeeFullNameCustomField.png)
 
-1. Let's now configure the rest of the attributes. Enter the following in the **Field Description**,
+1. Configure the remaining attributes. Enter the following in **Field Description**:
 
     ```text
     The full name of the employee
@@ -548,15 +631,15 @@ Let's begin!!! ⤵️
 
     ![Create remaining custom fields](assets/1.2_14_CreateRemainingCustomFields.png)
 
-1. Next, we'll add the **Employee Full Name** field to the _**16. Signatures**_ section of the template. Highlight the `{EmployeeFullName}` placeholder and select the corresponding field in the **Fields** left hand side pane.
+1. Next, we'll add the **Employee Full Name** field to the _**16. Signatures**_ section of the template. Highlight the `{EmployeeFullName}` placeholder and select the corresponding field in the **Fields** left-hand side pane.
 
     ![Add Employee Full Name Field](assets/1.2_15_AddEmployeeFullNameField.png)
 
-1. We'll now switch to the **Hiring Manager** role to define the fields that this recipient should complete.  On the **Fields** left hand side pane, select the **chevron icon** by **Sender** and select **Hiring Manager**.
+1. We'll now switch to the **Hiring Manager** role to define the fields that this recipient should complete. On the **Fields** left-hand side pane, select the **chevron icon** by **Sender** and select **Hiring Manager**.
 
     ![Select Hiring Manager role](assets/1.2_16_SwitchToHiringManagerRole.png)
 
-1. Highlight the `{ManagerSignature}` placeholder and select **Signature** in the **Fields** left hand side pane.
+1. Highlight the `{ManagerSignature}` placeholder and select **Signature** in the **Fields** left-hand side pane.
 
     ![Select Signature field for the Manager Signature placeholder](assets/1.2_17_AddSignatureField.png)
 
@@ -567,7 +650,7 @@ Let's begin!!! ⤵️
 1. Repeat the same steps to add the remaining fields for the **Hiring Manager** role and the **Employee** role.
 
     ::: tip :computer_mouse: Don't forget to switch roles
-    Remember to switch to the Employee role using the chevron icon in the Fields left hand side pane.
+    Remember to switch to the Employee role using the chevron icon in the Fields left-hand side pane.
 
     ![Switch to Employee Role](assets/1.2_19_SwitchToEmployeeRole.png)
     :::
@@ -584,27 +667,27 @@ Let's begin!!! ⤵️
 
     ![Fields added for all roles](assets/1.2_20_FieldsAddedForRoles.png)
 
-1. Select **Save as Draft** on the upper right which will redirect to the Document Templates web page with a confirmation message on the bottom left that the template has been saved as a draft. Next select the **ellipsis icon (...)** and select **Publish**.
+1. Select **Save as Draft** on the upper right. You'll be redirected to the Document Templates page and see a bottom-left confirmation message. Then select the **ellipsis icon (...)** and choose **Publish**.
 
     ![Publish document template](assets/1.2_21_PublishDocumentTemplate.png)
 
 1. Another confirmation message on the bottom left will appear to let you know the Draft template has been Published.
 
-    We'll now create the second Document Template, using the [Sample Offer Letter file](assets/Sample%20Offer%20Letter.docx). We'll be following the same steps previously from when we created the first Document Template.
+    Now create the second Document Template using the [Sample Offer Letter file](assets/Sample%20Offer%20Letter.docx), following the same steps as the first template.
 
     Select **+ Create new**.
 
     ![Create a new document template](assets/1.2_22_CreateNewDocumentTemplate.png)
 
-1. Repeat the same steps previously by uploading the Sample Offer Letter file and selecting **Offer Letter** as the **Agreement Type**.
+1. Repeat the previous steps by uploading the Sample Offer Letter file and selecting **Offer Letter** as the **Agreement Type**.
 
     Select **Continue**.
 
     ![Upload Sample Offer Letter file to create a new document template](assets/1.2_23_OfferLetterAgreementType.png)
 
-1. Repeat the same steps previously to create two new roles for the document template, Hiring Manager and Employee.
+1. Repeat the previous steps to create two roles for the document template: Hiring Manager and Employee.
 
-    On the **Fields** left hand side pane, select the **chevron icon** by **Sender 1** and select **Edit recipients**.
+    On the **Fields** left-hand side pane, select the **chevron icon** by **Sender 1** and select **Edit recipients**.
 
     Rename the **Signer 1** role to,
 
@@ -620,11 +703,11 @@ Let's begin!!! ⤵️
 
     ![Add roles](assets/1.2_24_Roles.png)
 
-1. Next, we'll replace placeholders in the document with fields. We'll start by switching to the **Sender** role. Highlight the `{EmployeeFullName}`placeholder and select the Employee Full Name field on the left hand side menu. The field will now display instead of the placeholder.
+1. Next, we'll replace placeholders in the document with fields. We'll start by switching to the **Sender** role. Highlight the `{EmployeeFullName}` placeholder and select the Employee Full Name field on the left-hand side menu. The field will now display instead of the placeholder.
 
     ![Configure Sender fields](assets/1.2_25_ConfigureFields.png)
 
-1. Repeat the same steps for the remainder of the placeholders for the **Sender** role by selecting existing fields on the left hand side menu or creating new fields.
+1. Repeat the same steps for the remainder of the placeholders for the **Sender** role by selecting existing fields on the left-hand side menu or creating new fields.
 
     | Placeholder                   | Field name                   | Create New Field | Field description                          | Required field | Field Type |
     |-------------------------------|------------------------------|------------------|--------------------------------------------|----------------|--------------------|
@@ -639,7 +722,7 @@ Let's begin!!! ⤵️
 1. Next, we'll add the fields for the **Hiring Manager** and **Employee** roles using the same steps as last time.
 
     ::: tip :computer_mouse: Don't forget to switch roles
-    Remember to switch to the Employee role using the chevron icon in the Fields left hand side pane.
+    Remember to switch to the Employee role using the chevron icon in the Fields left-hand side pane.
     :::
 
     | Role            | Placeholder                          | Field       |
@@ -672,9 +755,9 @@ Let's begin!!! ⤵️
 
     ![Sample Offer Letter document published](assets/1.2_32_Published.png)
 
-🏃🏻‍♀️‍➡️ Right, let's move on to creating the workflow in Workflow Builder!
+🏃🏻‍♀️‍➡️ Next, let's move on to creating the workflow in Workflow Builder.
 
-### 🧭 1.3 Create Docusign Workflow Builder workflow {#lab-1-3-create-docusign-workflow-builder-workflow}
+## 🧪 1.3 Create Docusign Workflow Builder workflow {#lab-1-3-create-docusign-workflow-builder-workflow}
 
 For our HR scenario, we need to process the following:
 
@@ -683,7 +766,7 @@ For our HR scenario, we need to process the following:
 - Then get the manager to sign
 - Save the final document to SharePoint
 
-All of this can be handled automatically by a Docusign workflow created in Workflow Builder instead of doing it manually. Let's begin building 🏗️
+Workflow Builder can automate all of this, instead of handling it manually. Let's build it. 🏗️
 
 1. Navigate to **Agreements** and select **Workflows**. Then select **Create Workflow**.
 
@@ -711,7 +794,7 @@ Note: The label on the menu has since changed from _Maestro Workflows_ to **Work
 
     ![Select Add workflow start](assets/1.3_05_AddWorkflowStart.png)
 
-1. There are several methods to choose one and the one to select is **From an API Call** to enable the agent built in Microsoft Copilot Studio to invoke the workflow through the Docusign MCP server.
+1. There are several start methods. Select **From an API Call** so the agent built in Microsoft Copilot Studio can invoke the workflow through the Docusign MCP Demo server.
 
    Select **Apply**.
 
@@ -721,7 +804,7 @@ Note: The label on the menu has since changed from _Maestro Workflows_ to **Work
 
     ![Select Next](assets/1.3_07_NextConfigurationStep.png)
 
-1. We're now going to add variables which will act as input parameters for the workflow. We'll be sending data from the agent built in Microsoft Copilot Studio to the workflow. This data will be consumed by other steps in the workflow.
+1. Now add variables that act as workflow input parameters. Data sent from the agent built in Microsoft Copilot Studio will be consumed by other workflow steps.
 
    Select **Text**.
 
@@ -731,6 +814,7 @@ Note: The label on the menu has since changed from _Maestro Workflows_ to **Work
 
     | Variable type | Value                       |
     |:--------------|:----------------------------|
+    | Text          | `Employee Full Name`        |
     | Email         | `Employee Email`            |
     | Text          | `Employee Position`         |
     | Date          | `Effective Date`            |
@@ -746,9 +830,9 @@ Note: The label on the menu has since changed from _Maestro Workflows_ to **Work
 
     ![Select Next](assets/1.3_10_SelectNext.png)
 
-1. In this step you define how the API call will be initiated or triggered with two options. Select the second option, **Automated process** since the agent built in Microsoft Copilot Studio will be invoking the workflow through the Docusign MCP server.
+1. In this step, define how the API call is triggered. Select the second option, **Automated process**, since the agent built in Microsoft Copilot Studio will invoke the workflow through the Docusign MCP Demo server.
 
-   Select **Apply**. That's it - we've now completed configuring the workflow start step, so let's continue with the remainder of the workflow steps.
+    Select **Apply**. This completes the workflow start step.
 
     ![Select Automated process](assets/1.3_11_SelectAutomatedProcess.png)
 
@@ -794,19 +878,19 @@ Note: The label on the menu has since changed from _Maestro Workflows_ to **Work
 
     ![Select Add a step](assets/1.3_21_AddStep.png)
 
-1. Select **Collet Data with Web Forms** as the next step.
+1. Select **Collect Data with Web Forms** as the next step.
 
     ![Select Collect Data with Web Forms](assets/1.3_22_SelectCollectDataWithWebForms.png)
 
-1. Select **Configure** to configure the Web Form step.
+1. Select **Configure** for the Web Form step.
 
     ![Select Configure](assets/1.3_23_SelectConfigure.png)
 
-1. You'll now need to select the web form created earlier. Select the **Request for contact information** web form.
+1. Select the web form created earlier: **Request for contact information**.
 
     ![Select Request for contact information web form](assets/1.3_24_ChooseForm.png)
 
-1. Select **Next** to configure the participant of the Web Form.
+1. Select **Next** to configure the Web Form participant.
 
     ![Select Next](assets/1.3_25_NextConfigurationStep.png)
 
@@ -822,7 +906,7 @@ Note: The label on the menu has since changed from _Maestro Workflows_ to **Work
 
     ![Select Employee Full Name variable](assets/1.3_28_EmployeeFullNameVariable.png)
 
-1. Great! We're now done configuring the Web Form step. Select **Apply** to add the next step in the workflow.
+1. The Web Form step is now configured. Select **Apply** to continue.
 
     ![Select Apply](assets/1.3_29_Apply.png)
 
@@ -830,15 +914,15 @@ Note: The label on the menu has since changed from _Maestro Workflows_ to **Work
 
     ![Select Add a step](assets/1.3_30_AddAStep.png)
 
-1. Scroll down to the **Documents** list and elect **Prepare a Document Template** step.
+1. Scroll down to the **Documents** list and select **Prepare a Document Template** step.
 
     ![Select Prepare a Document Template step](assets/1.3_31_SelectPrepareDocumentTemplate.png)
 
-1. Select **Configure** to configure the Document Template step.
+1. Select **Configure** for the Document Template step.
 
     ![Select Configure](assets/1.3_32_SelectConfigure.png)
 
-1. You'll now need to select the document template created earlier. Select the **Sample Employment Agreement** document template.
+1. Select the document template created earlier: **Sample Employment Agreement**.
 
     ![Select Sample Employment Agreement document template](assets/1.3_33_SelectSampleEmploymentAgreement.png)
 
@@ -846,17 +930,17 @@ Note: The label on the menu has since changed from _Maestro Workflows_ to **Work
 
     ![Select Next](assets/1.3_34_SelectNext.png)
 
-1. In this configuration step, you have the option to generate the document automatically without a review. For the purpose of this lab, we'll leave it as **Yes** to showcase how the turnaround time of sending an employment agreement with the employee's information can be reduced. In the real-world, the document template would have been approved internally including its input values that are to be mapped to the workflow start variables.
+1. In this step, you can generate the document automatically without review. For this lab, leave it as **Yes** to show faster turnaround when sending an employment agreement with employee information. In production, the template and mapped input values would typically be approved internally.
 
    Select **Next**.
 
     ![Select Next](assets/1.3_35_SelectNext.png)
 
-1. Now in this configuration step, we're defining how the values in the employment agreement are to be mapped to generate the document. Let's start with the Effective Date field. In the **Variables from Workflow Start** list, select **Effective Date**.
+1. In this step, map values for document generation. Start with the `Effective Date` field. In **Variables from Workflow Start**, select **Effective Date**.
 
     ![Select Effective Date variable](assets/1.3_36_SelectEffectiveDate.png)
 
-1. Repeat the same steps for the remainder of the employment agreement fields using the values in the table below as guidance. Make sure the Employee Full Name field is mapped to the **Full Name** field under the **Collect Data with Web Forms** list.
+1. Repeat these steps for the remaining employment agreement fields using the table below. Make sure Employee Full Name is mapped to **Full Name** under **Collect Data with Web Forms**.
 
    Select **Next** to configure the naming of the file.
 
@@ -868,9 +952,9 @@ Note: The label on the menu has since changed from _Maestro Workflows_ to **Work
     | Start Date         | Variables from Workflow Start| Start Date  |
     | Salary             | Variables from Workflow Start| Salary               |
 
-    ![Agreement Fields configured](assets/1.3_31_SelectPrepareDocumentTemplate.png)
+    ![Agreement Fields configured](assets/1.3_37_AgreementFieldsConfigured.png)
 
-1. In this step we can configure the naming convention of the generated file. We'll keep it simple by referencing the employee's full name, the effective date and append the text value of `EmploymentAgreement`.
+1. In this step, configure the generated file name. Keep it simple by using the employee's full name, the effective date, and appending `EmploymentAgreement`.
 
    Select the option **Use variables to customize a title** to reference values from our workflow steps. Select **Full Name** from the **Web Form** list.
 
@@ -882,11 +966,11 @@ Note: The label on the menu has since changed from _Maestro Workflows_ to **Work
 
 1. Next enter `_` in-between the two variables and at the end, enter the text value of `_EmploymentAgreement`.
 
-   Update the file format to **.pdf** in and select **Next**.
+    Update the file format to **.pdf** and select **Next**.
 
     ![Title Builder Field configured](assets/1.3_40_TitleBuilderFieldConfigured.png)
 
-1. Great! You've completed configured the step so let's continue with the next step. Select **Apply**.
+1. You've completed configuring the step. Select **Apply** to continue.
 
     ![Select Apply](assets/1.3_41_SelectApply.png)
 
@@ -894,7 +978,7 @@ Note: The label on the menu has since changed from _Maestro Workflows_ to **Work
 
     ![Select add a step](assets/1.3_42_AddAStep.png)
 
-1. You'll repeat the same steps to add the second Document Template created earlier, Sample Offer Letter, to the workflow. Select **Prepare Document Template**.
+1. Repeat the same process to add the second document template, Sample Offer Letter, to the workflow. Select **Prepare Document Template**.
 
     ![Select Prepare a Document Template step](assets/1.3_43_SelectPrepareDocumentTemplate.png)
 
@@ -913,17 +997,17 @@ Note: The label on the menu has since changed from _Maestro Workflows_ to **Work
     | Start Date                 | Variables from Workflow Start | Start Date        |
     | Signed Due Date            | Variables from Workflow Start | Due Signed Date   |
 
-    ![Configured agreement fields](assets/1.3_31_SelectPrepareDocumentTemplate.png)
+    ![Configured agreement fields](assets/1.3_44_ConfigureAgreementFields.png)
 
-1. For the naming convention of the generated file, we'll apply the same references of the employee's full name from **Collect Data with Web Forms**, the effective date from **Variables from Workflow Start** and append the text value of `_OfferLetter`.
+1. For the naming convention of the generated file, we'll apply the same references of **Employee Full Name** from **Collect Data with Web Forms**, the **Effective Date** from **Variables from Workflow Start** and append the text value of `_OfferLetter`.
 
    Update the file format to **.pdf**, select **Next** and select **Apply**.
 
     ![Configure the document file name](assets/1.3_45_NameDocumentConfigurationStep.png)
 
-1. We'll add another step to send the documents for signature by selecting **Add a step**.
+1. Add another step to send the documents for signature by selecting **Add a step**.
 
-    ![Select Add a step](assets/1.3_36_SelectEffectiveDate.png)
+    ![Select Add a step](assets/1.3_46_AddAStep.png)
 
 1. Select **Send Documents for Signature**.
 
@@ -933,7 +1017,7 @@ Note: The label on the menu has since changed from _Maestro Workflows_ to **Work
 
     ![Select Configure](assets/1.3_48_SelectConfigure.png)
 
-1. In this step, select the previous **Generate Document** steps so the generated documents are added to an envelope and sent to participants for signature.
+1. In this step, select the previous **Generate Document** steps so generated documents are added to an envelope and sent for signature.
 
    For the primary document, select the **Document** variable under **Generate Document - Employment Agreement**.
 
@@ -947,7 +1031,7 @@ Note: The label on the menu has since changed from _Maestro Workflows_ to **Work
 
     ![Select Generate Document - Offer Letter variable](assets/1.3_51_SelectGenerateDocumentOfferLetter.png)
 
-1. Select **Next** to continue with the configuration of the workflow step.
+1. Select **Next** to continue configuring the workflow step.
 
     ![Select Next](assets/1.3_52_SelectNext.png)
 
@@ -1001,11 +1085,11 @@ Note: The label on the menu has since changed from _Maestro Workflows_ to **Work
 
     ![Use a direct signing session](assets/1.3_63_UseADirectSigningSession.png)
 
-1. Select **Apply** to completing configuring the workflow step.
+1. Select **Apply** to complete workflow step configuration.
 
     ![Select Apply](assets/1.3_64_SelectApply.png)
 
-1. Select **Add a step**, we'll next add a Confirmation Screen for the Employee participant which will be displayed to them when they complete signing the document agreements.
+1. Select **Add a step**. Next, add a **Confirmation Screen** for the Employee participant that appears after signing is complete.
 
     ![Select Add a step](assets/1.3_65_AddAStep.png)
 
@@ -1013,7 +1097,7 @@ Note: The label on the menu has since changed from _Maestro Workflows_ to **Work
 
     ![Select Show a Confirmation Screen](assets/1.3_66_SelectShowAConfirmationScreen.png)
 
-1. Select **Configure** to configure the step.
+1. Select **Configure** for this step.
 
     ![Select Configure](assets/1.3_67_SelectConfigure.png)
 
@@ -1021,11 +1105,11 @@ Note: The label on the menu has since changed from _Maestro Workflows_ to **Work
 
     ![Select Employee](assets/1.3_68_SelectEmployee.png)
 
-1. Next, you have the option to configure the fields for message type, message title and message body. By default, there will be values already selected and entered. You can stick with the default values for the purpose of this lab. Select **Apply**.
+1. You can configure the message type, title, and body fields. Default values are already set, and you can keep them for this lab. Select **Apply**.
 
     ![Select Apply](assets/1.3_69_SelectApply.png)
 
-1. OK home stretch, the final step in the workflow is to upload the signed document agreements into SharePoint for visibility of the agreements. To do this, you'll need to set up a connection to your SharePoint site and authorize the connection. Select **App Center** on the upper right of the designer.
+1. In the final workflow step, upload the signed document agreements to SharePoint for visibility. To do this, set up and authorize a connection to your SharePoint site. Select **App Center** on the upper right of the designer.
 
     ![Select App Center](assets/1.3_70_SelectAppCenter.png)
 
@@ -1045,7 +1129,7 @@ Note: The label on the menu has since changed from _Maestro Workflows_ to **Work
 
     ![Select Connect Account](assets/1.3_74_ConnectAccount.png)
 
-1. You'll see a couple of options on how to connect a SharePoint account - either as a private connection for individual use or a shared connection for team access, before proceeding to the next step. Since you created your own Docusign developer account, stick with **Private** for the purpose of this lab.
+1. You'll see options to connect a SharePoint account as either a private connection (individual use) or a shared connection (team access). For this lab, use **Private**.
 
    Select **Next**.
 
@@ -1061,7 +1145,7 @@ Note: The label on the menu has since changed from _Maestro Workflows_ to **Work
 
     ![Allow consent](assets/1.3_77_Consent.png)
 
-1. You'll now see confirmation you've been logged into your SharePoint account. Select **X** icon to exit from the App Center and you should be back in the workflow designer. Otherwise navigate to **Agreements**, select **Workflows**, and open the workflow to edit it.
+1. You'll see confirmation that you're signed in to your SharePoint account. Select the **X** icon to exit App Center and return to the workflow designer. If not, navigate to **Agreements** > **Workflows** and reopen the workflow.
 
     ![Select the x icon to exit from the App Center](assets/1.3_78_SelectUseThisApp.png)
 
@@ -1073,7 +1157,7 @@ Note: The label on the menu has since changed from _Maestro Workflows_ to **Work
 
     ![Select Store files in SharePoint](assets/1.3_80_SelectStoreFilesInSharePoint.png)
 
-1. Select **Configure** to configure the step.
+1. Select **Configure** for this step.
 
     ![Select Configure](assets/1.3_81_SelectConfigure.png)
 
@@ -1081,7 +1165,7 @@ Note: The label on the menu has since changed from _Maestro Workflows_ to **Work
 
     ![Select Combined Envelope File](assets/1.3_82_SelectCombinedEnvelopFile.png)
 
-1. Next, select the **Connection** created earlier for your SharePoint site. This connection will be used in this step.
+1. Next, select the **Connection** created earlier for your SharePoint site.
 
     ![Select connection](assets/1.3_83_SelectConnection.png)
 
@@ -1101,11 +1185,11 @@ Note: The label on the menu has since changed from _Maestro Workflows_ to **Work
 
     ![Select Next](assets/1.3_87_SelectNext.png)
 
-1. In the final configuration step, you'll need to define the naming convention of the uploaded file. This can be achieved using variables from the workflow steps. We'll keep it simple by referencing the Envelope ID and the Employee Full name. Enter `env` and select **Envelope ID**.
+1. In the final configuration step, define the uploaded file naming convention using workflow variables. Keep it simple by referencing **Envelope ID** and **Employee Full Name**. Enter `env` and select **Envelope ID**.
 
     ![Select Envelope ID Variable](assets/1.3_88_SelectEnvelopeIDVariable.png)
 
-1. Next, we'll add an underscore character. Select **Add Text**.
+1. Next, add an underscore character. Select **Add Text**.
 
     ![Select Add Text](assets/1.3_89_SelectText.png)
 
@@ -1127,13 +1211,13 @@ Note: The label on the menu has since changed from _Maestro Workflows_ to **Work
 
 1. You'll see confirmation that the workflow has been saved. Select **Review & Publish**.
 
-    ![Select Review and Publish](assets/1.3_64_SelectApply.png)
+    ![Select Review and Publish](assets/1.3_94_SelectReviewAndPublish.png)
 
-1. There will be confirmation on whether you workflow has errors. Select **Next**.
+1. There will be confirmation on whether your workflow has errors. Select **Next**.
 
     ![Select Next](assets/1.3_95_SelectNext.png)
 
-1. Next, we'll name the workflow instance which will be the name given to a workflow run. We'll use the name builder to select variables as part of the naming convention. Select the **+** icon to insert a variable.
+1. Next, name the workflow instance (the name for each workflow run). Use the name builder to insert variables as part of the naming convention. Select the **+** icon.
 
     ![Select plus icon to insert a variable](assets/1.3_96_InsertVariable.png)
 
@@ -1145,7 +1229,7 @@ Note: The label on the menu has since changed from _Maestro Workflows_ to **Work
 
     ![Select Start Date and Time variable](assets/1.3_98_SelectStartDateAndTimeVariable.png)
 
-1. In-between the variables, enter the underscore character, `_` to complete the naming convention.
+1. Between the variables, enter an underscore (`_`) to complete the naming convention.
 
    Select **Done**.
 
@@ -1155,7 +1239,7 @@ Note: The label on the menu has since changed from _Maestro Workflows_ to **Work
 
     ![Select Publish](assets/1.3_100_SelectPublish.png)
 
-1. Next, you'll authorize the sender of the workflow which will be yourself. Select **Authorize My Account**.
+1. Next, authorize the workflow sender (your account). Select **Authorize My Account**.
 
     ![Select Authorize My Account](assets/1.3_101_SelectAuthorizeMyAccount.png)
 
@@ -1175,7 +1259,7 @@ Note: The label on the menu has since changed from _Maestro Workflows_ to **Work
 
     ![Workflow published](assets/1.3_105_WorkflowPublished.png)
 
-### 🧪 1.4 Test the workflow {#lab-1-4-test-the-workflow}
+## 🧪 1.4 Test the workflow {#lab-1-4-test-the-workflow}
 
 Before we move onto building the agent in Microsoft Copilot Studio, it's best practice to run the workflow to test it. You can manually run the workflow by starting a new instance.
 
@@ -1207,7 +1291,7 @@ Before we move onto building the agent in Microsoft Copilot Studio, it's best pr
 
     ![Select Start](assets/1.4_06_SelectStart.png)
 
-1. You'll now see the **Your Name** page of the Web Form. Enter the first name and last name of the employee you provided earlier when entering sample data for the variables in the workflow start step.
+1. You'll now see the **Your Name** page of the Web Form. Enter the first and last name for the employee you used in the workflow start sample data.
 
     ![Provide name information](assets/1.4_07_ProvideNameInformation.png)
 
@@ -1219,15 +1303,15 @@ Before we move onto building the agent in Microsoft Copilot Studio, it's best pr
 
     ![Select Next](assets/1.4_09_SelectNextToCompleteWebForm.png)
 
-1. Once the Web Form has been submitted, the next steps in the workflow will execute which is generating the Employment Agreement and Offer Letter using the data from the Web Form for the document templates, and then requesting the Employee participant to sign. As the Employee participant you'll immediately be directed to signing the document.
+1. After the Web Form is submitted, the next workflow steps run automatically: generate the Employment Agreement and Offer Letter using form data, then request the Employee participant signature. As the Employee participant, you'll be directed to signing immediately.
 
-   In a matter of minutes, the Employee participant goes from providing data in the Web Form, to signing the document which reduces the turnaround time for HR teams.
+    In minutes, the Employee participant goes from entering form data to signing documents, reducing turnaround time for HR teams.
 
    **Tick the terms and conditions checkbox** and select **Continue**.
 
     ![Agree and continue](assets/1.4_10_AgreeAndContinue.png)
 
-1. You'll now see the Employment Agreement. Notice how the text in blue displays the values entered from the variables in the Workflow Start step and from the Web Form you completed as the Employee (participant). Review the remainder of the Employment Agreement and then sign the agreement. Select **Start**.
+1. You'll now see the Employment Agreement. Blue text shows values from **Workflow Start variables** and the **Web Form** you completed as the **Employee participant**. Review the agreement, then select **Start** to sign.
 
     ![Select Start](assets/1.4_11_ReviewDocumentAgreements.png)
 
@@ -1235,11 +1319,11 @@ Before we move onto building the agent in Microsoft Copilot Studio, it's best pr
 
     ![Select Sign icon](assets/1.4_12_SignEmploymentAgreement.png)
 
-1. Next a modal will appear where you can confirm your signature details and select the style. The options are to use the default style, draw your signature or upload your signature. Continue with the default style and select **Adopt and Sign**.
+1. A modal appears where you can confirm signature details and style. Options are default style, drawn signature, or uploaded signature. Continue with the default style and select **Adopt and Sign**.
 
     ![Select Adopt and Sign](assets/1.4_13_AdoptAndSign.png)
 
-1. Review the Offer Letter next, notice how the address information is now displayed - this is the information you entered in the Address page of the Web Form as the the Employee participant. Select the **Sign** tab icon which will direct you to the **Sign** icon in the Offer Letter.
+1. Review the Offer Letter next. Notice how the address information is now displayed - this is the information you entered on the Address page of the Web Form as the Employee participant. Select the **Sign** tab icon, which will direct you to the **Sign** icon in the Offer Letter.
 
    Select the **Sign** icon.
 
@@ -1251,7 +1335,7 @@ Before we move onto building the agent in Microsoft Copilot Studio, it's best pr
 
 1. You'll next see the Confirmation Screen which is the step configured earlier.
 
-    ![Confirmation screen displayed](assets/1.4_05_SelectReview.png)
+    ![Confirmation screen displayed](assets/1.4_16_ConfirmationScreen.png)
 
 1. Next, for the email address you entered for the Hiring Manager participant, navigate to the email Inbox and open the Docusign email - it should have the subject of `Complete this envelope with Docusign`. Select **Review Documents**.
 
@@ -1259,7 +1343,7 @@ Before we move onto building the agent in Microsoft Copilot Studio, it's best pr
 
     ![Select Finish](assets/1.4_18_SelectFinish.png)
 
-1. If you're using the same email address of you Docusign Developer user account, you may see the following modal appear. Select **No Thanks**.
+1. If you're using the same email address as your Docusign Developer user account, you may see the following modal appear. Select **No Thanks**.
 
     ![Select No Thanks](assets/1.4_19_OptionToLogIntoDocusign.png)
 
@@ -1275,11 +1359,17 @@ Before we move onto building the agent in Microsoft Copilot Studio, it's best pr
 
     ![Signed document agreements uploaded into SharePoint](assets/1.4_22_SignedDocumentAgreementsUploadedToSharePoint.png)
 
-1. Open the .PDF file to see the document. You've now completed testing your workflow end-to-end manually! 🎉 Let's now build the agent in Microsoft Copilot Studio.
+1. Open the .PDF file to review the document. You've now completed an end-to-end manual workflow test. 🎉 Next, build the agent in Microsoft Copilot Studio.
 
     ![View signed document agreements](assets/1.4_23_ViewSignedDocumentAgreements.png)
 
-### 🤖 1.5 Build a custom agent in Microsoft Copilot Studio, connect to Docusign MCP Demo, and trigger the workflow {#lab-1-5-build-custom-agent-docusign-mcp-demo-trigger-workflow}
+## 🧪 1.5 Build a custom agent in Microsoft Copilot Studio, connect to Docusign MCP Demo, and trigger the workflow {#lab-1-5-build-custom-agent-docusign-mcp-demo-trigger-workflow}
+
+::: danger Use classic UI experience for Microsoft Copilot Studio
+The Docusign MCP Demo tool is not yet available in the new UI experience. Please switch to the classic UI experience to access it.
+
+When the tool is available in the new UI experience, this exercise and the following exercise will be updated.
+:::
 
 1. Navigate to [https://copilotstudio.microsoft.com](https://copilotstudio.microsoft.com)
 
@@ -1311,7 +1401,7 @@ Before we move onto building the agent in Microsoft Copilot Studio, it's best pr
 
     ![Edit agent description](assets/1.5_02_UpdateAgentDescription.png)
 
-1. You'll next add instructions to the agent so that it has clear guidelines of how it should invoke the Workflow Builder workflow using the Docusign MCP Demo tool.
+1. Next, add instructions to the agent so it has clear guidance on how to invoke the Workflow Builder workflow using the Docusign MCP Demo tool.
 
    Copy and paste the following, then select **Save**.
 
@@ -1323,7 +1413,7 @@ Before we move onto building the agent in Microsoft Copilot Studio, it's best pr
 
     ![Edit agent instructions](assets/1.5_03_AddAgentInstructions.png)
 
-1. Next step is to add the Docusign MCP Demo server as a tool for our agent. Scroll down to the **Tools** section and select **+Add tool**.
+1. Next, add the Docusign MCP Demo server as a tool for your agent. Scroll down to the **Tools** section and select **+Add tool**.
 
    Enter `docusign` in the search field and select the **Model Context Protocol** filter.
 
@@ -1349,7 +1439,7 @@ Before we move onto building the agent in Microsoft Copilot Studio, it's best pr
 
     ![Verify identity](assets/1.5_09_VerifyYourIdentity.png)
 
-1. Select **Allow Access**. The connection will now be created, hooray! Let's now test the agent.
+1. Select **Allow Access**. The connection is now created. Next, test the agent.
 
     ![Select Allow Access](assets/1.5_10_AllowAccess.png)
 
@@ -1364,9 +1454,9 @@ Before we move onto building the agent in Microsoft Copilot Studio, it's best pr
 
     ![Test agent](assets/1.5_12_TestAgent.png)
 
-1. In the test pane, the agent prompts you to select **Open connect manager** to verify your credentials.
+1. In the test pane, the agent prompts you to select **Open connection manager** to verify your credentials.
 
-   Select **Open connect manager**.
+    Select **Open connection manager**.
 
     ![Select Open connection manager](assets/1.5_13_OpenConnectionManager.png)
 
@@ -1405,7 +1495,7 @@ Before we move onto building the agent in Microsoft Copilot Studio, it's best pr
    - Replace the `[manager full name]` with a name of the manager.
    - Replace the `[manager email address]` placeholder using an email address for the manager (use the same one for the Hiring Manager participant when you manually tested the workflow earlier in Docusign).
 
-1. The orchestrator will trigger the workflow as all the variables for the workflow start step have bene provided. You'll see confirmation that the workflow was successfully triggered.
+1. The orchestrator will trigger the workflow once all variables for the workflow start step have been provided. You'll see confirmation that the workflow was successfully triggered.
 
     ![Workflow invoked](assets/1.5_18_WorkflowInvoked.png)
 
@@ -1415,20 +1505,20 @@ Before we move onto building the agent in Microsoft Copilot Studio, it's best pr
 
 1. Follow the same steps of completing the workflow.
 
-   - First navigate to the email Inbox of the email address you entered for the Employee participant and open the Docusign email. It should have the subject of `***Test Email*** Review and complete workflow`. Select **Review** to complete the web form followed by signing the agreements.
+    - First, go to the inbox for the Employee participant email address and open the Docusign message. It should have the subject `***Test Email*** Review and complete workflow`. Select **Review**, complete the web form, then sign the agreements.
 
         ![Run through workflow process](assets/1.5_20_RunThroughWorkflowProcess.png)
 
-   - Navigate to the email Inbox of the email address you entered for the Hiring Manager participant and open the Docusign email to sign the agreements.
-   - Lastly the final signed agreements should be uploaded to SharePoint.
+    - Navigate to the email Inbox of the email address you entered for the Hiring Manager participant and open the Docusign email to sign the agreements.
+    - Lastly the final signed agreements should be uploaded to SharePoint.
 
         ![Document uploaded to SharePoint](assets/1.5_21_DocumentUploadedToSharePoint.png)
 
-**Congrats!!!** 🥳 You've now learnt how to invoke your workflow created in Workflow Builder from your agent through the **Docusign MCP Demo** tool.
+**Congrats!** 🥳 You've now learned how to invoke a Workflow Builder workflow from your agent through the **Docusign MCP Demo** tool.
 
 If you want to continue to the bonus exercise of this lab, feel free to do so.
 
-### 🌟 1.6 BONUS - Add Work IQ Calendar tool (Frontier program) for multi-MCP capabilities {#lab-1-6-add-work-iq-calendar-tool}
+## 🧪🌟 1.6 BONUS - Add Work IQ Calendar tool (Frontier program) for multi-MCP capabilities {#lab-1-6-add-work-iq-calendar-tool}
 
 If your tenant and user has been enabled to use Frontier features, try the following exercise for your agent to combine the power of a first-party Microsoft MCP server (Work IQ Calendar) with a third-party service MCP server (Docusign MCP Demo).
 
@@ -1441,11 +1531,11 @@ Refer to the [IT Admin Guide](https://www.microsoft.com/microsoft-365-copilot/fr
 1. Update the agent instructions to include details in creating an Outlook meeting in your calendar after the Workflow Builder workflow has successfully triggered. You can provide instructions such as creating the meeting invite 2 working days before the effective date, or specify the time zone to use. Below is an example.
 
    ```text
-   - After sending the response to confirm the workflow was triggered successfully, automatically create a 1-hour Outlook meeting in the user's calendar without asking for any additional input. Schedule the meeting exactly 2 workdays before the agreement's Effective Date, ensuring it does not fall on a Saturday or Sunday, and use the user's work hours. Hardcode the time zone to (UTC+12:00) Auckland, Wellington so that no time zone selection is required. Set the subject to: Review pre-onboarding checklist for [Employee Fullname] where [Employee Fullname] comes from the Docusign Workflow Builder workflow.
+    - After sending the response to confirm the workflow was triggered successfully, automatically create a 1-hour Outlook meeting in the user's calendar without asking for any additional input. Schedule the meeting exactly 2 workdays before the agreement's Effective Date, ensuring it does not fall on a Saturday or Sunday, and use the user's work hours. Hardcode the time zone to (UTC+12:00) Auckland, Wellington so that no time zone selection is required. Set the subject to: Review pre-onboarding checklist for [Employee Full Name], where [Employee Full Name] comes from the Docusign Workflow Builder workflow.
    - Finally, send a response to the user confirming that the meeting has been created.
    ```
 
-   The orchestrator will insert the variable value of the Employee Fullname placeholders in square brackets.
+    The orchestrator will insert the variable value of the Employee Full Name placeholders in square brackets.
 
    Make sure select **Save** after updating the agent instructions.
 
@@ -1475,7 +1565,7 @@ Refer to the [IT Admin Guide](https://www.microsoft.com/microsoft-365-copilot/fr
 
     ![Select Add](assets/1.6_07_SelectAdd.png)
 
-1. The tool has now been added so you can now test your updated agent. Start a new test session by selecting the **+** icon in the test pane and enter the below text.
+1. The tool is now added, so you can test your updated agent. Start a new test session by selecting the **+** icon in the test pane and entering the text below.
 
    ```text
    Send an employment agreement and offer letter to [employee name], [email address]
@@ -1504,7 +1594,7 @@ Refer to the [IT Admin Guide](https://www.microsoft.com/microsoft-365-copilot/fr
 
     ![Workflow successfully triggered](assets/1.6_11_WorkflowSuccesfullyTriggered.png)
 
-1. The agent will also confirm that the Outlook Meeting has been created successfully 🙌🏻
+1. The agent will also confirm that the Outlook meeting has been created successfully 🙌🏻
 
     ![Outlook meeting created](assets/1.6_12_OutlookMeetingCreated.png)
 
@@ -1518,7 +1608,7 @@ Refer to the [IT Admin Guide](https://www.microsoft.com/microsoft-365-copilot/fr
 
 ## ✅ Mission Accomplished {#mission-accomplished}
 
-Congrats, agent - you've completed **Operation Docusign MCP**! You now have mastered the following skills:
+Congrats, agent - you've completed **Operation Docusign MCP**! You have now mastered the following skills:
 
 ✅ **Workflow Foundation**: Built a Docusign Web Form, created reusable Document Templates, and assembled a full Workflow Builder process end-to-end
 
@@ -1561,6 +1651,5 @@ Once your submission is reviewed, you will receive an email from Global AI Commu
 
 > [!TIP]
 > If you do not see the email, check your spam or junk folder.
-
 > [!NOTE]
 > 🚧 This mission is under construction. Check back soon for the full walkthrough.
