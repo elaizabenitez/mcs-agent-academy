@@ -1651,6 +1651,6 @@ Once your submission is reviewed, you will receive an email from Global AI Commu
 
 > [!TIP]
 > If you do not see the email, check your spam or junk folder.
-
+<!-- Separate callouts to satisfy MD028/no-blanks-blockquote -->
 > [!NOTE]
 > 🚧 This mission is under construction. Check back soon for the full walkthrough.
