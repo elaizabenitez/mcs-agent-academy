@@ -1645,7 +1645,9 @@ Congrats, agent - mission accomplished! Now it's time to claim your badge.
 
 Simply submit the badge request form and answer all required questions:
 
-[https://aka.ms/tbc](https://aka.ms/tbc)
+[**TO BE CONFIRMED**]
+
+<!--[https://aka.ms/tbc](https://aka.ms/tbc) -->
 
 Once your submission is reviewed, you will receive an email from Global AI Community with instructions to claim your badge.
 
