@@ -1651,5 +1651,6 @@ Once your submission is reviewed, you will receive an email from Global AI Commu
 
 > [!TIP]
 > If you do not see the email, check your spam or junk folder.
+
 > [!NOTE]
 > 🚧 This mission is under construction. Check back soon for the full walkthrough.
