@@ -504,8 +504,8 @@ For example:
 
 In this lab exercise, we'll create two Document Templates
 
-1. An employment agreement - [download the sample employment agreement](assets/Sample%20Employment%20Agreement.docx)
-1. An employee offer letter - [download the sample offer letter](assets/Sample%20Offer%20Letter.docx)
+1. An employment agreement - [download the sample employment agreement](assets/SampleEmploymentAgreement.docx)
+1. An employee offer letter - [download the sample offer letter](assets/SampleOfferLetter.docx)
 
 These document templates will be used in the next lab exercise when we create a workflow in Workflow Builder.
 
@@ -519,7 +519,7 @@ Let's begin. ⤵️
 
     ![Select Upload](assets/1.2_02_SelectUpload.png)
 
-1. Select the Sample Employment Agreement file. [Download the Sample Employment Agreement](assets/Sample%20Employment%20Agreement.docx) if you haven't already.
+1. Select the Sample Employment Agreement file. [Download the Sample Employment Agreement](assets/SampleEmploymentAgreement.docx) if you haven't already.
 
     ![Select Sample Employment Agreement files](assets/1.2_03_SelectSampleEmploymentAgreement.png)
 
@@ -673,7 +673,7 @@ Let's begin. ⤵️
 
 1. Another confirmation message on the bottom left will appear to let you know the Draft template has been Published.
 
-    Now create the second Document Template using the [Sample Offer Letter file](assets/Sample%20Offer%20Letter.docx), following the same steps as the first template.
+    Now create the second Document Template using the [Sample Offer Letter file](assets/SampleOfferLetter.docx), following the same steps as the first template.
 
     Select **+ Create new**.
 
