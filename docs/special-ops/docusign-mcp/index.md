@@ -84,7 +84,7 @@ Teams can see where agreements are in the process, who still needs to sign, and 
 Docusign provides secure digital signing and audit trails, helping organizations manage sensitive agreements more safely.
 
 #### Works with existing business tools
-Docusign integrates with platforms many organizations already use, including Microsoft applications, CRM systems, and productivity tools
+Docusign integrates with platforms many organizations already use, including Microsoft applications, CRM systems, and productivity tools.
 
 ## 🏗️ What is Docusign Workflow Builder? {#what-is-docusign-workflow-builder}
 In this mission, you'll build a workflow with Docusign Workflow Builder. Docusign Workflow Builder is a workflow automation platform that helps organizations automate agreement processes from beginning to end.
@@ -502,12 +502,16 @@ For example:
 💡 All of this can happen with minimal manual intervention.
 :::
 
-In this lab exercise, we'll create two Document Templates
+In this lab exercise, we'll create two Document Templates:
 
-1. An employment agreement - [download the sample employment agreement](../test-data/sample-data/SampleEmploymentAgreement.docx)
-1. An employee offer letter - [download the sample offer letter](../test-data/sample-data/SampleOfferLetter.docx)
+1. An employment agreement
+1. An employee offer letter
 
-These document templates will be used in the next lab exercise when we create a workflow in Workflow Builder.
+Download both sample files for the Document Templates by selecting the button below.
+
+<download-files path="special-ops/docusign-mcp/assets/sample-documents" />
+
+These two Document Templates will be used in the next lab exercise when we create a workflow in Workflow Builder.
 
 Let's begin. ⤵️
 
@@ -1270,7 +1274,7 @@ Before we move onto building the agent in Microsoft Copilot Studio, it's best pr
 1. A new modal will appear where you'll be required to provide the variables for the workflow start step. Fill in the fields with some sample data.
 
     ::: info Reminder on email address values
-    Use two different email addresses that you have access to for the employee and hiring manager
+    Use two different email addresses that you have access to for the employee and hiring manager.
     :::
 
     ![Enter the values for Workflow Start Variables](assets/1.4_02_EnterValuesForWorkflowStartVariables.png)
