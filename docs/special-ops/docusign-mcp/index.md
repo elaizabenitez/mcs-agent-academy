@@ -1650,6 +1650,24 @@ Congrats, agent - you've completed **Operation Docusign MCP**! You have now mast
 
 ✅ **Multi-MCP Extension (Bonus)**: Added Work IQ Calendar (Preview) to combine first-party Microsoft and third-party MCP tools in one agent experience
 
+## 🏅 Claim your completion badge {#claim-your-completion-badge}
+
+<!-- markdownlint-disable-next-line MD033 -->
+<p align="center"><img src="../assets/Academy-Docusign_Badge.png" alt="Docusign MCP Badge" width="220" /></p>
+
+Congrats, agent - mission accomplished! Now it's time to claim your badge.
+
+Simply submit the badge request form and answer all required questions:
+
+[https://aka.ms/agent-academy-special-ops/docusign-mcp/form](https://aka.ms/agent-academy-special-ops/docusign-mcp/form)
+
+<!--[https://aka.ms/tbc](https://aka.ms/tbc) -->
+
+Once your submission is reviewed, you will receive an email from Global AI Community with instructions to claim your badge.
+
+> [!TIP]
+> If you do not see the email, check your spam or junk folder.
+
 ## 📚 Tactical Resources {#tactical-resources}
 
 🔗 [Docusign for developers](https://developers.docusign.com)
@@ -1666,23 +1684,6 @@ Congrats, agent - you've completed **Operation Docusign MCP**! You have now mast
 
 📖 [Docusign MCP Demo connector (Microsoft Learn)](https://learn.microsoft.com/en-us/connectors/docusignmcpdemo/)
 
-## 🏅 Claim your completion badge {#claim-your-completion-badge}
-
-<!-- markdownlint-disable-next-line MD033 -->
-<p align="center"><img src="../assets/Academy-Docusign_Badge.png" alt="Docusign MCP Badge" width="220" /></p>
-
-Congrats, agent - mission accomplished! Now it's time to claim your badge.
-
-Simply submit the badge request form and answer all required questions:
-
-[**TO BE CONFIRMED**]
-
-<!--[https://aka.ms/tbc](https://aka.ms/tbc) -->
-
-Once your submission is reviewed, you will receive an email from Global AI Community with instructions to claim your badge.
-
-> [!TIP]
-> If you do not see the email, check your spam or junk folder.
 <!-- Separate callouts to satisfy MD028/no-blanks-blockquote -->
 > [!NOTE]
 > 🚧 This mission is under construction. Check back soon for the full walkthrough.
