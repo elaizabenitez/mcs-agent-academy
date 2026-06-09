@@ -54,59 +54,46 @@ In this mission, you'll learn:
 
 ## ❓ What is Docusign? {#what-is-docusign}
 
-[Docusign](https://www.docusign.com) is best known as an electronic signature platform that allows people and organizations to securely send, sign, approve, and manage documents digitally instead of relying on paper-based processes. Today, Docusign has evolved into a broader [Intelligent Agreement Management (IAM) platform](https://www.docusign.com/intelligent-agreement-management) that helps businesses create, sign, automate, track, and manage agreements from start to finish.
+[Docusign](https://www.docusign.com) is your agreement execution engine.
 
-At its core, Docusign helps organizations manage the full lifecycle of agreements - from creating contracts and collecting signatures, through to storing, tracking, and analyzing agreement data. The platform integrates with commonly used business tools such as Microsoft, Salesforce, and other enterprise systems.
+It enables organizations to create, send, sign, and manage agreements digitally - removing manual, paper-based processes. Beyond eSignatures, Docusign acts as an [Intelligent Agreement Management (IAM) platform](https://www.docusign.com/intelligent-agreement-management), supporting the full lifecycle from document creation to tracking and storage.
 
-### 💼 Why Docusign is essential for organizations {#why-docusign-is-essential-for-organizations}
+Instead of agreements living across emails and PDFs, Docusign brings them into a single, structured system.
 
-For organizations, agreements are everywhere:
+### 💼 Why it matters {#why-it-matters}
 
-- Employee contracts
-- Sales proposals
-- NDAs
-- Procurement approvals
-- Customer onboarding forms
-- Vendor agreements
-
-Managing these manually can be slow, repetitive, and error-prone and this is where Docusign shines by streamlining these processes digitally.
-
-#### Faster business processes
-Instead of waiting days for signatures or approvals, documents can be reviewed and signed from anywhere on almost any device. This helps businesses move faster and reduce delays.
-
-#### Reduced manual work
-Docusign removes much of the printing, scanning, emailing, and data entry involved in traditional paperwork processes.
-
-#### Better visibility and tracking
-Teams can see where agreements are in the process, who still needs to sign, and where bottlenecks exist.
-
-#### Improved security and compliance
-Docusign provides secure digital signing and audit trails, helping organizations manage sensitive agreements more safely.
-
-#### Works with existing business tools
-Docusign integrates with platforms many organizations already use, including Microsoft applications, CRM systems, and productivity tools.
+Agreements power core business operations but manual handling slows everything down. Docusign makes these processes faster, trackable, and scalable.
 
 ## 🏗️ What is Docusign Workflow Builder? {#what-is-docusign-workflow-builder}
-In this mission, you'll build a workflow with Docusign Workflow Builder. Docusign Workflow Builder is a workflow automation platform that helps organizations automate agreement processes from beginning to end.
 
-Rather than manually sending documents, collecting information, chasing approvals, and tracking progress, Workflow Builder connects everything into a structured digital workflow.
+Workflow Builder is where agreements become automated workflows.
 
-Docusign describes Workflow Builder as a way to automate, customize, and connect agreement workflows across the business.
+It lets you define how agreements move, from data collection to document generation to signing, without manual coordination.
 
-### ⚙️ What Workflow Builder can do
-Workflow Builder allows organizations to automate processes such as:
+Rather than manually sending documents, collecting information, chasing approvals, and tracking progress, Workflow Builder connects everything into a structured digital workflow. You design the workflow once, and it executes the defined process every time.
+
+### 💡 Common use cases {#common-use-cases}
 
 - Employee onboarding
-- Customer onboarding
+- Sales agreements
 - Procurement approvals
-- Vendor agreements
-- NDAs
-- Compliance and identity checks
+- NDAs and compliance workflows
+
+### ⚙️ What Workflow Builder does {#what-workflow-builder-does}
+
+Workflow Builder helps you automate agreement processes by:
+
+- Structuring multi-step workflows
+- Collecting inputs through web forms
+- Generating agreements from templates and data
+- Routing documents between participants in the right order
+- Connecting to third-party applications and services
+- Providing visibility into workflow progress
 
 ### 🧩 Key Workflow Builder capabilities {#key-workflow-builder-capabilities}
 
 #### Identity Verification
-Identity Verification helps organizations confirm a signer’s identity before agreements are completed. This adds an extra layer of security and is especially important for sensitive or regulated processes.
+Identity Verification helps organizations confirm a signer's identity before agreements are completed. This adds an extra layer of security and is especially important for sensitive or regulated processes.
 
 #### Web Forms
 Web Forms allow organizations to collect structured information through browser-based forms before generating agreements. Data entered into the form can automatically populate documents.
@@ -126,25 +113,13 @@ Agreement Desk helps centralize and coordinate agreement preparation, review, an
 #### Document Generation
 Document Generation helps automatically create agreements and documents using collected business data and reusable templates, reducing repetitive manual document creation.
 
-### 🚀 Why Workflow Builder adds value {#why-workflow-builder-adds-value}
+### 🚀 How this works with your agent {#how-this-works-with-your-agent}
 
-#### Faster processes
-Automated workflows reduce delays caused by back-and-forth emails and manual handoffs.
+Your Copilot Studio agent doesn't replace the workflow - it triggers it. Your agent works with your existing Workflow Builder workflows, there's no need to reinvent the wheel.
 
-#### Better consistency
-Templates and standardized workflows ensure every agreement follows the same approved process.
+You collect the inputs via your agent. Workflow Builder executes the process.
 
-#### Less manual work
-Teams spend less time creating documents, chasing approvals, and entering data.
-
-#### Improved visibility
-Organizations can track workflow progress and agreement status more easily.
-
-#### Scalability
-As businesses grow, Workflow Builder helps manage larger volumes of agreements without increasing administrative overhead.
-
-#### No-code accessibility
-Business users can build workflows without needing developers or complex custom software.
+That's how you turn natural language into real business outcomes which is what you'll learn in the upcoming lab.
 
 ## 🛡️ Certified MCP spotlight: Docusign MCP Demo {#certified-mcp-docusign-mcp-demo}
 
@@ -170,7 +145,7 @@ Treat this as secure-by-design, not secure-by-default:
 - Validate prompts and outputs before scaling to production scenarios.
 
 > [!WARNING] Your organization still owns governance
-> Certification does not remove your organization’s responsibility to configure and govern usage safely. You should still enforce least privilege, monitor usage, and keep human review in high-impact workflows.
+> Certification does not remove your organization's responsibility to configure and govern usage safely. You should still enforce least privilege, monitor usage, and keep human review in high-impact workflows.
 
 ### ✍🏻 Docusign MCP Demo connector notes {#docusign-mcp-demo-connector-notes}
 
@@ -217,6 +192,19 @@ For lab 1.6, the following is the use case:
 **I want to** auto-schedule a prep meeting before the new hire's start date,
 
 **So that** I have dedicated scheduled time in my calendar to complete onboarding tasks.
+
+### 🪾 How this fits together
+
+This diagram shows how your agent connects users to real-world agreement workflows.
+
+![Solution Diagram](assets/0.0_02_SolutionDiagram.png)
+
+Your agent is the control layer.
+
+- Users interact with your Copilot Studio agent, which collects inputs and triggers Docusign workflows through MCP.
+- Docusign handles the agreement process end-to-end, while additional tools like Work IQ Calendar can extend the flow to supporting tasks.
+
+One prompt. Multiple systems. Coordinated execution.
 
 ### ✅ Prerequisites {#docusign-mcp-lab-prerequisites}
 
@@ -627,7 +615,7 @@ Let's begin. ⤵️
     Employee Full Name
     ```
 
-    As you type a value into **Field Name**, the template designer searches for an existing field with the same name. If no results are found, you’ll have the option to create a new custom field using the entered value.
+    As you type a value into **Field Name**, the template designer searches for an existing field with the same name. If no results are found, you'll have the option to create a new custom field using the entered value.
 
     Select the **plus icon** to create a new custom field for Employee Full Name.
 
