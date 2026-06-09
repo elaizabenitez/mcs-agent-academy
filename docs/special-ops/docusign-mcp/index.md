@@ -523,7 +523,7 @@ Let's begin. ⤵️
 
     ![Select Upload](assets/1.2_02_SelectUpload.png)
 
-1. Select the Sample Employment Agreement file. [Download the Sample Employment Agreement](../test-data/sample-data/SampleEmploymentAgreement.docx) if you haven't already.
+1. Select the **Sample Employment Agreement** file.
 
     ![Select Sample Employment Agreement files](assets/1.2_03_SelectSampleEmploymentAgreement.png)
 
@@ -583,9 +583,11 @@ Let's begin. ⤵️
 
     ![Select Sender role to add fields](assets/1.2_07_SelectSender.png)
 
-1. Each of the sample documents have blue colored text to easily identify the placeholders of where we'll be adding fields to the template. This is for the purpose of learning and completing the lab exercise so keep in mind you would not have colored text in _Production-used_ templates.
+1. Highlight the first placeholder `{EffectiveDate}` and select the standard field, **Effective Date**, on the left-hand side menu.
 
-    Highlight the first placeholder `{EffectiveDate}` and select the standard field, **Effective Date**, on the left-hand side menu.
+    ::: warning Blue colored text in sample documents
+    Each of the sample documents have blue colored text to easily identify the placeholders of where we'll be adding fields to the template. This is for the purpose of learning and completing the lab exercise so keep in mind you would not have colored text in **_Production-used_** templates.
+    :::
 
     ![Effective Date field](assets/1.2_08_EffectiveDate.png)
 
@@ -677,13 +679,13 @@ Let's begin. ⤵️
 
 1. Another confirmation message on the bottom left will appear to let you know the Draft template has been Published.
 
-    Now create the second Document Template using the [Sample Offer Letter file](../test-data/sample-data/SampleOfferLetter.docx), following the same steps as the first template.
+    Now create the second Document Template using the **Sample Offer Letter** file.
 
     Select **+ Create new**.
 
     ![Create a new document template](assets/1.2_22_CreateNewDocumentTemplate.png)
 
-1. Repeat the previous steps by uploading the Sample Offer Letter file and selecting **Offer Letter** as the **Agreement Type**.
+1. Repeat the previous steps by uploading the **Sample Offer Letter** file and selecting **Offer Letter** as the **Agreement Type**.
 
     Select **Continue**.
 
@@ -755,7 +757,7 @@ Let's begin. ⤵️
 
     ![Publish Sampler Offer Letter document template](assets/1.2_31_Publish.png)
 
-1. The Sample Offer Letter document template is now published.
+1. The **Sample Offer Letter** document template is now published.
 
     ![Sample Offer Letter document published](assets/1.2_32_Published.png)
 
@@ -774,7 +776,7 @@ Workflow Builder can automate all of this, instead of handling it manually. Let'
 
 1. Navigate to **Agreements** and select **Workflows**. Then select **Create Workflow**.
 
-Note: The label on the menu has since changed from _Maestro Workflows_ to **Workflows**.
+    Note: The label on the menu has since changed from _Maestro Workflows_ to **Workflows**.
 
     ![Select Workflows](assets/1.3_01_CreateWorkflow.png)
 
@@ -982,7 +984,7 @@ Note: The label on the menu has since changed from _Maestro Workflows_ to **Work
 
     ![Select add a step](assets/1.3_42_AddAStep.png)
 
-1. Repeat the same process to add the second document template, Sample Offer Letter, to the workflow. Select **Prepare Document Template**.
+1. Repeat the same process to add the second document template, **Sample Offer Letter**, to the workflow. Select **Prepare Document Template**.
 
     ![Select Prepare a Document Template step](assets/1.3_43_SelectPrepareDocumentTemplate.png)
 
@@ -1372,6 +1374,8 @@ Before we move onto building the agent in Microsoft Copilot Studio, it's best pr
 ::: danger Use classic UI experience for Microsoft Copilot Studio
 The Docusign MCP Demo tool is not yet available in the new UI experience. Please switch to the classic UI experience to access it.
 
+![Toggle new experience](assets/1.5_00_ToggleNewExperience.png)
+
 When the tool is available in the new UI experience, this exercise and the following exercise will be updated.
 :::
 
@@ -1493,7 +1497,7 @@ When the tool is available in the new UI experience, this exercise and the follo
    ```
 
    - Replace the `[position]` placeholder with job position such as `Power Platform Engineer`.
-   - Replace the `[MMMM d]` placeholder with the full month name and day such as `August 25`. `d` means no leading zero (August 5).
+   - Replace the `[MMMM d]` placeholder with the full month name and day such as `August 25`. NOTE: `d` means no leading zero (August 5).
    - Replace the `[salary dollar amount]` with a dollar amount value.
    - Replace the `[city]` placeholder with a city of where the employee will be working in.
    - Replace the `[manager full name]` with a name of the manager.
