@@ -196,6 +196,28 @@ For this Special Ops mission, we're going to:
 - 1.5 Build a custom agent in Microsoft Copilot Studio, connect to Docusign MCP Demo, and trigger the workflow
 - 1.6 BONUS - Add Work IQ Calendar tool (Frontier program) for multi-MCP capabilities
 
+### ✨ Use case scenario {#use-case-scenario}
+
+#### Use Case 1
+
+For labs 1.1 - 1.5, the following is the use case:
+
+**As a** recruiter,
+
+**I want to** deliver an employee agreement and offer letter digitally,
+
+**So that** the candidate can quickly review and complete the signing process.
+
+#### Use Case 2
+
+For labs 1.6, the following is the use case:
+
+**As a** recruiter,
+
+**I want to** auto-schedule a prep meeting before the new hire's start date,
+
+**So that** I have dedicated scheduled time in my calendar to complete onboarding tasks.
+
 ### ✅ Prerequisites {#docusign-mcp-lab-prerequisites}
 
 To complete this Special Ops mission, you'll need the following prerequisites.
