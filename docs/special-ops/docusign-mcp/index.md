@@ -204,13 +204,13 @@ For labs 1.1 - 1.5, the following is the use case:
 
 **As a** recruiter,
 
-**I want to** deliver an employee agreement and offer letter digitally,
+**I want to** deliver an employment agreement and employee offer letter digitally,
 
 **So that** the candidate can quickly review and complete the signing process.
 
 #### Use Case 2
 
-For labs 1.6, the following is the use case:
+For lab 1.6, the following is the use case:
 
 **As a** recruiter,
 
