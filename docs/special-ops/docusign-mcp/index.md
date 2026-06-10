@@ -111,7 +111,7 @@ Centralize agreement preparation, review, and collaboration across teams.
 
 ### 🚀 How this works with your agent {#how-this-works-with-your-agent}
 
-Your Copilot Studio agent _does not_ replace the workflow - it triggers it. The agent collects inputs in natural language, then Workflow Builder runs the agreement process end-to-end.
+Your Copilot Studio agent _does not_ replace the workflow - it triggers it. You're not reinventing the wheel or rebuilding agreement logic from scratch; you're reusing a workflow that's already built in Docusign. The agent collects inputs in natural language, then Workflow Builder runs the agreement process end-to-end.
 
 ## 🛡️ Certified MCP spotlight: Docusign MCP Demo {#certified-mcp-docusign-mcp-demo}
 
@@ -154,28 +154,32 @@ For this Special Ops lab, that's exactly what we want: a safe development space 
 
 ## 🧪 Docusign MCP lab {#docusign-mcp-lab}
 
-For this Special Ops mission, we're going to:
+In this Special Ops mission, you'll work through two practical use cases:
+
+- First, automate a complete hiring agreement flow in Docusign.
+- Second, optionally extend that flow with a calendar follow-up using a second MCP tool.
+
+### ✨ Use case scenario {#use-case-scenario}
+
+#### Use Case 1: Core hiring workflow (Labs 1.1 to 1.5) {#use-case-1}
+
+**As a** recruiter,
+
+**I want to** deliver an employment agreement and employee offer letter digitally,
+
+**So that** the candidate can quickly review and complete signing.
+
+To deliver this scenario, you will complete:
 
 - 1.1 Create a Docusign Web Form
 - 1.2 Create Document Templates
 - 1.3 Create Docusign Workflow Builder workflow
 - 1.4 Test the workflow
 - 1.5 Build a custom agent in Microsoft Copilot Studio, connect to Docusign MCP Demo, and trigger the workflow
-- 1.6 BONUS - Add Work IQ Calendar tool (Frontier program) for multi-MCP capabilities
 
-### ✨ Use case scenario {#use-case-scenario}
+**Outcome**: your agent collects inputs, then triggers an already-built Docusign workflow end-to-end.
 
-#### Use Case 1
-
-For labs 1.1 - 1.5, the following is the use case:
-
-**As a** recruiter,
-
-**I want to** deliver an employment agreement and employee offer letter digitally,
-
-**So that** the candidate can quickly review and complete the signing process.
-
-#### Use Case 2
+#### Use Case 2: Multi-MCP extension (Lab 1.6) {#use-case-2}
 
 For lab 1.6, the following is the use case:
 
@@ -184,6 +188,12 @@ For lab 1.6, the following is the use case:
 **I want to** auto-schedule a prep meeting before the new hire's start date,
 
 **So that** I have dedicated scheduled time in my calendar to complete onboarding tasks.
+
+To extend the first scenario, you will optionally complete:
+
+- 1.6 BONUS - Add Work IQ Calendar tool (Frontier program) for multi-MCP capabilities
+
+**Outcome**: the same agent is enhanced with a second MCP tool for follow-up scheduling.
 
 ### 🪾 How this fits together {#how-this-fits-together}
 
@@ -229,18 +239,16 @@ You'll need two different email addresses to complete this lab:
 ## 🧪 1.1 Create a Docusign Web Form {#lab-1-1-create-a-docusign-web-form}
 
 > [!WARNING] IMPORTANT
-> You need a Docusign developer account to complete these Docusign lab exercises. Follow the steps outlined in the above **Prerequisites** section.
+> You need a Docusign developer account to complete these Docusign lab exercises. Follow the steps outlined in the above **Docusign Prerequisites** section.
 
-Docusign Web Forms allow organizations to collect information through secure, browser-based forms that can automatically feed data into agreements and workflows. They help reduce manual data entry, improve accuracy, and streamline processes such as onboarding, registrations, approvals, and contract generation.
+Web Forms allow organizations to collect information through secure, browser-based forms that can automatically feed data into agreements and workflows. This helps reduce manual data entry, improve accuracy, and streamline processes such as onboarding, registrations, approvals, and contract generation.
 
-To learn more about Docusign **Web Forms**, expand the following additional learning block.
+To learn more about **Web Forms**, expand the following additional learning block.
 
 ::: details Web Forms: Collecting Data Before Agreements
 🤔 **What is Web Forms?**
 
-One of the most powerful features within Workflow Builder is Web Forms.
-
-Web Forms allow organizations to collect structured information from users through browser-based forms before generating or sending agreements.
+Within Workflow Builder, Web Forms provide a way to capture user input before generating or sending agreements.
 
 Examples include:
 
@@ -254,7 +262,7 @@ Instead of manually entering information into contracts, users enter their own d
 
 The collected data can then:
 
-- Automatically populate agreements
+- Populate agreements automatically
 - Trigger workflows
 - Feed information into business systems
 - Launch signing processes
@@ -268,11 +276,11 @@ The collected data can then:
 - Required inputs
 - Template field mapping
 
-💡 **This significantly reduces**
+💡 **This helps minimize**
 
 - Manual data entry
-- Copy/paste mistakes
-- Delays caused by incomplete forms
+- Copy/paste errors
+- Delays caused by incomplete submissions
 :::
 
 1. From the Home page of Docusign developers portal, select **Templates**.
@@ -468,12 +476,12 @@ The collected data can then:
 
 ## 🧪 1.2 Create Document Templates {#lab-1-2-create-document-templates}
 
-A Document Template is a reusable setup for sending agreements that lets you pre‑define documents, recipient roles, routing order, and messages, so you can quickly create and send consistent envelopes without starting from scratch each time.
+Document Templates are a reusable setup for sending agreements that lets you pre‑define documents, recipient roles, routing order, and messages. This allows you to quickly create and send consistent envelopes without starting from scratch each time.
 
-To learn more about Docusign **Document Templates**, expand the following additional learning block.
+To learn more about **Document Templates**, expand the following additional learning block.
 
 ::: details Using Document Templates
-📄Workflow Builder works closely with reusable document templates.
+📄Workflow Builder works closely with document templates
 
 Templates allow organizations to standardize frequently used agreements such as:
 
