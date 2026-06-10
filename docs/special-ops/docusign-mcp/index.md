@@ -481,7 +481,7 @@ Document Templates are a reusable setup for sending agreements that lets you pre
 To learn more about **Document Templates**, expand the following additional learning block.
 
 ::: details Using Document Templates
-📄Workflow Builder works closely with document templates
+📄 Workflow Builder works closely with document templates
 
 Templates allow organizations to standardize frequently used agreements such as:
 
