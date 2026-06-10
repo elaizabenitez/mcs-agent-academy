@@ -39,112 +39,79 @@ last-edited-date: 2026-06-05
 <!-- markdownlint-disable-next-line MD033 -->
 <p align="center"><img src="../assets/Academy-Docusign_Badge.png" alt="Docusign MCP Badge" width="220" /></p>
 
-Welcome, agent. Your objective is simple: reuse what already works. Connect Docusign MCP server to your Copilot Studio agent, and invoke a Workflow Builder workflow to execute an _already-operational_ agreement automation workflow. You gather the intel. Workflow Builder runs the op. Minimal new logic. Maximum leverage.
+Welcome, agent. Your objective is to reuse what already works: connect the Docusign MCP Demo server to your Copilot Studio agent and trigger an existing Workflow Builder workflow. Your agent gathers inputs. Workflow Builder executes the agreement process.
 
 
 ## 🔎 Objectives {#mcs-docusign-mcp-objectives}
 
 In this mission, you'll learn:
 
-- how to create Docusign Web Forms, Document Templates and a workflow using Workflow Builder
-- how to add the Docusign MCP Demo server as a tool to your agent
+- how to create Docusign Web Forms, Document Templates, and a workflow in Workflow Builder
+- how to add the Docusign MCP Demo tool to your agent
 - how to invoke the Workflow Builder workflow from the agent
 - how to provide inputs in natural language for the workflow start step when testing the agent
 - _bonus_: add a first-party Microsoft MCP tool (Work IQ Calendar) to extend the agent with multi-MCP capabilities
 
 ## ❓ What is Docusign? {#what-is-docusign}
 
-[Docusign](https://www.docusign.com) is best known as an electronic signature platform that allows people and organizations to securely send, sign, approve, and manage documents digitally instead of relying on paper-based processes. Today, Docusign has evolved into a broader [Intelligent Agreement Management (IAM) platform](https://www.docusign.com/intelligent-agreement-management) that helps businesses create, sign, automate, track, and manage agreements from start to finish.
+[Docusign](https://www.docusign.com) is your agreement execution engine.
 
-At its core, Docusign helps organizations manage the full lifecycle of agreements - from creating contracts and collecting signatures, through to storing, tracking, and analyzing agreement data. The platform integrates with commonly used business tools such as Microsoft, Salesforce, and other enterprise systems.
+It enables organizations to create, send, sign, and manage agreements digitally, reducing manual and paper-based work. Beyond eSignatures, Docusign is an [Intelligent Agreement Management (IAM) platform](https://www.docusign.com/intelligent-agreement-management) that supports the full agreement lifecycle from creation to tracking and storage.
 
-### 💼 Why Docusign is essential for organizations {#why-docusign-is-essential-for-organizations}
+### 💼 Why it matters {#why-it-matters}
 
-For organizations, agreements are everywhere:
-
-- Employee contracts
-- Sales proposals
-- NDAs
-- Procurement approvals
-- Customer onboarding forms
-- Vendor agreements
-
-Managing these manually can be slow, repetitive, and error-prone and this is where Docusign shines by streamlining these processes digitally.
-
-#### Faster business processes
-Instead of waiting days for signatures or approvals, documents can be reviewed and signed from anywhere on almost any device. This helps businesses move faster and reduce delays.
-
-#### Reduced manual work
-Docusign removes much of the printing, scanning, emailing, and data entry involved in traditional paperwork processes.
-
-#### Better visibility and tracking
-Teams can see where agreements are in the process, who still needs to sign, and where bottlenecks exist.
-
-#### Improved security and compliance
-Docusign provides secure digital signing and audit trails, helping organizations manage sensitive agreements more safely.
-
-#### Works with existing business tools
-Docusign integrates with platforms many organizations already use, including Microsoft applications, CRM systems, and productivity tools.
+Agreements are business-critical, but manual handling causes delays and inconsistency. Docusign makes agreement processes faster, trackable, and scalable.
 
 ## 🏗️ What is Docusign Workflow Builder? {#what-is-docusign-workflow-builder}
-In this mission, you'll build a workflow with Docusign Workflow Builder. Docusign Workflow Builder is a workflow automation platform that helps organizations automate agreement processes from beginning to end.
 
-Rather than manually sending documents, collecting information, chasing approvals, and tracking progress, Workflow Builder connects everything into a structured digital workflow.
+Workflow Builder is where agreements become automated workflows.
 
-Docusign describes Workflow Builder as a way to automate, customize, and connect agreement workflows across the business.
+It defines how agreements move from data collection to document generation and signing, without manual coordination. You design a workflow once and run it consistently.
 
-### ⚙️ What Workflow Builder can do
-Workflow Builder allows organizations to automate processes such as:
+### 💡 Common use cases {#common-use-cases}
 
 - Employee onboarding
-- Customer onboarding
+- Sales agreements
 - Procurement approvals
-- Vendor agreements
-- NDAs
-- Compliance and identity checks
+- NDAs and compliance workflows
+
+### ⚙️ What Workflow Builder does {#what-workflow-builder-does}
+
+Workflow Builder helps you automate agreement processes by:
+
+- Structuring multi-step workflows
+- Collecting inputs through web forms
+- Generating agreements from templates and data
+- Routing documents between participants in the right order
+- Connecting to third-party applications and services
+- Providing visibility into workflow progress
 
 ### 🧩 Key Workflow Builder capabilities {#key-workflow-builder-capabilities}
 
 #### Identity Verification
-Identity Verification helps organizations confirm a signer’s identity before agreements are completed. This adds an extra layer of security and is especially important for sensitive or regulated processes.
+Confirm signer identity before agreement completion, adding security for sensitive or regulated processes.
 
 #### Web Forms
-Web Forms allow organizations to collect structured information through browser-based forms before generating agreements. Data entered into the form can automatically populate documents.
-
-#### eSignature
-Docusign eSignature enables legally recognized electronic signing directly within workflows, reducing delays and removing paper-based processes.
-
-#### App Center
-The App Center connects Workflow Builder with third-party applications and services so organizations can integrate agreement workflows into existing business systems.
-
-#### Workflow Templates
-Workflow Templates provide pre-built workflows for common business scenarios, helping teams quickly deploy standardized agreement processes without starting from scratch.
-
-#### Agreement Desk
-Agreement Desk helps centralize and coordinate agreement preparation, review, and collaboration activities across teams involved in the process. The sources reference workflow coordination and agreement process visibility as part of the broader Workflow Builder platform.
+Collect structured browser-based input before agreement generation. Captured data can automatically populate documents.
 
 #### Document Generation
-Document Generation helps automatically create agreements and documents using collected business data and reusable templates, reducing repetitive manual document creation.
+Automatically generate agreements and documents using collected data and reusable templates.
 
-### 🚀 Why Workflow Builder adds value {#why-workflow-builder-adds-value}
+#### eSignature
+Enable legally recognized electronic signatures directly in workflows.
 
-#### Faster processes
-Automated workflows reduce delays caused by back-and-forth emails and manual handoffs.
+#### App Center
+Connect Workflow Builder to third-party apps and services to integrate into existing business processes.
 
-#### Better consistency
-Templates and standardized workflows ensure every agreement follows the same approved process.
+#### Workflow Templates
+Use pre-built templates for common scenarios to deploy standardized agreement flows faster.
 
-#### Less manual work
-Teams spend less time creating documents, chasing approvals, and entering data.
+#### Agreement Desk
+Centralize agreement preparation, review, and collaboration across teams.
 
-#### Improved visibility
-Organizations can track workflow progress and agreement status more easily.
+### 🚀 How this works with your agent {#how-this-works-with-your-agent}
 
-#### Scalability
-As businesses grow, Workflow Builder helps manage larger volumes of agreements without increasing administrative overhead.
-
-#### No-code accessibility
-Business users can build workflows without needing developers or complex custom software.
+Your Copilot Studio agent _does not_ replace the workflow - it triggers it. You're not reinventing the wheel or rebuilding agreement logic from scratch; you're reusing a workflow that's already built in Docusign. The agent collects inputs in natural language, then Workflow Builder runs the agreement process end-to-end.
 
 ## 🛡️ Certified MCP spotlight: Docusign MCP Demo {#certified-mcp-docusign-mcp-demo}
 
@@ -170,7 +137,7 @@ Treat this as secure-by-design, not secure-by-default:
 - Validate prompts and outputs before scaling to production scenarios.
 
 > [!WARNING] Your organization still owns governance
-> Certification does not remove your organization’s responsibility to configure and govern usage safely. You should still enforce least privilege, monitor usage, and keep human review in high-impact workflows.
+> Certification does not remove your organization's responsibility to configure and govern usage safely. You should still enforce least privilege, monitor usage, and keep human review in high-impact workflows.
 
 ### ✍🏻 Docusign MCP Demo connector notes {#docusign-mcp-demo-connector-notes}
 
@@ -187,28 +154,32 @@ For this Special Ops lab, that's exactly what we want: a safe development space 
 
 ## 🧪 Docusign MCP lab {#docusign-mcp-lab}
 
-For this Special Ops mission, we're going to:
+In this Special Ops mission, you'll work through two practical use cases:
+
+- First, automate a complete hiring agreement flow in Docusign.
+- Second, optionally extend that flow with a calendar follow-up using a second MCP tool.
+
+### ✨ Use case scenario {#use-case-scenario}
+
+#### Use Case 1: Core hiring workflow (Labs 1.1 to 1.5) {#use-case-1}
+
+**As a** recruiter,
+
+**I want to** deliver an employment agreement and employee offer letter digitally,
+
+**So that** the candidate can quickly review and complete signing.
+
+To deliver this scenario, you will complete:
 
 - 1.1 Create a Docusign Web Form
 - 1.2 Create Document Templates
 - 1.3 Create Docusign Workflow Builder workflow
 - 1.4 Test the workflow
 - 1.5 Build a custom agent in Microsoft Copilot Studio, connect to Docusign MCP Demo, and trigger the workflow
-- 1.6 BONUS - Add Work IQ Calendar tool (Frontier program) for multi-MCP capabilities
 
-### ✨ Use case scenario {#use-case-scenario}
+**Outcome**: your agent collects inputs, then triggers an already-built Docusign workflow end-to-end.
 
-#### Use Case 1
-
-For labs 1.1 - 1.5, the following is the use case:
-
-**As a** recruiter,
-
-**I want to** deliver an employment agreement and employee offer letter digitally,
-
-**So that** the candidate can quickly review and complete the signing process.
-
-#### Use Case 2
+#### Use Case 2: Multi-MCP extension (Lab 1.6) {#use-case-2}
 
 For lab 1.6, the following is the use case:
 
@@ -217,6 +188,25 @@ For lab 1.6, the following is the use case:
 **I want to** auto-schedule a prep meeting before the new hire's start date,
 
 **So that** I have dedicated scheduled time in my calendar to complete onboarding tasks.
+
+To extend the first scenario, you will optionally complete:
+
+- 1.6 BONUS - Add Work IQ Calendar tool (Frontier program) for multi-MCP capabilities
+
+**Outcome**: the same agent is enhanced with a second MCP tool for follow-up scheduling.
+
+### 🪾 How this fits together {#how-this-fits-together}
+
+This diagram shows how your agent connects users to real-world agreement workflows.
+
+![Solution diagram showing a Copilot Studio agent triggering Docusign Workflow Builder via MCP and extending tasks with Work IQ Calendar](assets/0.0_02_SolutionDiagram.png)
+
+Your agent is the control layer.
+
+- Users interact with your Copilot Studio agent, which collects inputs and triggers Docusign workflows through MCP.
+- Docusign handles the agreement process end-to-end, while additional tools like Work IQ Calendar can extend the flow to supporting tasks.
+
+One prompt. Multiple systems. Coordinated execution.
 
 ### ✅ Prerequisites {#docusign-mcp-lab-prerequisites}
 
@@ -249,18 +239,16 @@ You'll need two different email addresses to complete this lab:
 ## 🧪 1.1 Create a Docusign Web Form {#lab-1-1-create-a-docusign-web-form}
 
 > [!WARNING] IMPORTANT
-> You need a Docusign developer account to complete these Docusign lab exercises. Follow the steps outlined in the above **Prerequisites** section.
+> You need a Docusign developer account to complete these Docusign lab exercises. Follow the steps outlined in the **Prerequisites** section above (see **Docusign**).
 
-Docusign Web Forms allow organizations to collect information through secure, browser-based forms that can automatically feed data into agreements and workflows. They help reduce manual data entry, improve accuracy, and streamline processes such as onboarding, registrations, approvals, and contract generation.
+Web Forms allow organizations to collect information through secure, browser-based forms that can automatically feed data into agreements and workflows. This helps reduce manual data entry, improve accuracy, and streamline processes such as onboarding, registrations, approvals, and contract generation.
 
-To learn more about Docusign **Web Forms**, expand the following additional learning block.
+To learn more about **Web Forms**, expand the following additional learning block.
 
 ::: details Web Forms: Collecting Data Before Agreements
 🤔 **What is Web Forms?**
 
-One of the most powerful features within Workflow Builder is Web Forms.
-
-Web Forms allow organizations to collect structured information from users through browser-based forms before generating or sending agreements.
+Within Workflow Builder, Web Forms provide a way to capture user input before generating or sending agreements.
 
 Examples include:
 
@@ -274,7 +262,7 @@ Instead of manually entering information into contracts, users enter their own d
 
 The collected data can then:
 
-- Automatically populate agreements
+- Populate agreements automatically
 - Trigger workflows
 - Feed information into business systems
 - Launch signing processes
@@ -288,11 +276,11 @@ The collected data can then:
 - Required inputs
 - Template field mapping
 
-💡 **This significantly reduces**
+💡 **This helps minimize**
 
 - Manual data entry
-- Copy/paste mistakes
-- Delays caused by incomplete forms
+- Copy/paste errors
+- Delays caused by incomplete submissions
 :::
 
 1. From the Home page of Docusign developers portal, select **Templates**.
@@ -488,12 +476,12 @@ The collected data can then:
 
 ## 🧪 1.2 Create Document Templates {#lab-1-2-create-document-templates}
 
-A Document Template is a reusable setup for sending agreements that lets you pre‑define documents, recipient roles, routing order, and messages, so you can quickly create and send consistent envelopes without starting from scratch each time.
+Document Templates are a reusable setup for sending agreements that lets you pre‑define documents, recipient roles, routing order, and messages. This allows you to quickly create and send consistent envelopes without starting from scratch each time.
 
-To learn more about Docusign **Document Templates**, expand the following additional learning block.
+To learn more about **Document Templates**, expand the following additional learning block.
 
 ::: details Using Document Templates
-📄Workflow Builder works closely with reusable document templates.
+📄 Workflow Builder works closely with document templates
 
 Templates allow organizations to standardize frequently used agreements such as:
 
@@ -627,7 +615,7 @@ Let's begin. ⤵️
     Employee Full Name
     ```
 
-    As you type a value into **Field Name**, the template designer searches for an existing field with the same name. If no results are found, you’ll have the option to create a new custom field using the entered value.
+    As you type a value into **Field Name**, the template designer searches for an existing field with the same name. If no results are found, you'll have the option to create a new custom field using the entered value.
 
     Select the **plus icon** to create a new custom field for Employee Full Name.
 
@@ -1650,6 +1638,24 @@ Congrats, agent - you've completed **Operation Docusign MCP**! You have now mast
 
 ✅ **Multi-MCP Extension (Bonus)**: Added Work IQ Calendar (Preview) to combine first-party Microsoft and third-party MCP tools in one agent experience
 
+## 🏅 Claim your completion badge {#claim-your-completion-badge}
+
+<!-- markdownlint-disable-next-line MD033 -->
+<p align="center"><img src="../assets/Academy-Docusign_Badge.png" alt="Docusign MCP Badge" width="220" /></p>
+
+Congrats, agent - mission accomplished! Now it's time to claim your badge.
+
+Simply submit the badge request form and answer all required questions:
+
+[https://aka.ms/agent-academy-special-ops/docusign-mcp/form](https://aka.ms/agent-academy-special-ops/docusign-mcp/form)
+
+<!--[https://aka.ms/tbc](https://aka.ms/tbc) -->
+
+Once your submission is reviewed, you will receive an email from Global AI Community with instructions to claim your badge.
+
+> [!TIP]
+> If you do not see the email, check your spam or junk folder.
+
 ## 📚 Tactical Resources {#tactical-resources}
 
 🔗 [Docusign for developers](https://developers.docusign.com)
@@ -1666,23 +1672,6 @@ Congrats, agent - you've completed **Operation Docusign MCP**! You have now mast
 
 📖 [Docusign MCP Demo connector (Microsoft Learn)](https://learn.microsoft.com/en-us/connectors/docusignmcpdemo/)
 
-## 🏅 Claim your completion badge {#claim-your-completion-badge}
-
-<!-- markdownlint-disable-next-line MD033 -->
-<p align="center"><img src="../assets/Academy-Docusign_Badge.png" alt="Docusign MCP Badge" width="220" /></p>
-
-Congrats, agent - mission accomplished! Now it's time to claim your badge.
-
-Simply submit the badge request form and answer all required questions:
-
-[**TO BE CONFIRMED**]
-
-<!--[https://aka.ms/tbc](https://aka.ms/tbc) -->
-
-Once your submission is reviewed, you will receive an email from Global AI Community with instructions to claim your badge.
-
-> [!TIP]
-> If you do not see the email, check your spam or junk folder.
 <!-- Separate callouts to satisfy MD028/no-blanks-blockquote -->
 > [!NOTE]
 > 🚧 This mission is under construction. Check back soon for the full walkthrough.
