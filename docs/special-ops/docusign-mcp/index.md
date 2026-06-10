@@ -239,7 +239,7 @@ You'll need two different email addresses to complete this lab:
 ## 🧪 1.1 Create a Docusign Web Form {#lab-1-1-create-a-docusign-web-form}
 
 > [!WARNING] IMPORTANT
-> You need a Docusign developer account to complete these Docusign lab exercises. Follow the steps outlined in the above **Docusign Prerequisites** section.
+> You need a Docusign developer account to complete these Docusign lab exercises. Follow the steps outlined in the **Prerequisites** section above (see **Docusign**).
 
 Web Forms allow organizations to collect information through secure, browser-based forms that can automatically feed data into agreements and workflows. This helps reduce manual data entry, improve accuracy, and streamline processes such as onboarding, registrations, approvals, and contract generation.
 
