@@ -401,12 +401,12 @@ The collected data can then:
     The table below shows a generic address format. You can adjust it, but keep track of any field changes because you'll need them in the Workflow Builder lab exercise. To avoid issues in later steps, use the following address format.
     :::
 
-    | Field name    | Field description  | Required field | API reference name   |
-    |---------------|--------------------|----------------|----------------------|
-    | `Address Line 1` | `Street Address` | No             | `TextBox_AddressLine1` |
-    | `Address Line 2`     | `Suburb/District`     | Yes            | `TextBox_AddressLine2`    |
-    | `City`   | `City`    | Yes            | `TextBox_City`   |
-    | `Post Code`   | `Post Code`    | Yes            | `PostCode`   |
+    | Field name       | Field description | Required field | API reference name      |
+    |------------------|-------------------|----------------|-------------------------|
+    | `Address Line 1` | `Street Address`  | No             | `TextBox_AddressLine1`  |
+    | `Address Line 2` | `Suburb/District` | Yes            | `TextBox_AddressLine2`  |
+    | `City`           | `City`            | Yes            | `TextBox_City`          |
+    | `Post Code`      | `Post Code`       | Yes            | `TextBox_PostCode`      |
 
     ![Update Address page details](assets/1.1_13_AddressPage.png)
 
