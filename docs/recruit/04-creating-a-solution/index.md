@@ -199,7 +199,7 @@ Make sure you switch to your dedicated developer environment. For details, see [
 
 ### 4.1 Create a Solution publisher
 
-1. From the left navigation select the **ellipsis** icon near the bottom, then under **Explore** select **Solutions**.
+1. From the left navigation, select the **ellipsis** icon near the bottom, then under **Explore** select **Solutions**.
 
     ![Solutions](./assets/4.1_01_Solutions.png)
 
