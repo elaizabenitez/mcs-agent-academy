@@ -403,7 +403,7 @@ The collected data can then:
 
     | Field name       | Field description | Required field | API reference name      |
     |------------------|-------------------|----------------|-------------------------|
-    | `Address Line 1` | `Street Address`  | No             | `TextBox_AddressLine1`  |
+    | `Address Line 1` | `Street Address`  | Yes            | `TextBox_AddressLine1`  |
     | `Address Line 2` | `Suburb/District` | Yes            | `TextBox_AddressLine2`  |
     | `City`           | `City`            | Yes            | `TextBox_City`          |
     | `Post Code`      | `Post Code`       | Yes            | `TextBox_PostCode`      |
@@ -467,6 +467,10 @@ The collected data can then:
     ![Select Activate](assets/1.1_24_Activate.png)
 
 1. A confirmation message will appear to let you know that the web form has been successfully activated. Select **Go to Web Forms**.
+
+    ::: tip
+    If you don't see the **Go to Web Forms** button, navigate back to the Web Forms page.
+    :::
 
     ![Select Go to Web Forms](assets/1.1_25_GoToWebForms.png)
 
@@ -539,9 +543,13 @@ Let's begin. ⤵️
 
 1. The **Name** field is automatically populated with the file name. In the **Agreement Type** field, select the **chevron icon** and scroll down to the **Human Resources** list of values, select **Offer Letter**.
 
+    ::: tip
+    You can also type **Offer Letter** to quickly find the field.
+    :::
+
     ![Select Offer Letter as the agreement type value](assets/1.2_04_AgreementType.png)
 
-1. Next we'll define the roles for the document template. On the **Fields** left-hand side pane, select the **chevron icon** by **Sender 1** and select **Edit recipients**.
+1. Next we'll define the roles for the document template. On the **Fields** left-hand side pane, select the **chevron icon** by **Sender 1** and select **Edit recipients** to update the signer role.
 
     ::: info What is a "Role" in a template? :thinking:
     A role is a placeholder in a template that represents an individual who will act on the document, such as signing or approving. Roles define _who_ is involved and _what action_ they take, while allowing the actual recipient to be assigned when the template is used.
@@ -685,6 +693,10 @@ Let's begin. ⤵️
 
 1. Select **Save as Draft** on the upper right. You'll be redirected to the Document Templates page and see a bottom-left confirmation message. Then select the **ellipsis icon (...)** and choose **Publish**.
 
+    ::: tip
+    If you don't see the **Save As Draft** button, but see it labeled as **Save and Publish**, select the **Save and Publish** button.
+    :::
+
     ![Publish document template](assets/1.2_21_PublishDocumentTemplate.png)
 
 1. Another confirmation message on the bottom left will appear to let you know the Draft template has been Published.
@@ -725,15 +737,20 @@ Let's begin. ⤵️
 
 1. Repeat the same steps for the remainder of the placeholders for the **Sender** role by selecting existing fields on the left-hand side menu or creating new fields.
 
-    | Placeholder                   | Field name                   | Create New Field | Field description                          | Required field | Field Type |
-    |-------------------------------|------------------------------|------------------|--------------------------------------------|----------------|--------------------|
-    | **{EmployeeAddressLine1}**    | `Employee Address Line 1`    | Yes              | `Apt or House No. and street name`         | Yes            | Text               |
-    | **{EmployeeAddressLine2}**    | `Employee Address Line 2`    | Yes              | `Suburb`                                   | Yes            | Text               |
-    | **{EmployeeAddressCity}**     | `Employee Address City`      | Yes              | `City`                                     | Yes            | Text               |
-    | **{Employee AddressPostCode}**| `Employee Address Post Code` | Yes              | `Post code`                                | Yes            | Text               |
-    | **{EmployeePosition}**        | `Employee Position`          | No               |                                            |                |                    |
-    | **{EmployeeStartDate}**       | `Start Date`        | No               |                                            |                |                    |
-    | **{DueDate}**                 | `Signed Due Date`            | Yes              | `Due date of signed agreement by employee` | Yes            | Date               |
+    | Placeholder                    | Field name                    | Create New Field | Field description                          | Required field | Field Type |
+    |--------------------------------|-------------------------------|------------------|--------------------------------------------|----------------|------------|
+    | **{EmployeeAddressLine1}**     | `Employee Address Line 1`     | Yes              | `Apt or House No. and street name`         | Yes            | Text       |
+    | **{EmployeeAddressLine2}**     | `Employee Address Line 2`     | Yes              | `Suburb`                                   | Yes            | Text       |
+    | **{EmployeeAddressCity}**      | `Employee Address City`       | Yes              | `City`                                     | Yes            | Text       |
+    | **{Employee AddressPostCode}** | `Employee Address Post Code`  | Yes              | `Post code`                                | Yes            | Text       |
+    | **{EmployeePosition}**         | `Employee Position`           | No               |                                            |                |            |
+    | **{EmployeeStartDate}**        | `Start Date`                  | No               |                                            |                |            |
+    | **{DueDate}**                  | `Signed Due Date`             | Yes              | `Due date of signed agreement by employee` | Yes            | Date       |
+
+    ::: tip
+    If you accidentally create a new field with the wrong field type (for example, you created **Signed Due Date** as `Text`), you won't be able to change the field type. You can, however, rename the field to `[Don't use] Signed Due Date`.
+    :::
+
 
 1. Next, we'll add the fields for the **Hiring Manager** and **Employee** roles using the same steps as last time.
 
@@ -759,7 +776,11 @@ Let's begin. ⤵️
 
     ![Select **Preview** to see the Document Template in preview mode](assets/1.2_29_PreviewMode.png)
 
-1. Exit from **Preview** mode by select the **X icon** on the upper left and select **Save As Draft**.
+1. Exit from **Preview** mode by selecting the **X icon** on the upper left and select **Save As Draft**.
+
+    ::: tip
+    If you don't see the **Save As Draft** button, but see it labeled as **Save and Publish**, select **Save and Publish** and skip the next two publishing steps.
+    :::
 
     ![Select Save as Draft](assets/1.2_30_SaveAsDraft.png)
 
@@ -838,7 +859,7 @@ Workflow Builder can automate all of this, instead of handling it manually. Let'
     | Text          | `Hiring Manager Full Name`  |
     | Email         | `Hiring Manager Email`      |
     | Date          | `Due Signed Date`           |
-    | Start Date    | `Start Date`                |
+    | Date          | `Start Date`                |
 
     ![Workflow Start variables](assets/1.3_09_WorkflowStartVariables.png)
 
@@ -938,7 +959,13 @@ Workflow Builder can automate all of this, instead of handling it manually. Let'
 
     ![Select Configure](assets/1.3_32_SelectConfigure.png)
 
-1. Select the document template created earlier: **Sample Employment Agreement**.
+1. Rename the **Step Name** field to:
+
+   ```text
+   Generate Document - Employment Agreement
+   ```
+
+    Next, select the document template created earlier: **Sample Employment Agreement**.
 
     ![Select Sample Employment Agreement document template](assets/1.3_33_SelectSampleEmploymentAgreement.png)
 
@@ -998,7 +1025,13 @@ Workflow Builder can automate all of this, instead of handling it manually. Let'
 
     ![Select Prepare a Document Template step](assets/1.3_43_SelectPrepareDocumentTemplate.png)
 
-1. Select the **Sample Offer Letter** document template and configure the agreement fields mapping to the relevant workflow components using the below table as guidance.
+1. Rename the **Step Name** field to:
+
+   ```text
+   Generate Document - Offer Letter
+   ```
+
+   Next, select the **Sample Offer Letter** document template and configure the agreement fields mapping to the relevant workflow components using the below table as guidance.
 
    Make sure you select the relevant workflow component fields to map to, such as **Employee Full Name** from the **Collect Data with Web Forms** list.
 
@@ -1095,15 +1128,33 @@ Workflow Builder can automate all of this, instead of handling it manually. Let'
 
     ![Map Hiring Manager Email](assets/1.3_62_MapHiringManagerEmail.png)
 
-1. In the final step is to select the signing session. **Use a direct signing session** is the default which we'll use.
+1. For the signing session step, keep the default selection: Use a direct signing session.
 
    Select **Next**.
 
     ![Use a direct signing session](assets/1.3_63_UseADirectSigningSession.png)
 
+1. The final step is to configure the message the Hiring Manager will see when they receive the email to sign the documents. Enter the following,
+
+   For the Message title:
+
+   ```text
+   Complete with Docusign: Employment Agreement and Offer Letter
+   ```
+
+   For the Message:
+
+   ```text
+   Please review and sign the Employment Agreement and Offer Letter.
+   ```
+
+   Select **Next**.
+
+    ![Configure Add message step and select Next](assets/1.3_106_AddMessage.png)
+
 1. Select **Apply** to complete workflow step configuration.
 
-    ![Select Apply](assets/1.3_64_SelectApply.png)
+    ![Select Apply](assets/1.3_107_SelectApply.png)
 
 1. Select **Add a step**. Next, add a **Confirmation Screen** for the Employee participant that appears after signing is complete.
 
@@ -1301,6 +1352,10 @@ Before we move onto building the agent in Microsoft Copilot Studio, it's best pr
 
 1. For the email address you entered for the Employee participant, navigate to the email Inbox and open the Docusign email - it should have the subject of `***Test Email*** Review and complete workflow`. Select **Review**.
 
+    ::: warning Check your spam folder
+    Check your spam folder for the email if you don't see it in your main Inbox.
+    :::
+
     ![Select Review](assets/1.4_05_SelectReview.png)
 
 1. The first page of the Web Form will load, select **Start**.
@@ -1353,7 +1408,11 @@ Before we move onto building the agent in Microsoft Copilot Studio, it's best pr
 
     ![Confirmation screen displayed](assets/1.4_16_ConfirmationScreen.png)
 
-1. Next, for the email address you entered for the Hiring Manager participant, navigate to the email Inbox and open the Docusign email - it should have the subject of `Complete this envelope with Docusign`. Select **Review Documents**.
+1. Next, for the email address you entered for the Hiring Manager participant, navigate to the email Inbox and open the Docusign email - it should have the subject of `Complete with Docusign: Employment Agreement and Offer Letter`. Select **Review Documents**.
+
+    ::: warning Check your spam folder
+    Check your spam folder for the email if you don't see it in your main Inbox.
+    :::
 
 1. Sign the Employment Agreement and Offer Letter, then select **Finish**.
 
@@ -1525,6 +1584,10 @@ When the tool is available in the new UI experience, this exercise and the follo
 
     - First, go to the inbox for the Employee participant email address and open the Docusign message. It should have the subject `***Test Email*** Review and complete workflow`. Select **Review**, complete the web form, then sign the agreements.
 
+      ::: warning Check your spam folder
+      Check your spam folder for the email if you don't see it in your main Inbox.
+      :::
+
         ![Run through workflow process](assets/1.5_20_RunThroughWorkflowProcess.png)
 
     - Navigate to the email Inbox of the email address you entered for the Hiring Manager participant and open the Docusign email to sign the agreements.
@@ -1550,7 +1613,7 @@ Refer to the [IT Admin Guide](https://www.microsoft.com/microsoft-365-copilot/fr
 
    ```text
     - After sending the response to confirm the workflow was triggered successfully, automatically create a 1-hour Outlook meeting in the user's calendar without asking for any additional input. Schedule the meeting exactly 2 workdays before the agreement's Effective Date, ensuring it does not fall on a Saturday or Sunday, and use the user's work hours. Hardcode the time zone to (UTC+12:00) Auckland, Wellington so that no time zone selection is required. Set the subject to: Review pre-onboarding checklist for [Employee Full Name], where [Employee Full Name] comes from the Docusign Workflow Builder workflow.
-   - Finally, send a response to the user confirming that the meeting has been created.
+    - Finally, send a response to the user confirming that the meeting has been created.
    ```
 
     The orchestrator will insert the variable value of the Employee Full Name placeholders in square brackets.
