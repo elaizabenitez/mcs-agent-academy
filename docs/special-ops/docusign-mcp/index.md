@@ -1128,7 +1128,7 @@ Workflow Builder can automate all of this, instead of handling it manually. Let'
 
     ![Map Hiring Manager Email](assets/1.3_62_MapHiringManagerEmail.png)
 
-1. In the next step is to select the signing session. **Use a direct signing session** is the default which we'll use.
+1. For the signing session step, keep the default selection: Use a direct signing session.
 
    Select **Next**.
 
