@@ -549,7 +549,7 @@ Let's begin. ⤵️
 
     ![Select Offer Letter as the agreement type value](assets/1.2_04_AgreementType.png)
 
-1. Next we'll define the roles for the document template. On the **Fields** left-hand side pane, select the **chevron icon** by **Sender 1** and select **Edit recipients** to edit the the role of the signer.
+1. Next we'll define the roles for the document template. On the **Fields** left-hand side pane, select the **chevron icon** by **Sender 1** and select **Edit recipients** to edit the role of the signer.
 
     ::: info What is a "Role" in a template? :thinking:
     A role is a placeholder in a template that represents an individual who will act on the document, such as signing or approving. Roles define _who_ is involved and _what action_ they take, while allowing the actual recipient to be assigned when the template is used.
@@ -748,7 +748,7 @@ Let's begin. ⤵️
     | **{DueDate}**                  | `Signed Due Date`             | Yes              | `Due date of signed agreement by employee` | Yes            | Date       |
 
     ::: tip
-    If you accidentally create a new field with the incorrect field type - for example created **Signed Due Date** as `Text`, you won't be able to edit the field type. You can rename the field however to `[Don't use] Signed Due Date`.
+    If you accidentally create a new field with the wrong field type (for example, you created **Signed Due Date** as `Text`), you won't be able to change the field type. You can, however, rename the field to `[Don't use] Signed Due Date`.
     :::
 
 
@@ -962,7 +962,7 @@ Workflow Builder can automate all of this, instead of handling it manually. Let'
 1. Rename the **Step Name** field to,
 
    ```text
-   Generate Document - Employment Agreement**
+   Generate Document - Employment Agreement
    ```
 
     Next, select the document template created earlier: **Sample Employment Agreement**.
@@ -1028,7 +1028,7 @@ Workflow Builder can automate all of this, instead of handling it manually. Let'
 1. Rename the **Step Name** field to,
 
    ```text
-   Generate Document - Offer Letter**
+   Generate Document - Offer Letter
    ```
 
    Next select the **Sample Offer Letter** document template and configure the agreement fields mapping to the relevant workflow components using the below table as guidance.
