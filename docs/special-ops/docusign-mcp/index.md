@@ -549,7 +549,7 @@ Let's begin. ⤵️
 
     ![Select Offer Letter as the agreement type value](assets/1.2_04_AgreementType.png)
 
-1. Next we'll define the roles for the document template. On the **Fields** left-hand side pane, select the **chevron icon** by **Sender 1** and select **Edit recipients** to edit the role of the signer.
+1. Next we'll define the roles for the document template. On the **Fields** left-hand side pane, select the **chevron icon** by **Sender 1** and select **Edit recipients** to update the signer role.
 
     ::: info What is a "Role" in a template? :thinking:
     A role is a placeholder in a template that represents an individual who will act on the document, such as signing or approving. Roles define _who_ is involved and _what action_ they take, while allowing the actual recipient to be assigned when the template is used.
@@ -694,7 +694,7 @@ Let's begin. ⤵️
 1. Select **Save as Draft** on the upper right. You'll be redirected to the Document Templates page and see a bottom-left confirmation message. Then select the **ellipsis icon (...)** and choose **Publish**.
 
     ::: tip
-    If you don't see the **Save As Draft** button, but see it as **Save and Publish**, select the **Save and Publish** button.
+    If you don't see the **Save As Draft** button, but see it labeled as **Save and Publish**, select the **Save and Publish** button.
     :::
 
     ![Publish document template](assets/1.2_21_PublishDocumentTemplate.png)
@@ -776,10 +776,10 @@ Let's begin. ⤵️
 
     ![Select **Preview** to see the Document Template in preview mode](assets/1.2_29_PreviewMode.png)
 
-1. Exit from **Preview** mode by select the **X icon** on the upper left and select **Save As Draft**.
+1. Exit from **Preview** mode by selecting the **X icon** on the upper left and select **Save As Draft**.
 
     ::: tip
-    If you don't see the **Save As Draft** button, but see it as **Save and Publish**, select this button and skip the next two publishing steps.
+    If you don't see the **Save As Draft** button, but see it labeled as **Save and Publish**, select **Save and Publish** and skip the next two publishing steps.
     :::
 
     ![Select Save as Draft](assets/1.2_30_SaveAsDraft.png)
@@ -959,7 +959,7 @@ Workflow Builder can automate all of this, instead of handling it manually. Let'
 
     ![Select Configure](assets/1.3_32_SelectConfigure.png)
 
-1. Rename the **Step Name** field to,
+1. Rename the **Step Name** field to:
 
    ```text
    Generate Document - Employment Agreement
@@ -1025,13 +1025,13 @@ Workflow Builder can automate all of this, instead of handling it manually. Let'
 
     ![Select Prepare a Document Template step](assets/1.3_43_SelectPrepareDocumentTemplate.png)
 
-1. Rename the **Step Name** field to,
+1. Rename the **Step Name** field to:
 
    ```text
    Generate Document - Offer Letter
    ```
 
-   Next select the **Sample Offer Letter** document template and configure the agreement fields mapping to the relevant workflow components using the below table as guidance.
+   Next, select the **Sample Offer Letter** document template and configure the agreement fields mapping to the relevant workflow components using the below table as guidance.
 
    Make sure you select the relevant workflow component fields to map to, such as **Employee Full Name** from the **Collect Data with Web Forms** list.
 
