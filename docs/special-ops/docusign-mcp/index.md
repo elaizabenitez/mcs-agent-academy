@@ -177,7 +177,7 @@ To deliver this scenario, you will complete:
 - 1.4 Test the workflow
 - 1.5 Build a custom agent in Microsoft Copilot Studio, connect to Docusign MCP Demo, and trigger the workflow
 
-**Outcome**: your agent collects inputs, then triggers an already-built Docusign workflow end-to-end.
+**Outcome**: your agent collects inputs, then triggers an already-built Docusign Workflow Builder workflow end-to-end.
 
 #### Use Case 2: Multi-MCP extension (Lab 1.6) {#use-case-2}
 
@@ -203,7 +203,7 @@ This diagram shows how your agent connects users to real-world agreement workflo
 
 Your agent is the control layer.
 
-- Users interact with your Copilot Studio agent, which collects inputs and triggers Docusign workflows through MCP.
+- Users interact with your Copilot Studio agent, which collects inputs and triggers Docusign Workflow Builder workflows through MCP.
 - Docusign handles the agreement process end-to-end, while additional tools like Work IQ Calendar can extend the flow to supporting tasks.
 
 One prompt. Multiple systems. Coordinated execution.
