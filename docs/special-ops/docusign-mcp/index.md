@@ -1479,7 +1479,7 @@ Let's begin!
 
    If the request cannot be fulfilled using available workflows or tools, clearly explain the limitation and suggest next steps.
 
-   If the user needs to provide missing information, provide the field name from the variables of the workflow with a corresponding field description
+   If the user needs to provide missing information, provide the field name from the variables of the workflow with a corresponding field description.
 
    Confirm with the user that all information is correct before triggering the workflow. If the user confirms the information is correct, trigger the workflow. If the user confirms the information is incorrect, do not trigger the workflow.
    ```
@@ -1520,7 +1520,7 @@ Let's begin!
 
     ![Enter credentials](assets/1.5_07_LogIn.png)
 
-   You may be asked to verify your identity which is in the form of a SMS code or phone call. Once you complete the verification, continue to the next step.
+   You may be asked to verify your identity which is in the form of an SMS code or phone call. Once you complete the verification, continue to the next step.
 
 1. The connection is created and you'll see a green tick icon. Select **Next**.
 
@@ -1647,7 +1647,7 @@ Refer to the [IT Admin Guide](https://www.microsoft.com/microsoft-365-copilot/fr
    Enter the following text below the **Docusign Workflow Builder** section.
 
    ```text
-   ## Schedule Outlook meeting   
+   ## Schedule Outlook meeting
    When the workflow has successfully been triggered, use the `outlook-pre-onboarding-checklist-meeting` skill to create the Outlook meeting.
    ```
 
@@ -1665,9 +1665,9 @@ Refer to the [IT Admin Guide](https://www.microsoft.com/microsoft-365-copilot/fr
 
 1. Download the sample skill package using the button below.
 
-   <download-files path="special-ops/docusign-mcp/assets/sample-skill" />
+    <download-files path="special-ops/docusign-mcp/assets/sample-skill" />
 
-   Extract the `.zip` file, then upload the `.md` skill file into the agent.
+    Download `sample-skill.zip`, extract it, then upload the `sample-skill-outlook-pre-onboarding-checklist-meeting.zip` file into the agent.
 
     ![Select Skill file](assets/1.6_05_SelectSkillFile.png)
 
@@ -1685,7 +1685,7 @@ Refer to the [IT Admin Guide](https://www.microsoft.com/microsoft-365-copilot/fr
    - Create a 1-hour Outlook meeting through Work IQ Calendar (Preview).
    - Schedule it exactly 2 workdays before the effective date.
    - Use the user’s work hours and force the timezone to UTC+12 Auckland/Wellington.
-   - Set the subject to: Review pre-onboarding checklist for [Employee Fullname].
+   - Set the subject to: Review pre-onboarding checklist for [Employee Full Name].
    - Confirm success, or return error details if meeting creation fails.
    - Never ask the user for extra meeting input.
 
