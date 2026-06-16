@@ -29,7 +29,7 @@ industries:
     - non-profit
     - hospitality and travel
     - construction and engineering
-created-date: 2026-06-05
+created-date: 2026-06-16
 last-edited-date: 2026-06-16
 ---
 # 📄 Microsoft Copilot Studio + Docusign MCP {#mcs-docusign-mcp}
@@ -1440,20 +1440,16 @@ Before we move onto building the agent in Microsoft Copilot Studio, it's best pr
 
 ## 🧪 1.5 Build a custom agent in Microsoft Copilot Studio, connect to Docusign MCP Demo, and trigger the workflow {#lab-1-5-build-custom-agent-docusign-mcp-demo-trigger-workflow}
 
+### Prerequisites
 
-### Prerequisite
+- **New solution**: As a best practice, create a new solution for this agent before you create the agent itself. Refer to our [Recruit mission](../../recruit/04-creating-a-solution/index.md) to learn how to create a solution.
+- **Use new UI experience**: The Docusign MCP Demo tool is available in the new UI experience, which we will use in this lab and the next one.
 
-As a best practice, create a new solution for this agent before you create the agent itself. Refer to our [Recruit mission](../../recruit/04-creating-a-solution/index.md) to learn how to create a solution.
+    ![Toggle new experience](assets/1.5_00_ToggleNewExperience.png)
 
-::: tip Use the new UI experience
-The Docusign MCP Demo tool is available in the new UI experience, which we will use in this lab and the next one.
+Let's begin!
 
-![Toggle new experience](assets/1.5_00_ToggleNewExperience.png)
-:::
-
-1. Navigate to [https://copilotstudio.microsoft.com](https://copilotstudio.microsoft.com)
-
-1. Sign in with your Microsoft 365 work or school account
+1. Navigate to [https://copilotstudio.microsoft.com](https://copilotstudio.microsoft.com) and sign in with your Microsoft 365 work or school account.
 
    > [!WARNING]
    > You must be in a tenant where Copilot Studio is enabled.
@@ -1488,7 +1484,7 @@ The Docusign MCP Demo tool is available in the new UI experience, which we will 
    Confirm with the user that all information is correct before triggering the workflow. If the user confirms the information is correct, trigger the workflow. If the user confirms the information is incorrect, do not trigger the workflow.
    ```
 
-   ::: info Purpose of the instructions
+   ::: tip Purpose of the instructions
    These instructions define the Offer Management Agent’s role, tone, and decision flow so it can collect required workflow inputs, confirm accuracy with the user, and only trigger the Docusign Workflow Builder workflow when all information is complete and approved.
    :::
 
@@ -1642,13 +1638,16 @@ Refer to the [IT Admin Guide](https://www.microsoft.com/microsoft-365-copilot/fr
 
 1. Next, we'll add a section for scheduling the Outlook meeting where it will specify to follow a skill.
 
-    ::: info Why use a skill in addition to agent instructions?
+    ::: tip Why use a skill in addition to agent instructions?
    Agent instructions define what the agent should do and when to do it.
    A skill defines how to do a specific task reliably and consistently.
    Using both gives you better control: orchestration from instructions, repeatable execution from the skill.
    :::
 
+   Enter the following text below the **Docusign Workflow Builder** section.
+
    ```text
+   ## Schedule Outlook meeting   
    When the workflow has successfully been triggered, use the `outlook-pre-onboarding-checklist-meeting` skill to create the Outlook meeting.
    ```
 
@@ -1670,7 +1669,13 @@ Refer to the [IT Admin Guide](https://www.microsoft.com/microsoft-365-copilot/fr
 
    Extract the `.zip` file, then upload the `.md` skill file into the agent.
 
-    ::: info What this skill does
+    ![Select Skill file](assets/1.6_05_SelectSkillFile.png)
+
+1. The skill has now been added to the agent.
+
+    ![Skill added](assets/1.6_06_SkillAdded.png)
+
+    ::: tip What this skill does
    This skill is an automation recipe for the agent to schedule an Outlook pre-onboarding meeting after a Docusign Workflow Builder workflow succeeds.
 
    It tells the agent to:
@@ -1686,14 +1691,8 @@ Refer to the [IT Admin Guide](https://www.microsoft.com/microsoft-365-copilot/fr
 
    So the value is consistency: the agent can reliably run the same follow-up scheduling logic every time without manual prompting.
 
-   You can update the skill where relevant such as timezone details.
+   Note: You can update the skill where relevant such as timezone details.
    :::
-
-    ![Select Skill file](assets/1.6_05_SelectSkillFile.png)
-
-1. The skill has now been added to the agent.
-
-    ![Skill added](assets/1.6_06_SkillAdded.png)
 
 1. Next, add the **Work IQ Calendar (Preview)** tool. Under **Tools** select the **plus icon** on the right-hand side panel.
 
@@ -1730,7 +1729,7 @@ Refer to the [IT Admin Guide](https://www.microsoft.com/microsoft-365-copilot/fr
 
     ![Test Work IQ Calendar tool](assets/1.6_13_TestWorkIQCalendarTool.png)
 
-1. Next, the orchestrator will invoke the Docusign MCP Demo tool to retrieve the workflow and the workflow trigger requirements. Repeat the same step in the previous exercise by entering the below text, replacing the placeholders and submitting the information to the agent.
+1. Next, the orchestrator will invoke the **Docusign MCP Demo** tool to retrieve the workflow and the workflow trigger requirements. Repeat the same step in the previous exercise by entering the below text, replacing the placeholders and submitting the information to the agent.
 
    Use an effective date and start date that fall on a Monday or Tuesday to confirm that the instruction is followed: creating the meeting 2 working days before the date.
 
@@ -1816,7 +1815,3 @@ Once your submission is reviewed, you will receive an email from Global AI Commu
 📖 [Microsoft MCP server certification](https://learn.microsoft.com/en-us/microsoft-copilot-studio/mcp-certification)
 
 📖 [Docusign MCP Demo connector (Microsoft Learn)](https://learn.microsoft.com/en-us/connectors/docusignmcpdemo/)
-
-<!-- Separate callouts to satisfy MD028/no-blanks-blockquote -->
-> [!NOTE]
-> 🚧 This mission is under construction. Check back soon for the full walkthrough.
