@@ -29,8 +29,8 @@ industries:
     - non-profit
     - hospitality and travel
     - construction and engineering
-created-date: 2026-05-25
-last-edited-date: 2026-06-05
+created-date: 2026-06-05
+last-edited-date: 2026-06-16
 ---
 # 📄 Microsoft Copilot Studio + Docusign MCP {#mcs-docusign-mcp}
 
