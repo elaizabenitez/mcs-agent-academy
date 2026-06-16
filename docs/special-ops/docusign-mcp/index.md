@@ -1440,87 +1440,111 @@ Before we move onto building the agent in Microsoft Copilot Studio, it's best pr
 
 ## 🧪 1.5 Build a custom agent in Microsoft Copilot Studio, connect to Docusign MCP Demo, and trigger the workflow {#lab-1-5-build-custom-agent-docusign-mcp-demo-trigger-workflow}
 
-::: danger Use classic UI experience for Microsoft Copilot Studio
-The Docusign MCP Demo tool is not yet available in the new UI experience. Please switch to the classic UI experience to access it.
+
+### Prerequisite
+
+As a best practice, create a new solution for this agent before you create the agent itself. Refer to our [Recruit mission](../../recruit/04-creating-a-solution/index.md) to learn how to create a solution.
+
+::: tip Use the new UI experience
+The Docusign MCP Demo tool is available in the new UI experience, which we will use in this lab and the next one.
 
 ![Toggle new experience](assets/1.5_00_ToggleNewExperience.png)
-
-When the tool is available in the new UI experience, this exercise and the following exercise will be updated.
 :::
 
 1. Navigate to [https://copilotstudio.microsoft.com](https://copilotstudio.microsoft.com)
 
 1. Sign in with your Microsoft 365 work or school account
 
-> [!WARNING]
-> You must be in a tenant where Copilot Studio is enabled.
-> Make sure you switch to your dedicated developer environment.
+   > [!WARNING]
+   > You must be in a tenant where Copilot Studio is enabled.
 
-1. Select **+ Create blank agent** and enter a name for your agent.
+1. Make sure you are in your developer environment and select **Agent**.
 
-   For example,
+    ![Create blank agent](assets/1.5_01_SelectAgent.png)
 
-   ```text
-   Docusign MCP Demo
-   ```
-
-    It's also best practice to use a solution, select an existing solution for your agent. Refer to our [Recruit mission](../../recruit/04-creating-a-solution/index.md) to learn how to create a solution.
-
-    Select **Create**.
-
-    ![Create blank agent](assets/1.5_01_CreateBlankAgent.png)
-
-1. Edit the description for the agent. Copy and paste the following, then select **Save**.
+1. Enter the following as the name of the agent.
 
    ```text
-   This agent automates the HR recruitment process when hiring an employee by triggering Docusign Workflow Builder workflows. It sends Employment Agreements and Offer Letters to candidates for signature, and then routes the documents to the hiring manager for final signing.
+   Offer Management Agent
    ```
 
-    ![Edit agent description](assets/1.5_02_UpdateAgentDescription.png)
-
-1. Next, add instructions to the agent so it has clear guidance on how to invoke the Workflow Builder workflow using the Docusign MCP Demo tool.
-
-   Copy and paste the following, then select **Save**.
+   Next, enter the following as the instructions of the agent.
 
    ```text
-   #Docusign Workflow Builder workflows
-   - Get Docusign workflow requirements for 'Send Employment agreement and offer letter' workflow, collect the mandatory inputs from the user and only then trigger the workflow to send the documents to the candidate. Respond to the user to let them know if the workflow is triggered successfully.
-   - For the startDate input in Docusign workflows, use today's date. Do not prompt or ask the user for the startDate
+   You are the Offer Management Agent, an HR onboarding agent that automates offer workflows.
+
+   Your goal is to streamline the process of sending, signing, and finalizing Employment Agreements and Offer Letters using Docusign Workflow Builder.
+
+   ## Docusign Workflow Builder
+
+   Assist users by identifying the correct workflow, collecting required inputs, and triggering document delivery to recipients.
+
+   Be concise, professional, and proactive. Ask for missing information before proceeding, and confirm actions before triggering workflows.
+
+   If the request cannot be fulfilled using available workflows or tools, clearly explain the limitation and suggest next steps.
+
+   If the user needs to provide missing information, provide the field name from the variables of the workflow with a corresponding field description
+
+   Confirm with the user that all information is correct before triggering the workflow. If the user confirms the information is correct, trigger the workflow. If the user confirms the information is incorrect, do not trigger the workflow.
    ```
 
-    ![Edit agent instructions](assets/1.5_03_AddAgentInstructions.png)
+   ::: info Purpose of the instructions
+   These instructions define the Offer Management Agent’s role, tone, and decision flow so it can collect required workflow inputs, confirm accuracy with the user, and only trigger the Docusign Workflow Builder workflow when all information is complete and approved.
+   :::
 
-1. Next, add the Docusign MCP Demo server as a tool for your agent. Scroll down to the **Tools** section and select **+Add tool**.
+    Next, we'll add the **Docusign MCP Demo** tool to our agent. Under **Tools** select the **plus icon** on the right-hand side panel.
 
-   Enter `docusign` in the search field and select the **Model Context Protocol** filter.
+    ![Select Tools](assets/1.5_02_AgentNameInstructionsAddTool.png)
 
-    ![Search for Docusign MCP Demo tool](assets/1.5_04_SearchForDocusignMCP.png)
+1. Select the **Model Context Protocol (MCP)** category to filter to the list of MCP tools. Scroll down and select **Docusign MCP Demo**.
 
-1. You may see multiple Docusign MCP servers listed. Select the **Docusign MCP Demo** tool.
+    ![Select Docusign MCP Demo](assets/1.5_03_SelectDocusignMCPDemo.png)
 
-    ![Select Docusign MCP Demo](assets/1.5_05_SelectDocusignMCPDemo.png)
+   ::: warning
+   In the new UI, searching for `Docusign MCP Demo` or `docusign` may return **Docusign MCP**, which is the production tool.
+
+   ![Do not search and select Docusign MCP](assets/1.5_03_Warning_DoNotSearch.png)
+
+   _Do not_ select Docusign MCP. Clear your search field and scroll down and choose **Docusign MCP Demo** instead.
+   :::
+
+1. Select **Docusign MCP Server**.
+
+    ![Select Docusign MCP Server](assets/1.5_04_SelectDocusignMCPServer.png)
 
 1. Next you'll need to add a new connection for your Docusign developer user account. Select the **chevron** icon and select **Create new connection**.
 
-    ![Select create new connection](assets/1.5_06_CreateNewConnection.png)
+    ![Select create new connection](assets/1.5_05_SelectCreateNewConnection.png)
 
 1. Select **Create** to enter your Docusign developer user account credentials.
 
-    ![Select Create](assets/1.5_07_SelectCreate.png)
+    ![Select Create](assets/1.5_06_SelectCreate.png)
 
 1. Enter your username and password for your Docusign developer user account.
 
-    ![Enter credentials](assets/1.5_08_EnterCredentials.png)
+    ![Enter credentials](assets/1.5_07_LogIn.png)
 
-1. Next you'll need to verify your identity. Enter the SMS code you would've received and select **Verify**.
+   You may be asked to verify your identity which is in the form of a SMS code or phone call. Once you complete the verification, continue to the next step.
 
-    ![Verify identity](assets/1.5_09_VerifyYourIdentity.png)
+1. The connection is created and you'll see a green tick icon. Select **Next**.
 
-1. Select **Allow Access**. The connection is now created. Next, test the agent.
+    ![Select Next](assets/1.5_08_ConnectionCreated.png)
 
-    ![Select Allow Access](assets/1.5_10_AllowAccess.png)
+1. You'll see a list of supported actions for the Docusign MCP Demo tool. Scroll down and notice how there's workflow operations, these will be used by the agent orchestration later when testing our agent. Select **Confirm**.
 
-1. Start a new test session by selecting the **+** icon in the test pane and enter the below text.
+    ![Select Confirm](assets/1.5_09_ReviewDocusignMCPDemoCapabilities.png)
+
+1. The tool is now added to our agent.
+
+   Next, change the solution for this agent under **Settings**. Select the ellipsis icon on the upper right and select **Settings**.
+
+   ![Select Settings](assets/1.5_10_SelectSettings.png)
+
+1. Change the solution to the new solution you created earlier for this agent by selecting it in the drop-down field.
+
+   ![Select target solution](assets/1.5_11_Solution.png)
+
+1. Now **save** and test the agent. Select the **Preview** tab, enter the following and submit.
 
    ```text
    Send an employment agreement and offer letter to [employee name], [email address]
@@ -1529,56 +1553,51 @@ When the tool is available in the new UI experience, this exercise and the follo
    - Replace the `[employee name]` with a name.
    - Replace the `[email address]` placeholder using an email address for the employee (use the same one for the Employee participant when you manually tested the workflow earlier in Docusign).
 
-    ![Test agent](assets/1.5_12_TestAgent.png)
+    ![Test agent](assets/1.5_12_TestOfferManagementAgent.png)
 
-1. In the test pane, the agent prompts you to select **Open connection manager** to verify your credentials.
+1. The orchestrator now uses the **Docusign MCP Demo** tool and the instructions you added to find the workflow requirements for **Send Employment agreement and offer letter**.
 
-    Select **Open connection manager**.
+   It first verifies your Docusign developer account, then locates the correct workflow, and finally returns the required start-step variables you configured.
 
-    ![Select Open connection manager](assets/1.5_13_OpenConnectionManager.png)
+    ![Orchestrator in progress](assets/1.5_13_OrchestratorInProgress.png)
 
-1. Select **Connect** to authorize the agent to use the tool.
+1. Since you only provided the employee name and the employee email address, the agent response prompts you to provide the information needed for the workflow.
 
-    ![Select Connect](assets/1.5_14_SelectConnect.png)
+    ![Workflow trigger requirements identified](assets/1.5_14_WorkflowTriggerRequirementsIdentified.png)
 
-1. Next, it will load the connection using the credentials you entered earlier for your Docusign developer user account.
-
-   Select **Submit**.
-
-    ![Select Submit](assets/1.5_15_SelectSubmit.png)
-
-1. Back in the test pane, select **Retry**.
-
-    ![Select Retry](assets/1.5_16_SelectRetry.png)
-
-1. Your agent will now interact with the Docusign MCP Demo tool based on the instructions entered earlier, where it will retrieve the Docusign workflow requirements for `Send Employment agreement and offer letter` workflow.
-
-   First, the orchestrator will fetch details about your Docusign developer user account, then retrieve the list of workflows to identify the `Send Employment agreement and offer letter` workflow, and then retrieve the workflow requirements which are the variables you configured for the **Start** step of the workflow.
-
-   Then you'll be prompted to enter the missing variable values needed since you only provided the employee name and the email address.
-
-    ![Enter missing workflow start variables](assets/1.5_17_WorkflowTriggerRequirements.png)
-
-1. Enter the below text.
+1. Enter the below text and submit.
 
    ```text
-   employee position is [position], effective date and start date is [MMMM d], salary is [salary dollar amount], based in [city], reporting to [manager full name] [manager email address], and due signed date is [MMMM d]
+   employee position is [position], effective date and start date is [MMMM d], salary is [salary dollar amount], reporting to [manager full name] [manager email address], and due signed date is [MMMM d]
    ```
 
    - Replace the `[position]` placeholder with job position such as `Power Platform Engineer`.
    - Replace the `[MMMM d]` placeholder with the full month name and day such as `August 25`. NOTE: `d` means no leading zero (August 5).
    - Replace the `[salary dollar amount]` with a dollar amount value.
-   - Replace the `[city]` placeholder with a city of where the employee will be working in.
    - Replace the `[manager full name]` with a name of the manager.
    - Replace the `[manager email address]` placeholder using an email address for the manager (use the same one for the Hiring Manager participant when you manually tested the workflow earlier in Docusign).
 
-1. The orchestrator will trigger the workflow once all variables for the workflow start step have been provided. You'll see confirmation that the workflow was successfully triggered.
+    ![Variables provided](assets/1.5_15_VariablesProvided.png)
 
-    ![Workflow invoked](assets/1.5_18_WorkflowInvoked.png)
+1. The agent then provides a summary of the variables based on the information you provided and asks for your confirmation that the information is correct. This is based on the instruction previously entered when you created the agent,
 
-   You'll also see the Instance ID reference of the workflow.
+   _"Confirm with the user that all information is correct before triggering the workflow. If the user confirms the information is correct, trigger the workflow. If the user confirms the information is incorrect, do not trigger the workflow."_
 
-    ![Workflow details](assets/1.5_17_WorkflowTriggerRequirements.png)
+    ![Review mapped information](assets/1.5_16_ReviewMappedInformation.png)
+
+1. Enter the below text and submit.
+
+   ```text
+   Yes, information is correct.
+   ```
+
+   The orchestrator will next trigger the workflow.
+
+    ![Trigger workflow](assets/1.5_17_ConfirmInformationIsCorrect.png)
+
+1. When the workflow has been triggered, you'll see confirmation and a summary.
+
+    ![Workflow successfully triggered](assets/1.5_18_WorkflowSuccessfullyTriggered.png)
 
 1. Follow the same steps of completing the workflow.
 
@@ -1588,12 +1607,16 @@ When the tool is available in the new UI experience, this exercise and the follo
       Check your spam folder for the email if you don't see it in your main Inbox.
       :::
 
-        ![Run through workflow process](assets/1.5_20_RunThroughWorkflowProcess.png)
-
     - Navigate to the email Inbox of the email address you entered for the Hiring Manager participant and open the Docusign email to sign the agreements.
     - Lastly the final signed agreements should be uploaded to SharePoint.
 
-        ![Document uploaded to SharePoint](assets/1.5_21_DocumentUploadedToSharePoint.png)
+        ![Document uploaded to SharePoint](assets/1.5_19_SignedAgreementsUploadedToSharePoint.png)
+
+        ![Review agreements](assets/1.5_20_ReviewAgreements.png)
+
+1. You can also review the workflow instances in the Docusign developer portal, and you'll see progress status as **Completed**.
+
+    ![Workflow progress status](assets/1.5_21_WorkflowProgressStatus.png)
 
 **Congrats!** 🥳 You've now learned how to invoke a Workflow Builder workflow from your agent through the **Docusign MCP Demo** tool.
 
@@ -1609,44 +1632,94 @@ The agent will be updated to automatically create an Outlook meeting in your cal
 Refer to the [IT Admin Guide](https://www.microsoft.com/microsoft-365-copilot/frontier-it-admins) which outlines the requirements and details of enabling Frontier in your tenant.
 :::
 
-1. Update the agent instructions to include details in creating an Outlook meeting in your calendar after the Workflow Builder workflow has successfully triggered. You can provide instructions such as creating the meeting invite 2 working days before the effective date, or specify the time zone to use. Below is an example.
+1. Update the agent instructions to include details in creating an Outlook meeting in your calendar after the Workflow Builder workflow has successfully triggered. Enter the following as a new line in the second paragraph of the instructions.
 
    ```text
-    - After sending the response to confirm the workflow was triggered successfully, automatically create a 1-hour Outlook meeting in the user's calendar without asking for any additional input. Schedule the meeting exactly 2 workdays before the agreement's Effective Date, ensuring it does not fall on a Saturday or Sunday, and use the user's work hours. Hardcode the time zone to (UTC+12:00) Auckland, Wellington so that no time zone selection is required. Set the subject to: Review pre-onboarding checklist for [Employee Full Name], where [Employee Full Name] comes from the Docusign Workflow Builder workflow.
-    - Finally, send a response to the user confirming that the meeting has been created.
+   When the workflow has successfully been triggered, schedule an Outlook meeting.
    ```
 
-    The orchestrator will insert the variable value of the Employee Full Name placeholders in square brackets.
+    ![Update agent instructions](assets/1.6_01_UpdateInstructions.png)
 
-   Make sure select **Save** after updating the agent instructions.
+1. Next, we'll add a section for scheduling the Outlook meeting where it will specify to follow a skill.
 
-    ![Update agent instructions](assets/1.6_01_UpdateAgentInstructions.png)
+    ::: info Why use a skill in addition to agent instructions?
+   Agent instructions define what the agent should do and when to do it.
+   A skill defines how to do a specific task reliably and consistently.
+   Using both gives you better control: orchestration from instructions, repeatable execution from the skill.
+   :::
 
-1. Next scroll down to **Tools** and **+Add tool**.
+   ```text
+   When the workflow has successfully been triggered, use the `outlook-pre-onboarding-checklist-meeting` skill to create the Outlook meeting.
+   ```
 
-    ![Select Add tool](assets/1.6_02_SelectAddTool.png)
+    ![Update instructions to include Outlook meeting section](assets/1.6_02_UpdateInstructionsToIncludeOutlookMeetingHeader.png)
 
-1. Select the **Model Context Protocol** filter.
+    Make sure to select **Save** after updating the agent instructions.
 
-    ![Select Model Context Protocol](assets/1.6_03_SelectModelContextProtocol.png)
+1. On the right-hand side panel, under **Skills** select the **plus icon** to upload a skill file.
 
-1. In the search field, enter `work iq`. Select the **Work IQ Calendar (Preview)** tool.
+    ![Select Add Skill icon](assets/1.6_03_AddSkill.png)
 
-    ![Select Work IQ Calendar (Preview tool)](assets/1.6_04_SelectWorkIQCalendar.png)
+1. Click to upload a file.
 
-1. You'll next need to create a connection for the tool using your signed in user account for your developer environment. Select the **chevron icon** and select **Create new connection**.
+    ![Upload a file](assets/1.6_04_ClickToUploadSkill.png)
 
-    ![Select Create new connection](assets/1.6_02_SelectAddTool.png)
+1. Download the sample skill package using the button below.
 
-1. Select your signed in user account.
+   <download-files path="special-ops/docusign-mcp/assets/sample-skill" />
 
-    ![Select user account](assets/1.6_06_UserAccountCredentials.png)
+   Extract the `.zip` file, then upload the `.md` skill file into the agent.
 
-1. Now that the connection has been created, select **Add**.
+    ::: info What this skill does
+   This skill is an automation recipe for the agent to schedule an Outlook pre-onboarding meeting after a Docusign Workflow Builder workflow succeeds.
 
-    ![Select Add](assets/1.6_07_SelectAdd.png)
+   It tells the agent to:
 
-1. The tool is now added, so you can test your updated agent. Start a new test session by selecting the **+** icon in the test pane and entering the text below.
+   - Wait until the Docusign workflow trigger is confirmed successful.
+   - Use the employee full name and effective date from workflow context.
+   - Create a 1-hour Outlook meeting through Work IQ Calendar (Preview).
+   - Schedule it exactly 2 workdays before the effective date.
+   - Use the user’s work hours and force the timezone to UTC+12 Auckland/Wellington.
+   - Set the subject to: Review pre-onboarding checklist for [Employee Fullname].
+   - Confirm success, or return error details if meeting creation fails.
+   - Never ask the user for extra meeting input.
+
+   So the value is consistency: the agent can reliably run the same follow-up scheduling logic every time without manual prompting.
+
+   You can update the skill where relevant such as timezone details.
+   :::
+
+    ![Select Skill file](assets/1.6_05_SelectSkillFile.png)
+
+1. The skill has now been added to the agent.
+
+    ![Skill added](assets/1.6_06_SkillAdded.png)
+
+1. Next, add the **Work IQ Calendar (Preview)** tool. Under **Tools** select the **plus icon** on the right-hand side panel.
+
+    ![Add new tool](assets/1.6_07_AddWorkIQCalendarTool.png)
+
+1. Select the **Model Context Protocol (MCP)** category to filter to the list of MCP tools. Select the **Work IQ Calendar (Preview)** tool.
+
+    ![Select Work IQ Calendar (Preview tool)](assets/1.6_08_SelectWorkIQCalendar.png)
+
+1. Create a connection for the tool using your signed in user account for your developer environment. Select the **chevron icon** and select **Create new connection**.
+
+    ![Select Create new connection](assets/1.6_09_CreateNewConnection.png)
+
+1. Select **Create**.
+
+    ![Select Create](assets/1.6_10_SelectCreate.png)
+
+1. Select your signed in user account and select **Next**.
+
+    ![Select next](assets/1.6_11_SelectNext.png)
+
+1. You'll see a list of supported actions for the **Work IQ Calendar (Preview)** tool. Select **Confirm** to add the tool.
+
+    ![Select confirm](assets/1.6_12_ReviewAndConfirm.png)
+
+1. The tool is now added and the agent can be tested next. Select **Preview** and start a new test session by selecting the **+ New chat**. Enter the below text and submit.
 
    ```text
    Send an employment agreement and offer letter to [employee name], [email address]
@@ -1655,37 +1728,46 @@ Refer to the [IT Admin Guide](https://www.microsoft.com/microsoft-365-copilot/fr
    - Replace the `[employee name]` with a name.
    - Replace the `[email address]` placeholder using an email address for the employee (use the same one for the Employee participant when you manually tested the workflow earlier in Docusign).
 
-    ![Test agent](assets/1.6_08_TestAgent.png)
-
-1. The agent will respond with a consent card. Select **Allow** to consent with the MCP server using your data.
-
-    ![Select Allow](assets/1.6_09_SelectAllow.png)
+    ![Test Work IQ Calendar tool](assets/1.6_13_TestWorkIQCalendarTool.png)
 
 1. Next, the orchestrator will invoke the Docusign MCP Demo tool to retrieve the workflow and the workflow trigger requirements. Repeat the same step in the previous exercise by entering the below text, replacing the placeholders and submitting the information to the agent.
 
-   Use a date value for the effective date and start date that falls on a Monday or Tuesday to confirm the instructions of creating it _2 working days_ before the date is adhered to.
+   Use an effective date and start date that fall on a Monday or Tuesday to confirm that the instruction is followed: creating the meeting 2 working days before the date.
 
    ```text
-   employee position is [position], effective date and start date is [MMMM d], salary is [salary dollar amount], based in [city], reporting to [manager full name] [manager email address], and due signed date is [MMMM d]
+   employee position is [position], effective date and start date is [MMMM d], salary is [salary dollar amount], reporting to [manager full name] [manager email address], and due signed date is [MMMM d]
    ```
 
-    ![Workflow trigger requirements](assets/1.6_10_WorfklowTriggerRequirements.png)
+1. After you provide the required information to trigger the workflow, the orchestrator confirms the workflow was triggered successfully and then processes the skill, invoking the **Work IQ Calendar (Preview)** tool to create the Outlook meeting 2 working days before the Effective Date.
 
-1. The workflow will successfully be triggered.
+    ![Loaded skill](assets/1.6_14_LoadedSkill.png)
 
-    ![Workflow successfully triggered](assets/1.6_11_WorkflowSuccesfullyTriggered.png)
+1. After the Outlook meeting has been created, a summary will be provided.
 
-1. The agent will also confirm that the Outlook meeting has been created successfully 🙌🏻
+   First, you'll see confirmation that the workflow successfully triggered.
 
-    ![Outlook meeting created](assets/1.6_12_OutlookMeetingCreated.png)
+    ![Workflow successfully triggered](assets/1.6_15_CompletionOfWorkflowAndOutlookMeeting.png)
+
+1. The second confirmation provides details of the Outlook meeting that has been created.
+
+    ![Confirmation of Outlook meeting](assets/1.6_16_ConfirmationOfOutlookMeeting.png)
 
 1. Navigate to your Outlook calendar and find the meeting invite. In the screenshot below the meeting has been created for the Friday, 2 working days before the Tuesday effective date.
 
-    ![View Outlook meeting in calendar](assets/1.6_13_OutlookCalendarEvent.png)
+    ![View Outlook meeting in calendar](assets/1.6_17_OutlookCalendar.png)
+
+1. You can also dive deeper into the reasoning applied by the orchestrator by expanding the skill details in the test session.
+
+   By expanding the loaded skill details, you can see exactly how the orchestrator applied the skill rules:
+
+   - it calculated the meeting date as 2 workdays before the Effective Date
+   - selected the configured time zone and work-hour start time
+   - built the subject with the employee name
+   - and then executed the CreateEvent action
+
+    ![Agent reasoning using skill](assets/1.6_18_AgentReasoningUsingSkill.png)
 
 1. After you completed the workflow process, once again the signed document will be uploaded to SharePoint.
-
-    ![Signed document uploaded to SharePoint](assets/1.6_14_DocumentUploadedInSharePoint.png)
 
 ## ✅ Mission Accomplished {#mission-accomplished}
 
