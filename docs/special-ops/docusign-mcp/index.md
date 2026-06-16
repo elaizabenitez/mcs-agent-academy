@@ -1520,7 +1520,7 @@ Let's begin!
 
     ![Enter credentials](assets/1.5_07_LogIn.png)
 
-   You may be asked to verify your identity which is in the form of an SMS code or phone call. Once you complete the verification, continue to the next step.
+   You may be asked to verify your identity via an SMS code or a phone call. Once you complete the verification, continue to the next step.
 
 1. The connection is created and you'll see a green tick icon. Select **Next**.
 
