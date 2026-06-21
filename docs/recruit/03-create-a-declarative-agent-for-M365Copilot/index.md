@@ -73,7 +73,7 @@ There are more capabilities offered for declarative agents built in Microsoft Co
 > [!TIP]
 >
 > - To learn more about Agent Builder in Microsoft 365 Copilot, head to [Copilot Developer Camp: Lab MAB1 - Build your first agent](https://microsoft.github.io/copilot-camp/pages/make/agent-builder/01-first-agent/)
-> - For pro-development of extending a declarative agent beyond Agent Builder in Microsoft 365 Copilot, head to [Copilot Developer Camp: Lab MAB1 - Build your first agent](https://microsoft.github.io/copilot-camp/pages/extend-m365-copilot/)
+> - For pro-development of extending a declarative agent beyond Agent Builder in Microsoft 365 Copilot, head to [Copilot Developer Camp: Extend Microsoft 365 Copilot](https://microsoft.github.io/copilot-camp/pages/extend-m365-copilot/)
 
 ### Extending Microsoft 365 Copilot with declarative agents built in Copilot Studio
 
@@ -269,6 +269,8 @@ Let's begin!
     ```
 
     ![Add suggested prompts for agent](assets/3.1_08_SuggestedPrompts.png)
+
+1. Select **Save**.
 
 1. Great! We're now done entering details for our agents so let's proceed with creating our declarative agent. Select **Create**.
 
