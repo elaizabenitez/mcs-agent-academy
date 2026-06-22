@@ -1815,3 +1815,5 @@ Once your submission is reviewed, you will receive an email from Global AI Commu
 📖 [Microsoft MCP server certification](https://learn.microsoft.com/en-us/microsoft-copilot-studio/mcp-certification)
 
 📖 [Docusign MCP Demo connector (Microsoft Learn)](https://learn.microsoft.com/en-us/connectors/docusignmcpdemo/)
+
+<analytics-tag section="special-ops" mission="docusign-mcp" />
