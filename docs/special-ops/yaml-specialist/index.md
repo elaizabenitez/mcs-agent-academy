@@ -26,6 +26,9 @@ last-edited-date: 2026-04-02
 
 Welcome, agent. Your mission - should you choose to accept it - is to become a **YAML Specialist** - an operative who builds and extends Microsoft Copilot Studio agents entirely from Visual Studio Code using the Copilot Studio YAML agent definition language. You're going deep cover: cloning agents, writing topics in raw YAML, wiring up knowledge sources, and pushing changes back to the cloud - all from your local command center. With GitHub Copilot as your handler, you'll iterate at speeds the web UI can't match.
 
+> [!IMPORTANT] This mission mixes VS Code with the classic Copilot Studio experience
+> Microsoft Copilot Studio is rolling out a new authoring experience. The screenshots and web UI steps in this mission use the **classic experience**. If your screen looks different, turn off **New Experience** in the upper-right corner before you continue. Refreshed instructions for the new experience are planned, but this mission remains valid in the classic experience.
+
 **Mission objectives:**
 
 - Set up the Copilot Studio VS Code extension and clone an agent to your local machine

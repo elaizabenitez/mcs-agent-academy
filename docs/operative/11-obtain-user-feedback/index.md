@@ -36,6 +36,9 @@ Your assignment, should you choose to accept it, is **Operation Echo**, a critic
 
 *Listen, analyze, adapt* - this is the operative's creed when processing user intelligence.
 
+> [!NOTE]
+> If your Copilot Studio screen looks different from the screenshots in this lesson, turn off **New Experience** in the upper-right corner to switch back to the **classic experience** used here.
+
 ## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:

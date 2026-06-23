@@ -25,6 +25,9 @@ last-edited-date: 2026-03-17
 
 Welcome, agent. Your mission — should you choose to accept it — is **Operation Open Book**: connect the **Microsoft Learn Docs MCP Server** to a Copilot Studio agent, giving it real-time access to the entire Microsoft Learn documentation library. No more agents responding with outdated or hallucinated product information. Your agent is about to become the most well-read operative in the field. 📖🎯
 
+> [!IMPORTANT] This mission currently uses the classic Copilot Studio experience
+> Microsoft Copilot Studio is rolling out a new authoring experience. The screenshots and steps in this mission use the **classic experience**. If your screen looks different, turn off **New Experience** in the upper-right corner before you continue. Refreshed instructions for the new experience are planned, but this mission remains valid in the classic experience.
+
 ## 🔧 What You'll Build {#what-youll-build}
 
 - A Copilot Studio agent connected to the hosted Microsoft Learn Docs MCP Server

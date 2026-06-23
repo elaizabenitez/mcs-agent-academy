@@ -29,6 +29,9 @@ Welcome, Operative. Your previous missions have shown you the power of prompts. 
 
 Your assignment, should you choose to accept it, is **Operation Doc Assembly**. In this operation you'll be creating a word document of interview prep questions from a prompt and calling that from an agent.
 
+> [!NOTE]
+> If your Copilot Studio screen looks different from the screenshots in this lesson, turn off **New Experience** in the upper-right corner to switch back to the **classic experience** used here.
+
 ## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:

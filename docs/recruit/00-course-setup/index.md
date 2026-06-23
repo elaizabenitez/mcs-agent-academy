@@ -32,6 +32,9 @@ Before you can start building your first AI agent, you need to establish your **
 
 This briefing outlines the systems, access credentials, and setup steps required to successfully operate in the Microsoft 365 ecosystem.
 
+> [!IMPORTANT] This lesson uses the classic Copilot Studio experience
+> Microsoft Copilot Studio is rolling out a new authoring experience. The screenshots and steps in this lesson use the **classic experience**. If your screen looks different, turn off **New Experience** in the upper-right corner before you continue. Refreshed instructions for the new experience are planned, but this lesson remains valid in the classic experience.
+
 ## 🔎 Objectives {#objectives}
 
 Your mission includes:

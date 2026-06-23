@@ -36,6 +36,9 @@ Your agent—equipped with a clear mission, powerful tools, and access to key kn
 
 Let’s launch your agent into action.
 
+> [!NOTE]
+> If your Copilot Studio screen looks different from the screenshots in this lesson, turn off **New Experience** in the upper-right corner to switch back to the **classic experience** used here.
+
 ## 🔎 Objectives {#objectives}
 
 📖 This lesson covers:

@@ -36,6 +36,9 @@ Rather than building from scratch, pre-built agents (also called **agent templat
 
 In this mission, you’ll deploy the **Safe Travels** agent—an agent that helps your users prepare for business travel, understand company policies, and streamline planning.
 
+> [!NOTE]
+> If your Copilot Studio screen looks different from the screenshots in this lesson, turn off **New Experience** in the upper-right corner to switch back to the **classic experience** used here.
+
 ## 🧭 Objectives {#objectives}
 
 Your goals for this mission are:

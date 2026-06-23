@@ -34,6 +34,9 @@ With Event Triggers, you'll train your agent to monitor external systems like Sh
 
 Success means building agents that initiate value - not just respond to it.
 
+> [!NOTE]
+> If your Copilot Studio screen looks different from the screenshots in this lesson, turn off **New Experience** in the upper-right corner to switch back to the **classic experience** used here.
+
 ## 🔎 Objectives {#objectives}
 
 📖 This lesson will cover:

@@ -34,6 +34,9 @@ This mission will transform you from a text-only agent builder into a **multimod
 
 The techniques you learn here will be essential for the advanced data grounding operations in your next mission.
 
+> [!NOTE]
+> If your Copilot Studio screen looks different from the screenshots in this lesson, turn off **New Experience** in the upper-right corner to switch back to the **classic experience** used here.
+
 ## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:

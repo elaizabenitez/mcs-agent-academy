@@ -35,6 +35,9 @@ Every agent needs a well-structured home. That’s what a Power Platform solutio
 
 Let’s pack up.
 
+> [!NOTE]
+> If your Copilot Studio screen looks different from the screenshots in this lesson, turn off **New Experience** in the upper-right corner to switch back to the **classic experience** used here.
+
 ## 🔎 Objectives {#objectives}
 
 In this mission, you’ll learn:

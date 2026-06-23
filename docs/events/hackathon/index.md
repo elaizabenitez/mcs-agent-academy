@@ -6,75 +6,45 @@ lastUpdated: false
 
 ![Hackathon Banner](./assets/AgentAcademyHackBanner.png)
 
-**May 12 – June 2, 2026** · $12,000 in total prizes · Open to everyone
+**Event dates:** May 12 – June 2, 2026 · **Status:** Closed
 
-Apply what you've learned from Agent Academy to build real, working AI agents using Microsoft AI tools. Compete for prizes, earn recognition, and help shape the future of the Agent Academy curriculum.
+**Winners announced:** June 18, 2026
+
+Builders applied what they learned from Agent Academy to create real, working AI agents using Microsoft AI tools, compete for prizes, and help shape future Agent Academy curriculum updates.
+
+::: tip ✅ Hackathon Completed
+The 2026 Agent Academy Hackathon has ended, and winners have been announced.
+
+- [Read the winners announcement](https://devblogs.microsoft.com/powerplatform/agent-academy-hackathon-winners/)
+- [Browse all submissions](https://github.com/microsoft/agent-academy/issues?q=is%3Aissue%20label%3Ahack-submission)
+:::
 
 ::: info 📜 Official Rules & Important Links
 
 - [Official Contest Rules](OFFICIAL_RULES.md)
-- [Submit Your Project](https://aka.ms/agent-academy-hack/submit)
-- [Browse Submissions](https://github.com/microsoft/agent-academy/issues?q=is%3Aissue+label%3Asubmission)
+- [Browse Submissions](https://github.com/microsoft/agent-academy/issues?q=is%3Aissue%20label%3Ahack-submission)
+- [Winners Announcement](https://devblogs.microsoft.com/powerplatform/agent-academy-hackathon-winners/)
 - [Disclaimer](DISCLAMER.md)
 :::
 
-## Kickoff Video
+## Kickoff Recording
 
-Watch the kickoff video to learn more about the hack and prizes!
+Watch the kickoff recording from the start of the hackathon.
 
 <!-- markdownlint-disable-next-line MD033 -->
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ijG4VPBn-Ls?si=1MMq-Ego4SppG_F2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## How it works
+## How it worked
 
-The hackathon is built around the Agent Academy learning tracks. You learn, build, and submit and the best agents win.
+The hackathon was built around the Agent Academy learning tracks: learn, build, and submit.
 
-1. **📚 Learn** — Work through the [Agent Academy curriculum](https://aka.ms/agent-academy)
-1. **📺 Watch** — Attend [Agent Academy Live](https://aka.ms/agent-academy-live) on May 12 for the official kickoff
-1. **🔨 Build** — Apply what you learned to build a real, working agent
-1. **📤 Submit** — Submit your demo video and architecture by June 2
-1. **🔄 Improve** — Your feedback and insights help shape the curriculum going forward
+1. **📚 Learn** — Builders worked through the [Agent Academy curriculum](https://aka.ms/agent-academy)
+1. **📺 Watch** — The community joined [Agent Academy Live](https://aka.ms/agent-academy-live) on May 12 for kickoff
+1. **🔨 Build** — Participants built real, working agents
+1. **📤 Submit** — Teams submitted demo videos and architecture overviews by June 2
+1. **🔄 Improve** — Feedback and project quality help shape future curriculum updates
 
-## How to enter
-
-### Step 1 — Build and submit your project
-
-Build your agent and submit your hackathon entry.
-
-<action-button href="https://aka.ms/agent-academy-hack/submit" label="Submit Your Entry" icon="👉" />
-
-Your submission must include:
-
-- A working agent using at least one Microsoft product (Copilot Studio, M365 Copilot, or Copilot Cowork)
-- A demo video no longer than **5 minutes** showcasing your solution
-- An architecture overview showing components, data flow, and integration points
-- A clear use case with a defined target user
-
-### Step 2 — Complete the Badge Validation Form
-
-If you would like to receive a badge for participation in the hack, this is a separate required step. The submission form and the badge form are two different things.
-
-<action-button href="https://aka.ms/agent-academy-hack/badge" label="Complete the Badge Validation Form" icon="👉" />
-
-This form:
-
-- Links your submission to badge issuance
-- Ensures we have the correct email to send your badge to
-- Allows you to agree to receiving a badge through the Global AI Community
-
-### Step 3 — Create a Global AI Community account
-
-Badges are issued through the Global AI Community platform. You need an account to receive yours.
-
-<action-button href="https://globalai.community/auth/login" label="Log in or create an account at globalai.community" icon="👉" />
-
-::: warning Important
-Create your account using the **same email address** you used in your submission and badge validation form. If the emails don't match, your badge cannot be delivered — even with a valid submission.
-
-**No account = no badge issuance.**
-:::
-
-## Entry period
+## Entry period (closed)
 
 **Start:** May 12, 2026 at 12:00 AM Pacific Time
 **End:** June 2, 2026 at 11:59 PM Pacific Time
@@ -88,7 +58,7 @@ Create your account using the **same email address** you used in your submission
 
 ## Tracks
 
-Choose the track that matches your experience level. You may submit **one entry per track** and **two entries total**.
+Participants chose the track matching their experience level. Submissions were limited to **one entry per track** and **two entries total**.
 
 ::: details 🟢 Recruit
 **For:** First-time agent builders or projects based on the Recruit learning path.
@@ -122,7 +92,7 @@ Build a solution that uses Copilot Cowork to complete or support delegated work.
 [View Cowork Collective →](/cowork-collective/)
 :::
 
-## Entry requirements
+## Entry requirements (archive)
 
 - Must be your own original work
 - Cannot have won another contest
@@ -131,6 +101,8 @@ Build a solution that uses Copilot Cowork to complete or support delegated work.
 - Must not contain obscene, offensive, violent, defamatory, or illegal content
 
 ## Judging criteria
+
+All qualifying entries were scored using the weighted criteria below.
 
 | Criteria | Weight |
 |----------|--------|
@@ -141,7 +113,7 @@ Build a solution that uses Copilot Cowork to complete or support delegated work.
 | **Reliability & Safety** — Solid patterns, avoids obvious pitfalls | 10% |
 | **Use Case Impact** — Most impactful use case | 10% |
 
-Winners selected within **14 days** of the entry period close. In case of a tie, an additional judge breaks it. **All judge decisions are final.**
+Winners were selected within **14 days** of the entry period close. In case of a tie, an additional judge breaks it. **All judge decisions are final.**
 
 ## Prizes
 
@@ -167,8 +139,53 @@ Winners selected within **14 days** of the entry period close. In case of a tie,
 | 🔨 Build Window | May 12 – June 2, 2026 |
 | 📤 Submission Deadline | June 2, 2026 at 11:59 PM PT |
 | ⚖️ Judging Window | Within 14 days of close |
+| 📰 Winners Publicly Announced | June 18, 2026 |
 | 🏆 Winners Notified | Within 7 days of judging |
 | 🎁 Prizes Delivered | Within 28 days of selection |
+
+## 2026 Winners
+
+Winners were announced in the official post: [Meet the Agent Academy Hackathon Winners](https://devblogs.microsoft.com/powerplatform/agent-academy-hackathon-winners/).
+
+### Recruit Track
+
+| Place | Project | Builder | Links |
+|-------|---------|---------|-------|
+| 🥇 First | Performance Development Assistant | [@Ateina](https://github.com/Ateina) | [Repo](https://github.com/Ateina/performance-development-assistant) · [Demo](https://www.youtube.com/watch?v=B5tggLGtnqE&feature=youtu.be) |
+| 🥈 Second | Meeting Tasks Agent | [@hutten358](https://github.com/hutten358) | [Repo](https://github.com/hutten358/MeetingTasksAgent) · [Demo](https://www.youtube.com/watch?v=hPbb13zlAx4) |
+| 🥉 Third | Conversational AI Agent for Vehicle Insurance Self-Service Portal | [@anupamac985](https://github.com/anupamac985) | [Repo](https://github.com/anupamac985/Copilot-Insurance-Agent) · [Demo](https://www.youtube.com/watch?v=Jjh_LOcwxMc) |
+
+### Operative Track
+
+| Place | Project | Builder | Links |
+|-------|---------|---------|-------|
+| 🥇 First | VendorGuard — Autonomous Vendor Contract Compliance System | [@experienceswithanishh](https://github.com/experienceswithanishh) | [Repo](https://github.com/experienceswithanishh/vendorguard-copilot-studio) · [Demo](https://drive.google.com/file/d/17-Y30hhX2ZBwbPJKSK8ul-wcw1BraLUy/view) |
+| 🥈 Second | Engagement Hub | [@leila-marspooner](https://github.com/leila-marspooner) | [Repo](https://github.com/leila-marspooner/engagement-hub-agent) · [Demo](https://www.youtube.com/watch?v=Tzn6pMMoEAw&feature=youtu.be) |
+| 🥉 Third | FrostByte AI Advisor | [@JBearCode](https://github.com/JBearCode) | [Repo](https://github.com/JBearCode/frostbyte-ai-advisor) · [Demo](https://www.youtube.com/watch?v=qGv_eDVM1gQ&feature=youtu.be) |
+
+### Special Ops Track
+
+| Place | Project | Builder | Links |
+|-------|---------|---------|-------|
+| 🥇 First | SprintForge | [@Shrusti13](https://github.com/Shrusti13) | [Repo](https://github.com/Shrusti13/sprint-forge) · [Demo](https://github.com/Shrusti13/sprint-forge/blob/main/demo/SprintForgeDemoShort%201.mp4) |
+| 🥈 Second | Calamity Agent — Weather & Fire Alerts | [@tagr](https://github.com/tagr) | [Repo](https://github.com/tagr/CalamityCopilotService) · [Demo](https://www.youtube.com/watch?v=cT6Jr3xLX-I) |
+| 🥉 Third | Warehouse Picking Agent | [@granjan7779](https://github.com/granjan7779) | [Repo](https://github.com/granjan7779/rj-mcp-d365-server-2) · [Demo](https://www.youtube.com/watch?v=XXu6rNQmKAo&feature=youtu.be) |
+
+### Cowork Collective Track
+
+| Place | Project | Builder | Links |
+|-------|---------|---------|-------|
+| 🥇 First | Copilot Cowork Autonomous ITSM Platform on Microsoft 365 | [@ninihen1](https://github.com/ninihen1) | [Repo](https://github.com/ninihen1/copilot-studio-itsm-agent) · [Demo](https://www.youtube.com/watch?v=4oKlENZGW5M&feature=youtu.be) |
+| 🥈 Second | Client Kick-off Skill | [@appieschot](https://github.com/appieschot) | [Repo](https://github.com/appieschot/client-kickoff-skill) · [Demo](https://www.youtube.com/watch?v=66Od72cKvM0&feature=youtu.be) |
+| 🥉 Third | Team Yaito — A Multi-Agent PMO on Copilot Cowork | [@Jirawat-Yaito](https://github.com/Jirawat-Yaito) | [Repo](https://github.com/Jirawat-Yaito/team-yaito-pmo) · [Demo](https://www.youtube.com/watch?v=Sri1vZOrUAw) |
+
+::: info Highlight
+VendorGuard (Operative Track 🥇) was noted as the single highest-scoring entry across the entire hackathon.
+:::
+
+## Thank You
+
+Congratulations to all winners, and thank you to everyone who participated in the 2026 Agent Academy Hackathon.
 
 ## Legal
 

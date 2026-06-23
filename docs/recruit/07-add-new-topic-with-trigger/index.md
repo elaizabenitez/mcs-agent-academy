@@ -32,6 +32,9 @@ Youâ€™ve built an agent. It listens, learns, and answers questions - but now itâ
 
 With Topics and Triggers, your agent can:
 
+> [!NOTE]
+> If your Copilot Studio screen looks different from the screenshots in this lesson, turn off **New Experience** in the upper-right corner to switch back to the **classic experience** used here.
+
 - Recognize intent
 
 - Route conversations with logic
