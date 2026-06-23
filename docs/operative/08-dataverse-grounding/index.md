@@ -33,6 +33,9 @@ In this mission, you'll enhance your custom prompt with **Dataverse grounding** 
 
 Your mission: integrate real-time job role and evaluation criteria data into your resume analysis workflow, creating a self-updating system that stays current with your organization's hiring requirements.
 
+> [!NOTE]
+> If your Copilot Studio screen looks different from the screenshots in this lesson, turn off **New Experience** in the upper-right corner to switch back to the **classic experience** used here.
+
 ## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:

@@ -14,6 +14,9 @@ Your advanced mission—should you choose to accept it—is to master the art of
 
 This intensive training takes you beyond basic agent creation into the sophisticated world of **multi-agent orchestration**: from hiring automation to AI safety, you'll learn to build, coordinate, and deploy intelligent agent ecosystems using real-world enterprise scenarios.
 
+> [!IMPORTANT]
+> Microsoft Copilot Studio is rolling out a new authoring experience. The lessons in this course currently use the **classic experience** shown in the screenshots and steps. If your screen looks different, turn off **New Experience** in the upper-right corner to follow along. Refreshed lessons for the new experience are planned, but the current material remains valid in the classic experience.
+
 ## 🎯 Mission Objective {#mission-objective}
 
 By completing the Agent Academy Operative program, you'll be able to:

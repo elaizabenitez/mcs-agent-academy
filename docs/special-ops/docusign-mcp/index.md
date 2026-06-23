@@ -1443,7 +1443,7 @@ Before we move onto building the agent in Microsoft Copilot Studio, it's best pr
 ### Prerequisites
 
 - **New solution**: As a best practice, create a new solution for this agent before you create the agent itself. Refer to our [Recruit mission](../../recruit/04-creating-a-solution/index.md) to learn how to create a solution.
-- **Use new UI experience**: The Docusign MCP Demo tool is available in the new UI experience, which we will use in this lab and the next one.
+- **Use the new experience**: This lab intentionally uses the new Copilot Studio experience because the Docusign MCP Demo tool is available there. If you switched back to the classic experience for other Agent Academy lessons, turn **New Experience** back on before continuing.
 
     ![Toggle new experience](assets/1.5_00_ToggleNewExperience.png)
 

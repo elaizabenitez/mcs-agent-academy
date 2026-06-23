@@ -33,6 +33,9 @@ Your mission, should you choose to accept it, is to deploy and configure a compr
 
 This initial deployment establishes the solution that you'll enhance throughout the Agent Academy Operative course. Consider this your base of operations - the foundation upon which you'll build an entire network of specialized agents in subsequent missions.
 
+> [!IMPORTANT] This lesson uses the classic Copilot Studio experience
+> Microsoft Copilot Studio is rolling out a new authoring experience. The screenshots and steps in this lesson use the **classic experience**. If your screen looks different, turn off **New Experience** in the upper-right corner before you continue. Refreshed instructions for the new experience are planned, but this lesson remains valid in the classic experience.
+
 ## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:

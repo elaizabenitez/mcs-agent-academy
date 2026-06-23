@@ -6,6 +6,9 @@ lastUpdated: false
 
 Special Ops are focused, one-off missions designed to sharpen your skills in a specific area.
 
+> [!IMPORTANT]
+> Many Special Ops missions that use Microsoft Copilot Studio currently follow the **classic experience** shown in their screenshots and steps. If your screen looks different, turn off **New Experience** in the upper-right corner before you continue. Newer or refreshed missions will call out when they intentionally use the new experience instead.
+
 If you want comprehensive, end-to-end training, explore the Courses sections first. Courses are full programs where each mission builds on the previous one, helping you develop deep, connected understanding over time.
 
 Special Ops missions are different by design: they are standalone labs for targeted learning. A mission might focus on a specific tool (for example, MCP), a practical integration pattern, or an industry-specific scenario.

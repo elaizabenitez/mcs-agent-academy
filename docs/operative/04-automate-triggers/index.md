@@ -36,6 +36,9 @@ Think of it as upgrading from agents that _answer questions_ to agents that _ant
 
 Welcome to the world where automation meets intelligence.
 
+> [!NOTE]
+> If your Copilot Studio screen looks different from the screenshots in this lesson, turn off **New Experience** in the upper-right corner to switch back to the **classic experience** used here.
+
 ## 🔎 Objectives {#objectives}
 
 In this mission, you'll learn:

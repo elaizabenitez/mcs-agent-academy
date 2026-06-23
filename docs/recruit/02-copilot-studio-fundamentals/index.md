@@ -32,6 +32,9 @@ Welcome, Recruit. This mission will equip you with foundational intel to underst
 
 Before building your first agent, you need to understand the four key components that make up every custom AI agent: Knowledge, Tools, Topics, and Instructions. You’ll also learn how these elements work together in the Copilot Studio orchestrator.
 
+> [!IMPORTANT] This course currently follows the classic experience
+> Microsoft Copilot Studio is rolling out a new authoring experience. The concepts in this mission still apply, but the course screenshots and click paths use the **classic experience**. If later lessons look different on your screen, turn off **New Experience** in the upper-right corner to follow along.
+
 ## 🔎 Objectives {#objectives}
 
 In this mission, you will:

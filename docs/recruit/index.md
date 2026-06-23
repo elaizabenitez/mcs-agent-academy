@@ -14,6 +14,9 @@ Your mission—should you choose to accept it—is to master the art of building
 
 This hands-on training is your entry point into the **world of agents**: from grounded prompts to Adaptive Cards and agent flows, you'll learn how to build, scale, and deploy intelligent agents using real-world tools and use cases.
 
+> [!IMPORTANT]
+> Microsoft Copilot Studio is rolling out a new authoring experience. The lessons in this course currently use the **classic experience** shown in the screenshots and steps. If your screen looks different, turn off **New Experience** in the upper-right corner to follow along. Refreshed lessons for the new experience are planned, but the current material remains valid in the classic experience.
+
 ## 🎯 Mission Objective {#mission-objective}
 
 By completing the Agent Academy, you'll be able to:

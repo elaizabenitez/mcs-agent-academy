@@ -31,6 +31,9 @@ Your agent can now converse with users and provide information, but true operati
 
 By mission's end, you'll have created an end-to-end device request automation that captures user input through an adaptive card, retrieves data from SharePoint, sends notifications to managers via email, and provides seamless user feedback - all orchestrated by your agent through intelligent workflow automation.
 
+> [!NOTE]
+> If your Copilot Studio screen looks different from the screenshots in this lesson, turn off **New Experience** in the upper-right corner to switch back to the **classic experience** used here.
+
 ## 🔎 Objectives {#objectives}
 
 In this mission, you’ll learn:

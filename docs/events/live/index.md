@@ -6,15 +6,15 @@ lastUpdated: false
 
 ![Banner](./assets/banner.png)
 
-**May 12, 2026 | 8:30 AM – 2:30 PM PT**
-Virtual, Free
+**Event date:** May 12, 2026 | 8:30 AM – 2:30 PM PT
+**Status:** Completed (Virtual, Free)
 
-Agent Academy Live is a one-day virtual conference designed to help developers, builders, and architects move from their first agent to production-ready solutions. Join Microsoft engineers, product leaders, MVPs, and community members for practical sessions on real agent patterns, governance, and architecture.
+Agent Academy Live was a one-day virtual conference focused on helping developers, builders, and architects move from their first agent to production-ready solutions. The event featured Microsoft engineers, product leaders, MVPs, and community members sharing practical sessions on real agent patterns, governance, and architecture.
 
-<action-button href="https://aka.ms/agent-academy-live/register" label="Register Now" icon="👉" />
+<action-button href="https://www.youtube.com/watch?v=KHJfukNZFUg" label="Watch Replay" icon="▶️" />
 
-::: tip Can't Attend Live?
-Register to get the recordings even if you can’t attend live.
+::: tip Replay Available
+The full event replay is available below, along with individual session videos.
 :::
 
 ## 📺 Watch The Replay
@@ -33,7 +33,7 @@ Register to get the recordings even if you can’t attend live.
 
 ## 🎬 Videos
 
-Looking for something specific? Check out the sessions.
+Looking for something specific? Browse individual sessions from the event.
 
 <!-- markdownlint-disable-next-line MD033 -->
 <VideoLibrary track="agent-academy-live" />
@@ -42,7 +42,7 @@ Looking for something specific? Check out the sessions.
 
 ## Who Should Attend
 
-This event is built for:
+This event was built for:
 
 - Builders and developers working with Microsoft Copilot Studio
 - Solution architects designing AI-powered systems
@@ -52,7 +52,7 @@ This event is built for:
 
 ## 📅 Schedule
 
-All times Pacific Time (PT).
+All times are Pacific Time (PT). The schedule below is archived for reference.
 
 <!-- markdownlint-disable-next-line MD033 -->
 <SessionSchedule />
@@ -60,27 +60,26 @@ All times Pacific Time (PT).
 ## Get Ready
 
 New to Copilot Studio agents? Get up to speed with the
-[Agent Academy curriculum](https://aka.ms/agent-academy) before the event
-so you can hit the ground running.
+[Agent Academy curriculum](https://aka.ms/agent-academy) and then use the
+replay and session videos to learn at your own pace.
 
-## Register
+## Continue Learning
 
-Space is free and open to everyone. Register on Microsoft Reactor to
-get the stream link, event reminders, and links to watch on demand.
+Use these resources to keep building after the event.
 
 <action-button
-  href="https://aka.ms/agent-academy-live/register"
-  label="Register Now"
+  href="https://aka.ms/agent-academy"
+  label="Start Agent Academy"
   icon="👉"
 />
 
-## Hack
+## Hackathon Recap
 
-Keep learning after the event and win prizes by participating in our
-Agent Academy Hackathon May 12th - June 2nd!
+The Agent Academy Hackathon that followed this event has now concluded.
+See winners and submissions on the hackathon page.
 
 <action-button
-  href="https://aka.ms/agent-academy-hack"
-  label="Learn More"
+  href="/events/hackathon/"
+  label="View Hackathon Winners"
   icon="👉"
 />
