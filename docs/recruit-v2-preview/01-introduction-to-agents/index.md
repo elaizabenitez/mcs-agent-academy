@@ -3,8 +3,8 @@ prev:
   text: 'Course Setup'
   link: '/recruit-v2-preview/00-course-setup'
 next:
-  text: 'Copilot Studio Fundamentals'
-  link: '/recruit-v2-preview/02-copilot-studio-fundamentals'
+  text: 'Declarative Agents in M365 Copilot'
+  link: '/recruit-v2-preview/02-declarative-agent'
 ---
 
 # 🚨 Mission 01: Introduction to Agents
@@ -32,7 +32,7 @@ In this mission, you'll learn:
 1. How Retrieval-Augmented Generation (RAG) keeps answers grounded and current
 1. What **orchestration** is, and why generative orchestration replaced the topic tree
 1. The **agency spectrum** from reactive to autonomous, and the control boundaries that keep it safe
-1. The two paths you'll build in this course: **declarative** vs. **custom-engine** agents
+1. The two paths you'll build in this course: **declarative** vs. **custom** agents
 
 Let's decode it.
 
@@ -104,14 +104,14 @@ Because autonomy cuts both ways, you set **control boundaries**, deciding, per a
 > [!TIP] Opinion: design the boundaries before the capabilities
 > The failure mode of agentic AI isn't a wrong sentence, it's a confident wrong *action* against a real system. Decide what the agent is allowed to do **before** you wire up what it *can* do.
 
-## Two Paths You'll Build: Declarative vs. Custom-Engine
+## Two Paths You'll Build: Declarative vs. Custom
 
 This course builds both kinds of agent, so meet them now as *concepts* (the how-to is in later missions):
 
-- **Declarative agent** — You *declare* the agent's instructions, knowledge, and actions, and it runs on **Microsoft 365 Copilot's** orchestrator and models. Fastest path to value; lives natively inside M365 Copilot. *(You'll build one in Mission 03.)*
-- **Custom-engine agent** — You bring your own orchestration, model choice, tools, and channels, built in **Copilot Studio**. More control and flexibility; deploy to M365 and beyond. *(You'll build one starting in Mission 05.)*
+- **Declarative agent** — You *declare* the agent's instructions, knowledge, and actions, and it runs on **Microsoft 365 Copilot's** orchestrator and models. Fastest path to value; lives natively inside M365 Copilot. *(You'll build one in Mission 02.)*
+- **Custom agent** — You bring your own orchestration, model choice, tools, and channels, built in **Copilot Studio**. More control and flexibility; deploy to M365 and beyond. *(You'll move into this immediately after Mission 02.)*
 
-The rule of thumb: **start declarative; reach for a custom engine when you need control the M365 Copilot orchestrator doesn't give you** like a specific model, custom logic, or a channel outside Microsoft 365.
+The rule of thumb: **start declarative; reach for a custom agent when you need control the M365 Copilot orchestrator doesn't give you** like a specific model, custom logic, or a channel outside Microsoft 365.
 
 ## Why This Lands in Microsoft 365
 
@@ -126,9 +126,9 @@ You now have the mental model. You can explain:
 1. **RAG = the memory** — grounded, cited answers from *your* data (the knowledge layer).
 1. **Generative orchestration = the director** — a planner that composes tools and knowledge instead of a hand-drawn topic tree.
 1. **Agency is a spectrum** — set control boundaries before capabilities.
-1. **Declarative vs. custom-engine** — start simple, escalate to control when needed.
+1. **Declarative vs. custom** — start simple, escalate to control when needed.
 
-Next up, you'll open the toolbox: the [**fundamentals of Copilot Studio**](../02-copilot-studio-fundamentals/index.md), where every concept here becomes a building block you can click.
+Next up, you'll build your first **declarative agent in Microsoft 365 Copilot** and use **Copy to** to bring it into **Copilot Studio** as your launch point for the rest of the custom-agent track: [**Mission 02: Declarative Agent**](../02-declarative-agent/index.md).
 
 Stay sharp, Recruit - your AI journey is just beginning!
 

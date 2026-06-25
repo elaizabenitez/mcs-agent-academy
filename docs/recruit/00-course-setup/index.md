@@ -61,7 +61,7 @@ Before you begin, ensure you have:
 ::: tip 🚀 Want a more guided experience?
 Prefer not to deal with environment setup, trial licenses, or expiring tenants? The **Microsoft Power Up Program** offers the Agent Academy Recruit path on their platform with a pre-configured environment, office hours, and discussion forums if you get stuck. A great option whether you're an individual learner or running this as a team. Same curriculum, just on Power Up's platform.
 
-[👉 Try it on Power Up](https://aka.ms/powerup)
+[👉 Try it on Power Up](https://powerup.microsoft.com/syllabus/?courseid=0920742c-1e2e-f111-88b4-000d3abd51f3&referral=CSAAL2)
 :::
 
 ## 🧪 Trial Environment Setup (Steps 1–4) {#trial-environment-setup-steps-14}

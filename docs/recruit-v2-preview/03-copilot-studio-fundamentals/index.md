@@ -1,13 +1,13 @@
 ---
 prev:
-  text: 'Introduction to Agents'
-  link: '/recruit-v2-preview/01-introduction-to-agents'
+  text: 'Declarative Agents in M365 Copilot'
+  link: '/recruit-v2-preview/02-declarative-agent'
 next:
-  text: 'Create a Declarative Agent'
-  link: '/recruit/03-create-a-declarative-agent-for-M365Copilot'
+  text: 'Creating a Solution'
+  link: '/recruit/04-creating-a-solution/'
 ---
 
-# 🛠️ Mission 02: Copilot Studio Fundamentals
+# 🛠️ Mission 03: Copilot Studio Fundamentals
 
 ## 🕵️‍♂️ CODENAME: `OPERATION TOOLBOX`
 
@@ -17,7 +17,7 @@ next:
 
 In [Mission 01](../01-introduction-to-agents/index.md) you learned *how to think about agents*. This mission is the **toolbox**: what Microsoft Copilot Studio actually is, the parts you assemble into an agent in the **new agent experience**, and, just as important, **how to decide** which part to reach for.
 
-We're not building yet. The hands-on missions (03 onward) do that. This is the map you'll keep open in another tab while you build, so the panels in the product line up with the ideas in your head.
+We're not building yet. The hands-on missions (04 onward) do that. This is the map you'll keep open in another tab while you build, so the panels in the product line up with the ideas in your head.
 
 > [!IMPORTANT] This module describes the **new agent experience**
 > Copilot Studio now has a redesigned authoring experience built on an **enhanced orchestration runtime**. It runs *alongside* the older "classic" experience, and you pick which one to use when you create an agent, but they don't convert to each other. **This course uses the new experience**, so if a screenshot online still shows **topics, flows, and branching**, that's classic. The building blocks below are the new ones.
@@ -27,7 +27,7 @@ We're not building yet. The hands-on missions (03 onward) do that. This is the m
 By the end of this mission you'll be able to:
 
 1. Place Copilot Studio in the wider Microsoft AI stack
-1. Choose between a **declarative** and a **custom-engine** agent with confidence
+1. Choose between a **declarative** and a **custom** agent with confidence
 1. Name the **building blocks** of the new agent experience and what each is for
 1. Understand how **Work IQ**, **Skills**, and **Workflows** change what an agent can do
 1. Know when to use a **workflow** instead of letting the orchestrator decide
@@ -71,20 +71,20 @@ This is the one most people get confused about. **Agent Builder** lives *inside*
 
 Go the *other* direction, past Copilot Studio to **Microsoft Foundry**, when you need **code-first control over orchestration**, your own **model and inference stack**, sub-100ms latency, an **Azure data boundary**, or you're really building a **custom AI application** rather than a business agent. Foundry can still publish to Microsoft 365 Copilot, so "pro-code" doesn't mean "leaves the ecosystem." *(Beyond Foundry, we also have the pure-SDK options like Microsoft Agent Framework and the M365 Agents SDK. Use these when you want full code ownership; that's a deeper dive than this mission.)*
 
-## Second Decision: Declarative vs. Custom-Engine Agent
+## Second Decision: Declarative vs. Custom Agent
 
 Once you've chosen **Copilot Studio** as your surface, the next fork is *which kind of agent* to build. This course builds **both**, so here's the opinionated guidance:
 
-| | **Declarative agent** | **Custom-engine agent** |
+| | **Declarative agent** | **Custom agent** |
 |---|---|---|
 | **Runs on** | Microsoft 365 Copilot's orchestrator & models | Copilot Studio's orchestrator, with your model choice |
 | **You provide** | Instructions, knowledge, skills, actions | Everything—model, knowledge, tools, skills, workflows, channels |
 | **Lives in** | Microsoft 365 Copilot (Teams, M365 Copilot) | Wherever you publish—Teams, web, voice, custom apps |
 | **Best when** | You want fast value inside M365, on Microsoft's stack | You need control: a specific model, custom logic, or a non-M365 channel |
-| **In this course** | Mission 03 | Missions 05–09 |
+| **In this course** | Mission 02 | Mission 03 onward |
 
 > [!TIP] Rule of thumb
-> **Start declarative.** Reach for a custom engine the moment you hit a wall the M365 Copilot orchestrator can't scale like needing a particular model, bespoke business logic, autonomous behavior, or a channel outside Microsoft 365. Don't pay for the flexibility until you need it.
+> **Start declarative.** Reach for a custom agent the moment you hit a wall the M365 Copilot orchestrator can't scale like needing a particular model, bespoke business logic, autonomous behavior, or a channel outside Microsoft 365. Don't pay for the flexibility until you need it.
 
 ## The Anatomy of an Agent
 
@@ -171,13 +171,13 @@ You don't need to master this yet, but know the shape because "it works in my en
 You've toured the Copilot Studio HQ. You can now:
 
 1. **Place Copilot Studio** — an agent platform that extends M365 Copilot, lives in Power Platform, and reaches into Azure AI.
-1. **Make the first decision** — declarative for speed inside M365; custom-engine for control.
+1. **Make the first decision** — declarative for speed inside M365; custom for control.
 1. **Name the new building blocks** — instructions, knowledge (incl. **Work IQ** & memory), **tools & skills**, **workflows**, model, and connected agents.
 1. **Steer the orchestrator** — via instructions and well-named capabilities, using Preview, Evaluate, and Monitor.
 1. **Choose deterministic vs. generative** — workflows for the repeatable, orchestration for the ambiguous.
 1. **See the whole lifecycle** — channels, solutions, identity, governance, licensing.
 
-Time to stop reading and start building. Next: [**Create a Declarative Agent for Microsoft 365 Copilot**](/recruit/03-create-a-declarative-agent-for-M365Copilot/).
+Time to stop reading and start building. Next: [**Creating a Solution**](/recruit/04-creating-a-solution/).
 
 Stay sharp, Recruit - the toolbox is yours now.
 
@@ -192,4 +192,4 @@ Stay sharp, Recruit - the toolbox is yours now.
 🔗 [Connect an agent to Teams & Microsoft 365 Copilot](https://learn.microsoft.com/en-us/microsoft-copilot-studio/publication-add-bot-to-microsoft-teams)
 
 <!-- markdownlint-disable-next-line MD033 -->
-<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit/02-copilot-studio-fundamentals" alt="Analytics" />
+<img src="https://m365-visitor-stats.azurewebsites.net/agent-academy/recruit-v2-preview/03-copilot-studio-fundamentals" alt="Analytics" />
