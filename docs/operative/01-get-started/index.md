@@ -82,6 +82,12 @@ This scenario is ideal for organizations looking to modernize their recruitment 
 
 In this hands-on lab, you'll establish the foundation for your hiring automation system. You'll begin by importing a pre-configured solution that contains all the necessary Dataverse tables and data structure for managing candidates, job positions, and hiring workflows. Next, you'll populate these tables with sample data that will support your learning throughout this module and provide realistic scenarios for testing. Finally, you'll create the Hiring Agent in Copilot Studio, setting up the basic conversational interface that will serve as the cornerstone for all the other features you'll add in future missions.
 
+::: tip 🚀 Want a more guided experience?
+Prefer not to deal with environment setup, trial licenses, or expiring tenants? The **Microsoft Power Up Program** offers the Agent Academy Recruit path on their platform with a pre-configured environment, office hours, and discussion forums if you get stuck. A great option whether you're an individual learner or running this as a team. Same curriculum, just on Power Up's platform.
+
+[👉 Try it on Power Up](https://powerup.microsoft.com/syllabus/?courseid=5407034e-fd4e-f111-bec7-000d3abd5010&referral=CSAAL3)
+:::
+
 ### 🧪 Lab 1.1 - Import solution {#lab-11-import-solution}
 
 1. Go to **[Copilot Studio](https://copilotstudio.microsoft.com)**
