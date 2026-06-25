@@ -324,7 +324,7 @@ Well done, Agent Maker. A tidy digital footprint is the first step toward operab
 
 This is the end of **Lab 04 - Creating a Solution**, select the link below to move to the next lesson. Your solution created in this lab will be used in the next lesson's lab.
 
-⏭️ [Move to **Get started quickly with pre-built agents** lesson](../05-using-prebuilt-agents/index.md)
+⏭️ [Move to **Understanding Licensing** lesson](../10-understanding-licensing/index.md)
 
 ## 📚 Tactical Resources {#tactical-resources}
 

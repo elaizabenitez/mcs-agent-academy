@@ -185,7 +185,7 @@ Before you launch an agent:
 
 ## 🧭 Licensing Across the Agent Stack {#licensing-across-the-agent-stack}
 
-Everything above is the **Copilot Studio** cost model. But back in [Mission 02](../02-copilot-studio-fundamentals/index.md) you learned that Copilot Studio isn't the only place to build an agent—**Agent Builder** (inside Microsoft 365 Copilot) and **Microsoft Foundry** sit on either side of it. Each bills differently, and that difference is a **real decision factor**, not an afterthought. Pick the wrong surface and you either overpay or hit a wall.
+Everything above is the **Copilot Studio** cost model. But back in [Mission 03](../03-copilot-studio-fundamentals/index.md) you learned that Copilot Studio isn't the only place to build an agent—**Agent Builder** (inside Microsoft 365 Copilot) and **Microsoft Foundry** sit on either side of it. Each bills differently, and that difference is a **real decision factor**, not an afterthought. Pick the wrong surface and you either overpay or hit a wall.
 
 > [!INFO] The one-sentence version
 > **Agent Builder** rides on the Microsoft 365 Copilot license you may already own; **Copilot Studio** runs on Copilot Credits (capacity packs, PAYGO, or prepaid); **Foundry** is billed as raw Azure consumption.
