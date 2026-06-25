@@ -36,7 +36,7 @@ last-edited-date: [YYYY-MM-DD]
 
 ## 🎥 Walkthrough Video (Optional)
 
-[Video link text](https://example.com/video-link)
+_Add optional video thumbnail/link when available._
 
 ## 🎯 Mission Brief
 
