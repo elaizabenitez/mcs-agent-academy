@@ -68,6 +68,8 @@ This academy is broken into progressive lessons—each one designed as a field m
 > [!TIP] 🚀 The next generation of Recruit is coming!
 > We're actively working on a new Recruit path showing how to build an agent with the **new experience** in Copilot Studio. [Get a sneak peek here →](/recruit-v2-preview/)
 
+<!-- markdownlint-disable-next-line MD028 -->
+
 > [!NOTE]
 > ✅ Completing this curriculum earns you the **Recruit** badge.  
 > 🔓 **Operative** and **Commander** will be unlocked in future phases.
