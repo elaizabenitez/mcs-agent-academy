@@ -3,6 +3,8 @@ lastUpdated: false
 ---
 # Cowork Collective
 
+![Copilot Studio Agent Academy Cowork Collective](../images/banner_cowork.png)
+
 Cowork Collective missions are hands-on labs focused on **Copilot Cowork** which provides a new way to delegate work to Copilot so it can take action on your behalf across your Microsoft 365 environment.
 
 > [!NOTE]

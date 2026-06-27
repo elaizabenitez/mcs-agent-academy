@@ -4,6 +4,8 @@ lastUpdated: false
 
 # Special Ops
 
+![Copilot Studio Agent Academy Special Ops](../images/banner_specialops.png)
+
 Special Ops are focused, one-off missions designed to sharpen your skills in a specific area.
 
 > [!IMPORTANT]

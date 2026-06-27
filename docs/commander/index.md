@@ -4,8 +4,8 @@ lastUpdated: false
 
 # Commander (Coming soon)
 
-This course is still very top secret. This will be unlocked in the future! 🔓
+![Copilot Studio Agent Academy Commander](../images/banner_commander.png)
 
-![Commander](../images/mcs-agent-academy-commander-badge.png){ width="300" }
+This course is still very top secret. This will be unlocked in the future! 🔓
 
 <analytics-tag section="commander" />
