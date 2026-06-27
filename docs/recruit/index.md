@@ -46,6 +46,9 @@ This course is ideal for:
 
 ## 🧭 Curriculum Overview {#curriculum-overview}
 
+> [!TIP] 🚀 The next generation of Recruit is coming!
+> We're actively working on a new Recruit path showing how to build an agent with the **new experience** in Copilot Studio. [Get a sneak peek here →](/recruit-v2-preview/)
+
 This academy is broken into progressive lessons—each one designed as a field mission to level up your agent-building skills.
 
 | Lesson | Title | Mission Briefing |
@@ -64,9 +67,6 @@ This academy is broken into progressive lessons—each one designed as a field m
 | `11` | 📢 [Publish Your Agent](./11-publish-your-agent/index.md) | Deploy your agent to Microsoft Teams and Microsoft 365 Copilot |
 | `12` | 🪪 [Understanding Licensing](./12-understanding-licensing/index.md) | Learn how licensing and billing works with Copilot Studio |
 | `13` | 🚨 [Securing Your Recruit Badge](./course-completion-badges-recruit/index.md) | Claim your badge and mark your achievement! |
-
-> [!TIP] 🚀 The next generation of Recruit is coming!
-> We're actively working on a new Recruit path showing how to build an agent with the **new experience** in Copilot Studio. [Get a sneak peek here →](/recruit-v2-preview/)
 
 <!-- markdownlint-disable-next-line MD028 -->
 
