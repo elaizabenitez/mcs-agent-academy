@@ -179,7 +179,7 @@ You've toured the Copilot Studio HQ. You can now:
 
 Time to stop reading and start building. Next: [**Creating a Solution**](/recruit/04-creating-a-solution/).
 
-Stay sharp, Recruit - the toolbox is yours now.
+Stay sharp, Recruit, the toolbox is yours now.
 
 ## 📚 Tactical Resources
 

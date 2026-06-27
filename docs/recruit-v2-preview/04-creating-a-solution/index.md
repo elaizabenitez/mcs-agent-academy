@@ -23,20 +23,16 @@ last-edited-date: 2026-06-10
 
 <mission-meta />
 
-🎥 **Watch the Walkthrough**
-
-[![Create a solution video thumbnail](./assets/video-thumbnail.jpg)](https://www.youtube.com/watch?v=1iATbkgfcpU "Watch the walkthrough on YouTube")
-
 ## 🎯 Mission Brief {#mission-brief}
 
-Agent Maker, welcome to your next tactical operation. In this mission, you’ll learn to assemble a Solution - the official deployment vehicle for your IT Helpdesk Agent built with Microsoft Copilot Studio. Think of this as creating a digital briefcase that holds your agent and it's artifacts.
+Welcome back, Recruit. In this mission, you’ll learn to assemble a Solution - the official deployment vehicle for your IT Helpdesk Agent built with Microsoft Copilot Studio. Think of this as creating a digital briefcase that holds your agent and it's artifacts.
 
 Every agent needs a well-structured home. That’s what a Power Platform solution provides - order, portability, and readiness for production.
 
 Let’s pack up.
 
 > [!NOTE]
-> If your Copilot Studio screen looks different from the screenshots in this lesson, turn off **New Experience** in the upper-right corner to switch back to the **classic experience** used here.
+> If your Copilot Studio screen looks different from the screenshots in this lesson, toggle on **New Experience** in the upper-right corner to switch back to the **new experience** used here.
 
 ## 🔎 Objectives {#objectives}
 
@@ -80,9 +76,6 @@ There are two types of solutions:
 ## 🤔 Why _should_ I use a Solution for my agent? {#why-should-i-use-a-solution-for-my-agent}
 
 Think of Solutions as a _toolbox_. When you need to fix or build something (an agent) in a different location (environment), you gather all the necessary tools (components) and put them in your toolbox (Solution). You can then carry this toolbox to the new location (environment) and use the tools (components) to complete your work, or add new tools (components) to customize your agent or project you're building.
-
-> [!NOTE] Elaiza, your friendly cloud advocate popping in here 🙋🏻‍♀️ to share some words:
-> We have a saying in New Zealand, "Be a tidy Kiwi!" which is a call to action for New Zealanders 🥝 to take responsibility for their environment by disposing of litter properly and keeping public spaces clean. We can use the same context for agents by keeping everything related to your agent organized and portable, and it'll help you maintain a tidy environment.
 
 It's good practice to create an agent in a dedicated solution in your source (developer) environment. Here's why solutions are valuable:
 
