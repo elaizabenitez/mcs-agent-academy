@@ -102,9 +102,10 @@ High-quality descriptions are essential for generative orchestration. Your agent
 - **List Actions or Considerations**: Use bulleted or numbered lists for clarity when describing multiple features or steps.
 - **Test for Overlap**: If multiple topics have similar descriptions, your agent may invoke them all. Test and revise to prevent overlap.
 
-!!! example "Good and Bad Description Examples"
-    **Good:** This topic provides weather information for any location in the world for the next day. It provides the temperature. It doesn't get the current weather for today.
-    **Bad:** This tool can answer questions. *(Too vague)*
+> [!NOTE] Good and Bad Description Examples
+> **Good:** This topic provides weather information for any location in the world for the next day. It provides the temperature. It doesn't get the current weather for today.
+>
+> **Bad:** This tool can answer questions. *(Too vague)*
 
 ## 🛠️ Best Practices for Instructions and Descriptions {#best-practices-for-instructions-and-descriptions}
 
@@ -140,7 +141,8 @@ Next up is [Mission 03](../03-multi-agent/index.md): Building multi-agent system
 
 ## 📚 Tactical Resources {#tactical-resources}
 
-📖 [Microsoft Copilot Studio - Authoring Instructions](https://learn.microsoft.com/microsoft-copilot-studio/authoring-instructions)  
+📖 [Microsoft Copilot Studio - Authoring Instructions](https://learn.microsoft.com/microsoft-copilot-studio/authoring-instructions)
+  
 📖 [Guidance for Generative Mode](https://learn.microsoft.com/microsoft-copilot-studio/guidance/generative-mode-guidance)
 
 <analytics-tag section="operative" mission="02-agent-instructions" />
