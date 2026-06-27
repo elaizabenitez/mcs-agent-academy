@@ -27,6 +27,12 @@ last-edited-date: [YYYY-MM-DD]
 
 ## 🕵️ CODENAME: OPERATION AUTOMATION POWERHOUSE
 
+> **Operation Time Window:** [~XX minutes - format: intel only / hands-on / mixed]
+
+## 🎥 Walkthrough Video (Optional)
+
+_Add optional video thumbnail/link when available._
+
 ## 🎯 Mission Brief
 
 > [!TIP]
