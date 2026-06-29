@@ -1,10 +1,10 @@
 ---
 prev:
-  text: Deploy a Declarative Agent for Microsoft 365 Copilot
-  link: /recruit/03-create-a-declarative-agent-for-M365Copilot
+  text: Copilot Studio fundamentals
+  link: /recruit/03-copilot-studio-fundamentals
 next:
-  text: Using a Pre-Built Agent
-  link: /recruit/05-using-prebuilt-agents
+  text: Build a custom engine agent
+  link: /recruit/05-build-a-custom-agent
 short-description: Package your agent into a reusable solution for environment management
 difficulty: 1
 codename: OPERATION CTRL-ALT-PACKAGE
@@ -16,7 +16,7 @@ products:
   - power-platform
 industries:
   - it
-created-date: 2025-08-20
+created-date: 2026-06-28
 last-edited-date: 2026-06-10
 ---
 # 🚨 Mission 04: Creating a Solution for Your Agent {#mission-04-creating-a-solution-for-your-agent}
@@ -25,7 +25,7 @@ last-edited-date: 2026-06-10
 
 ## 🎯 Mission Brief {#mission-brief}
 
-Welcome back, Recruit. In this mission, you’ll learn to assemble a Solution - the official deployment vehicle for your IT Helpdesk Agent built with Microsoft Copilot Studio. Think of this as creating a digital briefcase that holds your agent and it's artifacts.
+Welcome back, Recruit. In this mission, you’ll learn to assemble a Solution, the official deployment vehicle for your IT Helpdesk Agent built with Microsoft Copilot Studio. Think of this as creating a digital briefcase that holds your agent and it's artifacts.
 
 Every agent needs a well-structured home. That’s what a Power Platform solution provides - order, portability, and readiness for production.
 
@@ -317,7 +317,7 @@ Well done, Agent Maker. A tidy digital footprint is the first step toward operab
 
 This is the end of **Lab 04 - Creating a Solution**, select the link below to move to the next lesson. Your solution created in this lab will be used in the next lesson's lab.
 
-⏭️ [Move to **Understanding Licensing** lesson](../10-understanding-licensing/index.md)
+⏭️ [Move to **Build a custom engine agent** lesson](../05-build-a-custom-agent/index.md)
 
 ## 📚 Tactical Resources {#tactical-resources}
 

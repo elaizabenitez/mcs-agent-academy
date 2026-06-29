@@ -14,30 +14,23 @@ tags:
 products: [microsoft-365, copilot, sharepoint]
 industries:
   - it
-created-date: 2025-08-20
+created-date: 2026-06-28
 last-edited-date: 2026-06-28
 ---
 
-# 🚨 Mission 02: Declarative Agents {#mission-02-declarative-agents}
+# 🚨 Mission 02: Build a Declarative Agent {#mission-02-declarative-agents}
 
 <mission-meta />
 
-> [!NOTE]
-> This lab has been updated for the new Copilot experience (2026-06-28).
-> The original lab built the agent in Copilot Studio. The new experience lets you
-> build, test, and deploy a **declarative agent** directly inside **Microsoft 365
-> Copilot** using **Agent Builder** — no Copilot Studio required. See `evaluation.md`
-> for a full comparison.
-
 ## 🎯 Mission Brief {#mission-brief}
 
-Welcome back, Agent Maker. This mission puts you in the command seat of the fastest way to ship an agent: building one with natural language right where your users already work — **Microsoft 365 Copilot**.
+Welcome back, Agent. This mission puts you in the command seat of the fastest way to ship an agent: building one with natural language right where your users already work — **Microsoft 365 Copilot**.
 
-This isn't another chatbot. You're building a **declarative agent** - one that reuses the Copilot model and orchestrator, layered with your own instructions, knowledge, and starter prompts. You describe what you want, Agent Builder drafts it, you test it, and you deploy it. Minutes, not hours.
+This isn't another chatbot. You're building a **declarative agent**, one that uses the Copilot orchestrator, layered with your own instructions, knowledge, and starter prompts. You describe what you want, Agent Builder drafts it, you test it, and you deploy it in minutes, not hours.
 
-Your weapon of choice? Natural language. Your mission? Design, test, and deploy an IT helpdesk agent that answers questions using Microsoft Support — all inside Copilot.
+Your weapon of choice? Natural language. Your mission? Design, test, and deploy an IT helpdesk agent that answers questions using internal and external knowledge sources, all inside Copilot.
 
-In the next mission (**04 - Creating a Custom Engine Agent**) you'll export this same agent to Copilot Studio to customize it further. For now, let's forge it.
+In the next mission (**04 - Creating a Custom Engine Agent**) you'll export this same agent to Copilot Studio to customize it further. Let's get started.
 
 ## 🔎 Objectives {#objectives}
 
@@ -51,7 +44,7 @@ In this mission, you'll learn:
 
 ## 🤔 What is a declarative agent? {#what-is-a-declarative-agent}
 
-A **declarative agent** runs on the existing Microsoft 365 Copilot infrastructure — the same large language model and orchestrator — and you simply *declare* how it should behave. You provide:
+A **declarative agent** runs on the existing Microsoft 365 Copilot infrastructure using the same large language model and orchestrator that M365 Copilot uses and you simply *declare* how it should behave. You provide:
 
 - **Instructions** - the agent's purpose, tone, and rules.
 - **Knowledge** - websites, files, or SharePoint sources it can reference.
@@ -60,13 +53,13 @@ A **declarative agent** runs on the existing Microsoft 365 Copilot infrastructur
 You don't manage a model, orchestration, or hosting. That makes declarative agents the quickest way to put a focused assistant in front of users, right inside Teams, Outlook, and Word via Microsoft 365 Copilot.
 
 > [!TIP]
-> When you outgrow a declarative agent and need custom tools, topics, multi-source orchestration, or your own model, you graduate to a **custom engine agent** in Copilot Studio. That's exactly what Mission 04 covers — by exporting this agent.
+> When you outgrow a declarative agent and need custom tools, topics, multi-agent orchestration, or your own model, you graduate to a **custom engine agent** in Copilot Studio. That's exactly what Mission 04 covers by exporting this agent.
 
 ## 🧪 Lab 02: Build a declarative agent in Microsoft 365 Copilot {#lab-02-build-a-declarative-agent}
 
 ### ✨ Use case {#use-case}
 
-**As an** employee, **I want to** get quick and accurate help from an IT helpdesk agent for issues like device problems and network troubleshooting, **so that I can** stay productive and resolve technical issues without delays.
+**As an** employee, **I want to** get quick and accurate help from an IT helpdesk agent for issues like device problems and network troubleshooting, so that I can stay productive and resolve technical issues without delays.
 
 ### ✨ Prerequisites {#prerequisites}
 
@@ -91,7 +84,7 @@ You don't manage a model, orchestration, or hosting. That makes declarative agen
 
     ![Describe the agent](./assets/step-02-annotated.png)
 
-1. Press **Enter** to submit. Agent Builder drafts your agent — generating a name, description, instructions, and suggested prompts. This takes a few moments.
+1. Press **Enter** to submit. Agent Builder drafts your agent by generating a name, description, instructions, and suggested prompts. This takes a few moments.
 
     > [!WARNING] AI-generated content varies
     > The drafted name, description, instructions, and starter prompts can differ each session.
@@ -104,7 +97,7 @@ You don't manage a model, orchestration, or hosting. That makes declarative agen
     Contoso Helpdesk Agent
     ```
 
-    Review the AI-generated instructions below the name — you'll see the role, tone, and numbered troubleshooting flow reflected from your description.
+    Review the AI-generated instructions below the name. You'll see the role, tone, and numbered troubleshooting flow reflected from your description.
 
     ![Set agent name and review instructions](./assets/step-03-annotated.png)
 
@@ -122,7 +115,7 @@ You don't manage a model, orchestration, or hosting. That makes declarative agen
 
 ### 2.5 Create and deploy the agent
 
-1. Select **Create**. Agent Builder saves the agent and confirms it was created. It's **private** to you by default — select **Share** to deploy it to teammates, or **Go to agent** to start using it.
+1. Select **Create**. Agent Builder saves the agent and confirms it was created. It's **private** to you by default but you can select **Share** to deploy it to teammates, or **Go to agent** to start using it.
 
     ![Agent created and deploy options](./assets/step-05-annotated.png)
 
@@ -138,7 +131,7 @@ You don't manage a model, orchestration, or hosting. That makes declarative agen
     How can I check the warranty status of my Surface?
     ```
 
-1. The agent responds with numbered, step-by-step instructions and references a [https://support.microsoft.com](https://support.microsoft.com) link — exactly as defined in the instructions, grounded in your website knowledge source.
+1. The agent responds with numbered, step-by-step instructions and references a [https://support.microsoft.com](https://support.microsoft.com) link, exactly as defined in the instructions, grounded in your website knowledge source.
 
     ![Agent test response with support links](./assets/step-07-annotated.png)
 
@@ -146,9 +139,9 @@ You don't manage a model, orchestration, or hosting. That makes declarative agen
 
 ## ✅ Mission Complete {#mission-complete}
 
-You forged a declarative agent that speaks your language, references Microsoft Support, and lives right inside Copilot. In **Mission 04 - Creating a Custom Engine Agent**, you'll export this agent into Copilot Studio to add tools, custom knowledge, and deeper orchestration.
+You forged a declarative agent that speaks your language, references Microsoft Support, and lives right inside Copilot. In **Mission 04: Creating a Custom Engine Agent**, you'll export this agent into Copilot Studio to add tools, custom knowledge, and deeper orchestration. But before that, you need to learn more about Copilot Studio.
 
-⏭️ [Move to the **Creating a Custom Engine Agent** mission](../04-creating-a-custom-engine-agent/index.md)
+⏭️ [Move to the **Copilot Studio Fundamentals** mission](../03-copilot-studio-fundamentals/index.md)
 
 ## 📚 Tactical Resources {#tactical-resources}
 
