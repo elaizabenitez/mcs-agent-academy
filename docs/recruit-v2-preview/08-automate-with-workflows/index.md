@@ -145,7 +145,7 @@ For the full list, see the [functions reference guide](https://learn.microsoft.c
 
 1. **SharePoint list** — the **Devices** SharePoint list from [Lesson 00 - Course Setup](../00-course-setup/index.md#step-4-create-new-sharepoint-site). If you haven't set it up, head back and create it.
 
-1. **Contoso Helpdesk Agent** — the agent created in [Lesson 06](../06-create-agent-from-conversation/index.md).
+1. **Contoso Helpdesk Agent** — the agent created in [Lesson 06](../06-add-a-skill/index.md).
 
 1. The **New experience** toggle (upper-right) is turned **on**.
 
@@ -476,7 +476,7 @@ This is the new-experience equivalent of the classic "event trigger" lab — but
       ```
 
    > [!IMPORTANT]
-   > In the people-picker (token) mode, the **Author** person token can serialize to an empty value at runtime — the run then fails with **`To Field cannot be null or empty`**. Binding **To** with the explicit expression `triggerOutputs()?['body/Author/Email']` returns the submitter's email address as a plain string and resolves reliably. (See the [evaluation notes](./evaluation.md) for the full root-cause analysis.)
+   > In the people-picker (token) mode, the **Author** person token can serialize to an empty value at runtime — the run then fails with **`To Field cannot be null or empty`**. Binding **To** with the explicit expression `triggerOutputs()?['body/Author/Email']` returns the submitter's email address as a plain string and resolves reliably.
 
 1. Build the **Body** as **HTML**, reusing the Lab 09 technique. On the body toolbar, select **More formatting options (⋯) → Edit HTML source**, then enter the following — replacing each `@{…}` placeholder by leaving the editor's generated trigger tokens in place, or by selecting **Visual editor** afterward and inserting the matching tokens:
 
@@ -550,7 +550,7 @@ Congratulations! 👏🏻 You've built **two** automations in the **new Workflow
 
 Together they show the two halves of the new experience: workflows your agent calls **on demand**, and workflows that act **autonomously** on real-world events.
 
-⏭️ [Move to **Publish your agent** lesson](../11-publish-your-agent/index.md)
+⏭️ [Move to **Publish your agent** lesson](../09-publish-your-agent/index.md)
 
 ## 📚 Tactical Resources {#tactical-resources}
 
