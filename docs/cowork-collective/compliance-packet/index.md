@@ -205,14 +205,14 @@ After the three documents are complete, Copilot Cowork will present the leadersh
     ```
 
     > [!NOTE]
-    > If anything needs changing, select **Reject** and tell Copilot Cowork what to fix
+    > If anything needs changing, select **Cancel** and tell Copilot Cowork what to fix
 
 1. Copilot Cowork will draft a new email inline with the files attached that you can review before sending. Review the email then press **Send**
 
     ![Review Email](./assets/send-email-card.png)
 
     > [!WARNING]
-    > Once you **Approve**, the email is sent from your Outlook account to those recipients. For testing, please instruct Copilot Cowork to send the email to yourself so you can see the output and test that it was sent.
+    > Once you press **Send**, the email is sent from your Outlook account to those recipients. For testing, please instruct Copilot Cowork to send the email to yourself so you can see the output and test that it was sent.
 
 1. You'll get a confirmation in Copilot Cowork that the email was sent
 
