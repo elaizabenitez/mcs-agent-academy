@@ -32,7 +32,7 @@ last-edited-date: 2026-06-28
 
 ## 🎯 Mission Brief {#mission-brief}
 
-You’ve built an agent. It listens, learns, and answers questions - but now it’s time to get tactical and let it **take action**. In this mission you’ll connect your agent to a real data source so it can fetch live information and do something useful with it.
+You’ve built an agent. It listens, learns, and answers questions, but now it’s time to get tactical and let it **take action**. In this mission you’ll connect your agent to a real data source so it can fetch live information and do something useful with it.
 
 In the new Copilot Studio experience, that capability comes from **tools**. You’ll add a **SharePoint - Get items** tool so your IT Helpdesk Agent can pull available devices straight from a SharePoint list.
 
@@ -60,9 +60,9 @@ The new experience removes the **Topics** tab entirely. Instead of you wiring co
 
 The model reads your instructions, understands the user’s intent, and decides which tool to call and when. No trigger phrases, no node graphs. This is simpler, faster to build, and far more flexible - which is exactly why we’re focusing on **tools** in this mission.
 
-## 🔧 What is a tool? {#what-is-a-tool}
+## 🔧 What are tools {#what-are-tools}
 
-A **tool** gives your agent the ability to do something beyond chatting - call an API, run a process, or read and write business data. Think of tools as "action blocks" that give your agent superpowers.
+Tools gives your agent the ability to do something beyond chatting like call an API or MCP Server, run a process, or read and write business data. Think of tools as "action blocks" that give your agent superpowers.
 
 Tools can come from several places:
 

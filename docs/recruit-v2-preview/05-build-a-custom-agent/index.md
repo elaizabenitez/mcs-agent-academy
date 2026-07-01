@@ -33,11 +33,11 @@ last-edited-date: 2026-06-28
 
 ## 🎯 Mission Brief {#mission-brief}
 
-Welcome back, Agent. In this mission, you will not create an agent from scratch.
+Welcome back, Agent. In this mission, we'll take the declarative agent you built in Agent Builder in Mission 2 and bring it into Copilot Studio to make it a custom agent.
 
-Instead, you will take the declarative agent you already built, use **Copy to** to move it into Copilot Studio as a **custom engine agent**, verify what carried over (instructions and knowledge), add it to your solution, and test it.
+We'll use the out-of-the-box copy to functionality to bring it over and verify what carried over from the original agent, including instructions and knowledge, add it to your solution, and test it.
 
-This gives you a clean transition point so future missions can extend the same agent with advanced capabilities.
+This gives you a clean transition point so future missions can extend the same agent with more advanced capabilities.
 
 ## 🔎 Objectives {#objectives}
 
@@ -50,7 +50,7 @@ In this mission, you'll learn:
 
 ## 🧠 Why this transition matters {#why-this-transition-matters}
 
-Your declarative agent is a great starting point, but custom engine agents in Copilot Studio give you a broader authoring surface for enterprise scenarios.
+Your declarative agent is a great starting point, but custom agents in Copilot Studio give you a broader authoring surface for enterprise scenarios.
 
 By transitioning now, you can:
 
@@ -81,7 +81,10 @@ Before starting this lab, make sure you have:
 
 ### 5.1 Open your existing declarative agent
 
-1. Go to **Microsoft 365 Copilot** and open the declarative agent you created in Lesson 03.
+1. Go to **Microsoft 365 Copilot**, locate the Contoso Help Desk Agent you created in Module 2. Select the **three dots ..** next to it and choose **Edit**
+
+   ![Edit agent](./assets/6.1_00_edit.png)
+
 1. Confirm the agent still has your expected identity and behavior:
 
    - Name
@@ -92,13 +95,22 @@ Before starting this lab, make sure you have:
 1. Run one quick test prompt so you have a baseline response to compare later.
 
 > [!TIP]
-> Save one representative response from your declarative agent before you copy it. You will compare this to your custom engine agent test in step 5.5.
+> Save one representative response from your declarative agent before you copy it. You will compare this to your custom agent test in step 5.5.
 
 ### 5.2 Use **Copy to** to move it into Copilot Studio
 
-1. In your declarative agent, select **Copy to**.
-1. Choose **Copilot Studio** as the destination.
-1. Confirm the target environment (the same environment used in this course).
+1. In your agent, select the **three dots ...** in the upper right hand corner and select **Copy to Copilot Studio**.
+
+   ![Copy to](./assets/6.1_01_copyto.png)
+
+1. Choose the **Get started** button in the pop up.
+
+   ![Get started](./assets/6.1._02_GetStarted.png)
+
+1. Choose the target environment to move the agent to (the same developer environment used in this course) and click **Continue**.
+
+   ![Continue](./assets/6.2_envselect.png)
+
 1. Complete the copy flow.
 
 After the operation completes, open the copied agent in Copilot Studio.

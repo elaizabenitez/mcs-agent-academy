@@ -11,7 +11,7 @@ next:
 
 ## 🕵️‍♂️ CODENAME: `OPERATION TOOLBOX`
 
-> **⏱️ Operation Time Window:** `~30 minutes – intel + a tour of HQ, no fieldwork yet`
+> **⏱️ Operation Time Window:** `~20 minutes – intel + a tour of HQ, no fieldwork yet`
 
 ## 🎯 Mission Brief
 
@@ -42,7 +42,7 @@ By the end of this mission you'll be able to:
 - It **reaches into Azure AI** — bring your own models and search/knowledge when you need them.
 
 > [!INFO] The repositioning that matters
-> Copilot Studio has shifted from "make a bot" to "build and govern a workforce of software actors." In the new experience you don't script conversations—you **describe** the agent, point it at knowledge, give it skills and tools, and let the orchestrator reason. The skills that pay off are **writing clear instructions and choosing the right capabilities**, not drawing dialog trees.
+> In the new experience you don't script conversations, you **describe** the agent, point it at knowledge, give it skills and tools, and let the orchestrator reason. The skills that pay off are **writing clear instructions and choosing the right capabilities**, not drawing dialog trees.
 
 ## First Decision: Which Build Surface?
 
@@ -62,7 +62,7 @@ Copilot Studio isn't the only place to build an agent in the Microsoft stack. Th
 
 ### Agent Builder: Copilot Studio's lightweight cousin
 
-This is the one most people get confused about. **Agent Builder** lives *inside* the Microsoft 365 Copilot app (in Copilot chat, Teams, microsoft365.com). It's part of the same Microsoft agent family and produces **declarative agents**, the same agent type Copilot Studio can build but it's deliberately **scoped to Microsoft 365 Copilot and only Microsoft 365 Copilot**. No separate portal, no code, no broad publishing: you describe an agent in natural language, point it at some SharePoint or Graph content, and it's live for you or your team in minutes. It runs on the **M365 Copilot orchestrator and foundation models**, and it's governed from the **M365 admin center**.
+This is the one most people get confused about. **Agent Builder** lives *inside* the Microsoft 365 Copilot app (in Copilot chat, Teams, microsoft365.com). It's part of the same Microsoft agent family and produces **declarative agents** that are scoped to Microsoft 365 Copilot and only Microsoft 365 Copilot. No separate portal, no code, no broad publishing: you describe an agent in natural language, point it at some public websites or Work IQ content, and it's live for you or your team in minutes. It runs on the **M365 Copilot orchestrator and foundation models**, and it's governed from the **M365 admin center**.
 
 > [!TIP] The graduation path is the whole point
 > Start in **Agent Builder** when the job is "a Q&A agent over our content, for our team." The moment you need **broad/external publishing, multi-step workflows, custom connectors, autonomous triggers, etc**, you **copy the agent into Copilot Studio**, its core configuration and instructions carry over, so you don't start from scratch.
