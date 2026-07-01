@@ -24,13 +24,13 @@ last-edited-date: 2026-06-28
 
 ## 🎯 Mission Brief {#mission-brief}
 
-Welcome back, Agent. This mission puts you in the command seat of the fastest way to ship an agent: building one with natural language right where your users already work — **Microsoft 365 Copilot**.
+Welcome back, Agent. This mission puts you in the command seat of the fastest way to ship an agent: building one with natural language right where your users already work in **Microsoft 365 Copilot**.
 
 This isn't another chatbot. You're building a **declarative agent**, one that uses the Copilot orchestrator, layered with your own instructions, knowledge, and starter prompts. You describe what you want, Agent Builder drafts it, you test it, and you deploy it in minutes, not hours.
 
 Your weapon of choice? Natural language. Your mission? Design, test, and deploy an IT helpdesk agent that answers questions using internal and external knowledge sources, all inside Copilot.
 
-In the next mission (**04 - Creating a Custom Engine Agent**) you'll export this same agent to Copilot Studio to customize it further. Let's get started.
+In future missions, you'll export this same agent to Copilot Studio to customize it further. Let's get started.
 
 ## 🔎 Objectives {#objectives}
 
@@ -59,12 +59,12 @@ You don't manage a model, orchestration, or hosting. That makes declarative agen
 
 ### ✨ Use case {#use-case}
 
-**As an** employee, **I want to** get quick and accurate help from an IT helpdesk agent for issues like device problems and network troubleshooting, so that I can stay productive and resolve technical issues without delays.
+As an employee, you want to get quick and accurate help from an IT helpdesk agent for issues like device problems and network troubleshooting, so that you can stay productive and resolve technical issues without delays.
 
 ### ✨ Prerequisites {#prerequisites}
 
 - A Microsoft 365 Copilot license
-- Access to [Microsoft 365 Copilot](https://m365.cloud.microsoft/chat) (the Copilot chat experience)
+- Access to [Microsoft 365 Copilot](https://m365.cloud.microsoft/chat)
 
 ### 2.1 Open Agent Builder
 

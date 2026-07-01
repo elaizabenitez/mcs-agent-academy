@@ -5,55 +5,68 @@ prev:
 next:
   text: 'Declarative Agents in M365 Copilot'
   link: '/recruit-v2-preview/02-declarative-agent'
+
 ---
 
 # 🚨 Mission 01: Introduction to Agents
 
 ## 🕵️‍♂️ CODENAME: `OPERATION AI AGENT DECODE`
 
-> **⏱️ Operation Time Window:** `~25 minutes – intel only, no fieldwork required`
-
-🎥 **Watch the Walkthrough**
-
-[![Introduction to Agents video thumbnail](./images/video-thumbnail.jpg)](https://www.youtube.com/watch?v=BhPz_zicUnM "Watch the walkthrough on YouTube")
+> **⏱️ Operation Time Window:** `~15 minutes – intel only, no fieldwork required`
 
 ## 🎯 Mission Brief
 
-Welcome, Recruit. This mission is about **how to think about agents**. We're not opening Copilot Studio yet. First you need the concepts, because the product only makes sense once you understand the ideas underneath it.
+Welcome, Recruit.
 
-And those ideas have moved. A couple years ago, "building a bot" meant building out a conversation tree. Today, an **agent** reasons about what you want, pulls from trusted data, and *takes action* and our job has shifted from scripting dialogue to setting goals, supplying capabilities, and defining boundaries. By the end of this mission you'll know what's actually different and why it matters.
+This mission is about **how to think about agents**.
+
+We aren't opening Copilot Studio just yet. Before you start building, you need the core concepts, because the product only really clicks once you understand the ideas behind it.
+
+And those ideas have changed.
+
+A couple of years ago, “building a bot” usually meant designing a conversation tree. You mapped out what the user might say, wrote scripted responses, and tried to predict every possible path.
+
+Today, an **agent** works differently. It can reason over what someone is trying to accomplish, use trusted data, choose from available tools, and take action.
+
+That means our job has changed too.
+
+We aren't just scripting dialogue anymore. We're setting goals, providing capabilities, grounding the agent in the right knowledge, and defining the boundaries it needs to operate safely and effectively.
+
+By the end of this mission, you will understand what makes agents different, why that shift matters, and how to start thinking like an agent builder.
+
 
 ## 🔎 Objectives
 
 In this mission, you'll learn:
 
-1. The difference between a chatbot, an assistant, and an **agent**
+1. The difference between a chatbot, an AI assistant, and an **agent**
 1. How Large Language Models (LLMs) act as an agent's "brain"
 1. How Retrieval-Augmented Generation (RAG) keeps answers grounded and current
 1. What **orchestration** is, and why generative orchestration replaced the topic tree
-1. The **agency spectrum** from reactive to autonomous, and the control boundaries that keep it safe
+1. The **agent spectrum** from reactive to autonomous, and the control boundaries that keep it safe
+1. The common Microsoft build surfaces for agents, from **no-code** to **pro-code**
 1. The two paths you'll build in this course: **declarative** vs. **custom** agents
 
 Let's decode it.
 
-## Chatbot vs. Assistant vs. Agent
+## Chatbot vs. AI Assistant vs. Agent
 
-These words get used interchangeably. They're not the same, and the distinction is the whole point of this course.
+These words often get used interchangeably but they're not the same.
 
 - **Chatbot** — Matches your phrase to a pre-written answer or a branch in a scripted flow. Predictable, but brittle: say it differently and it breaks.
-- **Assistant** — Uses an LLM to respond fluently to almost anything, but mostly *talks*. It answers; it doesn't reliably *do*.
-- **Agent** — Reasons about your goal, decides which **knowledge** to consult and which **tools** to use, executes a multi-step plan, and can act on a **trigger** without you typing anything at all.
+- **AI Assistant** — Uses an LLM to respond fluently to almost anything, but mostly helps through conversation. Some assistants can call tools (like agents, MCP servers, etc), but they usually do less planning, delegation, or autonomous follow-through than an agent.
+- **Agent** — Reasons about your goal, decides which **knowledge** to consult and which **tools** to use, and may execute a multi-step plan. Some agents can also act on a **trigger**, like a schedule, new email, or new record, without you typing anything at all.
 
 > [!INFO] The one-line definition
 > An **agent** is an LLM given a goal, a set of tools and knowledge, and the autonomy to decide how to use them within boundaries you set.
 
 ## The Brain: Large Language Models (LLMs)
 
-Every agent is built around an LLM which is a neural network trained on enormous amounts of text that predicts language one **token** at a time. A few concepts you'll lean on later:
+Modern agents are built around an LLM: a neural network trained on enormous amounts of text that predicts language one **token** at a time. A few concepts you'll lean on later:
 
-- **Tokens & context window** — Models read and write in tokens (word fragments). The **context window** is how much it can "hold in mind" at once. These context windows tend to be big today, but not infinite. Long conversations and large documents can get summarized or dropped.
-- **Instructions over prompts** — You don't just ask an agent a question; you give it standing **instructions** (its persona, rules, and how to behave). This is the single biggest lever on agent quality.
-- **Not all models are equal** — Some are fast and cheap for chat. **Reasoning models** add a deliberate "think before answering" step that makes them far better at planning multi-step work. Choosing the right model for the job is important.
+- **Tokens & context window** — Models read and write in tokens (word fragments). The **context window** is how much it can "hold in mind" at once. These context windows are often pretty large, but not infinite. Long conversations and large documents can get summarized or dropped if the context window gets too big.
+- **Instructions** — You don't just ask an agent a question; you give it standing **instructions** (its persona, rules, and how to behave). This is the single biggest lever on agent quality.
+- **Not all models are equal** — Some are fast and cheap for chat. **Reasoning models** are optimized for more complex, multi-step tasks where planning, analysis, and careful tool use matter. Choosing the right model for the job is important.
 
 > [!TIP] The autocomplete analogy
 > An LLM is a "super-smart autocomplete": it doesn't *understand* like a human, it predicts the next best token. That's why **clear instructions and good grounding matter more than clever phrasing** because you're steering a prediction engine, not briefing a colleague.
@@ -84,16 +97,16 @@ You no longer script the path. You supply good building blocks like clearly name
 > [!INFO] Your job changed
 > You've gone from **writing the script** to **defining the operating environment**. Agent quality now lives in the quality of your *instructions, tool names, and data boundaries*, not in how many conversation branches you drew. A vaguely described tool isn't bad documentation anymore; it's a bad instruction handed to the planner.
 
-## The Agency Spectrum
+## The Agent Spectrum
 
 It's tempting to sort agents into two bins: "conversational" and "autonomous." The better way to think of it is a **dial**. The same agent can answer a chat now and run a scheduled job later. What varies is *how much it decides on its own*.
 
-| | More **reactive** | More **autonomous** |
-|---|---|---|
-| **Starts from** | A user message | A trigger (schedule, new email, new record) |
-| **Good for** | Q&A, guided help, support | Multi-step jobs, monitoring, back-office automation |
-| **Human role** | In the conversation | Reviewing outcomes, approving high-stakes steps |
-| **Example** | Teams agent answering HR-policy questions | Agent that triages an inbox and drafts replies for review |
+|                 | More **reactive**                         | More **autonomous**                                       |
+| --------------- | ----------------------------------------- | --------------------------------------------------------- |
+| **Starts from** | A user message                            | A trigger (schedule, new email, new record)               |
+| **Good for**    | Q&A, guided help, support                 | Multi-step jobs, monitoring, back-office automation       |
+| **Human role**  | In the conversation                       | Reviewing outcomes, approving high-stakes steps           |
+| **Example**     | Teams agent answering HR-policy questions | Agent that triages an inbox and drafts replies for review |
 
 Because autonomy cuts both ways, you set **control boundaries**, deciding, per action, whether the agent can:
 
@@ -109,9 +122,35 @@ Because autonomy cuts both ways, you set **control boundaries**, deciding, per a
 This course builds both kinds of agent, so meet them now as *concepts* (the how-to is in later missions):
 
 - **Declarative agent** — You *declare* the agent's instructions, knowledge, and actions, and it runs on **Microsoft 365 Copilot's** orchestrator and models. Fastest path to value; lives natively inside M365 Copilot. *(You'll build one in Mission 02.)*
-- **Custom agent** — You bring your own orchestration, model choice, tools, and channels, built in **Copilot Studio**. More control and flexibility; deploy to M365 and beyond. *(You'll move into this immediately after Mission 02.)*
+- **Custom agent** — You configure the agent's instructions, knowledge, tools, triggers, topics, actions, and orchestration behavior. This gives you more control over the agent experience, business process integration, channels, governance, and how the agent handles work beyond a simple Microsoft 365 Copilot declarative agent. *(You'll move into this immediately after Mission 02.)*
 
-The rule of thumb: **start declarative; reach for a custom agent when you need control the M365 Copilot orchestrator doesn't give you** like a specific model, custom logic, or a channel outside Microsoft 365.
+> [!INFO] Pro-code note
+> For fully code-driven agents where you bring your own orchestrator, model choices, runtime, and deployment architecture, you move into custom engine agents, Microsoft 365 Agents SDK, Agent Framework, or Microsoft Foundry.
+
+The rule of thumb: **start declarative when you want the fastest path inside Microsoft 365 Copilot**. Move to **Copilot Studio** when you need more control over business logic, actions, topics, triggers, governance, or channels. Move to a **custom engine or pro-code path** when you need full control over orchestration, model choice, runtime, or architecture.
+
+## Where Agents Get Built
+
+There are **multiple ways to build agents**, and they sit across a spectrum from **no-code** to **pro-code**.
+
+- **Agent Builder in Microsoft 365 Copilot** — A simple, approachable starting point for creating agents right inside the Microsoft 365 experience. Good for quick experiments and lightweight productivity scenarios.
+- **Copilot Studio** — Microsoft's low-code platform for building business-ready agents with instructions, knowledge, actions, orchestration, and governance controls.
+- **Microsoft 365 Agents SDK + Agents Toolkit** — A pro-code path for developers who want to build agents in code and use Microsoft tooling to scaffold, test, and package them.
+- **Microsoft Foundry / Foundry Agent Service** — An advanced AI agent platform for teams that need deeper control over models, frameworks, hosting, tools, runtime, infrastructure, and custom AI application architecture.
+
+The simplest way to think about it is this: **Agent Builder** is a great starting point, **Copilot Studio** gives you more control without requiring a fully code-first approach, and the **SDK/toolkit** and **Foundry** paths are for teams that want deeper developer control.
+
+Now that you've seen the two agent types, you can map the tools to them more clearly: **Agent Builder** creates **declarative agents** for Microsoft 365 Copilot. **Copilot Studio** can create **declarative agents** and more advanced **custom agents**. **Microsoft 365 Agents SDK + Agents Toolkit** can support declarative agents and custom engine agents. **Microsoft Foundry / Foundry Agent Service** is typically used when teams need deeper control over models, frameworks, hosting, tools, runtime, or agent architecture.
+
+These also aren't the only tools available. There are more specialized options, like **Custom SharePoint Agents** for SharePoint-centric scenarios, **Microsoft Agent Framework** for fully code-driven agent and workflow development, and other ecosystem-specific frameworks.
+
+The important point is not memorizing every product. It's understanding that agent development spans **no-code, low-code, and pro-code approaches**, and each has strengths:
+
+- **No-code** tools help you get started fast and validate ideas quickly.
+- **Low-code** tools balance speed with more control, integration, and governance.
+- **Pro-code** tools give developers the deepest flexibility when they need custom architectures, advanced logic, or specialized deployment patterns.
+
+This course is focused on **building agents with Copilot Studio**. We'll go deeper into **what Copilot Studio is and how it works in Mission 03**, and we'll also touch on **Agent Builder** as a useful starting point for simpler scenarios and early experimentation.
 
 ## Why This Lands in Microsoft 365
 
@@ -121,20 +160,24 @@ Concepts are universal, but in this course the agents you build **meet people wh
 
 You now have the mental model. You can explain:
 
-1. **Agent ≠ chatbot ≠ assistant** — an agent reasons, retrieves, acts, and can self-start.
+1. **Agent ≠ chatbot ≠ AI assistant** — an agent reasons, retrieves, uses tools, and may self-start when triggers are configured.
 1. **LLM = the brain**, steered by instructions and model choice.
 1. **RAG = the memory** — grounded, cited answers from *your* data (the knowledge layer).
 1. **Generative orchestration = the director** — a planner that composes tools and knowledge instead of a hand-drawn topic tree.
 1. **Agency is a spectrum** — set control boundaries before capabilities.
-1. **Declarative vs. custom** — start simple, escalate to control when needed.
+1. **Declarative vs. custom** — start simple, move to Copilot Studio or pro-code paths when you need more control.
 
 Next up, you'll build your first **declarative agent in Microsoft 365 Copilot** and use **Copy to** to bring it into **Copilot Studio** as your launch point for the rest of the custom-agent track: [**Mission 02: Declarative Agent**](../02-declarative-agent/index.md).
 
-Stay sharp, Recruit - your AI journey is just beginning!
+Stay sharp, Recruit because your AI journey is just beginning!
 
 ## 📚 Tactical Resources
 
+🔗 [AI Agents for Beginners](https://github.com/microsoft/ai-agents-for-beginners)
+
 🔗 [Copilot Studio Documentation Home](https://learn.microsoft.com/microsoft-copilot-studio/)
+
+🔗 [Copilot Developer Camp](https://aka.ms/copilot-camp) — hands-on learning paths for Agent Builder, Copilot Studio, Microsoft 365 Agents SDK, Agent Framework, and Foundry
 
 🔗 [Apply generative orchestration capabilities](https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/generative-orchestration) — the concept, in Microsoft's words
 

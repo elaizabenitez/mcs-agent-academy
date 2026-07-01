@@ -20,7 +20,7 @@ last-edited-date: 2026-06-28
 
 ---
 
-# 🚨 Mission 09: Automate with Workflows {#mission-09-automate-with-workflows}
+# 🚨 Mission 08: Automate with Workflows {#mission-08-automate-with-workflows}
 
 <mission-meta />
 
@@ -131,7 +131,7 @@ For the full list, see the [functions reference guide](https://learn.microsoft.c
 1. **Use version history** — save often so you can roll back.
 1. **Use dynamic content and expressions** — make parameters dynamic instead of hard-coding values.
 
-## 🧪 Lab 09 - Build a device request workflow and call it from your agent {#lab-09-build-a-device-request-workflow-and-call-it-from-your-agent}
+## 🧪 Lab 08 - Build a device request workflow and call it from your agent {#lab-08-build-a-device-request-workflow-and-call-it-from-your-agent}
 
 ### ✨ Use case {#use-case}
 
@@ -149,7 +149,7 @@ For the full list, see the [functions reference guide](https://learn.microsoft.c
 
 1. The **New experience** toggle (upper-right) is turned **on**.
 
-### 9.1 Create a new workflow
+### 8.1 Create a new workflow
 
 In this exercise, we'll build a workflow that retrieves the SharePoint item of the selected device, emails a manager with the details, and returns a value to the agent.
 
@@ -166,7 +166,7 @@ In this exercise, we'll build a workflow that retrieves the SharePoint item of t
 
    ![The workflow designer](./assets/9.2_01_workflow_designer.png)
 
-### 9.2 Configure the trigger and inputs
+### 8.2 Configure the trigger and inputs
 
 1. Select the **Start** trigger node. In the configuration panel, open the **Trigger type** dropdown and select **When an agent calls the workflow** (_Trigger as a tool from an agent_).
 
@@ -204,7 +204,7 @@ In this exercise, we'll build a workflow that retrieves the SharePoint item of t
 
    ![Trigger type and three inputs](./assets/9.2_02_trigger_and_inputs.png)
 
-### 9.3 Add the SharePoint Get item action
+### 8.3 Add the SharePoint Get item action
 
 1. In the **node palette** on the left, select **Connector**. A **Connector** action node is inserted after the trigger and the **Select a connector** dialog opens.
 
@@ -228,7 +228,7 @@ In this exercise, we'll build a workflow that retrieves the SharePoint item of t
 
 1. Select **Advanced parameters → Show all**, find **Limit Columns by View**, and select the **All Items** view to limit the columns returned.
 
-### 9.4 Add the Send an email action
+### 8.4 Add the Send an email action
 
 1. Select **+ Add a step** after the _Get Device_ node. In the **Add an action** dialog, search for `Office 365 Outlook`, select it, then select the **Send an email** action.
 
@@ -309,7 +309,7 @@ In this exercise, we'll build a workflow that retrieves the SharePoint item of t
 
    ![Email body with hyperlink and Manufacturer Value token](./assets/9.4_01_email_body.png)
 
-### 9.5 Configure the Respond to the agent output
+### 8.5 Configure the Respond to the agent output
 
 1. Select the **Respond to the agent** action at the end of the canvas.
 
@@ -325,7 +325,7 @@ In this exercise, we'll build a workflow that retrieves the SharePoint item of t
 
    ![Respond to the agent with ModelValue output](./assets/9.5_01_respond_modelvalue.png)
 
-### 9.6 Name, save, and publish the workflow
+### 8.6 Name, save, and publish the workflow
 
 1. Select the workflow title (**Untitled Workflow**) at the top and rename it to the following.
 
@@ -339,7 +339,7 @@ In this exercise, we'll build a workflow that retrieves the SharePoint item of t
 
    ![Workflow published successfully](./assets/9.6_01_published.png)
 
-### 9.7 Add the workflow to your agent
+### 8.7 Add the workflow to your agent
 
 Because there are no topics in the new experience, you attach the workflow to your agent as a **tool**.
 
@@ -357,7 +357,7 @@ Because there are no topics in the new experience, you attach the workflow to yo
 
    ![Agent instructions updated to call the workflow](./assets/9.7_03_agent_instructions.png)
 
-### 9.8 Test the agent
+### 8.8 Test the agent
 
 1. Select the **Preview** (test) tab and start a new conversation.
 
@@ -420,7 +420,7 @@ The SharePoint **When an item is created** trigger **polls** the list on a short
 > [!IMPORTANT]
 > **Maker authentication.** An autonomous workflow signs in to SharePoint and Outlook using **your** connections (the maker's credentials) and acts "as you" every time it runs — even though no user triggered it. Before publishing autonomous automations to production, review what data the trigger can read, narrow the trigger to a specific site and list, and avoid putting sensitive data into the email body.
 
-## 🧪 Lab 10 - Build an autonomous ticket-acknowledgment workflow {#lab-10-build-an-autonomous-ticket-acknowledgment-workflow}
+## 🧪 Lab 08 - Build an autonomous ticket-acknowledgment workflow {#lab-08-build-an-autonomous-ticket-acknowledgment-workflow}
 
 ### ✨ Use case {#use-case-2}
 
@@ -437,7 +437,7 @@ This is the new-experience equivalent of the classic "event trigger" lab — but
 1. **Tickets SharePoint list** — a list on your **Contoso IT** site with at least these columns: **Title** (displays as _Issue_), **Description** (displays as _Issue description_), and a **Priority** choice column. The built-in **ID** and **Author** (Created by) columns are used automatically.
 1. The **New experience** toggle (upper-right) is turned **on**.
 
-### 10.1 Create a workflow with a SharePoint event trigger
+### 8.10 Create a workflow with a SharePoint event trigger
 
 1. From the Copilot Studio **Home** page, select the **Workflow** card (or select **Workflows → New Workflow**). The workflow designer opens with an empty canvas.
 
@@ -455,7 +455,7 @@ This is the new-experience equivalent of the classic "event trigger" lab — but
    > [!NOTE]
    > Unlike Lab 09's _When an agent calls the workflow_ trigger, this trigger has **no inputs you define** — its outputs are the columns of the newly created SharePoint item, available as dynamic content in the next steps.
 
-### 10.2 Add the acknowledgment email
+### 08.11 Add the acknowledgment email
 
 1. In the **node palette** on the left, select **Connector**, choose **Office 365 Outlook**, then select the **Send an email (V2)** action. If prompted, the connection is created automatically using your account.
 
@@ -503,7 +503,7 @@ This is the new-experience equivalent of the classic "event trigger" lab — but
 
    ![Send an email action with Title subject token and HTML body tokens](./assets/10.2_01_email_config.png)
 
-### 10.3 Name, save, and publish
+### 08.12 Name, save, and publish
 
 1. Select the workflow title at the top and rename it to the following.
 
@@ -515,7 +515,7 @@ This is the new-experience equivalent of the classic "event trigger" lab — but
 
    ![Published autonomous workflow: trigger plus Send an email](./assets/10.3_01_published_canvas.png)
 
-### 10.4 Test the autonomous workflow
+### 08.13 Test the autonomous workflow
 
 1. Open a new browser tab and navigate to your **Contoso IT → Tickets** list. Select **+ New** (Add new item) and create a test ticket, for example:
 
