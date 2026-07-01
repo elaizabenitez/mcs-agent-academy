@@ -42,7 +42,7 @@
   They instead learn skills + native multimodality, which is the supported path. Strict-JSON output is
   best-effort (model may return friendly markdown) — instructions must explicitly demand "ONLY valid JSON"
   if a downstream system consumes it.
-- **Screenshot:** ![](./assets/validation/add-tool-no-prompt.png)
+- **Screenshot:** ![Screenshot of add tool no prompt](./assets/validation/add-tool-no-prompt.png)
 
 ## Step-by-Step Comparison
 
@@ -54,7 +54,7 @@
   input parameter (model is multimodal).
 - **What changed:** Prompt tool removed; rebuilt as a Skill. **Validated live** (skill created; chip
   "Remove skill summarize-resume" appeared).
-- **Screenshot:** ![](./assets/validation/skill-create-dialog.png)
+- **Screenshot:** ![Screenshot of skill create dialog](./assets/validation/skill-create-dialog.png)
 
 ### 7.2 Configure JSON output → **Ask the skill for structured JSON in its instructions**
 
@@ -77,7 +77,7 @@
 - **What changed:** New canvas/palette and node names; all field mappings and `fx` expressions are
   unchanged. **Surface/trigger/palette validated live**; the full Dataverse persistence flow was not
   rebuilt end-to-end live (logic identical to classic, documented as the mapping).
-- **Screenshot:** ![](./assets/validation/workflow-agent-node.png)
+- **Screenshot:** ![Screenshot of workflow agent node](./assets/validation/workflow-agent-node.png)
 
 ### 7.4 Create candidate record → **(same logic, Workflow Connector + If/Else)**
 
@@ -108,7 +108,7 @@
   send. The agent loads the **summarize-resume** Skill, reads the PDF natively, and returns the structured
   extraction. Dataverse persistence check is optional/advanced. **Validated live.**
 - **What changed:** "Test" panel → "Preview" tab; attachment-timing quirk (pause before send).
-- **Screenshot:** ![](./assets/validation/skill-test-result.png)
+- **Screenshot:** ![Screenshot of skill test result](./assets/validation/skill-test-result.png)
 
 ## What was validated live vs documented mapping
 

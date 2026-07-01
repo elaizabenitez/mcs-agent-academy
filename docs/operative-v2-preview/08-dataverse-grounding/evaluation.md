@@ -70,7 +70,7 @@ calls the MCP tools directly:
   goes disabled). Then update the `summarize-resume` Skill instructions to read live Job Roles (filter
   Active) + Evaluation Criteria via `read_query`.
 - **What changed:** Replaces the entire AI Builder Prompt grounding flow.
-- **Screenshot:** ![](./assets/validation/mcp-grounding-jobroles.png)
+- **Screenshot:** ![Screenshot of mcp grounding jobroles](./assets/validation/mcp-grounding-jobroles.png)
 
 ### Lab 8.3 — Test the grounded Skill
 
@@ -79,7 +79,7 @@ calls the MCP tools directly:
   `search` → `describe` → `read_query` and returns live roles; upload a resume to see MatchedRoles.
 - **What changed:** Classic test ran inside the Prompt editor with a "Knowledge used" tab; now tested in
   Preview. **Validated live** (5 active Job Roles J1000–J1004 returned).
-- **Screenshot:** ![](./assets/validation/mcp-grounding-jobroles.png)
+- **Screenshot:** ![Screenshot of mcp grounding jobroles](./assets/validation/mcp-grounding-jobroles.png)
 
 ### Lab 8.4 — Create Job Applications via the Dataverse MCP
 
@@ -89,7 +89,7 @@ calls the MCP tools directly:
   Application Date = utcNow). No Agent Flow built.
 - **What changed:** Replaces the 4-node Agent Flow. **`create_record` validated live** (created Candidate
   C01000 GUID 830601a1-…, read back, deleted via `delete_record`).
-- **Screenshot:** ![](./assets/validation/mcp-create-record.png)
+- **Screenshot:** ![Screenshot of mcp create record](./assets/validation/mcp-create-record.png)
 
 ### Lab 8.5 — Attach the Create Job Application flow
 
@@ -113,7 +113,7 @@ calls the MCP tools directly:
 - **What changed:** "Create Job Application tool" runs are now Dataverse MCP `create_record` calls.
 - **Note:** Full upload → match → create chain not run end-to-end because Resumes/Candidates tables are
   empty in this environment; each MCP operation confirmed working individually.
-- **Screenshot:** ![](./assets/validation/mcp-create-record.png)
+- **Screenshot:** ![Screenshot of mcp create record](./assets/validation/mcp-create-record.png)
 
 ## Notes / Not validated end-to-end
 

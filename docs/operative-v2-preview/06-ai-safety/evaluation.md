@@ -56,7 +56,7 @@ Status column / Security Analytics moved out of the authoring Agents list into g
   modified** — there is **no Protection Status column** and no click-through protection summary dialog.
 - **Alternative:** Agent runtime protection is reported via **Agent Ops** / **Power Platform admin
   center** governance surfaces.
-- **Screenshot:** ![](./assets/validation/agents-list-no-protection-status.png)
+- **Screenshot:** ![Screenshot of agents list no protection status](./assets/validation/agents-list-no-protection-status.png)
 
 ### Lab 6.8: Security Analytics / Threat detection
 
@@ -74,7 +74,7 @@ Status column / Security Analytics moved out of the authoring Agents list into g
 - **New instruction:** ⋯ More options → **Settings → Greeting & prompts → Greeting message** → paste the
   disclosure text → close (auto-saves) → confirm in the **Preview** tab.
 - **What changed:** The greeting is no longer a Topic; it is a single textbox in Settings.
-- **Screenshot:** ![](./assets/validation/greeting-prompts.png)
+- **Screenshot:** ![Screenshot of greeting prompts](./assets/validation/greeting-prompts.png)
 
 ### Lab 6.2 — Content moderation level + custom flagged message
 
@@ -87,7 +87,7 @@ Status column / Security Analytics moved out of the authoring Agents list into g
   (verified: AI & behavior = Moderation level only; Safety & access = Authentication / Web channel
   security / User feedback). Test in the **Preview** tab.
 - **What changed:** Moderation relocated and gained 2 levels; custom message removed; no Activity-map note.
-- **Screenshot:** ![](./assets/validation/moderation-levels.png)
+- **Screenshot:** ![Screenshot of moderation levels](./assets/validation/moderation-levels.png)
 
 ### Lab 6.3 — Custom error handling (On Error topic)
 

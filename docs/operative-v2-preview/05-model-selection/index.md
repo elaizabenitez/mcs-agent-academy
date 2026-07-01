@@ -397,6 +397,8 @@ Let's compare the responses of three available models by asking the **same three
 >
 > Each conversation in a test session can produce slightly different responses, since the selected generative AI model creates answers dynamically rather than returning fixed replies.
 
+<!-- -->
+
 > [!NOTE] Where you test
 > Use the **Preview** tab (the test pane) of the **Interview Agent** to chat with the agent. Select **New
 > chat** to start a fresh test session between model changes so earlier context doesn't carry over.

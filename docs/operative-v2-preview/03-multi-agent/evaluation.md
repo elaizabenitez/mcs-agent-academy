@@ -22,6 +22,8 @@
 > **agent** (Build → *Tools*) and are referenced from the Skill's instructions. The Interview Prep
 > **connected agent** still exists (Build → *Connected agents* → *Add connected agent*).
 
+<!-- -->
+
 > **Validation note (updated):** The full lab was **built live** in env `aab8f8eb` (which has the
 > Operative solution + Hiring Hub + `ppa_` tables). Created the **Hiring Agent** with an
 > **`application-intake`** skill, created and **published** the **Interview Agent**, gave it Dataverse
@@ -46,7 +48,7 @@
 - **Impact:** Learners lose the "child agent owns its own tools / priority / web‑search toggle"
   model. Skills don't have *Priority* or a per‑skill *Web Search* toggle; tool scoping is expressed
   through instructions instead of the child‑agent boundary.
-- **Screenshot:** ![](./assets/validation/skill-create-from-blank-real.png)
+- **Screenshot:** ![Screenshot of skill create from blank real](./assets/validation/skill-create-from-blank-real.png)
 
 ### Per‑child "Priority" and "Web Search" toggles
 
@@ -70,7 +72,7 @@
   ID*) against the `ppa_` tables. The agent reads rows on demand instead of indexing them as knowledge.
 - **Impact:** Learners no longer "ground" the agent on tables as a knowledge index; they grant
   tool-based, on-demand data access. Instructions must name the exact tables/identifiers to query.
-- **Screenshot:** ![](./assets/validation/dataverse-tool-actions.png)
+- **Screenshot:** ![Screenshot of dataverse tool actions](./assets/validation/dataverse-tool-actions.png)
 
 ### "Pass conversation history to this agent" toggle (connected agents)
 
@@ -80,7 +82,7 @@
   **no conversation-history toggle**.
 - **Alternative:** None needed — generative orchestration passes context automatically.
 - **Impact:** One fewer setting to configure; hand-off behavior is governed entirely by the Description.
-- **Screenshot:** ![](./assets/validation/connected-agent-add-real.png)
+- **Screenshot:** ![Screenshot of connected agent add real](./assets/validation/connected-agent-add-real.png)
 
 ## Step-by-Step Comparison
 
@@ -110,7 +112,7 @@
 - **Status:** modified
 - **New instruction:** On the **Build** tab, edit the **Instructions** box directly (no Overview tab,
   no Edit button) → **Save** (top right).
-- **Screenshot:** ![](./assets/validation/build-canvas-cards.png)
+- **Screenshot:** ![Screenshot of build canvas cards](./assets/validation/build-canvas-cards.png)
 
 ### 3.1.2 Settings table (10 toggles)
 
@@ -124,7 +126,7 @@
   generative orchestration is always on; *Use information from the Web* is now the **Knowledge →
   Search all websites** item; deep reasoning, retired models, general knowledge, file uploads, and
   code interpreter toggles are not present.
-- **Screenshot:** ![](./assets/validation/settings-ai-behavior-real.png)
+- **Screenshot:** ![Screenshot of settings ai behavior real](./assets/validation/settings-ai-behavior-real.png)
 
 ### 3.1.3 Add the Application Intake child agent
 
@@ -136,7 +138,7 @@
   **Description** (when to use it), and **Instructions** (the step‑by‑step process) → **Create**. No
   *When will this be used?* dropdown, no *Priority*, no per‑skill *Web Search* (see removed
   capabilities). **Confirmed live.**
-- **Screenshot:** ![](./assets/validation/skill-create-from-blank-real.png)
+- **Screenshot:** ![Screenshot of skill create from blank real](./assets/validation/skill-create-from-blank-real.png)
 
 ### 3.1.4 Build the Resume Upload agent flow
 
@@ -199,7 +201,7 @@
   agents to connect* = **On** and *Moderation level* = **Medium**. **Publish** (confirmed: publish
   completes and the agent then appears in the connect list).
 - **What changed:** Table grounding moved from Knowledge (indexed) to a connector **Tool** (on-demand).
-- **Screenshot:** ![](./assets/validation/dataverse-tool-actions.png) · ![](./assets/validation/settings-ai-behavior-real.png)
+- **Screenshot:** ![Screenshot of dataverse tool actions](./assets/validation/dataverse-tool-actions.png) · ![Screenshot of settings ai behavior real](./assets/validation/settings-ai-behavior-real.png)
 
 ### 3.2.3 Connect the Interview Prep Agent
 
@@ -211,7 +213,7 @@
   **Description** → **Connect**. Result shows one **Skill** (`application-intake`) and one **Connected
   agent** (Interview). **Confirmed live: there is NO "Pass conversation history" toggle** — the dialog
   exposes only the Description and a read-only Agent-details preview.
-- **Screenshot:** ![](./assets/validation/connected-agent-add-real.png) · ![](./assets/validation/hiring-agent-connected.png)
+- **Screenshot:** ![Screenshot of connected agent add real](./assets/validation/connected-agent-add-real.png) · ![Screenshot of hiring agent connected](./assets/validation/hiring-agent-connected.png)
 
 ### 3.2.4 Test multi-agent collaboration
 

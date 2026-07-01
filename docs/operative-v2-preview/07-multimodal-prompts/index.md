@@ -267,6 +267,8 @@ You'll create a **Workflow** that uses the extracted data to update resumes stor
 > [!NOTE] Workflow Connector nodes
 > In the new experience, each classic Agent Flow action (Dataverse **List rows**, **Download a file or an image**, **Add a new row**, **Update a row**) is added on the Workflow canvas as a **Connector** node using the **Microsoft Dataverse** connector. The field mappings and `fx` expressions in the tables below are **unchanged** from the classic Agent Flow — only the node-adding gesture differs. The classic **Condition** action is the **If/Else** node, and **Respond to the agent** is configured from the **When an agent calls the workflow** trigger's outputs.
 
+<!-- -->
+
 > [!TIP] Workflow Expressions
 > It is very important that you follow the instructions for naming your nodes and entering expressions exactly because the expressions refer to the previous nodes using their name! Refer to the [Agent Flow mission in Recruit](../../recruit/09-add-an-agent-flow/index.md#you-mentioned-expressions-what-are-expressions) for a quick refresher!
 

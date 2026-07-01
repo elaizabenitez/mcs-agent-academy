@@ -74,7 +74,7 @@ Mapping of classic flow constructs → new Workflow step types:
   **Agent** step. Net behavior (autonomous email → process → notify) is fully preserved.
 - **Impact:** Learners no longer "attach a trigger to the agent"; they author an autonomous **Workflow**
   and connect it to the agent. Conceptually identical (event → payload → agent acts), different surface.
-- **Screenshot:** ![](./assets/validation/email-arrives-connector-trigger.png)
+- **Screenshot:** ![Screenshot of email arrives connector trigger](./assets/validation/email-arrives-connector-trigger.png)
 
 ### Step group: "Edit in Power Automate" + "Change plan to Copilot Studio"
 
@@ -109,7 +109,7 @@ Mapping of classic flow constructs → new Workflow step types:
 - **What changed:** Same trigger and same inputs, now hosted as a Workflow Connector trigger.
   **Include Attachments** and **Only with Attachments** are now **toggle switches** (On/Off), not the
   classic Yes/No dropdowns.
-- **Screenshot:** ![](./assets/validation/email-trigger-configured.png)
+- **Screenshot:** ![Screenshot of email trigger configured](./assets/validation/email-trigger-configured.png)
 
 ### Lab 4.1 — "Split On" trigger setting
 
@@ -121,7 +121,7 @@ Mapping of classic flow constructs → new Workflow step types:
 - **What changed:** Split On is **not** removed — it relocated from the Power Automate trigger settings to
   the workflow trigger's **Settings** flyout. (This corrects the earlier draft, which claimed Split On was
   not exposed.)
-- **Screenshot:** ![](./assets/validation/trigger-settings-split-on.png)
+- **Screenshot:** ![Screenshot of trigger settings split on](./assets/validation/trigger-settings-split-on.png)
 
 ### Lab 4.1 — Condition (check contentType = application/pdf)
 
@@ -151,7 +151,7 @@ Mapping of classic flow constructs → new Workflow step types:
 - **What changed:** Connector step instead of a PA action; expressions unchanged. Column names confirmed
   live against the Operative **Resumes** table (Resume Title, Cover Letter, Source Email Address, Upload
   Date) — they match the original lab.
-- **Screenshot:** ![](./assets/validation/dataverse-add-row-resumes.png)
+- **Screenshot:** ![Screenshot of dataverse add row resumes](./assets/validation/dataverse-add-row-resumes.png)
 
 ### Lab 4.1 — Dataverse "Upload a file or an image" (Resume PDF)
 
@@ -170,7 +170,7 @@ Mapping of classic flow constructs → new Workflow step types:
 - **What changed:** The PA "send a prompt to copilot" action is the **Agent** step. The reference to a
   *child agent* "Application Intake Agent" becomes a reference to the **Application Intake skill** on the
   Hiring Agent (skills don't own tools — the Notify Teams workflow tool lives on the agent).
-- **Screenshot:** ![](./assets/validation/agent-step-handoff.png)
+- **Screenshot:** ![Screenshot of agent step handoff](./assets/validation/agent-step-handoff.png)
 
 ### Lab 4.1 — Save / Back / change plan / Edit / Publish
 
@@ -188,7 +188,7 @@ Mapping of classic flow constructs → new Workflow step types:
   selectable **trigger types** (Manual, Recurrence, Connector, When an agent calls the workflow). Inputs
   are defined directly on the trigger (types offered: Text, Number, Yes/No, Date, File). It is attached to
   the agent later as a Tool (not authored inside a child agent's Tools tab).
-- **Screenshot:** ![](./assets/validation/agent-trigger-inputs.png)
+- **Screenshot:** ![Screenshot of agent trigger inputs](./assets/validation/agent-trigger-inputs.png)
 
 ### Lab 4.2 — Post the adaptive card to Teams
 
@@ -201,7 +201,7 @@ Mapping of classic flow constructs → new Workflow step types:
 - **What changed:** Same Teams action, added as a Connector step. **Adaptive cards are fully supported**
   in the new experience via Teams connector actions. **NEEDS VALIDATION:** the JSON token-binding UI
   (lightning-bolt / fx pickers) and the model-driven-app URLs require the Operative solution.
-- **Screenshot:** ![](./assets/validation/teams-post-card-action.png)
+- **Screenshot:** ![Screenshot of teams post card action](./assets/validation/teams-post-card-action.png)
 
 ### Lab 4.2 — "Respond to the agent" output (EndConversation = Finished)
 
@@ -211,7 +211,7 @@ Mapping of classic flow constructs → new Workflow step types:
   completion (the new equivalent of the classic "Respond to the agent" / EndConversation = Finished).
 - **What changed:** Equivalent to the classic "Respond to the agent" action; it is now an auto-created
   terminal node on the agent-callable workflow rather than an action you add manually.
-- **Screenshot:** ![](./assets/validation/agent-trigger-inputs.png)
+- **Screenshot:** ![Screenshot of agent trigger inputs](./assets/validation/agent-trigger-inputs.png)
 
 ### Lab 4.2 — Edit details, refresh AI description, Publish the flow
 

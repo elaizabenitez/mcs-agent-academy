@@ -57,7 +57,7 @@
 - **Reason:** The agent Settings dialog no longer has a Response formatting section (only Agent details / AI & behavior / Safety & access / Greeting & prompts).
 - **Alternative (validated):** Add the formatting rules to the agent's main **Instructions** field on the Build page. Behavior is equivalent — the model is still instructed how to format responses.
 - **Impact:** None functionally; one fewer place to look. Formatting and behavior live together in Instructions.
-- **Screenshot:** ![](./assets/validation/settings-no-response-formatting.png)
+- **Screenshot:** ![Screenshot of settings no response formatting](./assets/validation/settings-no-response-formatting.png)
 
 ### Step: Power Fx formula in formatting instructions
 
@@ -94,7 +94,7 @@
 
 - **Status:** modified
 - **New instruction:** Switch the model from the **Build → Model** dropdown (not Overview → chevron).
-- **Screenshot:** ![](./assets/validation/model-dropdown.png)
+- **Screenshot:** ![Screenshot of model dropdown](./assets/validation/model-dropdown.png)
 
 ### Concept: Model updates and retired models
 
@@ -119,7 +119,7 @@
 - **New instruction:** Add the formatting rules to the agent's **Instructions** field on the Build page
   (no Settings → Response formatting section). Use literal example dates (`Jan 06, 2026`) instead of Power
   Fx formulas. **Save** the agent.
-- **Screenshot:** ![](./assets/validation/build-model-card.png), ![](./assets/validation/settings-no-response-formatting.png)
+- **Screenshot:** ![Screenshot of build model card](./assets/validation/build-model-card.png), ![Screenshot of settings no response formatting](./assets/validation/settings-no-response-formatting.png)
 
 ### Lab 5.2 — compare model responses
 
@@ -129,7 +129,7 @@
   via **New chat**. The three test questions (resume summary, upload date, interview questions) are
   unchanged. Model-specific runtime response screenshots from the original (GPT-4.1 / GPT-5 / Claude Sonnet
   4.5) were dropped because those models are no longer offered and responses are non-deterministic.
-- **Screenshot:** ![](./assets/validation/model-dropdown.png)
+- **Screenshot:** ![Screenshot of model dropdown](./assets/validation/model-dropdown.png)
 
 ### Mission Complete / Tactical Resources
 
