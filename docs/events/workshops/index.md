@@ -57,17 +57,5 @@ Everything you need to deliver Agent Academy as a live workshop.
 <!-- markdownlint-disable-next-line MD033 -->
 <WorkshopsPage />
 
-## Deliver Recruit with Power Up
-
-We've partnered with the **Microsoft Power Up Program** to offer the Agent Academy Recruit path as part of their platform, making it easier than ever to facilitate this training for your organization.
-
-Power Up provides participants with a **ready-to-use environment** so you can skip the setup entirely:
-
-- No need for participants to use their own Microsoft 365 tenant
-- No extra licenses required
-- Required lab data is pre-configured and ready to go
-- Built-in **office hours** and **discussion forums** so participants have support if they get stuck
-
-[👉 Learn more about the Power Up Program](https://aka.ms/powerup)
 
 
