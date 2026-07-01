@@ -68,10 +68,10 @@ Copilot Studio supports OpenAI models and Anthropic models. Each model will have
 > The exact models offered evolve quickly. In the **Model** dropdown of this environment, the models are
 > grouped under **Managed models** (OpenAI), **Anthropic models**, and **Mistral models**:
 >
-> - **Managed models (OpenAI):** GPT‑5 Chat, GPT‑5 Reasoning *(Preview)*, GPT‑5.3 Chat *(Preview)*,
->   GPT‑5.4 Reasoning *(Experimental)*, GPT‑5.5 Reasoning *(Experimental)*, GPT‑5.5 Chat *(Experimental)*
-> - **Anthropic models:** **Claude Sonnet 4.6 *(default)***, Claude Opus 4.6, Claude Opus 4.7, Claude Opus 4.8
-> - **Mistral models:** Mistral Medium 3.5 *(Experimental)*
+> - **Managed models (OpenAI):** GPT‑5 Chat, GPT‑5 Reasoning _(Preview)_, GPT‑5.3 Chat _(Preview)_,
+>   GPT‑5.4 Reasoning _(Experimental)_, GPT‑5.5 Reasoning _(Experimental)_, GPT‑5.5 Chat _(Experimental)_
+> - **Anthropic models:** **Claude Sonnet 4.6 _(default)_**, Claude Opus 4.6, Claude Opus 4.7, Claude Opus 4.8
+> - **Mistral models:** Mistral Medium 3.5 _(Experimental)_
 >
 > The **default** model for new agents is now **Claude Sonnet 4.6** — not GPT‑4.1. The category tags
 > (Deep / Auto / General) and availability tags (Experimental / Preview / GA) described below still apply;
@@ -451,7 +451,7 @@ Let's compare the responses of three available models by asking the **same three
     >
     > If you don't have admin rights and cannot enable the settings, you can skip the hands-on steps for the remainder of this exercise.
 
-    On the **Build** page, open the **Model** dropdown and select an experimental model — for example **GPT‑5.5 Chat** *(Experimental)* under **Managed models**, **Claude Opus 4.8** under **Anthropic models**, or **Mistral Medium 3.5** *(Experimental)* under **Mistral models**.
+    On the **Build** page, open the **Model** dropdown and select an experimental model — for example **GPT‑5.5 Chat** _(Experimental)_ under **Managed models**, **Claude Opus 4.8** under **Anthropic models**, or **Mistral Medium 3.5** _(Experimental)_ under **Mistral models**.
 
     <!-- ⚠️ MODIFIED: Classic step selected "Claude Sonnet 4.5 (Experimental)" from the Overview-tab
          chevron's Anthropic list. That specific model is no longer offered; choose any current

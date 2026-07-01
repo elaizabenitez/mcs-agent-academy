@@ -26,6 +26,7 @@ last-edited-date: 2026-06-30
 > See `evaluation.md` for a full comparison with the original. Most steps are
 > **modified** (UI elements moved), with two notable changes validated live in
 > this environment:
+>
 > - **Tools** are now added from the **Add tool** button in the agent's
 >   right-side configuration panel (not a top-navigation **Tools** tab), and MCP
 >   servers are filtered using the **Model Context Protocol (MCP)** *tab* in the

@@ -2,7 +2,7 @@
 
 **Original lab:** Mission 10: Integrate with MCP Servers
 **Date evaluated:** 2026-06-30
-**Environment:** https://copilotstudio.preview.microsoft.com/environments/aab8f8eb-e060-e28b-958f-2ea6fd0ab517 (April (Preview), new experience, has Operative solution)
+**Environment:** <https://copilotstudio.preview.microsoft.com/environments/aab8f8eb-e060-e28b-958f-2ea6fd0ab517> (April (Preview), new experience, has Operative solution)
 **Plugin version:** AgentAcademyLabTestPlugin (rewrite-lab)
 
 ## Summary
@@ -23,26 +23,27 @@ plus one **environment availability gap**:
 
 1. **Tools moved** — classic "select **Tools** in the top navigation" → an **Add tool**
    button in the agent's right-side **Agent configuration** panel (Build page).
-2. **Filter → Tab** — classic "select **Model Context Protocol** in the filters" → the
+1. **Filter → Tab** — classic "select **Model Context Protocol** in the filters" → the
    **Model Context Protocol (MCP)** *tab* in the "Add a tool" dialog (tabs: All, MCP,
    Connectors, Workflows). Search box role `searchbox`, name "Search".
-3. **Connection flow** — select server → **Select a connection** step → **Not connected**
+1. **Connection flow** — select server → **Select a connection** step → **Not connected**
    dropdown → **Create new connection** → **Create** → OAuth `select_account` popup
    (auto-completes if already signed in) → **Add**.
-4. **"Add and configure" → "Add"** — the button is now just **Add**; there is no
+1. **"Add and configure" → "Add"** — the button is now just **Add**; there is no
    separate tool-overview/configure page.
-5. **No separate consent card** — in the classic experience the first MCP call showed a
+1. **No separate consent card** — in the classic experience the first MCP call showed a
    consent card (select **Allow**); in the validated new-experience run the agent
    invoked the **ListCalendarView** tool directly using the connection created at
    add-time. No consent card appeared. The MCP tool button in the transcript exposes the
    request/response detail.
-6. **Tool name** — classic referenced *getEvents*; the live tool surfaced as
+1. **Tool name** — classic referenced *getEvents*; the live tool surfaced as
    **ListCalendarView** (Work IQ Calendar Preview). *findMeetingTimes* / *createEvent*
    remain the conceptual tools for Lab 10.2.
 
 ## ⚠️ Blockers & Removed Capabilities
 
 ### Work IQ User (Preview) MCP server — blocked in this environment
+
 - **Status:** blocked (environment availability)
 - **Reason:** Searching the **Model Context Protocol (MCP)** tab for "Work IQ", "User",
   and "Work IQ User" returned only **Work IQ Mail, Teams, Calendar, SharePoint, and
@@ -60,11 +61,13 @@ plus one **environment availability gap**:
 ## Step-by-Step Comparison
 
 ### Conceptual sections (What is MCP, Agent 365, roles, tooling servers)
+
 - **Original:** Large prose sections explaining MCP, Agent 365, Entra Agent ID, roles.
 - **Status:** unchanged
 - **New instruction:** Same as original — preserved verbatim.
 
 ### Lab 10.1 — Add the Work IQ User (Preview) MCP Server
+
 - **Original:** Add Work IQ User (Preview) via Tools → Add a tool → MCP filter → select →
   create connection → Add and configure → test "Who is my manager?".
 - **Status:** blocked (server not present in env)
@@ -73,6 +76,7 @@ plus one **environment availability gap**:
   Calendar server.
 
 ### Lab 10.1 — Add the Work IQ Calendar (Preview) MCP server
+
 - **Original:** Tools (top nav) → Add a tool → MCP filter → Work IQ Calendar → Create new
   connection → Create → pick account → **Add and configure** → test "Get my meetings for
   today" → consent card **Allow** → response.
@@ -91,6 +95,7 @@ plus one **environment availability gap**:
   `./assets/validation/m10-mcp-preview-test.png`.
 
 ### Lab 10.2 — Plan an interview prep-meeting (findMeetingTimes / createEvent)
+
 - **Original:** New test session → "find 3 meeting times…" (*findMeetingTimes*) → "schedule
   the one on 10:30 AM UTC" (*createEvent*) → meeting request in invitee's mailbox.
 - **Status:** modified (UI references updated; end-to-end output not reproduced)
@@ -102,6 +107,7 @@ plus one **environment availability gap**:
   documented as prerequisite-gated.
 
 ## Validation evidence
+
 - Work IQ Calendar (Preview) added end-to-end on the **Interview Agent**
   (`a4952ccd-28d7-4704-a396-3e1a7319bc64`): connection created via OAuth, tool landed in
   Tools section, **Saved** (button went disabled).
@@ -111,5 +117,6 @@ plus one **environment availability gap**:
   "Work IQ User") on the MCP tab.
 
 ## Cleanup
+
 - Work IQ Calendar (Preview) tool removed from the Interview Agent and **Saved**
   (baseline restored: no tools/skills; agent NOT published).

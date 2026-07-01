@@ -35,6 +35,7 @@
 ## ⚠️ Removed Capabilities
 
 ### Child agents (entire construct)
+
 - **Status:** removed
 - **Reason:** The new agent editor is a single **Build** canvas (Model · Microsoft IQ · Skills ·
   Tools · Knowledge · Connected agents · Memory). There is no **Agents** tab inside an agent and no
@@ -48,6 +49,7 @@
 - **Screenshot:** ![](./assets/validation/skill-create-from-blank-real.png)
 
 ### Per‑child "Priority" and "Web Search" toggles
+
 - **Status:** removed
 - **Reason:** These lived on the child‑agent config page, which no longer exists.
 - **Alternative:** Express precedence/guardrails in the Skill **Description** and **Instructions**
@@ -57,6 +59,7 @@
   ordering is guided by skill/connected‑agent descriptions.
 
 ### Dataverse as a **Knowledge** source
+
 - **Status:** removed (relocated)
 - **Reason:** Confirmed live — the **Add knowledge** dialog only offers *Public websites*, *SharePoint*,
   and *OneDrive* (Featured), plus Confluence/Azure DevOps/Jira shown as unavailable. Searching
@@ -70,6 +73,7 @@
 - **Screenshot:** ![](./assets/validation/dataverse-tool-actions.png)
 
 ### "Pass conversation history to this agent" toggle (connected agents)
+
 - **Status:** removed
 - **Reason:** Confirmed live — the **Add a connected agent** dialog requires only a **Description**
   (placeholder *Describe this connected agent*) plus a read-only **Agent details** preview. There is
@@ -81,6 +85,7 @@
 ## Step-by-Step Comparison
 
 ### Concept section — "Child agents vs connected agents"
+
 - **Original:** Teaches *child agents* (live within the parent, share parent topics/tools) vs
   *connected agents*.
 - **Status:** new_flow
@@ -91,6 +96,7 @@
 - **What changed:** Conceptual model replaced child agents with Skills.
 
 ### 3.1.1 Solution setup (Set preferred solution)
+
 - **Original:** Left‑nav ellipsis under **Tools** → **Solutions** → *Set preferred solution* → *Apply*.
 - **Status:** modified
 - **New instruction:** Solutions are not in the Copilot Studio left nav (Home · Agent Ops · Agents ·
@@ -99,6 +105,7 @@
 - **What changed:** Solutions surface moved out of the Copilot Studio nav.
 
 ### 3.1.2 Hiring Agent instructions
+
 - **Original:** **Overview** tab → **Instructions** → **Edit** → paste → **Save**.
 - **Status:** modified
 - **New instruction:** On the **Build** tab, edit the **Instructions** box directly (no Overview tab,
@@ -106,6 +113,7 @@
 - **Screenshot:** ![](./assets/validation/build-canvas-cards.png)
 
 ### 3.1.2 Settings table (10 toggles)
+
 - **Original:** **Settings** button → 10‑row toggle table (generative orchestration, deep reasoning,
   let other agents connect, retired models, content moderation, reactions, general knowledge, web,
   file uploads, code interpreter).
@@ -119,6 +127,7 @@
 - **Screenshot:** ![](./assets/validation/settings-ai-behavior-real.png)
 
 ### 3.1.3 Add the Application Intake child agent
+
 - **Original:** **Agents** tab → **Add** → **New child agent** → Name/Description → *When will this be
   used?* → **Advanced → Priority 10000** → **Web Search Disabled** → **Save**.
 - **Status:** new_flow
@@ -130,6 +139,7 @@
 - **Screenshot:** ![](./assets/validation/skill-create-from-blank-real.png)
 
 ### 3.1.4 Build the Resume Upload agent flow
+
 - **Original:** Child agent **Tools → + Add → + New tool → Agent flow**, then build the flow inline.
 - **Status:** modified (entry) + needs‑validation (internals)
 - **New instruction:** Agent flows are now **Workflows**. Create the flow in the **Workflows** hub
@@ -141,6 +151,7 @@
 - **What changed:** Flow authored as a standalone Workflow, new designer.
 
 ### 3.1.5 Connect the flow to your agent
+
 - **Original:** Child agent **Tools → + Add → Flow filter → Resume Upload → Add and configure** →
   inputs/formulas.
 - **Status:** modified
@@ -151,12 +162,14 @@
 - **What changed:** Tool added to the agent and governed by the Skill, not a child agent.
 
 ### 3.1.6 Application Intake instructions
+
 - **Original:** Child agent **Instructions** panel → paste → resolve `/` references → **Save**.
 - **Status:** modified
 - **New instruction:** Put this guidance in the **Application Intake** *Skill* **Instructions**.
   Tool/variable `/` references are written in‑line in the skill instructions.
 
 ### 3.1.7 Test the Application Intake
+
 - **Original:** **Test** panel → upload resumes; check **Activity map**.
 - **Status:** modified
 - **New instruction:** Use the **Preview** tab (replaces the Test pane). Inspect the agent's
@@ -164,6 +177,7 @@
   publishing. Power Apps **Hiring Hub** verification is unchanged.
 
 ### 3.2.1 Create the connected Interview Agent
+
 - **Original:** **Agents** tab → **New Agent** → *Configure* tab → Name/Description/Instructions →
   **Web Search Disabled** → **… → Update advanced settings → Solution → Operative → Update → Create**.
 - **Status:** modified
@@ -173,6 +187,7 @@
 - **What changed:** No separate *Configure* tab; settings split across Build + Settings.
 
 ### 3.2.2 Configure data access and publish
+
 - **Original:** **Knowledge → + Add knowledge → Dataverse →** `ppa_` → select 5 tables → **Add to
   agent**; **Settings**: let other agents connect On, general knowledge Off, file uploads Off,
   moderation Medium; **Publish**.
@@ -187,6 +202,7 @@
 - **Screenshot:** ![](./assets/validation/dataverse-tool-actions.png) · ![](./assets/validation/settings-ai-behavior-real.png)
 
 ### 3.2.3 Connect the Interview Prep Agent
+
 - **Original:** Hiring Agent → **Agents** tab → **+Add an agent** → select **Interview Agent** →
   Description → note *Pass conversation history* → **Add agent**; see one child + one connected.
 - **Status:** modified
@@ -198,18 +214,21 @@
 - **Screenshot:** ![](./assets/validation/connected-agent-add-real.png) · ![](./assets/validation/hiring-agent-connected.png)
 
 ### 3.2.4 Test multi-agent collaboration
+
 - **Original:** **Test** panel → upload resume + delegation prompt.
 - **Status:** modified
 - **New instruction:** Use the **Preview** tab; same prompts. Observe the agent invoking the
   Application Intake **skill** and handing off to the Interview **connected agent**.
 
 ### Mission Brief / Objectives / Mission Complete copy
+
 - **Status:** modified
 - **New instruction:** Replace "child agent" wording with "Skill" where it refers to the Application
   Intake specialist; keep "connected agent" for the Interview agent. Update the classic‑experience
   banner to a new‑experience note.
 
 ### Unchanged
+
 - Power Apps solution import context, Dataverse table names/prefix (`ppa_`), and the **Hiring Hub**
   model‑driven app verification (3.1.7 / Power Apps) are unchanged.
 - All agent **instruction text** (the prompt content) is reused verbatim.

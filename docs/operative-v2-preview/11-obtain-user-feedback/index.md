@@ -25,6 +25,7 @@ last-edited-date: 2026-06-30
 > [!NOTE]
 > This lab has been updated for the new Copilot Studio experience (2026-06-30).
 > See `evaluation.md` for a full comparison with the original. Highlights:
+>
 > - **The conceptual half of this mission is unchanged** — built-in reactions and
 >   adaptive cards still work the same way conceptually.
 > - **Built-in feedback moved.** The reactions toggle is now at **Settings → Safety
@@ -340,6 +341,7 @@ We're now going to review the feedback submitted. In the new experience this liv
 > They depend on the **Topics authoring canvas**, which does not exist in the new
 > experience. Specifically, the new agent **Build** surface has **no Topics tab**, so
 > there is:
+>
 > - no **End of Conversation** or **CSAT Question** system topic to modify,
 > - no **Add a topic → From blank** to create the *Capture CSAT dissatisfied feedback* topic,
 > - and none of the nodes the exercise uses — *Ask with adaptive card*, *Condition*,

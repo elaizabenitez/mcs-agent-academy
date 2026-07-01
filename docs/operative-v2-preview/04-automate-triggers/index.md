@@ -87,7 +87,7 @@ Previously in [Recruit](../../recruit/10-add-event-triggers/index.md), we learne
 - **Where you build it (new experience):**
       - In the new Copilot Studio experience, an autonomous event automation is a **Workflow** whose
         **Trigger type** is **Connector** ("Trigger from an external service"). You pick the connector
-        event (for example, *Office 365 Outlook → When a new email arrives*) and build the rest of the
+        event (for example, _Office 365 Outlook → When a new email arrives_) and build the rest of the
         logic in the same Workflows canvas.
 
 - **Requires generative orchestration:**
@@ -207,7 +207,7 @@ To complete this lab you will need to:
 
 1. In the left navigation, select **Workflows**, then select **+ New workflow** (or **New** → **Workflow**) to open the workflow canvas.
 
-1. On the **Start** node, open the **Trigger type** dropdown and select **Connector** (*Trigger from an external service*).
+1. On the **Start** node, open the **Trigger type** dropdown and select **Connector** (_Trigger from an external service_).
 
     ![Select the Connector trigger type](./assets/validation/email-arrives-connector-trigger.png)
 
@@ -235,6 +235,7 @@ To complete this lab you will need to:
     > As a performant alternative to branching inside the workflow, you can also restrict when the
     > trigger fires. The following expression checks the attachments array is not empty **AND** the first
     > item's content type is `application/pdf`:
+>
     > ```text
     > @and(not(empty(triggerOutputs()?['body/attachments'])),equals(toLower(first(triggerOutputs()?['body/attachments'])?['contentType']),'application/pdf'))
     > ```
@@ -321,7 +322,7 @@ To complete this lab you will need to:
      |-------|------------|-------|
      | **Content name** | Expression (fx) | `item()?['name']` |
      | **Table name** | Dropdown | Resumes |
-     | **Row ID** | Token | The **Resume** id from the *Add a new Resume row* step |
+     | **Row ID** | Token | The **Resume** id from the _Add a new Resume row_ step |
      | **Column name** | Dropdown | Resume PDF |
      | **Content** | Expression (fx) | `item()?['contentBytes']` |
 
@@ -336,7 +337,7 @@ To complete this lab you will need to:
     > specified copilot for processing."** In the new experience the workflow **Agent** step plays the
     > same role - it invokes your agent and passes data to it.
 
-1. In the **Agent** step, pass the new resume's details and instruct the agent to notify the team. Provide the **Resume** id, **Resume Title**, and **Resume Number** from the *Add a new Resume row* step, and instruct the agent to use the **Application Intake skill** to call the **Notify Teams Applicant channel** tool (which you'll build in Lab 4.2). For example:
+1. In the **Agent** step, pass the new resume's details and instruct the agent to notify the team. Provide the **Resume** id, **Resume Title**, and **Resume Number** from the _Add a new Resume row_ step, and instruct the agent to use the **Application Intake skill** to call the **Notify Teams Applicant channel** tool (which you'll build in Lab 4.2). For example:
 
     ```text
     A new resume was uploaded. ResumeId = <Resume id>, ResumeTitle = <Resume Title>, ResumeNumber = <Resume Number>. Use the Application Intake skill to notify the Teams Applicant channel with these values.
@@ -371,7 +372,7 @@ Let's begin!
 
 1. In the left navigation, select **Workflows**, then **+ New workflow**.
 
-1. On the **Start** node, open the **Trigger type** dropdown and select **When an agent calls the workflow** (*Trigger as a tool from an agent*). The canvas adds a **Respond to the agent** terminal node automatically — you'll configure its output in a later step.
+1. On the **Start** node, open the **Trigger type** dropdown and select **When an agent calls the workflow** (_Trigger as a tool from an agent_). The canvas adds a **Respond to the agent** terminal node automatically — you'll configure its output in a later step.
 
 1. Add three **Text** inputs to the trigger. In the trigger's **Inputs** section, select **Add an input**, choose **Text** (the input types offered are Text, Number, Yes/No, Date, and File), and name them, one at a time:
 
@@ -434,7 +435,7 @@ Let's begin!
 
 1. We've completed configuring the **Post card in a chat or channel** action 👏🏻
 
-1. Finally, configure the workflow's response back to the agent so the agent knows processing is complete. Select the **Respond to the agent** node that the *When an agent calls the workflow* trigger added to the canvas, and add a **Text** output named `EndConversation` with the value:
+1. Finally, configure the workflow's response back to the agent so the agent knows processing is complete. Select the **Respond to the agent** node that the _When an agent calls the workflow_ trigger added to the canvas, and add a **Text** output named `EndConversation` with the value:
 
     ```text
     Finished
@@ -478,7 +479,7 @@ Let's begin!
     ```
 
     > [!NOTE]
-    > In the classic experience, the instruction referenced a *child agent* ("…in the child agent
+    > In the classic experience, the instruction referenced a _child agent_ ("…in the child agent
     > 'Application Intake Agent'") and the tool was inserted with a `/` mention. In the new experience,
     > the **Application Intake skill** references the tool that lives on the **Hiring Agent**'s Tools
     > card.

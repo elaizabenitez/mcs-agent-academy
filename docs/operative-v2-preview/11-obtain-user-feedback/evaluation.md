@@ -2,7 +2,7 @@
 
 **Original lab:** Mission 11: Collecting feedback from users
 **Date evaluated:** 2026-06-30
-**Environment:** https://copilotstudio.preview.microsoft.com/environments/aab8f8eb-e060-e28b-958f-2ea6fd0ab517 (April (Preview), new experience, Operative solution installed)
+**Environment:** <https://copilotstudio.preview.microsoft.com/environments/aab8f8eb-e060-e28b-958f-2ea6fd0ab517> (April (Preview), new experience, Operative solution installed)
 **Plugin version:** AgentAcademyLabTestPlugin (rewrite-lab)
 
 ## Summary
@@ -25,6 +25,7 @@ classic **Topics authoring canvas**, which **does not exist** in the new experie
 ## ⚠️ Blockers & Removed Capabilities
 
 ### Labs 11.3 & 11.4 — Custom Adaptive Card feedback + Application Insights telemetry
+
 - **Status:** blocked
 - **Reason:** The new agent **Build** surface has **no Topics tab**. The exercise requires:
   - the **End of Conversation** and **CSAT Question** *system topics* (gone),
@@ -33,7 +34,7 @@ classic **Topics authoring canvas**, which **does not exist** in the new experie
     **Go to another topic**, and **Log a custom telemetry event** (all gone).
 
   The new model replaces topic authoring with **Instructions + Skills + Tools + Knowledge
-  + Connected agents** under autonomous orchestration. There is no end-of-conversation
+  - Connected agents** under autonomous orchestration. There is no end-of-conversation
   CSAT survey trigger to branch on, and no topic-level telemetry node.
 - **Alternative:** No 1:1 equivalent. Forward-looking option documented in the rewrite:
   build a **Workflow** that posts an Adaptive Card, attach it via **Tools → Add a tool →
@@ -49,10 +50,12 @@ classic **Topics authoring canvas**, which **does not exist** in the new experie
 ## Step-by-Step Comparison
 
 ### Conceptual sections (importance of feedback, thumbs concepts, adaptive-card concepts, why/best-practices, comparison & summary tables)
+
 - **Status:** unchanged — preserved verbatim. (Light terminology touch-ups only; these
   are channel-agnostic educational content.)
 
 ### Managing the reactions feature (the user-feedback toggle)
+
 - **Original:** **Generative AI Settings → User feedback** → *Collect user reactions to
   agent messages* toggle, plus a free-text **disclaimer** field.
 - **Status:** modified (validated live)
@@ -62,6 +65,7 @@ classic **Topics authoring canvas**, which **does not exist** in the new experie
 - **Screenshot:** `./assets/validation/m11-settings-user-feedback.png`
 
 ### Lab 11.1 — User feedback through built-in interactions
+
 - **Original:** In Microsoft Teams, use **thumbs up / thumbs down** with a comment.
 - **Status:** modified (validated live)
 - **New instruction:** Two paths. (1) **Preview** tab → ask a question → response shows
@@ -73,6 +77,7 @@ classic **Topics authoring canvas**, which **does not exist** in the new experie
 - **Screenshot:** `./assets/validation/m11-preview-dislike-comment.png`
 
 ### Lab 11.2 — Reviewing built-in analytics
+
 - **Original:** **Analytics** tab → **Satisfaction** → **Reactions** → **See details**.
 - **Status:** modified (validated live)
 - **New instruction:** **Monitor** tab → **Performance** → **Total reactions** tile +
@@ -84,9 +89,11 @@ classic **Topics authoring canvas**, which **does not exist** in the new experie
 
 ### Lab 11.3 — Build adaptive card to collect custom feedback → **BLOCKED** (Topics removed)
 ### Lab 11.4 — BONUS: Log telemetry to Application Insights → **BLOCKED** (Topics removed)
+
 - See Blockers section above. Preserved verbatim in a collapsed details block.
 
 ## Validation evidence (env aab8f8eb, Interview Agent a4952ccd)
+
 - **Settings:** Confirmed **Safety & access → Feedback → User feedback** toggle exists;
   no disclaimer field. 4-tab Settings dialog (Agent details / AI & behavior / Safety &
   access / Greeting & prompts).
@@ -100,5 +107,6 @@ classic **Topics authoring canvas**, which **does not exist** in the new experie
   Topics tab** anywhere → 11.3/11.4 unbuildable.
 
 ## Cleanup
+
 - No agent state was changed for this mission (settings dialog closed without saving;
   feedback dialog cancelled). Baseline intact; agent NOT published.

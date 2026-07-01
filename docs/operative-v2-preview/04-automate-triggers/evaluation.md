@@ -2,7 +2,7 @@
 
 **Original lab:** 🚨 Mission 04: Add Event Triggers to act autonomously
 **Date evaluated:** 2026-06-29
-**Environment:** https://copilotstudio.preview.microsoft.com/environments/aab8f8eb-e060-e28b-958f-2ea6fd0ab517 (New experience ON; **has the Operative solution** — Hiring Agent, Resumes table)
+**Environment:** <https://copilotstudio.preview.microsoft.com/environments/aab8f8eb-e060-e28b-958f-2ea6fd0ab517> (New experience ON; **has the Operative solution** — Hiring Agent, Resumes table)
 **Plugin version:** AgentAcademyLabTestPlugin (rewrite-lab)
 
 ## Summary
@@ -32,9 +32,9 @@ Mission 04 was built on three classic surfaces that **no longer exist** in the n
 
 1. **Agent Overview → Triggers and Channels.** The agent **Overview** tab is gone. There is no
    agent-level "Triggers and Channels" card to add "When a new email arrives (V3)".
-2. **"Edit in Power Automate".** Agent flows are no longer authored in the Power Automate maker portal
+1. **"Edit in Power Automate".** Agent flows are no longer authored in the Power Automate maker portal
    from inside the agent. They are **Workflows**, authored in the **Workflows** canvas in Copilot Studio.
-3. **"Sends a prompt to the specified copilot for processing".** The Power-Automate action that handed
+1. **"Sends a prompt to the specified copilot for processing".** The Power-Automate action that handed
    control back to the agent is replaced by the workflow **Agent** step ("Connect to Agent").
 
 **The new pattern (validated live):** An autonomous email automation is now a **Workflow** whose
@@ -64,6 +64,7 @@ Mapping of classic flow constructs → new Workflow step types:
 ## ⚠️ Removed Capabilities
 
 ### Step group: Agent-level event trigger on the Overview tab
+
 - **Status:** removed (relocated)
 - **Original:** "In the Hiring Agent, scroll down in the **Overview tab** to the **Triggers and Channels** section and select **+ Add**" → "When a new email arrives (V3)".
 - **Reason:** The agent **Overview** tab and its **Triggers and Channels** card do not exist in the new
@@ -76,6 +77,7 @@ Mapping of classic flow constructs → new Workflow step types:
 - **Screenshot:** ![](./assets/validation/email-arrives-connector-trigger.png)
 
 ### Step group: "Edit in Power Automate" + "Change plan to Copilot Studio"
+
 - **Status:** removed
 - **Original:** Edit the trigger in the Power Automate maker portal; later change the flow **Plan** to
   **Copilot Studio** and confirm.
@@ -88,6 +90,7 @@ Mapping of classic flow constructs → new Workflow step types:
 ## Step-by-Step Comparison
 
 ### Concept sections (Mission Brief, What is an Event trigger, Topic vs Event, Interactive vs Autonomous, Developer tips)
+
 - **Status:** unchanged (mostly)
 - **New instruction:** Keep the teaching. Two wording fixes: (a) event triggers are added in a
   **Workflow** (Connector trigger), not the agent Overview; (b) "requires generative orchestration"
@@ -96,6 +99,7 @@ Mapping of classic flow constructs → new Workflow step types:
 - **What changed:** Surface names only.
 
 ### Lab 4.1 — steps 1-4 (add + name + configure the email trigger)
+
 - **Status:** new_flow
 - **New instruction:** Create a new **Workflow**; set **Trigger type → Connector**; choose
   **Office 365 Outlook → When a new email arrives** (use **See all triggers for Office 365 Outlook**).
@@ -108,6 +112,7 @@ Mapping of classic flow constructs → new Workflow step types:
 - **Screenshot:** ![](./assets/validation/email-trigger-configured.png)
 
 ### Lab 4.1 — "Split On" trigger setting
+
 - **Status:** modified — **CONFIRMED EXISTS**
 - **New instruction:** Open the trigger's **More options (…) → Settings**. Under **General**, the
   **Split On** field is present (default `@triggerBody()`) alongside **Concurrency control** (single
@@ -119,6 +124,7 @@ Mapping of classic flow constructs → new Workflow step types:
 - **Screenshot:** ![](./assets/validation/trigger-settings-split-on.png)
 
 ### Lab 4.1 — Condition (check contentType = application/pdf)
+
 - **Status:** modified
 - **New instruction:** Add an **If/Else** step. Left value = the attachment **Content-Type** (added via
   the token/dynamic-content picker); operator **is equal to**; right value `application/pdf`. Selecting
@@ -128,12 +134,14 @@ Mapping of classic flow constructs → new Workflow step types:
   alternative (`@and(not(empty(...)),equals(...))`) still applies as an advanced option.
 
 ### Lab 4.1 — Html to text (True path)
+
 - **Status:** modified
 - **New instruction:** In the **True** branch, add a **Connector** step → search `html to text` →
   **Data Operations → Html to text**; set **Content** = trigger **Body**.
 - **What changed:** Same action, added as a Connector step.
 
 ### Lab 4.1 — Dataverse "Add a new row" (Resume row)
+
 - **Status:** modified — **columns CONFIRMED**
 - **New instruction:** Add a **Connector** step → **Microsoft Dataverse → Add a new row** → **Table =
   Resumes**. Configure **Resume Title** (required) `item()?['name']`, **Cover Letter**
@@ -146,6 +154,7 @@ Mapping of classic flow constructs → new Workflow step types:
 - **Screenshot:** ![](./assets/validation/dataverse-add-row-resumes.png)
 
 ### Lab 4.1 — Dataverse "Upload a file or an image" (Resume PDF)
+
 - **Status:** modified
 - **New instruction:** Add a **Connector** step → **Microsoft Dataverse → Upload a file or an image** →
   Content name `item()?['name']`, Table = Resumes, Row ID = the **Resume** row id from the previous
@@ -153,6 +162,7 @@ Mapping of classic flow constructs → new Workflow step types:
 - **What changed:** Connector step; expressions unchanged.
 
 ### Lab 4.1 — "Sends a prompt to the specified copilot for processing"
+
 - **Status:** new_flow
 - **New instruction:** Add an **Agent** step → **Connect to Agent** → select the **Hiring Agent**. In the
   step's message/inputs, pass the new resume's **Id**, **Title**, and **Number** and instruct the agent
@@ -163,11 +173,13 @@ Mapping of classic flow constructs → new Workflow step types:
 - **Screenshot:** ![](./assets/validation/agent-step-handoff.png)
 
 ### Lab 4.1 — Save / Back / change plan / Edit / Publish
+
 - **Status:** modified (collapsed)
 - **New instruction:** **Publish** the workflow from the Workflows canvas. (No "Edit in Power Automate",
   no "change plan to Copilot Studio".)
 
 ### Lab 4.2 — Create the notify flow (child agent → Tools → New tool → Agent flow)
+
 - **Status:** new_flow — **CONFIRMED live**
 - **New instruction:** In the **Workflows** hub, create a new workflow; set **Trigger type → When an
   agent calls the workflow** ("Trigger as a tool from an agent"). In the trigger's **Inputs** section,
@@ -179,6 +191,7 @@ Mapping of classic flow constructs → new Workflow step types:
 - **Screenshot:** ![](./assets/validation/agent-trigger-inputs.png)
 
 ### Lab 4.2 — Post the adaptive card to Teams
+
 - **Status:** modified
 - **New instruction:** Add a **Connector** step → **Microsoft Teams → Post card in a chat or channel**;
   **Post as = Flow bot**, **Post in = Channel**, pick a **Team** and **Channel**; paste the
@@ -191,6 +204,7 @@ Mapping of classic flow constructs → new Workflow step types:
 - **Screenshot:** ![](./assets/validation/teams-post-card-action.png)
 
 ### Lab 4.2 — "Respond to the agent" output (EndConversation = Finished)
+
 - **Status:** modified — **CONFIRMED**
 - **New instruction:** The *When an agent calls the workflow* trigger **auto-includes a "Respond to the
   agent" terminal node** on the canvas. Use it to return outputs/text to the calling agent to signal
@@ -200,11 +214,13 @@ Mapping of classic flow constructs → new Workflow step types:
 - **Screenshot:** ![](./assets/validation/agent-trigger-inputs.png)
 
 ### Lab 4.2 — Edit details, refresh AI description, Publish the flow
+
 - **Status:** modified
 - **New instruction:** Name the workflow **Notify Teams Applicant channel**, optionally generate a
   description, then **Publish** in the Workflows canvas.
 
 ### Lab 4.2 — Add the flow as a tool to the (child) Application Intake Agent
+
 - **Status:** new_flow
 - **New instruction:** On the **Hiring Agent** Build canvas, open the **Tools** card → **Add a tool** →
   **Workflows** tab → select **Notify Teams Applicant channel** → **Add and configure**. Keep inputs on
@@ -213,6 +229,7 @@ Mapping of classic flow constructs → new Workflow step types:
   Intake skill** references the tool from its instructions.
 
 ### Lab 4.2 — Update child-agent instructions to call the tool
+
 - **Status:** new_flow
 - **New instruction:** Edit the **Application Intake skill** instructions (Skills card → Application
   Intake → Instructions) to call the **Notify Teams Applicant channel** tool with the three parameters.
@@ -220,10 +237,12 @@ Mapping of classic flow constructs → new Workflow step types:
 - **What changed:** Child-agent instructions → **skill** instructions; tool referenced from the agent.
 
 ### Lab 4.2 — Publish the Hiring Agent
+
 - **Status:** unchanged
 - **New instruction:** Select **Publish** (upper right) and confirm.
 
 ### Lab 4.3 — Test (send email, view run, Activity tab, model-driven app, Teams card)
+
 - **Status:** modified
 - **New instruction:** Send the test email with the resume PDF (unchanged). View the run in the
   **Workflows** canvas (**Activity/Monitor** tab) instead of the Power Automate portal. In the agent,

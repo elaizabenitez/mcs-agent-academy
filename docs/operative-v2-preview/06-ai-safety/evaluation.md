@@ -2,7 +2,7 @@
 
 **Original lab:** 🚨 Mission 06: AI Safety and Content Moderation (OPERATION SAFE HARBOR)
 **Date evaluated:** 2026-06-29
-**Environment:** https://copilotstudio.preview.microsoft.com/environments/aab8f8eb-e060-e28b-958f-2ea6fd0ab517 (April (Preview), has the Operative solution; Interview Agent `a4952ccd-28d7-4704-a396-3e1a7319bc64`)
+**Environment:** <https://copilotstudio.preview.microsoft.com/environments/aab8f8eb-e060-e28b-958f-2ea6fd0ab517> (April (Preview), has the Operative solution; Interview Agent `a4952ccd-28d7-4704-a396-3e1a7319bc64`)
 **Plugin:** AgentAcademyLabTestPlugin — rewrite-lab (local-only, no PR)
 
 ## Summary
@@ -25,6 +25,7 @@ Status column / Security Analytics moved out of the authoring Agents list into g
 ## ⚠️ Blockers & Removed Capabilities
 
 ### Lab 6.3: Adding custom error handling (edit System → On Error topic)
+
 - **Status:** blocked / removed
 - **Reason:** The new experience has no **Topics** tab and no **System → On Error** topic. Navigating to
   the agent's `/topics` URL falls back to the **Build** page (tabs: Build / Preview / Evaluate / Monitor).
@@ -36,6 +37,7 @@ Status column / Security Analytics moved out of the authoring Agents list into g
   exposure to System topics / `InTestMode`.
 
 ### Lab 6.4: Generative Answers content moderation level + prompt modification
+
 - **Status:** blocked / removed
 - **Reason:** No Topics, no **Add a topic → From blank**, and no **Generative Answers** node. Content
   moderation is **agent-level only** (Settings → AI & behavior → Safety → Moderation level). There is no
@@ -48,6 +50,7 @@ Status column / Security Analytics moved out of the authoring Agents list into g
 ## Relocated Capabilities
 
 ### Lab 6.7: Protection Status column on the Agents page
+
 - **Status:** modified / relocated
 - **Reason:** The new-experience **Agents** list columns are **Name / Channel / Status / Owner / Last
   modified** — there is **no Protection Status column** and no click-through protection summary dialog.
@@ -56,6 +59,7 @@ Status column / Security Analytics moved out of the authoring Agents list into g
 - **Screenshot:** ![](./assets/validation/agents-list-no-protection-status.png)
 
 ### Lab 6.8: Security Analytics / Threat detection
+
 - **Status:** modified / relocated
 - **Reason:** The dashboard (Threat detection, Protection Categories, Reason-for-Block / Session Block
   Rate Trend charts) is a governance/admin feature reached through Agent Ops / PPAC, not through a
@@ -64,6 +68,7 @@ Status column / Security Analytics moved out of the authoring Agents list into g
 ## Step-by-Step Comparison
 
 ### Lab 6.1 — AI safety disclosure in greeting
+
 - **Original:** Topics → System → Conversation Start → edit greeting message → Save → Test/Refresh.
 - **Status:** modified
 - **New instruction:** ⋯ More options → **Settings → Greeting & prompts → Greeting message** → paste the
@@ -72,6 +77,7 @@ Status column / Security Analytics moved out of the authoring Agents list into g
 - **Screenshot:** ![](./assets/validation/greeting-prompts.png)
 
 ### Lab 6.2 — Content moderation level + custom flagged message
+
 - **Original:** Settings → Moderation → set High → add a custom **"When potential responses get flagged…"**
   message → Save → test in Test panel.
 - **Status:** modified (moved) + removed (custom message)
@@ -84,14 +90,17 @@ Status column / Security Analytics moved out of the authoring Agents list into g
 - **Screenshot:** ![](./assets/validation/moderation-levels.png)
 
 ### Lab 6.3 — Custom error handling (On Error topic)
+
 - **Original:** Edit System → On Error topic Message node; Publish; test in Teams.
 - **Status:** **blocked** (see Blockers above).
 
 ### Lab 6.4 — Generative Answers node moderation + prompt modification
+
 - **Original:** Custom topic + Generative Answers node + per-node moderation level + prompt modification.
 - **Status:** **blocked** (see Blockers above).
 
 ### Lab 6.5 — Agent instructions to control scope
+
 - **Original:** Overview → Instructions → Edit → append PROHIBITED TOPICS → Save.
 - **Status:** modified
 - **New instruction:** **Build** tab → **Instructions** field → append PROHIBITED TOPICS (now also folds
@@ -100,6 +109,7 @@ Status column / Security Analytics moved out of the authoring Agents list into g
   Mission 05). Same Instructions editor toolbar (no Power Fx picker).
 
 ### Lab 6.6 — Testing instruction-based blocking
+
 - **Original:** Test prompts in the Test panel; observe filter vs. instruction refusal vs. Unknown Intent
   fallback topic.
 - **Status:** modified
@@ -108,9 +118,11 @@ Status column / Security Analytics moved out of the authoring Agents list into g
   generative orchestration.
 
 ### Lab 6.7 — Protection Status column
+
 - **Status:** modified / relocated (see Relocated above).
 
 ### Lab 6.8 — Security Analytics
+
 - **Status:** modified / relocated (see Relocated above).
 
 ## Validation notes

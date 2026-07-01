@@ -29,6 +29,7 @@ last-edited-date: 2026-06-30
 > job roles, plus an **Agent Flow** to create Job Applications. In the new experience **AI Builder Prompts
 > no longer exist**, so both capabilities are rebuilt with the **Microsoft Dataverse MCP Server** tool
 > (added under **Tools → Add a tool → Model Context Protocol (MCP)**) combined with a **Skill**:
+>
 > - **Grounding** → the agent uses the MCP `read_query` tool to read live **Job Roles** + **Evaluation
 >   Criteria** from Dataverse at runtime (validated live).
 > - **Create Job Application** → the agent uses the MCP `create_record` tool to insert rows directly — no

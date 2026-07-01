@@ -2,7 +2,7 @@
 
 **Original lab:** Multimodal Prompts — Document Resume Recon
 **Date evaluated:** 2026-06-29
-**Environment:** https://copilotstudio.preview.microsoft.com/environments/aab8f8eb-e060-e28b-958f-2ea6fd0ab517
+**Environment:** <https://copilotstudio.preview.microsoft.com/environments/aab8f8eb-e060-e28b-958f-2ea6fd0ab517>
 **Plugin version:** rewrite-lab (agent-academy-tester)
 
 ## Headline finding
@@ -30,6 +30,7 @@
 ## ⚠️ Removed Capabilities
 
 ### AI Builder Prompt (the core of the original mission)
+
 - **Status:** removed
 - **Reason:** "Prompt is now called Agent." No standalone Prompt tool in the new experience; no Prompt in
   the agent **Add a tool** gallery; no `/document` `/text` input params; no **Output → JSON** toggle; no
@@ -46,6 +47,7 @@
 ## Step-by-Step Comparison
 
 ### 7.1 Create the resume-extraction Prompt → **Create the resume-extraction Skill**
+
 - **Status:** new_flow
 - **New instruction:** Build → **Skills** card → **+ Add skill** → **Create from blank**; Name
   `summarize-resume` (lowercase/hyphen), Description, Instructions describing the extraction. No document
@@ -55,6 +57,7 @@
 - **Screenshot:** ![](./assets/validation/skill-create-dialog.png)
 
 ### 7.2 Configure JSON output → **Ask the skill for structured JSON in its instructions**
+
 - **Status:** new_flow
 - **New instruction:** A Skill has no **Output → Text/JSON** toggle and no "Configure for use in Agent"
   dialog. Append the desired JSON structure to the skill **Instructions**.
@@ -62,6 +65,7 @@
   may render as readable markdown unless instructions explicitly demand strict JSON.
 
 ### 7.3 Add prompt to an Agent Flow → **Persist extracted data with a Workflow tool**
+
 - **Status:** new_flow
 - **New instruction:** Skills can't write to Dataverse, so persistence still needs a tool. Classic
   **Agent Flow** is now a standalone **Workflow** (Workflows hub → New Workflow). Trigger
@@ -76,18 +80,21 @@
 - **Screenshot:** ![](./assets/validation/workflow-agent-node.png)
 
 ### 7.4 Create candidate record → **(same logic, Workflow Connector + If/Else)**
+
 - **Status:** new_flow
 - **New instruction:** Connector node (Dataverse **List rows** = Get Existing Candidate) + **If/Else**
   on candidate count; **Add a new row** in the True branch. Expressions unchanged.
 - **What changed:** Control → If/Else; actions added as Connector nodes.
 
 ### 7.5 Update resume + flow outputs → **(same logic, Workflow Update row + trigger outputs)**
+
 - **Status:** new_flow
 - **New instruction:** Connector **Update a row** (Update Resume) outside the If/Else; outputs configured
   on the **Respond to the agent** node; publish via **Publish** (no separate Overview/Designer tabs).
 - **What changed:** No Overview/Details panel; rename + description set on the canvas; single Publish.
 
 ### 7.6 Connect the flow to your agent → **Attach Workflow as a tool; child agent → Skill**
+
 - **Status:** modified
 - **New instruction:** Attach via Build → **Tools** card → **Add a tool** → **Workflows** tab (not
   "Flow"). The classic child **Application Intake Agent** is now a **Skill** named `application-intake`
@@ -95,6 +102,7 @@
 - **What changed:** Tool gallery path; child agent migrated to a Skill (confirmed live in this env).
 
 ### 7.7 Test your agent → **Test in the Preview tab**
+
 - **Status:** modified
 - **New instruction:** Use the **Preview** tab. Attach the resume (Attach file), wait a few seconds, then
   send. The agent loads the **summarize-resume** Skill, reads the PDF natively, and returns the structured
