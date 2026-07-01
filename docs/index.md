@@ -63,12 +63,6 @@ For example:
 
 If a module requires a capability you don't have access to, you can **skip it** and move on, but keep in mind that many modules **build on previous ones**. Skipping a module may mean you're missing a dependency (like a solution, agent, or data) that later modules expect to be in place. You may be able to work around this, but in some cases it could block your progress on subsequent modules.
 
-::: tip 🚀 Want a more guided experience?
-Prefer not to deal with environment setup, trial licenses, or expiring tenants? The **Microsoft Power Up Program** offers the Agent Academy Recruit path on their platform with a pre-configured environment, office hours, and discussion forums if you get stuck. A great option whether you're an individual learner or running this as a team. Same curriculum, just on Power Up's platform.
-
-[👉 Try it on Power Up](https://aka.ms/powerup)
-:::
-
 ## 🎒 Other Courses {#other-courses}
 
 Looking to go deeper or explore related topics? Here are some recommended next steps:
