@@ -108,7 +108,7 @@ Next, you'll ground your agent with a guidance document you already have and two
 #### 2.4.1 Upload guidance document
 
 1. Download your guidance document [Contoso_Guest_WiFi_Connection_Guide.docx](./assets/Contoso_Guest_WiFi_Connection_Guide.docx).
-2. In the agent's same **Configure** view, scroll to the **Knowledge** section 1️⃣ and upload 2️⃣ the DOCX guidance document. This gives the agent company-specific information it can use for troubleshooting and device-related questions.
+1. In the agent's same **Configure** view, scroll to the **Knowledge** section 1️⃣ and upload 2️⃣ the DOCX guidance document. This gives the agent company-specific information it can use for troubleshooting and device-related questions.
 
     ![Upload guidance document](./assets/step-02.4.1-annotated.png)
 
