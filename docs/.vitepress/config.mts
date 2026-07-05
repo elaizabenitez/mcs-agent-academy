@@ -12,6 +12,7 @@ export default defineConfig({
   title: "Agent Academy",
   base: "/agent-academy/",
   cleanUrls: true,
+  ignoreDeadLinks: [/\.docx$/],
   head: [
     ["link", { rel: "icon", href: "/agent-academy/logo.png" }],
     [
