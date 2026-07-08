@@ -202,7 +202,7 @@ Make sure you switch to your dedicated developer environment. For details, see [
 
 ### 4.1 Create a Solution publisher
 
-1. Select the **ellipsis icon (...)** on the left hand side menu in Copilot Studio. Select **Solutions** under the **Explore** header.
+1. Select the **ellipsis icon (...)** on the left-hand side menu in Copilot Studio. Select **Solutions** under the **Explore** header.
 
     ![Solutions](./assets/4.1_01_Solutions.png)
 
