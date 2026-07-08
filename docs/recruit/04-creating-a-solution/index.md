@@ -196,13 +196,13 @@ The following are the security roles that enables users to create a solution in 
 Make sure you switch to your dedicated developer environment. For details, see [Lesson 00 - Course Setup - Step 3: Create new developer environment](../00-course-setup/index.md#step-3-create-new-developer-environment).
 :::
 
-1. On the upper right, select the **Cog wheel** icon and switch from the default environment to your environment, for example **Adele Vance's environment**.
+1. In the upper right, select the **gear (settings)** icon and switch from the default environment to your environment, for example **Adele Vance's environment**.
 
     ![Developer environment](./assets/4.0_03_DeveloperEnvironment.png)
 
 ### 4.1 Create a Solution publisher
 
-1. Select the **ellipsis icon (. . .)** on the left hand side menu in Copilot Studio. Select **Solutions** under the **Explore** header.
+1. Select the **ellipsis icon (...)** on the left hand side menu in Copilot Studio. Select **Solutions** under the **Explore** header.
 
     ![Solutions](./assets/4.1_01_Solutions.png)
 
