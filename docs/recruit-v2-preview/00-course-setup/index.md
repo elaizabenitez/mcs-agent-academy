@@ -18,7 +18,7 @@ products:
 industries:
   - it
 created-date: 2025-08-20
-last-edited-date: 2026-03-16
+last-edited-date: 2026-07-16
 ---
 
 # 🚨 Mission 00: Course Setup {#mission-00-course-setup}
@@ -74,7 +74,7 @@ Copilot Studio resides within Microsoft 365, so you need a Microsoft 365 account
 
 Once you have your Microsoft 365 Tenant, you need to get access to Copilot Studio. You can get a free 30 day trial by following these steps:
 
-1. Navigate to [aka.ms/TryCopilotStudio](https://aka.ms/TryCopilotStudio).  
+1. Navigate to [aka.ms/TryCopilotStudio](https://aka.ms/TryCopilotStudio).
 1. Enter the email address from the new account you configured in the previous step and select `Next`.  
 
     ![Microsoft 365 Signup](./images/mcs-trial-screen.png)
@@ -186,91 +186,104 @@ The following steps are required regardless of whether you're using a trial or a
 
 ## Step 5: Create new SharePoint site
 
-A new SharePoint site needs to be created  which will be used in [Lesson 06](/recruit/06-create-agent-from-conversation/#62-add-an-internal-knowledge-source-using-a-sharepoint-site).
+A new SharePoint site is required for [Mission 04](/recruit-v2-preview/05-build-a-custom-agent). In this step, you'll also create a new list in that site to store available devices.
 
-1. Select the waffle icon on the top left hand side of Microsoft Copilot Studio to view the menu. Select SharePoint from the menu.
+1. Select the waffle icon in the top-left corner of [Power Apps](https://make.powerapps.com/) or the [Microsoft 365 admin center](https://admin.cloud.microsoft) to open the app menu, then select **SharePoint**.
 
-    ![Select SharePoint](images/0.4_01_SelectSharePoint.png)
+    ![Select SharePoint in Power Apps](images/0.5_01_PowerApps.png)
 
-1. SharePoint will load. Select **+ Create  site** to create a new SharePoint site.
+    ![Select SharePoint in Microsoft 365 Admin Center](images/0.5_02_MAC.png)
 
-    ![Create site](images/0.4_02_CreateSite.png)
+1. After SharePoint loads, select **Build** in the left navigation menu, then select **Site** to create a new SharePoint site.
 
-1. A dialog will appear to guide you in creating a new SharePoint site. Select **Team site**.
+    ![Create site](images/0.5_03_SelectSite.png)
 
-    ![Team site](images/0.4_03_SelectTeamOrCommunicationSite.png)
+1. A dialog appears to guide site creation. Under the **Team site** option, select **IT help desk**.
 
-1. In the next step, a list of Microsoft templates will load by default. Scroll down and select the **IT help desk** template.
+    ![Select IT help desk site template](images/0.5_04_SelectITHelpDeskSiteTemplate.png)
 
-    ![IT help desk template](images/0.4_04_SelectITHelpDeskTemplate.png)
+1. Select **Use template** to create a new SharePoint site from the IT help desk template.
 
-1. Select **Use template** to create a new SharePoint site using the IT help desk template.
+    ![Use template](images/0.5_05_SelectUseTemplate.png)
 
-    ![Use template](images/0.4_05_SelectUseTemplate.png)
-
-1. Enter information for your site. The following is an example:
+1. Enter your site details. Example:
 
     | Field | Value |
     | --- | --- |
     | Site name | Contoso IT |
-    | Site description | Copilot Studio for Beginners |
+    | Site description | Copilot Studio Agent Academy |
     | Site address | ContosoIT |
 
-    ![Site information](images/0.4_06_SiteDetails.png)
+    Select **Create site**.
 
-1. In the final step, a language can be selected for the SharePoint site. By default it will be **English**. Leave the Language as **English** and select **Create site**.
+    ![Set up your site](images/0.5_06_SetUpSite.png)
 
-    ![Language and other options](images/0.4_07_LanguageOtherOptions.png)
+1. After selecting **Create site**, SharePoint may take a few seconds to finish provisioning. In the meantime, you can optionally add users by entering email addresses in the **Add members** field.
 
-1. The SharePoint site will provision for the next few seconds. In the mean time, you can choose to add other users to your site by entering their email address in the **Add members** field. When completed, select **Finish**.
+    Once you see confirmation that the site is ready, select **Go to site**.
 
-    ![Select finish](images/0.4_08_SelectFinish.png)
+    ![Select go to site](images/0.5_07_SelectGoToSite.png)
 
-1. The SharePoint site home page will next load. **Copy** the SharePoint site URL.
+1. Next, create a list to store device information. On the site's **Home** tab, select **+ New**, then select **List**.
 
-1. This template provides pages with sample data about various IT policies and two sample lists (Tickets and Devices).
+    ![Create new list](images/0.5_08_CreateNewList.png)
 
-### Use Devices SharePoint list
+1. Under the **Import from** section, select **Excel**.
 
-We will use the **Devices** list for in Mission 07.
+    ![Select Excel](images/0.5_09_ImportFromExcel.png)
 
-![Devices list](./images/devices-list.png)
+1. Select **Upload file**.
 
-### Add new column
+    ![Select upload file](images/0.5_10_UploadFile.png)
 
-Scroll to the far right in the list and select the **+ Add column** button.  
+1. Download the following ZIP file, extract it, then upload `EmployeeAssets.xlsx` to the list by selecting **Open**.
 
-![Add column](./images/add-column.png)
+    <download-files path="recruit-v2-preview/00-course-setup/assets/employee-assets" label="Download Excel .zip file for List" />
 
-Choose the **hyperlink** type, enter **Image** for the column name, and select add.
+    ![Select file](images/0.5_11_SelectFile.png)
 
-### Create sample data in Devices SharePoint list
+1. Enter `EmployeeAssets` as the list name, select the **Show list in site navigation** checkbox, then select **Create**.
 
-You need to make sure you fill in this list with at least 4 sample data items and add one additional column to this list.  
+    ![Select Create](images/0.5_12_CreateList.png)
 
-When adding sample data, make sure that the following fields are filled out:
+1. Add a new column with the type `Hyperlink`. Scroll across the list, select **+ Add column**, select **Hyperlink**, then select **Next**.
 
-- Device photo - use the device images below
-- Title
-- Status
-- Manufacturer
-- Model
-- Asset Type
-- Color
-- Serial Number
-- Purchase Date
-- Purchase Price,
-- Order #
-- Image - use the following links
+    ![Add new hyperlink column](images/0.5_13_AddNewHyperlinkColumn.png)
 
-<download-files path="recruit/00-course-setup/assets/device-images" label="Download device images" />
+1. Enter the following information for the column and select **Save**.
 
-| Device | URL |
-| ------ | --- |
-| Surface Laptop 13 | [https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/recruit/00-course-setup/images/device-images/Surface-Laptop-13.png](https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/recruit/00-course-setup/images/device-images/Surface-Laptop-13.png) |
-| Surface Laptop 15 | [https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/recruit/00-course-setup/images/device-images/Surface-Laptop-15.png](https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/recruit/00-course-setup/images/device-images/Surface-Laptop-15.png) |
-| Surface Pro | [https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/recruit/00-course-setup/images/device-images/Surface-Pro-12.png](https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/recruit/00-course-setup/images/device-images/Surface-Pro-12.png) |
-| Surface Studio | [https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/recruit/00-course-setup/images/device-images/Surface-Studio.png](https://raw.githubusercontent.com/microsoft/agent-academy/refs/heads/main/docs/recruit/00-course-setup/images/device-images/Surface-Studio.png) |
+    | Field | Value |
+    | --- | --- |
+    | Name | Image URL |
+    | Description | The image URL of the employee asset |
+
+    ![Create a column](images/0.5_14_CreateAColumn.png)
+
+1. Copy each value from the **Image** column to the **Image URL** column. Select **Edit in grid view**.
+
+    ![Select Edit in Grid View](images/0.5_15_SelectEditInGridView.png)
+
+1. In the first row (the first item in the list), double-click the **Image** column and copy the value. Press the `Esc` key to exit editing.
+
+    ![Double click column](images/0.5_16_DoubleClickColumn.png)
+
+1. Double-click the corresponding **Image URL** column, paste the value in the **Link** field, then select the checkmark icon to save.
+
+    ![Paste value into image URL column](images/0.5_17_PasteValueIntoImageURLColumn.png)
+
+1. Repeat the same steps for the remaining three rows in the list.
+
+1. Lastly, delete the Image text column. Select the column, then select **Column settings** followed by **Edit**.
+
+    ![Select Edit](images/0.5_18_EditColumnSettings.png)
+
+1. Select **Delete**.
+
+    ![Select Delete](images/0.5_19_SelectDelete.png)
+
+1. A confirmation dialog appears. Select **Delete** to confirm removing the column from the list.
+
+    ![Confirm Deletion](images/0.5_20_ConfirmDeletion.png)
 
 ## ✅ Mission Complete {#mission-complete}
 
