@@ -66,15 +66,19 @@ As an employee, you want an IT helpdesk assistant that can help you solve common
 - A Microsoft 365 Copilot license
 - Access to [Microsoft 365 Copilot](https://m365.cloud.microsoft/chat)
 
-### 2.1 Open Agent Builder
+### 2.1 Create new agent
 
-1. Go to [Microsoft 365 Copilot](https://m365.cloud.microsoft/chat) and sign in.
+1. Browse to [Microsoft 365 Copilot](https://m365.cloud.microsoft/chat) and sign in.
 
-1. In the left navigation, under **Agents** 1️⃣, select **New agent** 2️⃣. This opens **Agent Builder**.
+1. Select the **New design** toggle to enable the new UI.
 
-    ![Select New agent](./assets/step-01-annotated.png)
+   In the left navigation pane, select **Agents** and select **New agent**. This opens **Agent Builder**.
 
-### 2.2 Describe your agent in natural language
+    ![Select new agent](./assets/2.1_01_SelectNewAgent.png)
+
+1. In Agent Builder you can create an agent using natural language, as well as select from a list of templates.
+
+    ![Available templates](./assets/2.1_02_AvailableTemplates.png)
 
 1. In the message box shown below, copy and enter the natural language prompt given here:
 
@@ -82,14 +86,14 @@ As an employee, you want an IT helpdesk assistant that can help you solve common
     You are an IT Help Desk assistant that helps employees resolve common IT issues and find available devices. Be polite, concise, and helpful. Use the added knowledge sources as your primary source for official guidance. Ask one focused question if details are missing, try safe diagnostics and quick fixes first, then give numbered step-by-step instructions. Do not invent steps. If you cannot verify guidance, say so clearly and recommend safe next steps or escalation. Never ask for passwords.
     ```
 
-    ![Natural language prompt to describe the agent](./assets/step-02-annotated.png)
+    ![Natural language prompt to describe the agent](./assets/2.1_03_EnterPrompt.png)
 
 1. Press **Enter** to submit. Agent Builder drafts your agent by generating a name, description, instructions, and suggested prompts. This takes a few moments.
 
     > [!WARNING] AI-generated content varies
     > The drafted name, description, instructions, and starter prompts can differ each session.
 
-### 2.3 Name and review your agent
+    ![Draft agent](./assets/2.1_04_AI-generatedContent.png)
 
 1. The builder switches to the **Configure** view. In the name field shown in the screenshot, replace the suggested name with:
 
@@ -97,32 +101,25 @@ As an employee, you want an IT helpdesk assistant that can help you solve common
     Contoso Helpdesk Agent
     ```
 
-    Review the AI-generated instructions below the name. You'll see the role, tone, and guidance reflected from your description.
+    Review the AI-generated instructions below the name. You'll see the role, tone, and guidance reflected in the generated instructions.
 
-    ![Set agent name and review instructions](./assets/step-03-annotated.png)
+    ![Set agent name and review instructions](./assets/2.1_05_RenameAgent.png)
 
-### 2.4 Add knowledge sources
+### 2.2 Add knowledge sources
 
-Next, you'll ground your agent with a guidance document you already have and two website knowledge sources.
+Next, you'll ground your agent with two websites and a SharePoint site
 
-#### 2.4.1 Upload guidance document
+#### 2.2.1 Add websites
 
-1. Download your guidance document [Contoso_Guest_WiFi_Connection_Guide.docx](./assets/Contoso_Guest_WiFi_Connection_Guide.docx).
-1. In the agent's same **Configure** view, scroll to the **Knowledge** section 1️⃣ and upload 2️⃣ the DOCX guidance document. This gives the agent company-specific information it can use for troubleshooting and device-related questions.
+1. In the **Knowledge** section, select the **Enter a URL or name or drop files here** box.
 
-    ![Upload guidance document](./assets/step-02.4.1-annotated.png)
-
-#### 2.4.2 Add website references
-
-1. In the same **Knowledge** section, select the **Enter a URL or name or drop files here** box.
-
-1. Add the first website knowledge source, then press **Enter**:
+   Add the first website knowledge source, then press **Enter**:
 
     ```text
     https://support.microsoft.com
     ```
 
-    ![Add website knowledge source](./assets/step-04-annotated.png)
+    ![Add website knowledge source](./assets/2.2_01_AddFirstWebsiteURL.png)
 
 1. Add the second website knowledge source, then press **Enter**:
 
@@ -130,48 +127,137 @@ Next, you'll ground your agent with a guidance document you already have and two
     https://learn.microsoft.com/troubleshoot
     ```
 
+    ![Add second website knowledge source](./assets/2.2_02_SecondWebsiteURLAdded.png)
+
 1. In the same **Knowledge** section, if **Only use specified sources** is available and currently off, turn it on so the agent uses only the knowledge sources you added.
+
+#### 2.2.2 Add SharePoint site
+
+1. Next, we'll add the SharePoint site. In the **Knowledge** section, select the **Enter a URL or name or drop files here** box and select the Sites option.
+
+   Select the SharePoint site created in Mission 00 - Course setup.
+
+    ![Add SharePoint site knowledge source](./assets/2.2_03_AddSharePointSite.png)
 
 1. When you're done, the **Knowledge** section should show all three knowledge sources.
 
-    - Contoso_Guest_WiFi_Connection_Guide.docx
     - `https://support.microsoft.com`
     - `https://learn.microsoft.com/troubleshoot`
+    - Contoso IT SharePoint site
 
-    ![All knowledge sources configured](./assets/step-2.4.2-annotated.png)
+    ![All knowledge sources configured](./assets/2.2_04_KnowledgeSourcesConfigured.png)
 
-### 2.5 Create and deploy the agent
+### 2.3 Add Suggested Prompts
 
-1. Select **Create**. Agent Builder saves the agent and confirms it was created. It's **private** to you by default but you can select **Share** to deploy it to teammates, or **Go to agent** to start using it.
+1. Lastly, we'll enter several suggested prompts. You can configure up to 10 suggested prompts that users can choose from to start a conversation with your agent in Microsoft 365 Copilot Chat or Microsoft Teams.
 
-    ![Agent created and deploy options](./assets/step-05-annotated.png)
+    Enter the following suggested prompts.
 
-1. Select **Go to agent**. Your declarative agent opens in Microsoft 365 Copilot, ready for testing.
+    **Prompt No. 1**
 
-### 2.6 Test the agent
-
-1. In the message box, enter:
+    Title
 
     ```text
-    I'm at the Contoso office and can’t get on guest Wi-Fi.
+    Software Installation Help
     ```
 
-    ![Agent test prompt](./assets/step-06-annotated.png)
+    Prompt
 
-1. The agent responds with numbered, step-by-step instructions grounded in the knowledge you added, using your guidance document for company-specific help and website sources for official supporting information.
+    ```text
+    I need help installing a new application on my computer.
+    ```
 
-    ![Agent test response with document reference](./assets/step-07-annotated.png)
+    **Prompt No. 2**
 
-1. Next, test an advanced prompt to validate source scoping and website-only troubleshooting behavior.
+    Title
+
+    ```text
+    Explain IT Terms
+    ```
+
+    Prompt
+
+    ```text
+    Can you explain what a VPN is and why I might need one?
+    ```
+
+    **Prompt No. 3**
+
+    Title
+
+    ```text
+    Resolve Printer Problem
+    ```
+
+    Prompt
+
+    ```text
+    My printer isn't working. Can you help me fix it?
+    ```
+
+    ![Add suggested prompts for agent](./assets/2.3_01_AddStarterPrompts.png)
+
+### 2.4 Preview agent
+
+The **Preview** option lets you test and refine your agent while you build it. It becomes available after the agent has a name, description, and instructions, and it behaves like a published agent based on those instructions.
+
+It also includes the suggested starter prompts. Select one to begin a conversation, or choose New chat to reset the chat and see the prompts again.
+
+Let's try a starter prompt.
+
+1. Switch from **Configure** to **Preview**.
+
+    ![Switch to Preview](./assets/2.4_01_PreviewAgent.png)
+
+1. Select one of the prompts.
+
+    ![Select a starter prompt](./assets/2.4_02_SelectAPrompt.png)
+
+1. The agent responds based on its instructions and grounded knowledge sources, and it shows citations for the information it used.
+
+   Select one of the citations and it will load the web page of the website that it sourced the information from.
+
+    ![Review response citation](./assets/2.4_03_ReviewResponseCitationReference.png)
+
+### 2.5 Create and test the agent
+
+1. Select **Create**.
+
+    ![Select Create](./assets/2.5_01_CreateAgent.png)
+
+1. Agent Builder saves the agent and confirms it was created. It's **private** to you by default. You can select **Share** to deploy it to teammates, or **Start chat** to start using it.
+
+   Select **Start chat**. Your declarative agent opens in Microsoft 365 Copilot, ready for testing.
+
+    ![Agent created and deploy options](./assets/2.5_01_CreateAgent.png)
+
+1. We'll first test the website knowledge source. In the message box, enter:
+
+    ```text
+    How can I check the warranty status of my Surface?
+    ```
+
+    ![Enter first question](./assets/2.5_03_EnterQuestion.png)
+
+1. The agent responds with numbered, step-by-step instructions grounded in the website knowledge sources you added for official supporting information.
+
+   Review the citation references by selecting source. A sources panel will appear on the right.
+
+    ![Review citations references](./assets/2.5_04_ReviewResponseCitationReference.png)
+
+1. Next, enter the following question to validate the SharePoint site knowledge source.
 
 1. In the same chat, enter:
 
     ```text
-    I can’t connect to Wi-Fi on my Windows laptop at the office. Please give me a website-based troubleshooting flow only: start with quick checks, then advanced diagnostics, and end with clear escalation criteria. Keep it concise and step-by-step.
+    How can I access our company's Contoso VPN from my device?
     ```
 
-    ![Agent test response with doc and support links](./assets/step-08-annotated.png)
+    ![Enter second question](./assets/2.5_05_EnterSecondQuestion.png)
 
+1. The agent once again responds with numbered, step-by-step instructions and this time references the SharePoint site.
+
+    ![Review SharePoint site knowledge source](./assets/2.5_06_ReviewResponseCitationReference.png)
 
 🎉 Congratulations! You built, tested, and deployed a declarative agent entirely inside Microsoft 365 Copilot.
 
