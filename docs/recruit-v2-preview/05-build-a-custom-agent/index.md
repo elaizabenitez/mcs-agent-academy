@@ -23,7 +23,7 @@ created-date: 2026-06-28
 last-edited-date: 2026-06-28
 ---
 
-# 🚨 Mission 05: Build a custom engine agent from your declarative agent {#mission-05-build-a-custom-engine-agent-from-your-declarative-agent}
+# 🚨 Mission 05: Build a custom engine agent {#mission-05-build-a-custom-engine-agent}
 
 <mission-meta />
 
