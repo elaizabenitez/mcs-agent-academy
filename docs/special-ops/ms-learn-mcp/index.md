@@ -23,10 +23,9 @@ last-edited-date: 2026-03-17
 <!-- markdownlint-disable-next-line MD033 -->
 <p align="center"><img src="./assets/Academy_LearnMCP_Badge.png" alt="Microsoft Learn MCP Badge" width="220" /></p>
 
-Welcome, agent. Your mission — should you choose to accept it — is **Operation Open Book**: connect the **Microsoft Learn Docs MCP Server** to a Copilot Studio agent, giving it real-time access to the entire Microsoft Learn documentation library. No more agents responding with outdated or hallucinated product information. Your agent is about to become the most well-read operative in the field. 📖🎯
+Welcome, agent. This mission is **Operation Open Book** where you'll connect the **Microsoft Learn Docs MCP Server** to a Copilot Studio agent, giving it real-time access to the entire Microsoft Learn documentation library. No more agents responding with outdated or hallucinated product information. Your agent is about to become the most well-read operative in the field.
 
-> [!IMPORTANT] This mission currently uses the classic Copilot Studio experience
-> Microsoft Copilot Studio is rolling out a new authoring experience. The screenshots and steps in this mission use the **classic experience**. If your screen looks different, turn off **New Experience** in the upper-right corner before you continue. Refreshed instructions for the new experience are planned, but this mission remains valid in the classic experience.
+> [!IMPORTANT] Copilot Studio is rolling out a new authoring experience. The screenshots and steps in this mission use the **new experience**. If your screen looks different, turn on **New Experience** in the upper-right corner before you continue.
 
 ## 🔧 What You'll Build {#what-youll-build}
 
@@ -73,142 +72,125 @@ Zava is building an internal agent to support employees with Microsoft 365, Azur
 
 ## 🧪 Lab 1.1 - Create the Support Agent {#lab-11-create-the-support-agent}
 
-The first step is to create a new Copilot Studio agent that will serve as the foundation for your Microsoft Learn-powered helpdesk.
+The first step is to create a new Copilot Studio agent that will serve as the foundation for your Microsoft Learn-powered support agent.
 
-1. Navigate to [Microsoft Copilot Studio](https://copilotstudio.microsoft.com) and sign in.
+1. Navigate to [Microsoft Copilot Studio](https://copilotstudio.microsoft.com) and sign in. Ensure that the **New Experience** option is toggled on in the upper right hand corner.
 
-1. Select **Create Agent** on the home page.
+1. Select **Agent** under the **select what you want to build** section on the home page.
 
-    ![Create Agent](./assets/create-agent.png)
+    ![Create Agent](./assets/step-01.png)
 
-1. Select **Edit** in the Details section
-
-    ![Edit Details](./assets/edit-details.png)
-
-1. Enter the following in the **Name** field:
+1. Copy and paste the following in the **Name your agent** value at the top left of the screen.
 
     ```text
-    Microsoft Product Support Assistant
+    Microsoft Product Support
     ```
 
-1. Enter the following in the **Description** field:
+    ![Name your agent](./assets/step-02.png)
 
-    ```text
-    An agent that answers questions about Microsoft products by searching live Microsoft Learn documentation.
-    ```
-
-1. Select **Save**
-
-    ![Save](./assets/save-details.png)
+1. The agent saves automatically as you build; you can also select **Save** in the top-right toolbar at any time.
 
 ## 🧪 Lab 1.2 - Connect the Microsoft Learn Docs MCP Server {#lab-12-connect-the-microsoft-learn-docs-mcp-server}
 
 Next, you'll add the Microsoft Learn Docs MCP Server as a tool in Copilot Studio, making its tools available to your agent.
 
-1. Select the **Add tool** button in the Tools section.
+1. In the right-hand configuration panel, on the **Tools** section, select **+ Add tool**.
 
-    ![Add Tool](./assets/add-tool.png)
+    ![Add Tool](./assets/step-03.png)
 
-1. Select the **Model Context Protocol** tab and search for `Microsoft Learn`. Select the **Microsoft Learn Docs MCP Server** from the list of options.
+1. In the **Add a tool** dialog, select the **Model Context Protocol (MCP)** tab and search for `Microsoft Learn`. Select the **Microsoft Learn Docs MCP Server** from the list of options.
 
-    ![Select MCP](./assets/tool-search.png)
+    ![Select the MCP server](./assets/step-04.png)
 
-1. Select the dropdown next to **Connection** and select **Create new connection** to create a new connection to the MCP server.
+1. If you don't already see a connection, select the **Not connected** dropdown next to **Connection** and select **Create new connection** to create a new connection to the MCP server.
 
-    ![Create Connection](./assets/create-connection.png)
+    ![Create new connection](./assets/step-05.png)
 
-1. Select **Create** to create the connection
+1. Select **Create** to create the connection.
 
-    ![Create connection confirm](./assets/create-connection-confirm.png)
+    ![Create connection confirm](./assets/step-06.png)
 
-1. Select **Add and configure**
+1. Select **Add**.
 
-    ![Add and Configure](./assets/add-configure.png)
+    ![Add](./assets/step-07.png)
 
-1. You'll be taken to the MCP details screen. Scroll down to the **Tools** section and notice that this comes with three separate tools and how you can enable and disable which tools you want to allow the agent to use by toggling them on and off.
+1. Select the **Microsoft Learn Docs MCP Server** tool chip in the **Tools** panel to open the **Edit** dialog. Notice that this server comes with three separate tools — `microsoft_docs_search`, `microsoft_code_sample_search`, and `microsoft_docs_fetch` — and how you can enable and disable which tools the agent may use by toggling them on and off. Select **Confirm**.
 
-    ![Tools](./assets/observe-tools.png)
+    ![Observe the MCP tools](./assets/step-08.png)
 
 ## 🧪 Lab 1.3 - Add Instructions {#lab-13-add-instructions}
 
 Now that we have the Learn MCP server added, we need to add instructions for the agent so it knows what it's supposed to do.
 
-1. Select the **Overview** tab to go back to the overview screen for your agent.
-
-1. Select **Edit** next to the Instructions section.
-
-    ![Edit Instructions](./assets/edit-instructions.png)
-
-1. Enter the following in the **Instructions** field:
+1. Select the **Instructions** field on the Build tab and copy and paste the following as the **Instructions**:
 
     ```text
     You are a helpful Microsoft documentation assistant. When a user asks a question about any Microsoft product, service, or technology, use the microsoft_docs_search tool to find relevant, accurate information from Microsoft Learn. If a user asks a question about a code sample, use the microsoft_code_sample_search tool to find a relevant code sample. Always cite the source documentation URL in your response. If the search does not return a relevant result, tell the user and suggest they visit https://learn.microsoft.com directly.
     ```
 
+![Enter the instructions](./assets/step-09.png)
+
 > [!TIP]
 > Strong instructions are critical when using MCP tools. The instruction to "use the microsoft_docs_search tool" explicitly tells the agent to invoke the MCP tool rather than relying on any built-in knowledge you might have added.
 
-1. Select **Save**
+1. Select **Save** in the top-right toolbar.
 
-    ![Save](./assets/save-instruction2.png)
+    ![Save](./assets/step-10.png)
 
 ## 🧪 Lab 1.4 - Test Your Agent {#lab-14-test-your-agent}
 
-Time to see your documentation-powered agent in action.
+Time to see your Microsoft Learn MCP powered agent in action!
 
-1. Select **Test** in the top-right corner to open the test panel.
+1. Select the **Preview** tab at the top of the agent designer.
 
-1. Send the following message:
+    ![Open the Preview tab](./assets/step-11.png)
+
+1. In the Preview chat box (**Ask a question or describe what you need**), send the following message:
 
     ```text
     What types of agents can I build in Copilot Studio?
     ```
 
-1. The first time you run the agent, it might ask you to verify your connection to the MCP server. If you see this, select the **Open Connection Manager** text.
+    ![Send a test message](./assets/step-12.png)
 
-    ![Connection Manager](./assets/connection-manager.png)
+1. The first time the agent calls the MCP server, an inline **Permission Required** card appears in the chat. Select **Allow**. The agent connects and continues automatically.
 
-1. Select the **Connect** option to connect to the MCP Server.
-
-    ![Connection](./assets/connect-manager-connect.png)
-
-1. Select **Submit**
-
-    ![Submit](./assets/submit-connection.png)
-
-1. Verify that you see the **Connected** status. Close out of the connections window and go back to your agent.
-
-    ![Connected](./assets/connected.png)
-
-1. Select **Retry** in your test window
-
-    ![Retry](./assets/retry.png)
+    ![Allow the MCP connection](./assets/step-13.png)
 
 1. Observe the agent's response. It should:
-    - Invoke the `microsoft_docs_search` tool from the MCP server and return a grounded answer with a link to the Microsoft Learn documentation page
+    - Invoke the `microsoft_docs_search` tool from the MCP server and return a grounded answer with a **Citations** section linking to the Microsoft Learn documentation page.
 
-    ![Test Result](./assets/test-result-valid.png)
+    ![Grounded test result](./assets/step-14.png)
 
-1. Send a follow-up question:
+    > [!TIP]
+    > The default mode in the Preview section is testing mode which shows you what tools are being called and what the agent is planning. You can toggle on the End User preview mode to mimic what it would look like to the end user.
+
+1. Toggle on the **End user preview** mode to see what it would look like to an end user. Send a follow-up question:
 
     ```text
     What are the licensing requirements for Copilot Studio?
     ```
 
+    ![New test](./assets/step-15.png)
+
 1. Confirm that the agent again searches Microsoft Learn and returns accurate, cited content.
 
-    > [!NOTE]
-    > You may notice a brief pause while the agent calls the MCP tool. This is expected — the agent is making a live HTTP call to the Microsoft Learn MCP Server and returning real results.
+    ![Follow-up cited result](./assets/step-16.png)
 
-1. Start a new test session and send the following message:
+    > [!NOTE]
+    > You may notice a brief pause while the agent calls the MCP tool. This is expected since the agent is making a live HTTP call to the Microsoft Learn MCP Server and returning real results.
+
+1. Select **New chat**, toggle **End user preview** back to off and send the following message:
 
     ```text
     Find a good code sample for creating a PCF control
     ```
 
-1. Notice how this time, it calls a different tool in the MCP Server, the `microsoft_code_sample_search` tool to find a relevant code sample.
+    ![New chat](./assets/step-17.png)
 
-    ![Test Result](./assets/test-code-sample.png)
+1. Notice how this time it calls a different tool in the MCP Server, the `microsoft_code_sample_search` tool, to find a relevant code sample.
+
+    ![Code sample result](./assets/step-18.png)
 
 ## 🧪 Lab 1.5 - Test the fallback behavior {#lab-15-test-the-fallback-behavior}
 
@@ -216,31 +198,32 @@ In our instructions, we defined what's called "fallback behavior", meaning, what
 
 Instructions are one way to limit the scope of what your agent should and shouldn't do. We can also adjust the agent settings to control this further. Every agent includes out-of-the-box knowledge from the model that it's using as well as the ability to use information from the web. This can be useful when you want your agent to have vast general knowledge and to perform basic chit chat. But, when you want to make sure your agent is only pulling from the explicit knowledge sources and tools that you configure, this capability could lead to hallucinations and incorrect answers.
 
-Let's take a look at how we can fine tune these settings so that the agent only uses the knowledge and tools we give it.
+Let's remove the web knowledge source so the agent relies only on the Microsoft Learn MCP tools and its instructions.
 
-1. In the **Overview** tab, select the **Settings** button.
+> [!NOTE]
+> In the new Copilot Studio experience, the classic **Use general knowledge** and **Use information from the web** settings toggles no longer exist. Web grounding is now controlled by the **Search all websites** knowledge source on the Build tab, and general model scope is governed through your instructions.
 
-    ![Settings Button](./assets/settings-btn.png)
+1. On the Build tab, in the **Knowledge** section, remove the **Search all websites** source by selecting its **X** (Remove) to disable web grounding.
 
-1. Scroll down to the **Knowledge** section and toggle the **Use general knowledge** and **Use information from the web** options off.
+    ![Remove the Search all websites source](./assets/step-19.png)
 
-    ![Settings Configuration](./assets/settings-knowledge.png)
+1. Select **Save** in the top toolbar to apply the change.
 
-1. Select the **X** in the upper right hand corner to close out of the settings screen.
-
-1. Now it's time to test that these settings and are fallback logic is working. Send the following message to test your fallback instruction:
+1. Now it's time to test that your fallback logic is working. Go to the **Preview** tab, select **New chat**, and send the following message:
 
     ```text
     What is the recipe for chocolate cake?
     ```
 
-1. Confirm that the agent responds appropriately — either indicating no relevant Microsoft Learn result was found or redirecting the user to search Microsoft Learn directly.
+    ![Fallback test](./assets/step-20.png)
 
-    ![Fallback Test](./assets/test-invalid.png)
+1. Confirm that the agent responds appropriately, either indicating no relevant Microsoft Learn result was found or redirecting you to Microsoft products and documentation.
+
+    ![Fallback test result](./assets/step-21.png)
 
 ## ✅ Mission Accomplished {#mission-accomplished}
 
-Congrats, agent — **Operation Open Book** is complete! Your Copilot Studio agent is now wired to the full Microsoft Learn documentation library through a live MCP connection.
+Congrats, agent, **Operation Open Book** is complete! Your Copilot Studio agent is now wired to the full Microsoft Learn documentation library through a live MCP connection.
 
 In this mission, you accomplished:
 
