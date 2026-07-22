@@ -54,8 +54,8 @@ Vector search finds information based on **meaning** rather than exact keywords.
 Here's how it works:
 
 1. **Convert text to vectors:** documents are turned into vectors that capture their meaning, using an **embedding model**.
-2. **Store vectors:** the vectors are stored in a search index (Azure AI Search) built to handle them efficiently.
-3. **Search with vectors:** your query is also converted to a vector, and the index returns the vectors closest in meaning.
+1. **Store vectors:** the vectors are stored in a search index (Azure AI Search) built to handle them efficiently.
+1. **Search with vectors:** your query is also converted to a vector, and the index returns the vectors closest in meaning.
 
 For example, a search for "software engineering skills" can surface candidates described as having "programming expertise" or "development capabilities" — even without the exact words from your query.
 
@@ -270,7 +270,7 @@ In this exercise you will create a Microsoft Copilot Studio agent that leverages
     If the search returns no relevant results, say so clearly rather than guessing. Always be professional and respect candidate privacy.
     ```
 
-1. Select **Save** in the upper right hand corner to save your changes. 
+1. Select **Save** in the upper right hand corner to save your changes.
 
 ![Title and description](assets/title-description.png)
 
