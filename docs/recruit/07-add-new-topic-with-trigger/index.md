@@ -348,8 +348,8 @@ Sketch a simple conversation flow of how the agent should respond
 - Ask follow-up questions to get details
 - Provide answers or perform actions
 
-!!! tip
-    Keep the conversation short and focused. Only ask what's necessary.
+> [!TIP]
+> Keep the conversation short and focused. Only ask what's necessary.
 
 ### 🔀 Step 4 - Handle different conversation types {#step-4-handle-different-conversation-types}
 

@@ -23,7 +23,7 @@ created-date: 2026-06-28
 last-edited-date: 2026-06-28
 ---
 
-# 🚨 Mission 05: Build a custom engine agent from your declarative agent {#mission-05-build-a-custom-engine-agent-from-your-declarative-agent}
+# 🚨 Mission 05: Build a custom engine agent {#mission-05-build-a-custom-engine-agent}
 
 <mission-meta />
 
@@ -74,7 +74,7 @@ We'll continue using the same IT helpdesk scenario introduced earlier in the cou
 
 Before starting this lab, make sure you have:
 
-- The declarative agent from [Lesson 03 - Create a declarative agent for Microsoft 365 Copilot](../03-create-a-declarative-agent-for-M365Copilot/index.md)
+- The declarative agent from [Lesson 03 - Create a declarative agent for Microsoft 365 Copilot](../02-declarative-agent/index.md)
 - The solution from [Lesson 04 - Creating a solution](../04-creating-a-solution/index.md)
 - Access to Copilot Studio with the **new experience** enabled
 - Your test knowledge source(s), for example the **Contoso IT** SharePoint site from [Lesson 00 - Course setup](../00-course-setup/index.md#step-4-create-new-sharepoint-site)
