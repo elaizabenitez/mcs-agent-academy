@@ -279,7 +279,7 @@ In this exercise you will create a Microsoft Copilot Studio agent that leverages
 > [!IMPORTANT]
 > In the new Copilot Studio experience, **Azure AI Search is not a Knowledge source**. The **Add knowledge** dialog only offers Public websites, SharePoint, and OneDrive. Instead, you connect Azure AI Search as a **connector tool** and let the agent call it for retrieval.
 >
-> ![The Add knowledge dialog does not list Azure AI Search — searching "Azure" returns no results.](./assets/validation/rag-knowledge-no-azure-search.png)
+> ![The Add knowledge dialog does not list Azure AI Search — searching "Azure" returns no results.](./assets/rag-knowledge-no-azure-search.png)
 
 1. In the right-hand **Agent configuration** panel, find the **Tools** card and select **Add tool**.
 
