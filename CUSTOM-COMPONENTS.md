@@ -77,6 +77,8 @@ Show all missions with pagination (4 rows per page):
 
 **When to use:** On section landing pages (`docs/special-ops/index.md`, `docs/cowork-collective/index.md`, etc.) and any taxonomy pages that list missions.
 
+Missions with `hide: true` in their frontmatter are excluded from every `<missions />` grid, including section, tag, product, and industry listings. The mission page remains available directly, and its `<mission-meta />` component is unaffected.
+
 **Preview:**
 
 ![Missions grid with filter pills and mission cards](./assets/component-missions.png)
@@ -456,6 +458,7 @@ Use these when you need to show different images or text depending on the user's
 | `industries` | string[] | Required | Required | Required | Industry slugs from `industries.json`. |
 | `created-date` | date | Required | Required | Required | ISO date of first publish. |
 | `last-edited-date` | date | Required | Required | Required | ISO date of last edit. |
+| `hide` | boolean | Optional | Optional | Optional | Set to `true` to exclude the page from all `<missions />` grids. |
 | `lastUpdated` | boolean | Optional | Optional | Optional | Set to `false` on landing/overview pages to hide the VitePress last-updated footer. |
 
 *`prev` is not required on the first mission; `next` is not required on the last mission.

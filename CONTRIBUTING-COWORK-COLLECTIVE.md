@@ -71,6 +71,7 @@ last-edited-date: 2026-04-06
 | `industries` | string[] | Yes | Array of industry slugs from `docs/.vitepress/data/industries.json`. |
 | `created-date` | date | Yes | ISO date when the mission was first published. |
 | `last-edited-date` | date | Yes | ISO date of the most recent edit. Update this on every change. |
+| `hide` | boolean | No | Set to `true` to exclude the page from all `<missions />` grids. The page remains directly accessible. |
 
 > [!IMPORTANT]
 > Cowork Collective missions require `section: cowork-collective` — this is what makes the mission appear on the Cowork Collective landing page. They do **not** use `prev`, `next`, `short-description`, or `codename`.
