@@ -16,7 +16,7 @@ industries:
   - hr
 created-date: 2026-07-02
 last-edited-date: 2026-07-02
-hidden: true
+hide: true
 ---
 
 # 🔎 Azure AI Search RAG {#azure-ai-search-rag}
