@@ -16,6 +16,7 @@ industries:
   - hr
 created-date: 2026-07-02
 last-edited-date: 2026-07-02
+hidden: true
 ---
 
 # 🔎 Azure AI Search RAG {#azure-ai-search-rag}
@@ -23,12 +24,11 @@ last-edited-date: 2026-07-02
 <mission-meta />
 
 <!-- markdownlint-disable-next-line MD033 -->
-<p align="center"><img src="./assets/badge.png" alt="Azure AI Search RAG Badge" width="220" /></p>
+<p align="center"><img src="./assets/ai-search-badge.png" alt="Azure AI Search RAG Badge" width="220" /></p>
 
-Welcome, agent. Your mission — should you choose to accept it — is **Operation Vector Vault**: give a Copilot Studio agent the ability to reason over your organization's own documents using **Retrieval-Augmented Generation (RAG)** powered by **Azure AI Search** vector search. You'll stand up a search service, vectorize a stack of candidate resumes, and wire the index into an **HR Knowledge Agent** so it answers questions by *meaning*, not just keywords — with document-backed citations. 🎯
+Welcome, agent. Your mission is **Operation Vector Vault**: give a Copilot Studio agent the ability to reason over your organization's own documents using **Retrieval-Augmented Generation (RAG)** powered by **Azure AI Search** vector search. You'll stand up a search service, vectorize a stack of candidate resumes, and wire the index into an **HR Knowledge Agent** so it answers questions by *meaning*, not just keywords, with document-backed citations. 🎯
 
 > [!NOTE] This mission uses the **new** Copilot Studio experience
-> This mission was authored and validated against the **new** Copilot Studio authoring experience (2026-07-02). Keep **New Experience** turned **on** in the upper-right corner. The most important change from older RAG guidance: **Azure AI Search is no longer a Knowledge source** — you now connect it as a **connector tool**. This mission walks you through that new path.
 
 ## ❓ What is Retrieval-Augmented Generation (RAG)? {#what-is-rag}
 
@@ -65,18 +65,15 @@ For example, a search for "software engineering skills" can surface candidates d
 - An **Azure subscription** with permission to create resources (Azure AI Search, Storage, and Azure OpenAI / Microsoft Foundry).
 - Familiarity with basic Copilot Studio agent creation and basic Azure resource management.
 
-> [!NOTE]
-> Exercises 1 and 2 happen in the **Azure Portal** and **Microsoft Foundry**, outside Copilot Studio. Those portals are unchanged by the new Copilot Studio experience. The Copilot Studio changes begin in **Exercise 3**.
-
 ## 🎯 The Scenario {#the-scenario}
 
-Contoso's HR team is drowning in candidate resumes across formats and languages. They want an agent that lets recruiters ask natural-language questions — "who speaks Spanish and knows Python?" — and get accurate, cited answers pulled from the actual resume documents. You're the agent builder wiring up RAG with Azure AI Search.
+Contoso's HR team is drowning in candidate resumes across formats and languages. They want an agent that lets recruiters ask natural-language questions, like "who speaks Spanish and knows Python?", and get accurate, cited answers pulled from the actual resume documents. You're the agent builder wiring up RAG with Azure AI Search.
 
-## 🧪 Exercise 1 — Set up the Azure AI Search service {#exercise-1}
+## 🧪 Lab 1.1 — Setup the Azure AI Search service {#lab1.1-setup-azure-ai-search-service}
 
 In this exercise you create and configure the Azure AI Search service that will store and index your documents.
 
-### Step 1 — Create the Azure AI Search service
+### Create the Azure AI Search service
 
 Navigate to the [Azure Portal](https://portal.azure.com) and create an Azure AI Search service:
 
@@ -98,9 +95,9 @@ Once the service is created, open the resource and capture two values you'll nee
 1. Under **Settings → Keys**, copy the **Primary admin key**.
 
 > [!TIP]
-> Keep the endpoint URL and admin key somewhere safe — you'll paste them into the Azure AI Search **connection** in Copilot Studio in Exercise 3.
+> Keep the endpoint URL and admin key somewhere safe because you'll paste them into the Azure AI Search **connection** in Copilot Studio in Lab 1.3.
 
-### Step 2 — Create an Azure Storage account
+### Create an Azure Storage account
 
 You need somewhere to hold the documents before they're indexed.
 
@@ -117,7 +114,7 @@ You need somewhere to hold the documents before they're indexed.
 
     ![Storage](assets/azure-storage-01.png)
 
-### Step 3 — Deploy a text embedding model
+### Deploy a text embedding model
 
 Vector search needs an **embedding model** to turn documents and queries into vectors.
 
@@ -141,11 +138,11 @@ Then open [Microsoft Foundry](https://oai.azure.com/portal), select your Azure O
 > [!NOTE]
 > **What does `text-embedding-ada-002` do?** It converts text into numeric vectors that represent meaning, enabling vector search that finds semantically similar text across languages and formats. Paired with Azure AI Search, it returns the most relevant, contextually accurate content instead of exact keyword matches.
 
-## 🧪 Exercise 2 — Create and populate the search index {#exercise-2}
+## 🧪 Lab 1.2 — Create and populate the search index {#lab1.2-create-search-index}
 
 Now you'll create a search index in Azure AI Search and populate it with candidate resume documents using the integrated vectorization feature.
 
-### Step 1 — Preparing sample documents
+### Preparing sample documents
 
 For this lab, download the sample resume documents that will be indexed for search. Download [fictitious_resumes.zip](assets/fictitious_resumes%20(1).zip) and unzip the folder to access the PDF files.
 
@@ -160,7 +157,7 @@ These sample resumes contain diverse candidate profiles with information such as
 
 Review the content of these files to understand the type of information that will be searchable through your RAG-enabled agent. Notice also that the documents are written in various languages. This will not be a problem for the text-embedding-ada-002 model or for the vector index.
 
-### Step 2 — Uploading sample documents in the Storage Account
+### Uploading sample documents in the Storage Account
 
 Using Azure AI Search, you'll create a vector index with your resume documents using the integrated vectorization feature.
 
@@ -181,7 +178,7 @@ Once the container has been created, you can upload the resume files following t
 
     ![Upload](assets/azure-storage-03.png)
 
-### Step 3 — Populating the Vector Index with Integrated Vectorization
+### Populating the Vector Index with Integrated Vectorization
 
 Once the resume files are uploaded go back to the home page of the Azure Portal and access the Azure AI Search service instance. Then select the Import data (new) command in the top command bar.
 
@@ -227,11 +224,11 @@ Once the vector index is created, a small dialog confirms the index creation and
 
 ![Create](assets/azure-search-06.png)
 
-## 🧪 Exercise 3 — Build the RAG-enabled agent {#exercise-3}
+## 🧪 Lab 1.3 — Build the RAG-enabled agent {#lab1.3-build-agent}
 
 In this exercise you will create a Microsoft Copilot Studio agent that leverages your Azure AI Search index to provide intelligent, document-backed responses about HR candidates.
 
-### Step 1 — Create the HR Knowledge Agent
+### Create the HR Knowledge Agent
 
 1. Navigate to [Microsoft Copilot Studio](https://copilotstudio.microsoft.com) and sign in. Make sure **New experience** is turned **on**.
 
@@ -274,7 +271,7 @@ In this exercise you will create a Microsoft Copilot Studio agent that leverages
 
 ![Title and description](assets/title-description.png)
 
-### Step 2 — Connect Azure AI Search as a tool
+### Connect Azure AI Search as a tool
 
 > [!IMPORTANT]
 > In the new Copilot Studio experience, **Azure AI Search is not a Knowledge source**. The **Add knowledge** dialog only offers Public websites, SharePoint, and OneDrive. Instead, you connect Azure AI Search as a **connector tool** and let the agent call it for retrieval.
@@ -289,9 +286,6 @@ In this exercise you will create a Microsoft Copilot Studio agent that leverages
 
 1. Select the **Semantic Hybrid Search** action, then select **Add**. (This action performs semantic hybrid search — combining vector and keyword search — against your index. **Search vectors with natural language** is a good alternative for pure vector queries.)
 
-    <!-- ⚠️ NEW FLOW: This replaces the entire classic "Add knowledge → Featured →
-         Azure AI Search → Create new connection → select index → Add to agent" flow. -->
-
 1. The tool is added under **Tools**. Select it to open **Tool details**. Here you set the tool **Name**, **Description**, and **Authentication mode** (**User** or **Maker**). Configure the connector **connection** with your Azure AI Search **endpoint URL** and **admin key** (the values you saved in Exercise 1), and point it at the `resumes` index.
 
     ![Tool details for the Azure AI Search Semantic Hybrid Search action, showing the Authentication mode options.](./assets/rag-tool-details-auth.png)
@@ -304,13 +298,9 @@ In this exercise you will create a Microsoft Copilot Studio agent that leverages
     > [!WARNING]
     > If you navigate away with unsaved changes, they are silently discarded. Always confirm **Save** goes disabled before leaving the Build canvas.
 
-## 🧪 Exercise 4 — Test the agent {#exercise-4}
+## 🧪 Lab 1.4 — Test the agent {#lab1.4-test-agent}
 
 Now validate retrieval in the **Preview** tab.
-
-<!-- ⚠️ MODIFIED: Classic used the "test panel." In the new experience, testing happens
-     in the "Preview" tab. Start a New chat after adding/saving a tool so the tool
-     context refreshes. -->
 
 1. Select the **Preview** tab. If you just added the tool, select **New chat** so the agent picks up the new tool context.
 
@@ -369,7 +359,7 @@ The RAG pattern you built applies far beyond HR — customer support knowledge b
 
 ## 🏅 Claim your completion badge {#claim-your-completion-badge}
 <!-- markdownlint-disable-next-line MD033 -->
-<p align="center"><img src="./assets/badge.png" alt="Azure AI Search RAG Badge" width="220" /></p>
+<p align="center"><img src="./assets/ai-search-badge.png" alt="Azure AI Search RAG Badge" width="220" /></p>
 
 Congrats, agent - mission accomplished! Now it's time to claim your badge.
 

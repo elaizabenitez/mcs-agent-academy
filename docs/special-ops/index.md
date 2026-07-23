@@ -20,5 +20,3 @@ Use Special Ops when you need fast, practical training on a defined topic.
 ## Missions
 
 <missions section="special-ops" sort="first-added" order="descending" />
-
-More Special Ops missions will be added here soon!
