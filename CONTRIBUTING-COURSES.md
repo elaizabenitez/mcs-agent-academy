@@ -92,6 +92,7 @@ last-edited-date: 2026-03-13
 | `industries` | string[] | Yes | Array of industry slugs from `docs/.vitepress/data/industries.json`. |
 | `created-date` | date | Yes | ISO date when the mission was first published (for example `2025-08-20`). |
 | `last-edited-date` | date | Yes | ISO date of the most recent edit. Update this on every change. |
+| `hide` | boolean | No | Set to `true` to exclude the page from all `<missions />` grids. The page remains directly accessible. |
 
 Use single quotes for string values. Paths in `prev`/`next` are absolute and start with `/recruit/`, `/operative/`, or `/commander-preview/`.
 
