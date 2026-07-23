@@ -16,6 +16,7 @@ industries:
   - hr
 created-date: 2026-07-02
 last-edited-date: 2026-07-02
+hide: true
 hidden: true
 ---
 
