@@ -1,4 +1,5 @@
 ---
+hide: true
 prev:
   text: Integrate with MCP Servers
   link: /operative/10-mcp
