@@ -64,6 +64,8 @@ function loadMissions(docsDir: string): MissionData[] {
       const raw = fs.readFileSync(indexPath, "utf-8");
       const { data: frontmatter, content } = matter(raw);
 
+      if (frontmatter.hide === true) continue;
+
       const title = extractH1(content);
       if (!title) continue;
 
@@ -74,7 +76,10 @@ function loadMissions(docsDir: string): MissionData[] {
           frontmatter.badge
         );
         // Prevent path traversal outside docsDir
-        if (!badgeFsPath.startsWith(docsDir + path.sep) && badgeFsPath !== docsDir) {
+        if (
+          !badgeFsPath.startsWith(docsDir + path.sep) &&
+          badgeFsPath !== docsDir
+        ) {
           badge = null;
         } else {
           badge = "/" + path.relative(docsDir, badgeFsPath).replace(/\\/g, "/");
@@ -88,7 +93,10 @@ function loadMissions(docsDir: string): MissionData[] {
         section: sectionName,
         url: `/${sectionName}/${sub.name}/`,
         badge,
-        difficulty: Math.min(Math.max(Number(frontmatter.difficulty) || 0, 0), 5),
+        difficulty: Math.min(
+          Math.max(Number(frontmatter.difficulty) || 0, 0),
+          5
+        ),
         tags: frontmatter.tags ?? [],
         products: frontmatter.products ?? [],
         industries: frontmatter.industries ?? [],

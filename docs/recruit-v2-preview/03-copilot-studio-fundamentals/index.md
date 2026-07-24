@@ -1,4 +1,5 @@
 ---
+hide: true
 prev:
   text: 'Declarative Agents in M365 Copilot'
   link: '/recruit-v2-preview/02-declarative-agent'

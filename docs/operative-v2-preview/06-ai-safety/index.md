@@ -1,4 +1,5 @@
 ---
+hide: true
 prev:
   text: Understanding Agent Models
   link: /operative/05-model-selection

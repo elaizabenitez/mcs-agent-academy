@@ -1,4 +1,5 @@
 ---
+hide: true
 prev:
   text: Operative Overview
   link: /operative

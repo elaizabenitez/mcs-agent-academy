@@ -1,4 +1,5 @@
 ---
+hide: true
 prev:
   text: Multimodal Prompts
   link: /operative/07-multimodal-prompts

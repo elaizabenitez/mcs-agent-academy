@@ -1,4 +1,5 @@
 ---
+hide: true
 prev:
   text: Dataverse Grounding
   link: /operative/08-dataverse-grounding

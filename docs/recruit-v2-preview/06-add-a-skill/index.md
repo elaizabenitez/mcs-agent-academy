@@ -1,4 +1,5 @@
 ---
+hide: true
 prev:
   text: 'Build a Custom Agent'
   link: '/recruit-v2-preview/05-build-a-custom-agent'

@@ -1,4 +1,5 @@
 ---
+hide: true
 prev:
   text: Get started with the Hiring Agent
   link: /operative/01-get-started
@@ -140,7 +141,8 @@ Next up is [Mission 03](../03-multi-agent/index.md): Building multi-agent system
 
 ## 📚 Tactical Resources {#tactical-resources}
 
-📖 [Microsoft Copilot Studio - Authoring Instructions](https://learn.microsoft.com/microsoft-copilot-studio/authoring-instructions)  
+📖 [Microsoft Copilot Studio - Authoring Instructions](https://learn.microsoft.com/microsoft-copilot-studio/authoring-instructions)
+  
 📖 [Guidance for Generative Mode](https://learn.microsoft.com/microsoft-copilot-studio/guidance/generative-mode-guidance)
 
 <analytics-tag section="operative" mission="02-agent-instructions" />
