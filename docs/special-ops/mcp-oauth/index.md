@@ -74,9 +74,9 @@ The secured HR MCP server is an OAuth-protected version of a standard HR candida
 
 The difference: every request requires a valid OAuth 2.0 access token in the `Authorization` header, validated as a JWT against your Entra ID tenant.
 
-1. Download the pre-built secured HR MCP server files [from here](./assets/hr-mcp-server-secured).
+1. Open the pre-built secured HR MCP server files in `./assets/hr-mcp-server-secured/`.
 
-1. Extract the zip and open the folder in **Visual Studio Code**. The server is already implemented with OAuth 2.0 security.
+1. Open the folder in **Visual Studio Code**. The server is already implemented with OAuth 2.0 security.
 
     The main elements of the project are:
 
